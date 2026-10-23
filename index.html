@@ -6,8 +6,9 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Studio Syntropy 趨合工作室</title>
 <meta name="description" content="Studio Syntropy (趨合工作室) designs syntropic agroforestry systems in Taiwan and Southeast Asia: design consultancy, courses, research and publications.">
-<link rel="icon" type="image/png" href="img/v5-favicon.png">
-<link rel="apple-touch-icon" href="img/v5-app-icon.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="img/v8-favicon.png">
+<link rel="apple-touch-icon" href="img/v8-app-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
@@ -98,9 +99,9 @@ html[lang="zh-Hant"] .eyebrow{letter-spacing:.16em}
 .nav a:hover{background:var(--paper-2);text-decoration:underline}
 .tools{display:flex;gap:.5rem;align-items:center}
 .seg{display:inline-flex;border:1.5px solid var(--ink-soft);border-radius:999px;padding:2px}
-.seg button{font:inherit;font-size:.95rem;font-weight:500;border:0;background:transparent;color:var(--ink);min-width:44px;min-height:40px;padding:0 .7rem;border-radius:999px;cursor:pointer;line-height:1}
+.seg button{white-space:nowrap;font:inherit;font-size:.95rem;font-weight:500;border:0;background:transparent;color:var(--ink);min-width:44px;min-height:40px;padding:0 .7rem;border-radius:999px;cursor:pointer;line-height:1}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.menu-btn{display:none;font:inherit;font-weight:700;min-height:48px;padding:0 1rem;border:1.5px solid var(--ink-soft);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}
+.menu-btn{display:none;white-space:nowrap;font:inherit;font-weight:700;min-height:48px;padding:0 1rem;border:1.5px solid var(--ink-soft);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}
 @media (max-width:1060px){
   .menu-btn{display:inline-flex;align-items:center}
   .nav{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem var(--gutter-r) 1rem var(--gutter)}
@@ -117,6 +118,15 @@ html[lang="zh-Hant"] .eyebrow{letter-spacing:.16em}
 
 .nav .seg-size-m{display:none}
 @media (max-width:640px){.nav .seg-size-m{display:inline-flex;margin-top:.75rem}}
+
+@media (max-width:440px){
+  .site-head .wrap{gap:.5rem}
+  .brand img{height:3.75rem;margin-block:0}
+  .head-right,.tools{gap:.4rem}
+  .seg button{min-width:40px;padding:0 .5rem}
+  .menu-btn{padding:0 .8rem}
+}
+@media (max-width:360px){.brand img{height:3.1rem}}
 
 /* hero */
 .hero{padding-top:clamp(2.5rem,6vw,4.5rem)}
@@ -329,8 +339,8 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Studio Syntropy 趨合工作室, home">
-      <img class="logo-light" src="img/v5-horizontal.svg" alt="" width="641" height="288">
-      <img class="logo-dark" src="img/v5-horizontal-reversed.svg" alt="" width="641" height="288">
+      <img class="logo-light" src="img/v8-horizontal-color.svg" alt="" width="641" height="288">
+      <img class="logo-dark" src="img/v8-horizontal-reversed.svg" alt="" width="641" height="288">
     </a>
     <div class="head-right">
       <nav class="nav" id="site-nav" aria-label="Main" data-open="false">
@@ -545,7 +555,7 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
           <p><span lang="en">With the Indigenous Crop Department in Ji'an, a 2,000 m² government demonstration plot was planted during a five-day course in spring 2026: five tree lines with indigenous annual crops in the alleys, followed by monthly consultancy. At the Organic Center in Shoufeng, a design for soya with tree lines and green manure, sized for the station's machinery, is planted from November 2026.</span><span lang="zh-Hant">與花蓮農改場吉安的原住民作物部門合作，於 2026 年春季的五日實作課程中種下 2,000 平方公尺的公部門示範區：五條樹列，行間種植原住民一年生作物，之後每月提供管理諮詢。壽豐有機中心則以大豆搭配樹列與綠肥進行設計，並依場內機具尺寸規劃，自 2026 年 11 月起種植。</span></p>
           <dl class="facts">
             <dt><span lang="en">Place</span><span lang="zh-Hant">地點</span></dt><dd><span lang="en">Ji'an and Shoufeng, Hualien</span><span lang="zh-Hant">花蓮 吉安、壽豐</span></dd>
-            <dt><span lang="en">Area</span><span lang="zh-Hant">面積</span></dt><dd>2,000 m² · 4,260 m²</dd>
+            <dt><span lang="en">Area</span><span lang="zh-Hant">面積</span></dt><dd>2,000 m² · 4,000 m²</dd>
             <dt><span lang="en">Period</span><span lang="zh-Hant">期間</span></dt><dd><span lang="en">2026 – present</span><span lang="zh-Hant">2026 年至今</span></dd>
           </dl>
         </div>
@@ -911,7 +921,7 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
     <h2 id="foot-title" class="sr-only">Studio Syntropy 趨合工作室</h2>
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="img/v5-horizontal-reversed.svg" alt="趨合工作室 studio syntropy" width="641" height="288" loading="lazy">
+        <img src="img/v8-horizontal-reversed.svg" alt="趨合工作室 studio syntropy" width="641" height="288" loading="lazy">
         <p><span lang="en">Syntropic agroforestry design, courses and soil research for farms, institutions and communities in Taiwan and Southeast Asia.</span><span lang="zh-Hant">為台灣與東南亞的農場、機構與社區提供趨合農業設計、課程與土壤研究。</span></p>
         <p class="foot-reg"><span lang="en">Registered studio in Taiwan: 趨合工作室</span><span lang="zh-Hant">台灣登記立案：趨合工作室</span></p>
       </div>
