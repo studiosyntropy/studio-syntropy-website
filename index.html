@@ -311,24 +311,28 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
 .contact-item .val{font-size:var(--step-1);overflow-wrap:anywhere;user-select:all}
 .copy{justify-self:start;font:inherit;font-size:.95rem;font-weight:700;background:transparent;color:var(--band-ink);border:1.5px solid rgba(245,241,230,.6);border-radius:999px;min-height:44px;padding:0 1rem;cursor:pointer}
 .copy:hover{border-color:var(--sunlight)}
-.foot{display:grid;gap:2rem;padding-block:clamp(2.5rem,5vw,3.5rem) 2rem;border-top:1px solid rgba(245,241,230,.2);font-size:var(--step--1);color:var(--band-soft)}
-.foot-grid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(2,minmax(0,1fr));gap:2rem}
-@media (max-width:900px){.foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.foot-grid{grid-template-columns:1fr}}
-.foot-brand{display:grid;gap:.9rem;align-content:start;max-width:26rem}
-.foot-brand img{height:4.5rem;width:auto;justify-self:start}
-.foot-reg{font-size:.9375rem}
-.foot-col h3{font-size:var(--step-0);color:var(--band-ink);margin-bottom:.5rem}
-.foot-col ul{list-style:none;margin:0;padding:0;display:grid}
-.foot-col li{min-height:44px;display:flex;align-items:center;overflow-wrap:anywhere}
-.foot-col a{color:var(--band-ink);text-decoration:underline;text-decoration-color:rgba(245,241,230,.4);text-underline-offset:4px}
-.foot-col a:hover{text-decoration-color:var(--sunlight)}
-.foot-notes{display:grid;gap:.25rem;border-top:1px solid rgba(245,241,230,.2);padding-top:1rem}
-.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;border-top:1px solid rgba(245,241,230,.2);padding-top:1.25rem}
-.to-top{color:var(--band-ink);min-height:44px;display:inline-flex;align-items:center;gap:.3rem;text-underline-offset:4px}
-.a11y{max-width:46rem}
-.a11y summary{cursor:pointer;min-height:44px;display:inline-flex;align-items:center;font-weight:700;color:var(--band-ink);text-decoration:underline;text-underline-offset:3px}
-.a11y ul{margin:.5rem 0 0;padding-left:1.2rem;display:grid;gap:.3rem}
+.foot{display:grid;gap:0;padding-block:1.75rem 1rem;border-top:1px solid rgba(245,241,230,.2);font-size:var(--step--1);color:var(--band-soft)}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot a,.foot-toggle{color:var(--band-ink);text-decoration:underline;text-decoration-color:rgba(245,241,230,.45);text-underline-offset:4px}
+.foot a:hover,.foot-toggle:hover{text-decoration-color:var(--sunlight)}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem 2.5rem;padding-bottom:1rem}
+.foot-brand{display:flex;align-items:center;gap:1.25rem;min-width:0;flex:1 1 26rem}
+.foot-brand img{height:3.75rem;width:auto;flex:0 0 auto}
+.foot-brand p{max-width:30em}
+.foot-contact{display:flex;flex-wrap:wrap;gap:0 1.5rem}
+.foot-contact li,.foot-nav li,.foot-info li{min-height:44px;display:flex;align-items:center}
+.foot-contact a{overflow-wrap:anywhere}
+.foot-nav{border-top:1px solid rgba(245,241,230,.2);padding-block:.25rem}
+.foot-nav ul{display:flex;flex-wrap:wrap;gap:0 1.75rem}
+.foot-nav a{font-weight:500}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.25rem 1.5rem;border-top:1px solid rgba(245,241,230,.2);padding-top:.25rem}
+.foot-info{display:flex;flex-wrap:wrap;gap:0 1.5rem}
+.foot-toggle{font:inherit;background:none;border:0;padding:0;cursor:pointer;min-height:44px}
+.foot-toggle[aria-expanded="true"]{font-weight:700;text-decoration-color:var(--sunlight)}
+.to-top{display:inline-flex;align-items:center;gap:.3rem;min-height:44px}
+.foot-panel{max-width:46rem;display:grid;gap:.5rem;margin-top:.75rem;padding:1rem 1.25rem;border:1px solid rgba(245,241,230,.25);border-radius:6px}
+.foot-panel ul{list-style:disc;padding-left:1.2rem;display:grid;gap:.3rem}
+@media (max-width:640px){.foot-brand{flex:1 1 100%;gap:.9rem;align-items:flex-start}.foot-brand img{height:3rem}.foot-contact,.foot-nav ul,.foot-info{gap:0 1.25rem}}
 </style>
 
 <style>body{margin:0}[hidden]{display:none!important}</style>
@@ -919,15 +923,19 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
   </section>
   <footer class="wrap foot" aria-labelledby="foot-title">
     <h2 id="foot-title" class="sr-only">Studio Syntropy 趨合工作室</h2>
-    <div class="foot-grid">
+    <div class="foot-top">
       <div class="foot-brand">
         <img src="img/v8-horizontal-reversed.svg" alt="趨合工作室 studio syntropy" width="641" height="288" loading="lazy">
-        <p><span lang="en">Syntropic agroforestry design, courses and soil research for farms, institutions and communities in Taiwan and Southeast Asia.</span><span lang="zh-Hant">為台灣與東南亞的農場、機構與社區提供趨合農業設計、課程與土壤研究。</span></p>
-        <p class="foot-reg"><span lang="en">Registered studio in Taiwan: 趨合工作室</span><span lang="zh-Hant">台灣登記立案：趨合工作室</span></p>
+        <p><span lang="en">Syntropic agroforestry design, courses and soil research in Taiwan and Southeast Asia.</span><span lang="zh-Hant">台灣與東南亞的趨合農業設計、課程與土壤研究。</span></p>
       </div>
-      <nav class="foot-col" aria-labelledby="fn-explore">
-        <h3 id="fn-explore"><span lang="en">Explore</span><span lang="zh-Hant">網站導覽</span></h3>
-        <ul>
+      <ul class="foot-contact" aria-label="Contact 聯絡方式">
+        <li><a href="mailto:studiosyntropy@proton.me">studiosyntropy@proton.me</a></li>
+        <li><a href="tel:+886909572694">+886 909 572 694</a></li>
+        <li><span lang="en">Hualien &amp; Taipei, Taiwan</span><span lang="zh-Hant">台灣 花蓮、台北</span></li>
+      </ul>
+    </div>
+    <nav class="foot-nav" aria-label="Footer 頁尾導覽">
+      <ul>
           <li><a href="#approach"><span lang="en">Approach</span><span lang="zh-Hant">理念</span></a></li>
           <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
           <li><a href="#services"><span lang="en">Services</span><span lang="zh-Hant">服務</span></a></li>
@@ -935,22 +943,19 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
           <li><a href="#journal"><span lang="en">Journal</span><span lang="zh-Hant">日誌</span></a></li>
           <li><a href="#teaching"><span lang="en">Teaching</span><span lang="zh-Hant">教學</span></a></li>
           <li><a href="#about"><span lang="en">About</span><span lang="zh-Hant">關於</span></a></li>
-        </ul>
-      </nav>
-      <div class="foot-col">
-        <h3><span lang="en">Contact</span><span lang="zh-Hant">聯絡方式</span></h3>
-        <ul>
-          <li><a href="mailto:studiosyntropy@proton.me">studiosyntropy@proton.me</a></li>
-          <li><a href="tel:+886909572694">+886 909 572 694</a></li>
-          <li><span lang="en">Hualien &amp; Taipei, Taiwan</span><span lang="zh-Hant">台灣 花蓮、台北</span></li>
-        </ul>
-      </div>
+      </ul>
+    </nav>
+    <div class="foot-bottom">
+      <span>© 2026 趨合工作室 Studio Syntropy · <span lang="en">Registered studio in Taiwan</span><span lang="zh-Hant">台灣登記立案</span></span>
+      <ul class="foot-info" aria-label="Information 網站資訊">
+        <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="accessibility"><span lang="en">Accessibility</span><span lang="zh-Hant">無障礙說明</span></button></li>
+        <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="privacy"><span lang="en">Privacy</span><span lang="zh-Hant">隱私權說明</span></button></li>
+        <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="credits"><span lang="en">Credits</span><span lang="zh-Hant">致謝與圖片來源</span></button></li>
+        <li><a href="#top" class="to-top"><span lang="en">Back to top</span><span lang="zh-Hant">回到頂端</span> <span aria-hidden="true">↑</span></a></li>
+      </ul>
     </div>
-    <div class="foot-notes" role="group" aria-label="Information 網站資訊">
-      <details class="a11y" id="accessibility">
-      <summary><span lang="en">Accessibility</span><span lang="zh-Hant">無障礙說明</span></summary>
-      <div style="margin-top:.5rem;display:grid;gap:.5rem">
-        <p><span lang="en">This site aims to meet WCAG 2.2 level AA.</span><span lang="zh-Hant">本網站以符合 WCAG 2.2 AA 等級為目標。</span></p>
+    <section class="foot-panel" id="accessibility" aria-label="Accessibility 無障礙說明" hidden>
+      <p><span lang="en">This site aims to meet WCAG 2.2 level AA.</span><span lang="zh-Hant">本網站以符合 WCAG 2.2 AA 等級為目標。</span></p>
         <ul>
           <li><span lang="en">Typefaces chosen for legibility: Atkinson Hyperlegible Next and Noto Sans TC.</span><span lang="zh-Hant">採用易讀字體：Atkinson Hyperlegible Next 與思源黑體（Noto Sans TC）。</span></li>
           <li><span lang="en">Text size buttons (A, A+, A++) and full support for browser zoom up to 400%.</span><span lang="zh-Hant">提供字級按鈕（A、A+、A++），並完整支援瀏覽器放大至 400%。</span></li>
@@ -960,25 +965,13 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
           <li><span lang="en">Reduced motion is respected; nothing flashes or moves on its own.</span><span lang="zh-Hant">尊重「減少動態效果」設定；網頁不會自行閃爍或移動。</span></li>
         </ul>
         <p><span lang="en">If something is hard to use, please write to studiosyntropy@proton.me.</span><span lang="zh-Hant">若有任何使用上的困難，請來信 studiosyntropy@proton.me。</span></p>
-      </div>
-    </details>
-      <details class="a11y" id="privacy">
-        <summary><span lang="en">Privacy</span><span lang="zh-Hant">隱私權說明</span></summary>
-        <div style="margin-top:.5rem;display:grid;gap:.5rem">
-          <p><span lang="en">This site uses no tracking, no advertising and no analytics cookies. Your choice of language and text size is saved only in your own browser. If you write to us, your message is used only to answer you and is not passed on.</span><span lang="zh-Hant">本網站不使用追蹤、廣告或分析類 Cookie。您選擇的語言與字級僅儲存在您自己的瀏覽器中。若您來信，內容僅用於回覆您，不會提供給第三方。</span></p>
-        </div>
-      </details>
-      <details class="a11y" id="credits">
-        <summary><span lang="en">Credits</span><span lang="zh-Hant">致謝與圖片來源</span></summary>
-        <div style="margin-top:.5rem;display:grid;gap:.5rem">
-          <p><span lang="en">Photos and designs: Studio Syntropy / Tobias Chen, unless noted. Research data: Tzu Chi University USR Center, with the partners named in the Research section. Logo and website: Studio Syntropy, 2026.</span><span lang="zh-Hant">照片與設計：趨合工作室／陳拓彼，另有標示者除外。研究數據：慈濟大學 USR 中心，及研究段落中所列之合作夥伴。標誌與網站：趨合工作室，2026 年。</span></p>
-        </div>
-      </details>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 趨合工作室 Studio Syntropy. <span lang="en">All rights reserved.</span><span lang="zh-Hant">版權所有。</span></span>
-      <a href="#top" class="to-top"><span lang="en">Back to top</span><span lang="zh-Hant">回到頂端</span> <span aria-hidden="true">↑</span></a>
-    </div>
+    </section>
+    <section class="foot-panel" id="privacy" aria-label="Privacy 隱私權說明" hidden>
+      <p><span lang="en">This site uses no tracking, no advertising and no analytics cookies. Your choice of language and text size is saved only in your own browser. If you write to us, your message is used only to answer you and is not passed on.</span><span lang="zh-Hant">本網站不使用追蹤、廣告或分析類 Cookie。您選擇的語言與字級僅儲存在您自己的瀏覽器中。若您來信，內容僅用於回覆您，不會提供給第三方。</span></p>
+    </section>
+    <section class="foot-panel" id="credits" aria-label="Credits 致謝與圖片來源" hidden>
+      <p><span lang="en">Photos and designs: Studio Syntropy / Tobias Chen, unless noted. Research data: Tzu Chi University USR Center, with the partners named in the Research section. Logo and website: Studio Syntropy, 2026.</span><span lang="zh-Hant">照片與設計：趨合工作室／陳拓彼，另有標示者除外。研究數據：慈濟大學 USR 中心，及研究段落中所列之合作夥伴。標誌與網站：趨合工作室，2026 年。</span></p>
+    </section>
   </footer>
 </div>
 </main>
@@ -1021,9 +1014,11 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
     r.addEventListener('input',u);u();
   });
 
-  /* footer info links open their section */
-  ['accessibility','privacy','credits'].forEach(function(id){var l=document.getElementById('open-'+(id==='accessibility'?'a11y':id)),d=document.getElementById(id);if(l&&d)l.addEventListener('click',function(){d.open=true;setTimeout(function(){d.querySelector('summary').focus()},50)})});
-  if(['#accessibility','#privacy','#credits'].indexOf(location.hash)>=0){var dd=document.querySelector(location.hash);if(dd)dd.open=true}
+  /* footer info panels (Accessibility, Privacy, Credits) */
+  var toggles=[].slice.call(document.querySelectorAll('.foot-toggle'));
+  function showPanel(id,focus){toggles.forEach(function(t){var on=t.getAttribute('aria-controls')===id&&t.getAttribute('aria-expanded')!=='true';var pn=document.getElementById(t.getAttribute('aria-controls'));t.setAttribute('aria-expanded',String(on));pn.hidden=!on;if(on&&focus){pn.setAttribute('tabindex','-1');pn.focus()}})}
+  toggles.forEach(function(t){t.addEventListener('click',function(){showPanel(t.getAttribute('aria-controls'),false)})});
+  if(['#accessibility','#privacy','#credits'].indexOf(location.hash)>=0)showPanel(location.hash.slice(1),true);
 
   /* copy */
   var cs=document.getElementById('copy-status');
