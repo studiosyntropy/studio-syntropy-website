@@ -226,15 +226,10 @@
   "taken": "2025-11",
   "edit": "Resized to 1600 px"
  },
- "img/hda-jian-castor.jpg": {
-  "original": null,
-  "source": "Sent by Tobias in the chat on 27 Oct 2026",
-  "taken": null
- },
  "img/hda-jian-perilla.jpg": {
   "original": null,
   "source": "Sent by Tobias in the chat on 27 Oct 2026",
-  "taken": null
+  "taken": "2026-08"
  },
  "img/ngm-food-forest.jpg": {
   "original": null,
@@ -247,5 +242,15 @@
   "taken": null,
   "note": "Composite image; before and after are not the same view",
   "edit": "Resized to 1600 px"
+ },
+ "img/hda-jian-setup.jpg": {
+  "original": null,
+  "source": "Sent by Tobias in the chat on 27 Oct 2026",
+  "taken": "2026-04"
+ },
+ "img/gft-papaya.jpg": {
+  "original": null,
+  "source": "Sent by Tobias in the chat on 27 Oct 2026",
+  "taken": null
  }
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27 02:40",
+ "updated": "2026-10-27 02:54",
  "videos": 0,
  "items": [
   {
@@ -943,7 +943,37 @@
      "section": "Story \"From rock to food forest\"",
      "page_date": null,
      "alt": "Tree line A2 at Gengfutian: banana with a bunch of fruit, moringa, taro, cassava and young fruit trees above a mulch of cut leaves, mountains behind",
-     "caption": "Tree line A2 at Gengfutian, November 2025: banana, moringa, taro and cassava growing together."
+     "caption": "Gengfutian: tree line A2 in November 2025 with banana, moringa, taro and cassava, and papaya fruiting among cassava and banana."
+    }
+   ]
+  },
+  {
+   "id": "img__gft-papaya_jpg",
+   "file": "gft-papaya.jpg",
+   "web_path": "img/gft-papaya.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "A papaya tree heavy with green fruit between cassava, banana, lemongrass and young trees in the Gengfutian food forest",
+   "width": 1280,
+   "height": 960,
+   "size_kb": 346,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": null,
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "A papaya tree heavy with green fruit between cassava, banana, lemongrass and young trees in the Gengfutian food forest",
+     "caption": "Gengfutian: tree line A2 in November 2025 with banana, moringa, taro and cassava, and papaya fruiting among cassava and banana."
     }
    ]
   },
@@ -1008,46 +1038,16 @@
    ]
   },
   {
-   "id": "img__hda-jian-castor_jpg",
-   "file": "hda-jian-castor.jpg",
-   "web_path": "img/hda-jian-castor.jpg",
-   "kind": "Photo",
-   "status": "In use",
-   "description": "Ji'an demonstration plot: rows of herbs and green manure between castor and young trees, under a large shade tree",
-   "width": 1280,
-   "height": 721,
-   "size_kb": 254,
-   "taken": null,
-   "original": null,
-   "copy": null,
-   "embedded_in": null,
-   "source": "Sent by Tobias in the chat on 27 Oct 2026",
-   "edit": null,
-   "credit": null,
-   "note": null,
-   "added_to_site": "2026-10-27",
-   "uses": [
-    {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
-     "section": "Projects",
-     "page_date": null,
-     "alt": "Ji'an demonstration plot: rows of herbs and green manure between castor and young trees, under a large shade tree",
-     "caption": "Indigenous Crop Department plot, Ji'an, 2026."
-    }
-   ]
-  },
-  {
    "id": "img__hda-jian-perilla_jpg",
    "file": "hda-jian-perilla.jpg",
    "web_path": "img/hda-jian-perilla.jpg",
    "kind": "Photo",
    "status": "In use",
-   "description": "Ji'an demonstration plot: three people harvesting along a row of purple perilla beside a tree line with banana and pigeon pea",
+   "description": "Ji'an demonstration plot in August 2026: three people harvesting along a row of purple perilla beside a tree line with banana and pigeon pea",
    "width": 1280,
    "height": 721,
    "size_kb": 277,
-   "taken": null,
+   "taken": "2026-08",
    "original": null,
    "copy": null,
    "embedded_in": null,
@@ -1062,8 +1062,38 @@
      "url": "https://studio-syntropy.com/",
      "section": "Projects",
      "page_date": null,
-     "alt": "Ji'an demonstration plot: three people harvesting along a row of purple perilla beside a tree line with banana and pigeon pea",
-     "caption": "Indigenous Crop Department plot, Ji'an, 2026."
+     "alt": "Ji'an demonstration plot in August 2026: three people harvesting along a row of purple perilla beside a tree line with banana and pigeon pea",
+     "caption": "Indigenous Crop Department plot, Ji'an: setup in April 2026, and the same lines in August 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__hda-jian-setup_jpg",
+   "file": "hda-jian-setup.jpg",
+   "web_path": "img/hda-jian-setup.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Ji'an demonstration plot at setup: rows of young seedlings between paths of wood chips, a log edge with young trees on the right and people working in the background",
+   "width": 1280,
+   "height": 721,
+   "size_kb": 349,
+   "taken": "2026-04",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": null,
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Ji'an demonstration plot at setup: rows of young seedlings between paths of wood chips, a log edge with young trees on the right and people working in the background",
+     "caption": "Indigenous Crop Department plot, Ji'an: setup in April 2026, and the same lines in August 2026."
     }
    ]
   },
