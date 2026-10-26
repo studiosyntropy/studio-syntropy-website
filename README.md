@@ -20,26 +20,30 @@ If the new photo shows something else (another place, another date), ask Claude 
 | File in `img/` | Where on the page | Shape on the page |
 |---|---|---|
 | `hero-chili-gft.jpg` | Full-screen photo at the top, behind the headline (keep the lower half calm and not too bright) | fills the screen |
-| `hero-gengfutian-2026-04.jpg` | Story step 3 (March 2026) | very wide, 4.3 : 1 |
-| `s-gft-2024-11.jpg` | Story step 1, story slider (before), blog card | 16 : 7 |
-| `s-gft-2026-05.jpg` | Story slider (after), first blog card | 16 : 7 |
-| `dqm-before.jpg` | Ching Mei's Food Forest, before (slider) | 4 : 3 |
-| `dqm-after.jpg` | Ching Mei's Food Forest, after (slider) | 4 : 3 |
-| `hdares-alley.jpg` | HDARES, large photo | 16 : 9 |
-| `s-hdares-jian-1.jpg` | HDARES, small photo left | 4 : 3 |
-| `s-hdares-jian-2.jpg` | HDARES, small photo right | 4 : 3 |
-| `ngm-before-after.jpg` | Malaysia, Noble Gateway before/after image | 16 : 9 |
-| `kira-aerial.jpg` | Malaysia, Kira Organic Farm photo | 4 : 3 |
-| `kira-design.jpg` | Malaysia, Kira tree line drawing | 4 : 3 (shown whole, white background) |
+| `s-gft-2024-11.jpg` | Story step 1 (November 2024) | 16 : 7 |
 | `bed-syn.jpg` | Story step 2 | 3 : 1 |
-| `s-bio-mushroom.jpg` | Research, "Life above ground", left | 16 : 9 |
-| `s-bio-grasshopper.jpg` | Research, "Life above ground", middle | 16 : 9 |
-| `s-bio-pollinators.jpg` | Research "Life above ground" right; story step 5 | 16 : 9 |
-| `teach-course.jpg` | Teaching photo 1; second blog card | 4 : 3 |
-| `teach-students.jpg` | Teaching, photo 2 | 4 : 3 |
-| `ngm-group.jpg` | Teaching photo 3; third blog card | 4 : 3 |
-| `teach-guidebook.jpg` | Teaching, photo 4 | 4 : 3 |
+| `hero-gengfutian-2026-04.jpg` | Story step 3 | very wide, 4.3 : 1 |
+| `gft-ba-before.jpg` / `gft-ba-after.jpg` | Story step 4, before/after slider | 16 : 9, same view |
+| `bio-bee.jpg` / `bio-moth.jpg` | Story step 5 | 3 : 4 (portrait) |
+| `dqm-before.jpg` / `dqm-after.jpg` | Ching Mei's Food Forest, slider | 4 : 3, same view |
+| `hda-ba-before.jpg` / `hda-ba-after.jpg` | HDARES, slider | 16 : 9, same view |
+| `s-hdares-jian-1.jpg` / `s-hdares-jian-2.jpg` | HDARES, two small photos | 4 : 3 |
+| `kira-aerial.jpg` | Malaysia, large photo | 4 : 3 |
+| `kira-treeline.jpg` | Malaysia, small photo left | 4 : 3 |
+| `kira-design.jpg` | Malaysia, tree line drawing | 4 : 3 (shown whole) |
+| `s-bio-mushroom.jpg`, `s-bio-grasshopper.jpg`, `s-bio-pollinators.jpg` | Research, "Life above ground" | 16 : 9 |
+| `teach-course.jpg`, `teach-students.jpg`, `ngm-group.jpg`, `teach-guidebook.jpg` | Teaching | 4 : 3 |
 | `tobias-field.jpg` | About, portrait | 4 : 3 |
+| `blog/…` | Photos inside the blog posts | as in the post |
+
+Rules: every photo appears only once on the home page; before/after pairs are always taken from the same spot and shown with a slider.
+
+## How the site is built
+
+- `src/index.html` is the one source page with English and Chinese side by side.
+- `content/blog/` holds the blog posts, one file each (title, date, description, cover photo, then the text).
+- `build/build.py` turns these into the published pages: `index.html` (English), `zh/index.html` (Chinese), `blog/index.html` and one page per post under `blog/`, plus `sitemap.xml` and `robots.txt`.
+- New blog post: put the Word or Google Doc in "02_Post materials" and ask Claude to publish it.
 
 ## Held-back research content
 
@@ -51,5 +55,7 @@ The folder `_held` keeps the research data, the strata × succession table and t
 
 ## Before launch
 
-- Remove `<meta name="robots" content="noindex, nofollow">` from `index.html` and the `Disallow: /` line from `robots.txt`.
+- In `build/build.py` set `LAUNCH = True` and rebuild: this removes the noindex tags and opens `robots.txt`.
+- Register the site and `sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+- Create a Google Business Profile for the studio.
 - Connect studio-syntropy.com in Vercel and lift the deployment protection.

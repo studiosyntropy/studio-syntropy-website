@@ -4,8 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Studio Syntropy 趨合工作室</title>
-<meta name="description" content="Studio Syntropy (趨合工作室) designs syntropic agroforestry systems in Taiwan and Southeast Asia: design consultancy, courses, research and publications.">
+<link rel="canonical" href="https://studio-syntropy.com/">
+<link rel="alternate" hreflang="en" href="https://studio-syntropy.com/">
+<link rel="alternate" hreflang="zh-Hant" href="https://studio-syntropy.com/zh">
+<link rel="alternate" hreflang="x-default" href="https://studio-syntropy.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Syntropy 趨合工作室">
+<meta property="og:title" content="Studio Syntropy | Syntropic agroforestry design, courses and consultancy in Taiwan">
+<meta property="og:description" content="Studio Syntropy (趨合工作室) designs syntropic agroforestry systems and food forests in Hualien, Taiwan and beyond: design consultancy, courses, soil assessment and biomass management.">
+<meta property="og:url" content="https://studio-syntropy.com/">
+<meta property="og:image" content="https://studio-syntropy.com/img/hero-chili-gft.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@type": "ProfessionalService", "@id": "https://studio-syntropy.com/#studio", "name": "Studio Syntropy", "alternateName": "趨合工作室", "url": "https://studio-syntropy.com/", "logo": "https://studio-syntropy.com/img/v8-app-icon.png", "image": "https://studio-syntropy.com/img/hero-chili-gft.jpg", "description": "Studio Syntropy (趨合工作室) designs syntropic agroforestry systems and food forests in Hualien, Taiwan and beyond: design consultancy, courses, soil assessment and biomass management.", "email": "studiosyntropy@proton.me", "telephone": "+886909572694", "address": {"@type": "PostalAddress", "addressLocality": "Hualien", "addressCountry": "TW"}, "areaServed": ["Taiwan", "Malaysia"], "knowsAbout": ["Syntropic agroforestry", "Food forest design", "Soil health", "Soil food web", "Agroforestry courses"], "founder": {"@type": "Person", "@id": "https://studio-syntropy.com/#tobias", "name": "Tobias Chen", "alternateName": "陳拓彼", "jobTitle": "Founder, syntropic agroforestry designer"}, "@context": "https://schema.org"}</script>
+<title>Studio Syntropy | Syntropic agroforestry design, courses and consultancy in Taiwan</title>
+<meta name="description" content="Studio Syntropy (趨合工作室) designs syntropic agroforestry systems and food forests in Hualien, Taiwan and beyond: design consultancy, courses, soil assessment and biomass management.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="img/v8-favicon.png">
 <link rel="apple-touch-icon" href="img/v8-app-icon.png">
@@ -102,7 +115,7 @@ html[lang="zh-Hant"] .eyebrow{letter-spacing:.16em}
 .seg button{white-space:nowrap;font:inherit;font-size:.95rem;font-weight:500;border:0;background:transparent;color:var(--ink);min-width:44px;min-height:40px;padding:0 .7rem;border-radius:999px;cursor:pointer;line-height:1}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 .menu-btn{display:none;white-space:nowrap;font:inherit;font-weight:700;min-height:48px;padding:0 1rem;border:1.5px solid var(--ink-soft);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}
-@media (max-width:1060px){
+@media (max-width:1220px){
   .menu-btn{display:inline-flex;align-items:center}
   .nav{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem var(--gutter-r) 1rem var(--gutter)}
   .nav[data-open="false"]{display:none}
@@ -466,15 +479,56 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 .post-body h4{font-size:var(--step-1);margin-top:1rem;font-family:var(--display);font-weight:800}
 .post-figs figure,.post-pair figure{margin:0}
 .post-figs img,.post-pair img{width:100%;border-radius:4px;background:#fff}
+.post-pair img{aspect-ratio:4/3;object-fit:cover}
 .post-pair{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 @media (max-width:560px){.post-pair{grid-template-columns:1fr}}
 .post .cover{max-height:28rem;object-fit:cover}
+
+/* ===== v11: language links, compact blog, latest line, tall pairs ===== */
+.seg a{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;font-size:.95rem;font-weight:500;color:var(--ink);min-width:44px;min-height:40px;padding:0 .7rem;border-radius:999px;text-decoration:none;line-height:1}
+.seg a:hover{text-decoration:underline}
+.seg a[aria-current]{background:var(--ink);color:var(--paper)}
+@media (max-width:440px){.seg a{min-width:40px;padding:0 .5rem}}
+.hero-latest{display:flex;flex-wrap:wrap;gap:.25rem .6rem;align-items:baseline;font-size:var(--step--1);color:#EDE7D6;margin:0}
+.hero-latest b{font-size:.875rem;letter-spacing:.1em;text-transform:uppercase;color:#F3DDB0}
+.hero-latest a{color:#F5F1E6;font-weight:700;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+.blog-list{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.blog-list li{border-bottom:1px solid var(--line)}
+.bl{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:1.25rem;align-items:center;padding:1.1rem 0;text-decoration:none;color:inherit}
+.bl img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+.bl time{display:block;font-size:var(--step--1);color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.bl-t{display:block;font-family:var(--display);font-weight:800;font-size:var(--step-1);line-height:1.2;letter-spacing:-.01em;margin:.15rem 0 .3rem}
+.bl-x{display:block;color:var(--ink-soft);font-size:var(--step--1)}
+.bl:hover .bl-t{text-decoration:underline;text-underline-offset:4px}
+@media (min-width:900px){.bl{grid-template-columns:11rem minmax(0,1fr)}}
+@media (max-width:480px){.bl{grid-template-columns:5.5rem minmax(0,1fr);gap:.9rem}.bl-x{display:none}}
+.blog{background:var(--paper)}
+.pair-tall{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.pair-tall figure{margin:0}.pair-tall img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
+.ba .lbl span{display:inline}
+/* post pages */
+.post-page{padding-block:clamp(2.5rem,6vw,4.5rem)}
+.post-page .wrap{max-width:46rem}
+.crumbs{font-size:var(--step--1);margin-bottom:1.5rem}
+.crumbs a{min-height:44px;display:inline-flex;align-items:center}
+.post-page h1{font-family:var(--display);font-size:clamp(2rem,1.4rem + 2.6vw,3.4rem);line-height:1.08;letter-spacing:-.03em;font-weight:800;margin:.4rem 0 1.5rem}
+.post-page time{color:var(--ink-soft);font-size:var(--step--1)}
+.post-page .cover{width:100%;border-radius:4px;margin-bottom:2rem;max-height:30rem;object-fit:cover}
+.post-body{display:grid;gap:1.1rem}
+.post-body h2{font-size:var(--step-2);margin-top:1.25rem;letter-spacing:-.02em}
+.post-body ul{margin:0;padding-left:1.25rem;display:grid;gap:.4rem}
+.post-figs figure,.post-pair figure,.post-body .ba{margin:0}
+.post-figs img,.post-pair img{width:100%;border-radius:4px;background:#fff}
+.post-pair{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media (max-width:560px){.post-pair{grid-template-columns:1fr}}
+.post-end{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.75rem}
+.blog-index{list-style:none;margin:0;padding:0}
 </style>
 
 <style>body{margin:0}[hidden]{display:none!important}</style>
 </head>
 <body>
-<a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="zh-Hant">跳到主要內容</span></a>
+<a class="skip" href="#main"><span lang="en">Skip to content</span></a>
 
 <header class="site-head">
   <div class="wrap">
@@ -485,12 +539,13 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
     <div class="head-right">
       <nav class="nav" id="site-nav" aria-label="Main" data-open="false">
         <ul>
-          <li><a href="#story"><span lang="en">Story</span><span lang="zh-Hant">故事</span></a></li>
-          <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
-          <li><a href="#research"><span lang="en">Research</span><span lang="zh-Hant">研究</span></a></li>
-          <li><a href="#blog"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></a></li>
-          <li><a href="#services"><span lang="en">Services</span><span lang="zh-Hant">服務</span></a></li>
-          <li><a href="#contact"><span lang="en">Contact</span><span lang="zh-Hant">聯絡</span></a></li>
+          <li><a href="#services"><span lang="en">Services</span></a></li>
+          <li><a href="#projects"><span lang="en">Projects</span></a></li>
+          <li><a href="#story"><span lang="en">Story</span></a></li>
+          <li><a href="#research"><span lang="en">Research</span></a></li>
+          <li><a href="#blog"><span lang="en">Blog</span></a></li>
+          <li><a href="#about"><span lang="en">About</span></a></li>
+          <li><a href="#contact"><span lang="en">Contact</span></a></li>
         </ul>
         <div class="seg seg-size-m" role="group" aria-label="Text size 字級">
           <button type="button" id="ts-0m" data-ts="0" aria-pressed="true" aria-label="Normal text size">A</button>
@@ -500,15 +555,15 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
       </nav>
       <div class="tools">
         <div class="seg" role="group" aria-label="Language 語言">
-          <button type="button" id="lang-en" data-lang="en" aria-pressed="true" lang="en" class="keep">EN</button>
-          <button type="button" id="lang-zh" data-lang="zh-Hant" aria-pressed="false" lang="zh-Hant" class="keep">中文</button>
+          <a id="lang-en" href="index.html" hreflang="en" lang="en" class="keep" aria-current="page">EN</a>
+          <a id="lang-zh" href="zh/index.html" hreflang="zh-Hant" lang="zh-Hant" class="keep" >中文</a>
         </div>
         <div class="seg seg-size" role="group" aria-label="Text size 字級">
           <button type="button" id="ts-0" data-ts="0" aria-pressed="true" aria-label="Normal text size">A</button>
           <button type="button" id="ts-1" data-ts="1" aria-pressed="false" aria-label="Larger text" style="font-size:1.1rem">A+</button>
           <button type="button" id="ts-2" data-ts="2" aria-pressed="false" aria-label="Largest text" style="font-size:1.2rem">A++</button>
         </div>
-        <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><span lang="en">Menu</span><span lang="zh-Hant">選單</span></button>
+        <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><span lang="en">Menu</span></button>
       </div>
     </div>
   </div>
@@ -521,127 +576,45 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 <section class="hero hero-full" aria-labelledby="hero-title">
   <img class="hero-bg" src="img/hero-chili-gft.jpg" alt="" width="2000" height="1000" fetchpriority="high">
   <div class="wrap hero-over">
-    <p class="eyebrow"><span lang="en">Syntropic agroforestry · Taiwan &amp; Southeast Asia</span><span lang="zh-Hant">趨合農業 · 台灣與東南亞</span></p>
+    <p class="eyebrow"><span lang="en">Syntropic agroforestry · Taiwan &amp; Southeast Asia</span></p>
     <h1 id="hero-title" class="display">
       <span lang="en">Designing land that grows toward abundance.</span>
-      <span lang="zh-Hant" class="zh-h1">讓土地<wbr>朝向豐饒<wbr>生長的設計。</span>
+      
     </h1>
     <div class="hero-side">
-      <p class="lede"><span lang="en">Studio Syntropy integrates natural ecosystem processes into farms and designed landscapes. We plan with succession, strata and soil life, so that land builds its own fertility over time.</span><span lang="zh-Hant">趨合工作室將自然生態系統的運作融入農場與景觀設計。我們以演替、層次與土壤生命為依據進行規劃，讓土地隨時間建立自身的肥力。</span></p>
-      <p class="hero-links"><a class="btn" href="#story"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span> <span aria-hidden="true">↓</span></a> <a class="btn ghost" href="#blog"><span lang="en">Read the blog</span><span lang="zh-Hant">閱讀部落格</span></a></p>
+      <p class="lede"><span lang="en">Studio Syntropy integrates natural ecosystem processes into farms and designed landscapes. We plan with succession, strata and soil life, so that land builds its own fertility over time.</span></p>
+      <p class="hero-links"><a class="btn" href="#services"><span lang="en">Our services</span></a> <a class="btn ghost" href="#contact"><span lang="en">Contact</span></a></p>
+      <p class="hero-latest"><b>Latest</b> <a href="blog/validating-syntropic-agroforestry/index.html" lang="en" class="keep">Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health <span aria-hidden="true">→</span></a></p>
     </div>
-    <p class="hero-cap"><span lang="en">Photo: chili peppers in a syntropic tree line, Gengfutian Farm, Hualien, October 2026.</span><span lang="zh-Hant">照片：花蓮耕福田農場趨合樹列中的辣椒，2026 年 10 月。</span></p>
+    <p class="hero-cap"><span lang="en">Photo: chili peppers in a syntropic tree line, Gengfutian Farm, Hualien, October 2026.</span></p>
   </div>
 </section>
 
-<!-- BLOG -->
-<section class="section blog" id="blog" aria-labelledby="blog-title">
+<!-- SERVICES -->
+<section class="section" id="services" aria-labelledby="services-title">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></p>
-      <div>
-        <h2 id="blog-title"><span lang="en">Notes from the field</span><span lang="zh-Hant">田野筆記</span></h2>
-        <p class="muted"><span lang="en">Projects, soil results, courses and what grows, written once a month or when something special happens.</span><span lang="zh-Hant">專案進度、土壤結果、課程與生長中的一切，每月更新，或在特別的時刻發佈。</span></p>
+      <p class="eyebrow"><span lang="en">Services</span></p>
+      <h2 id="services-title"><span lang="en">What the studio offers</span></h2>
+    </div>
+    <div class="services">
+      <div class="svc">
+        <h3><span lang="en">Design consultancy</span></h3>
+        <p class="muted"><span lang="en">Syntropic agroforestry designs for farms, institutions, parks and rooftops, large and small, with priority on native Taiwanese species in high-density systems.</span></p>
+      </div>
+      <div class="svc">
+        <h3><span lang="en">Soil assessment</span></h3>
+        <p class="muted"><span lang="en">Microbiometer and microscope readings of soil biology, read together with laboratory soil chemistry, to set a baseline and measure change.</span></p>
+      </div>
+      <div class="svc">
+        <h3><span lang="en">Courses and workshops</span></h3>
+        <p class="muted"><span lang="en">From a three-hour introduction to two- and five-day immersion courses with hands-on planting.</span></p>
+      </div>
+      <div class="svc">
+        <h3><span lang="en">Biomass and ecosystem management</span></h3>
+        <p class="muted"><span lang="en">Pruning plans, planting calendars and on-site guidance that use the life cycles of species to build fertility and structure.</span></p>
       </div>
     </div>
-    <div id="journal-admin" hidden class="btn-row" style="margin-bottom:1.5rem">
-      <button type="button" class="btn" id="new-post"><span aria-hidden="true">＋</span><span lang="en">New post</span><span lang="zh-Hant">新增文章</span></button>
-      <span class="hint"><span lang="en">Only you see this button. Drafts stay hidden until you publish them.</span><span lang="zh-Hant">只有您看得到此按鈕。草稿在發佈前不會公開。</span></span>
-    </div>
-    <div id="editor-slot"></div>
-    <div id="journal-view" aria-live="polite">
-      <div class="posts" id="blog-fallback">
-        <article class="post-card">
-          <img src="img/s-gft-2026-05.jpg" alt="Dense young food forest at Gengfutian, May 2026" loading="lazy" width="1600" height="702">
-          <div class="pc">
-            <span class="pc-tag"><span lang="en">Story</span><span lang="zh-Hant">故事</span></span>
-            <h3><a href="#story"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span></a></h3>
-            <p class="muted"><span lang="en">Two years at Gengfutian Farm, from bare gravel to a layered food forest, told in five steps.</span><span lang="zh-Hant">耕福田農場的兩年：從裸露礫石地到分層的食物森林，分五個步驟呈現。</span></p>
-          </div>
-        </article>
-        <article class="post-card">
-          <img src="img/teach-course.jpg" alt="Course participants planting a syntropic tree line" loading="lazy" width="1200" height="900">
-          <div class="pc">
-            <span class="pc-tag"><span lang="en">Teaching</span><span lang="zh-Hant">教學</span></span>
-            <h3><a href="#teaching"><span lang="en">Learning by planting</span><span lang="zh-Hant">從種植中學習</span></a></h3>
-            <p class="muted"><span lang="en">Courses for farmers, students, communities and government staff in Taiwan.</span><span lang="zh-Hant">為台灣的農友、學生、社區與公部門人員開設的課程。</span></p>
-          </div>
-        </article>
-        <article class="post-card">
-          <img src="img/ngm-group.jpg" alt="Course participants at the Noble Gateway food forest in Malaysia" loading="lazy" width="1024" height="768">
-          <div class="pc">
-            <span class="pc-tag"><span lang="en">Course</span><span lang="zh-Hant">課程</span></span>
-            <h3><a href="#p-my"><span lang="en">Teaching in Malaysia</span><span lang="zh-Hant">在馬來西亞授課</span></a></h3>
-            <p class="muted"><span lang="en">Design courses and tree line plans with Noble Gateway and Kira Organic Farm, 2025–2026.</span><span lang="zh-Hant">2025–2026 年與 Noble Gateway 及 Kira 有機農場合作的設計課程與樹列規劃。</span></p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STORY -->
-<section class="section story band" id="story" aria-labelledby="story-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow"><span lang="en">Gengfutian Farm · 2024–2026</span><span lang="zh-Hant">耕福田農場 · 2024–2026</span></p>
-      <div>
-        <h2 id="story-title"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span></h2>
-        <p class="muted"><span lang="en">Two years on stony ground, in five steps. Scroll at your own pace.</span><span lang="zh-Hant">一塊礫石地上的兩年，分為五個步驟。請依自己的步調往下閱讀。</span></p>
-      </div>
-    </div>
-    <nav class="story-rail" aria-label="Story steps 故事步驟"><ol><li><a href="#step-1" data-step="1">2024.11</a></li><li><a href="#step-2" data-step="2">2025.09</a></li><li><a href="#step-3" data-step="3">2026.03</a></li><li><a href="#step-4" data-step="4">2026.05</a></li><li><a href="#step-5" data-step="5">2026.10</a></li></ol></nav>
-    <ol class="steps">
-      <li class="step" id="step-1">
-        <div class="step-media"><figure><img src="img/s-gft-2024-11.jpg" alt="Open gravel ground with the first log lines laid out, a small tractor and the old orchard behind" loading="lazy" width="1600" height="702"><figcaption class="media-cap"><span lang="en">Gengfutian Farm, Tzu Chi University, Hualien.</span><span lang="zh-Hant">花蓮慈濟大學耕福田農場。</span></figcaption></figure></div>
-        <div class="step-text">
-          <p class="step-date"><span lang="en">November 2024</span><span lang="zh-Hant">2024 年 11 月</span></p>
-          <h3><span lang="en">Gravel and an old orchard</span><span lang="zh-Hant">礫石地與老果園</span></h3>
-          <p><span lang="en">A ten-year-old soursop orchard on shallow, stony, calcareous ground, with almost no organic matter. The first log lines are laid out on bare gravel.</span><span lang="zh-Hant">一座十年的刺果番荔枝果園，位於淺薄、多石、幾乎沒有有機質的石灰質土地上。第一批原木線鋪在裸露的礫石上。</span></p>
-        </div>
-      </li>
-      <li class="step" id="step-2">
-        <div class="step-media"><figure><img src="img/bed-syn.jpg" alt="Syntropic bed: banana trunks, wood chips and pruned leaves with dense green cover" loading="lazy" width="1074" height="348"><figcaption class="media-cap"><span lang="en">A syntropic bed covered with pruned biomass.</span><span lang="zh-Hant">覆蓋修剪生物量的趨合植床。</span></figcaption></figure></div>
-        <div class="step-text">
-          <p class="step-date"><span lang="en">September 2025</span><span lang="zh-Hant">2025 年 9 月</span></p>
-          <h3><span lang="en">Soil builds under the tree lines</span><span lang="zh-Hant">樹列下的土壤開始累積</span></h3>
-          <p><span lang="en">Pruned biomass, wood chips and banana trunks are laid along the tree lines. The soil beneath them changes first; the open inter-rows follow later.</span><span lang="zh-Hant">修剪下的生物量、木屑與香蕉莖沿著樹列鋪放。樹列下方的土壤最先改變，行間空地隨後跟進。</span></p>
-        </div>
-      </li>
-      <li class="step" id="step-3">
-        <div class="step-media"><figure><img src="img/hero-gengfutian-2026-04.jpg" alt="Wide view of Gengfutian in April 2026: young tree lines with banana and moringa between mulched beds" loading="lazy" width="1950" height="450"><figcaption class="media-cap"><span lang="en">Gengfutian, April 2026.</span><span lang="zh-Hant">耕福田，2026 年 4 月。</span></figcaption></figure></div>
-        <div class="step-text">
-          <p class="step-date"><span lang="en">March 2026</span><span lang="zh-Hant">2026 年 3 月</span></p>
-          <h3><span lang="en">Chili planted, then no more water</span><span lang="zh-Hant">種下辣椒，之後不再灌溉</span></h3>
-          <p><span lang="en">Chili seedlings go into the syntropic beds between the tree lines. After 21 March they receive no irrigation, no fertiliser and no sprays; the trees, mulch and soil life have to carry them.</span><span lang="zh-Hant">辣椒苗種入樹列之間的趨合植床。3 月 21 日之後不再灌溉、施肥或噴藥，由樹木、覆蓋物與土壤生命支撐它們生長。</span></p>
-        </div>
-      </li>
-      <li class="step" id="step-4">
-        <div class="step-media"><figure class="ba" style="--ar:1600/702">
-            <img class="before" src="img/s-gft-2024-11.jpg" alt="Before, November 2024: open gravel ground with the first log lines laid out, a small tractor and the old orchard behind" loading="lazy" width="1600" height="702">
-            <img class="after" src="img/s-gft-2026-05.jpg" alt="After, May 2026: the same view as a dense, closed food forest of young trees" loading="lazy" width="1600" height="702">
-            <span class="divider" aria-hidden="true"></span><span class="knob" aria-hidden="true">⇆</span>
-            <span class="lbl b" aria-hidden="true">2024.11</span><span class="lbl a" aria-hidden="true">2026.05</span>
-            <input type="range" min="0" max="100" value="50" id="ba-gft" aria-label="Before and after comparison, Gengfutian Farm">
-            
-          </figure>
-          <p class="media-cap"><span lang="en">Same view, November 2024 and May 2026. Drag the line or use the arrow keys.</span><span lang="zh-Hant">同一視角，2024 年 11 月與 2026 年 5 月。拖曳分隔線或使用方向鍵。</span></p></div>
-        <div class="step-text">
-          <p class="step-date"><span lang="en">May 2026</span><span lang="zh-Hant">2026 年 5 月</span></p>
-          <h3><span lang="en">A closed food forest</span><span lang="zh-Hant">成林的食物森林</span></h3>
-          <p><span lang="en">Eighteen months after the first logs, the same view shows a dense, layered food forest. Shade, leaf litter and roots keep the ground cool and covered.</span><span lang="zh-Hant">鋪下第一批原木十八個月後，同一視角已是茂密、分層的食物森林。樹蔭、落葉與根系讓地面保持涼爽與覆蓋。</span></p>
-        </div>
-      </li>
-      <li class="step" id="step-5">
-        <div class="step-media"><figure><img src="img/s-bio-pollinators.jpg" alt="Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Pollinators and birds at Gengfutian.</span><span lang="zh-Hant">耕福田的授粉者與鳥類。</span></figcaption></figure></div>
-        <div class="step-text">
-          <p class="step-date"><span lang="en">July–October 2026</span><span lang="zh-Hant">2026 年 7–10 月</span></p>
-          <h3><span lang="en">Harvest, and life returns</span><span lang="zh-Hant">收成，生命回歸</span></h3>
-          <p><span lang="en">The chili plants keep fruiting into October, through the dry months, without irrigation. Spiders, bees, wasps, grasshoppers and birds live among them.</span><span lang="zh-Hant">辣椒在乾燥的月份中未經灌溉，仍持續結果至十月。植物間可見蜘蛛、蜜蜂、胡蜂、蚱蜢與鳥類。</span></p>
-        </div>
-      </li>
-    </ol>
-    <p class="story-end"><a class="btn ghost" href="#research"><span lang="en">See all research data</span><span lang="zh-Hant">查看完整研究數據</span> <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -649,24 +622,92 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 <section class="section sunband" id="approach" aria-labelledby="approach-title">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow"><span lang="en">Approach</span><span lang="zh-Hant">理念</span></p>
-      <h2 id="approach-title"><span lang="en">A living perspective on spatial design</span><span lang="zh-Hant">以生命視角進行空間設計</span></h2>
+      <p class="eyebrow"><span lang="en">Approach</span></p>
+      <h2 id="approach-title"><span lang="en">A living perspective on spatial design</span></h2>
     </div>
     <div class="three">
       <div class="leafed" style="--c:var(--sun)">
-        <h3><span lang="en">Soil food web as infrastructure</span><span lang="zh-Hant">土壤食物網即基礎建設</span></h3>
-        <p class="muted"><span lang="en">Lasting growth above ground starts beneath the surface. Healthy micro-ecosystems give resilience and natural water retention.</span><span lang="zh-Hant">地面上的長久生長始於地表之下。健康的微生態系統帶來韌性，並自然保持水分。</span></p>
+        <h3><span lang="en">Soil food web as infrastructure</span></h3>
+        <p class="muted"><span lang="en">Lasting growth above ground starts beneath the surface. Healthy micro-ecosystems give resilience and natural water retention.</span></p>
       </div>
       <div class="leafed" style="--c:var(--leaf)">
-        <h3><span lang="en">Succession in time</span><span lang="zh-Hant">時間上的演替</span></h3>
-        <p class="muted"><span lang="en">Short-lived pioneers prepare the ground for longer-lived species. Each life cycle hands over to the next, and pruning keeps the system young and productive.</span><span lang="zh-Hant">短命的先驅植物為長壽的物種預備土地。每個生命週期接續下一個，修剪則讓系統保持年輕與生產力。</span></p>
+        <h3><span lang="en">Succession in time</span></h3>
+        <p class="muted"><span lang="en">Short-lived pioneers prepare the ground for longer-lived species. Each life cycle hands over to the next, and pruning keeps the system young and productive.</span></p>
       </div>
       <div class="leafed" style="--c:var(--moss)">
-        <h3><span lang="en">Strata in space</span><span lang="zh-Hant">空間上的分層</span></h3>
-        <p class="muted"><span lang="en">Every plant has a place in the light: emergent, high, medium or low. Filling all strata at high density uses the sunlight completely and builds biomass fast.</span><span lang="zh-Hant">每株植物在光中都有自己的位置：突出層、高層、中層或低層。高密度地填滿各層，能完整利用陽光並快速累積生物量。</span></p>
+        <h3><span lang="en">Strata in space</span></h3>
+        <p class="muted"><span lang="en">Every plant has a place in the light: emergent, high, medium or low. Filling all strata at high density uses the sunlight completely and builds biomass fast.</span></p>
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section story band" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span lang="en">Gengfutian Farm · 2024–2026</span></p>
+      <div>
+        <h2 id="story-title"><span lang="en">From rock to food forest</span></h2>
+        <p class="muted"><span lang="en">Two years on stony ground, in five steps. Scroll at your own pace.</span></p>
+      </div>
+    </div>
+    <nav class="story-rail" aria-label="Story steps 故事步驟"><ol><li><a href="#step-1" data-step="1">2024.11</a></li><li><a href="#step-2" data-step="2">2025.09</a></li><li><a href="#step-3" data-step="3">2026.03</a></li><li><a href="#step-4" data-step="4">2026.05</a></li><li><a href="#step-5" data-step="5">2026.10</a></li></ol></nav>
+    <ol class="steps">
+      <li class="step" id="step-1">
+        <div class="step-media"><figure><img src="img/s-gft-2024-11.jpg" alt="Open gravel ground with the first log lines laid out, a small tractor and the old orchard behind" loading="lazy" width="1600" height="702"><figcaption class="media-cap"><span lang="en">Gengfutian Farm, Tzu Chi University, Hualien.</span></figcaption></figure></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">November 2024</span></p>
+          <h3><span lang="en">Gravel and an old orchard</span></h3>
+          <p><span lang="en">A ten-year-old soursop orchard on shallow, stony, calcareous ground, with almost no organic matter. The first log lines are laid out on bare gravel.</span></p>
+        </div>
+      </li>
+      <li class="step" id="step-2">
+        <div class="step-media"><figure><img src="img/bed-syn.jpg" alt="Syntropic bed: banana trunks, wood chips and pruned leaves with dense green cover" loading="lazy" width="1074" height="348"><figcaption class="media-cap"><span lang="en">A syntropic bed covered with pruned biomass.</span></figcaption></figure></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">September 2025</span></p>
+          <h3><span lang="en">Soil builds under the tree lines</span></h3>
+          <p><span lang="en">Pruned biomass, wood chips and banana trunks are laid along the tree lines. The soil beneath them changes first; the open inter-rows follow later.</span></p>
+        </div>
+      </li>
+      <li class="step" id="step-3">
+        <div class="step-media"><figure><img src="img/hero-gengfutian-2026-04.jpg" alt="Wide view of Gengfutian in April 2026: young tree lines with banana and moringa between mulched beds" loading="lazy" width="1950" height="450"><figcaption class="media-cap"><span lang="en">Gengfutian, April 2026.</span></figcaption></figure></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">March 2026</span></p>
+          <h3><span lang="en">Chili planted, then no more water</span></h3>
+          <p><span lang="en">Chili seedlings go into the syntropic beds between the tree lines. After 21 March they receive no irrigation, no fertiliser and no sprays; the trees, mulch and soil life have to carry them.</span></p>
+        </div>
+      </li>
+      <li class="step" id="step-4">
+        <div class="step-media"><figure class="ba" style="--ar:16/9">
+            <img class="before" src="img/gft-ba-before.jpg" alt="Before: young tree lines with logs and pruned branches on stony ground, the old orchard and houses behind" loading="lazy" width="1280" height="720">
+            <img class="after" src="img/gft-ba-after.jpg" alt="After: the same area as a dense, closed food forest with banana, below the mountain" loading="lazy" width="1280" height="720">
+            <span class="divider" aria-hidden="true"></span><span class="knob" aria-hidden="true">⇆</span>
+            <span class="lbl b" aria-hidden="true"><span lang="en">Before</span></span><span class="lbl a" aria-hidden="true"><span lang="en">After</span></span>
+            <input type="range" min="0" max="100" value="50" id="ba-gft" aria-label="Before and after comparison, Gengfutian Farm 耕福田前後對照">
+          </figure>
+          <p class="media-cap"><span lang="en">Gengfutian, before and after. Drag the line or use the arrow keys.</span></p>
+        </div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">May 2026</span></p>
+          <h3><span lang="en">A closed food forest</span></h3>
+          <p><span lang="en">Eighteen months after the first logs, the tree lines have grown into a dense, layered food forest. Shade, leaf litter and roots keep the ground cool and covered.</span></p>
+        </div>
+      </li>
+      <li class="step" id="step-5">
+        <div class="step-media"><div class="pair pair-tall">
+            <figure><img src="img/bio-bee.jpg" alt="A honeybee with pollen on its legs resting on the edge of a taro leaf" loading="lazy" width="900" height="1200"></figure>
+            <figure><img src="img/bio-moth.jpg" alt="A black and yellow clearwing moth on a Bidens flower among green leaves" loading="lazy" width="900" height="1200"></figure>
+          </div><p class="media-cap"><span lang="en">A honeybee on taro and a clearwing moth on Bidens, Gengfutian.</span></p></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">July–October 2026</span></p>
+          <h3><span lang="en">Harvest, and life returns</span></h3>
+          <p><span lang="en">The chili plants keep fruiting into October, through the dry months, without irrigation. Spiders, bees, wasps, grasshoppers and birds live among them.</span></p>
+        </div>
+      </li>
+    </ol>
+    <p class="story-end"><a class="btn ghost" href="#research"><span lang="en">See all research data</span> <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -674,9 +715,9 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 <section class="section" id="projects" aria-labelledby="projects-title">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow"><span lang="en">Selected projects</span><span lang="zh-Hant">精選案例</span></p>
-      <h2 id="projects-title"><span lang="en">Before and after</span><span lang="zh-Hant">轉變前後</span></h2>
-      <p class="muted"><span lang="en">Drag the line on a photo, or focus it and use the arrow keys, to compare the site before and after the work.</span><span lang="zh-Hant">拖曳照片上的分隔線，或以鍵盤方向鍵操作，比較施作前後的樣貌。</span></p>
+      <p class="eyebrow"><span lang="en">Selected projects</span></p>
+      <h2 id="projects-title"><span lang="en">Before and after</span></h2>
+      <p class="muted"><span lang="en">Drag the line on a photo, or focus it and use the arrow keys, to compare the site before and after the work.</span></p>
     </div>
 
     <div class="projects">
@@ -691,55 +732,62 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
           </figure>
         </div>
         <div class="proj-text">
-          <span class="tag"><span lang="en">Indigenous heritage</span><span lang="zh-Hant">原民傳承</span></span>
-          <h3 id="p-dqm"><span lang="en">Ching Mei's Food Forest</span><span lang="zh-Hant">清美農場食物森林</span></h3>
-          <p><span lang="en">The landowner had planted tropical and subtropical fruit trees on unused grassland without success. From June 2024 the site was converted into a high-diversity, high-density syntropic food forest. Annual crops filled the early phases; berries and fruit trees are now producing.</span><span lang="zh-Hant">地主原先在閒置草地上種植熱帶與亞熱帶果樹，但成效不佳。自 2024 年 6 月起，此地轉型為高多樣性、高密度的趨合食物森林。初期以一年生作物為主，如今漿果與果樹已開始結果。</span></p>
+          <span class="tag"><span lang="en">Indigenous heritage</span></span>
+          <h3 id="p-dqm"><span lang="en">Ching Mei's Food Forest</span></h3>
+          <p><span lang="en">The landowner had planted tropical and subtropical fruit trees on unused grassland without success. From June 2024 the site was converted into a high-diversity, high-density syntropic food forest. Annual crops filled the early phases; berries and fruit trees are now producing.</span></p>
           <dl class="facts">
-            <dt><span lang="en">Place</span><span lang="zh-Hant">地點</span></dt><dd><span lang="en">Jiawan (Truku) Community, Xiulin, Hualien</span><span lang="zh-Hant">花蓮 秀林鄉 加灣部落（太魯閣族）</span></dd>
-            <dt><span lang="en">Period</span><span lang="zh-Hant">期間</span></dt><dd><span lang="en">2024 – present</span><span lang="zh-Hant">2024 年至今</span></dd>
-            <dt><span lang="en">Role</span><span lang="zh-Hant">角色</span></dt><dd><span lang="en">Design, implementation, guidance</span><span lang="zh-Hant">設計、施作、輔導</span></dd>
+            <dt><span lang="en">Place</span></dt><dd><span lang="en">Jiawan (Truku) Community, Xiulin, Hualien</span></dd>
+            <dt><span lang="en">Period</span></dt><dd><span lang="en">2024 – present</span></dd>
+            <dt><span lang="en">Role</span></dt><dd><span lang="en">Design, implementation, guidance</span></dd>
           </dl>
         </div>
       </article>
 
       <article class="proj" aria-labelledby="p-hda">
         <div class="proj-media">
-          <figure class="lead"><img src="img/hdares-alley.jpg" alt="Grass alley between tall tree lines with banana, castor and palms at the HDARES demonstration plot" loading="lazy" width="1400" height="788"><figcaption class="media-cap"><span lang="en">HDARES demonstration plot, 19 October 2026.</span><span lang="zh-Hant">花蓮農改場示範區，2026 年 10 月 19 日。</span></figcaption></figure>
+          <figure class="ba lead" style="--ar:16/9">
+            <img class="before" src="img/hda-ba-before.jpg" alt="Before: an open lawn with string lines marking the future tree lines, a pile of wood chips on the right and a palm in the foreground" loading="lazy" width="1280" height="720">
+            <img class="after" src="img/hda-ba-after.jpg" alt="After: the same area with flowering cosmos in the alley between tall tree lines with banana and castor" loading="lazy" width="1280" height="720">
+            <span class="divider" aria-hidden="true"></span><span class="knob" aria-hidden="true">⇆</span>
+            <span class="lbl b" aria-hidden="true"><span lang="en">Before</span></span><span class="lbl a" aria-hidden="true"><span lang="en">After</span></span>
+            <input type="range" min="0" max="100" value="50" id="ba-hda" aria-label="Before and after comparison, HDARES demonstration plot 花蓮農改場示範區前後對照">
+          </figure>
+          <p class="media-cap" style="margin:.4rem 0 .9rem"><span lang="en">HDARES demonstration plot, before and after.</span></p>
           <div class="pair" style="margin-bottom:.75rem">
             <figure><img src="img/s-hdares-jian-1.jpg" alt="Ji'an demonstration plot: a mulched planting line with young trees and potted seedlings beside a gravel path" loading="lazy" width="1600" height="900"></figure>
             <figure><img src="img/s-hdares-jian-2.jpg" alt="Ji'an demonstration plot: tree lines with banana, cassava and young trees between mulched beds" loading="lazy" width="1600" height="900"></figure>
           </div>
-          <p class="media-cap" style="margin-top:-.25rem"><span lang="en">Indigenous Crop Department plot, Ji'an, 2026.</span><span lang="zh-Hant">吉安原住民作物示範區，2026 年。</span></p>
+          <p class="media-cap" style="margin-top:-.25rem"><span lang="en">Indigenous Crop Department plot, Ji'an, 2026.</span></p>
         </div>
         <div class="proj-text">
-          <span class="tag"><span lang="en">Public research &amp; extension</span><span lang="zh-Hant">公部門研究與推廣</span></span>
-          <h3 id="p-hda"><span lang="en">Hualien District Agricultural Research &amp; Extension Station</span><span lang="zh-Hant">農業部花蓮區農業改良場</span></h3>
-          <p><span lang="en">With the Indigenous Crop Department in Ji'an, a 2,000 m² government demonstration plot was planted during a five-day course in spring 2026: five tree lines with indigenous annual crops in the alleys, followed by monthly consultancy. At the Organic Center in Shoufeng, a design for soya with tree lines and green manure, sized for the station's machinery, is planted from November 2026.</span><span lang="zh-Hant">與花蓮農改場吉安的原住民作物部門合作，於 2026 年春季的五日實作課程中種下 2,000 平方公尺的公部門示範區：五條樹列，行間種植原住民一年生作物，之後每月提供管理諮詢。壽豐有機中心則以大豆搭配樹列與綠肥進行設計，並依場內機具尺寸規劃，自 2026 年 11 月起種植。</span></p>
+          <span class="tag"><span lang="en">Public research &amp; extension</span></span>
+          <h3 id="p-hda"><span lang="en">Hualien District Agricultural Research &amp; Extension Station</span></h3>
+          <p><span lang="en">With the Indigenous Crop Department in Ji'an, a 2,000 m² government demonstration plot was planted during a five-day course in spring 2026: five tree lines with indigenous annual crops in the alleys, followed by monthly consultancy. At the Organic Center in Shoufeng, a design for soya with tree lines and green manure, sized for the station's machinery, is planted from November 2026.</span></p>
           <dl class="facts">
-            <dt><span lang="en">Place</span><span lang="zh-Hant">地點</span></dt><dd><span lang="en">Ji'an and Shoufeng, Hualien</span><span lang="zh-Hant">花蓮 吉安、壽豐</span></dd>
-            <dt><span lang="en">Area</span><span lang="zh-Hant">面積</span></dt><dd>2,000 m² · 4,000 m²</dd>
-            <dt><span lang="en">Period</span><span lang="zh-Hant">期間</span></dt><dd><span lang="en">2026 – present</span><span lang="zh-Hant">2026 年至今</span></dd>
+            <dt><span lang="en">Place</span></dt><dd><span lang="en">Ji'an and Shoufeng, Hualien</span></dd>
+            <dt><span lang="en">Area</span></dt><dd>2,000 m² · 4,000 m²</dd>
+            <dt><span lang="en">Period</span></dt><dd><span lang="en">2026 – present</span></dd>
           </dl>
         </div>
       </article>
 
       <article class="proj" aria-labelledby="p-my">
         <div class="proj-media">
-          <figure class="lead"><img src="img/ngm-before-after.jpg" alt="Noble Gateway before and after: a tilled bed in a grass field, then banana, cassava and young trees on the same bed" loading="lazy" width="1600" height="901"><figcaption class="media-cap"><span lang="en">Noble Gateway demonstration plot, Hulu Langat.</span><span lang="zh-Hant">烏魯冷岳 Noble Gateway 示範區。</span></figcaption></figure>
+          <figure class="lead"><img src="img/kira-aerial.jpg" alt="Aerial view of Kira Organic Farm with vegetable beds surrounded by forest" loading="lazy" width="1280" height="960"></figure>
           <div class="pair">
-            <figure><img src="img/kira-aerial.jpg" alt="Aerial view of Kira Organic Farm with vegetable beds surrounded by forest" loading="lazy" width="1280" height="960"></figure>
+            <figure><img src="img/kira-treeline.jpg" alt="A new tree line at Kira Organic Farm right after planting: bamboo stakes and young banana in a thick layer of pruned leaves" loading="lazy" width="960" height="1280"></figure>
             <figure><img class="plan" src="img/kira-design.jpg" alt="Design of an 18 m tree line with banana, ficus, gliricidia and moringa" loading="lazy" width="1280" height="960"></figure>
           </div>
-          <p class="media-cap"><span lang="en">Kira Organic Farm: site and 18 m tree line design, October 2026.</span><span lang="zh-Hant">Kira 有機農場：基地現況與 18 公尺樹列設計，2026 年 10 月。</span></p>
+          <p class="media-cap"><span lang="en">Kira Organic Farm: the site, a tree line right after planting, and its 18 m design, 2026.</span></p>
         </div>
         <div class="proj-text">
-          <span class="tag"><span lang="en">International</span><span lang="zh-Hant">國際</span></span>
-          <h3 id="p-my"><span lang="en">Malaysia: Noble Gateway and Kira Organic Farm</span><span lang="zh-Hant">馬來西亞：Noble Gateway 與 Kira 有機農場</span></h3>
-          <p><span lang="en">At Noble Gateway in Hulu Langat, a syntropic demonstration plot was established in 2025, together with a three-day intensive design course adapted to tropical ecosystems. In 2026 the work continued with tree line designs for Kira Organic Farm.</span><span lang="zh-Hant">2025 年於烏魯冷岳的 Noble Gateway 建立趨合農業示範區，並開設依熱帶生態系統調整的三日密集設計課程。2026 年延續合作，為 Kira 有機農場設計樹列。</span></p>
+          <span class="tag"><span lang="en">International</span></span>
+          <h3 id="p-my"><span lang="en">Malaysia: Noble Gateway and Kira Organic Farm</span></h3>
+          <p><span lang="en">At Noble Gateway in Hulu Langat, a syntropic demonstration plot was established in 2025, together with a three-day intensive design course adapted to tropical ecosystems. In 2026 the work continued with tree line designs for Kira Organic Farm.</span></p>
           <dl class="facts">
-            <dt><span lang="en">Place</span><span lang="zh-Hant">地點</span></dt><dd><span lang="en">Selangor, Malaysia</span><span lang="zh-Hant">馬來西亞 雪蘭莪</span></dd>
-            <dt><span lang="en">Period</span><span lang="zh-Hant">期間</span></dt><dd><span lang="en">2025 – present</span><span lang="zh-Hant">2025 年至今</span></dd>
-            <dt><span lang="en">Role</span><span lang="zh-Hant">角色</span></dt><dd><span lang="en">Design, courses</span><span lang="zh-Hant">設計、課程</span></dd>
+            <dt><span lang="en">Place</span></dt><dd><span lang="en">Selangor, Malaysia</span></dd>
+            <dt><span lang="en">Period</span></dt><dd><span lang="en">2025 – present</span></dd>
+            <dt><span lang="en">Role</span></dt><dd><span lang="en">Design, courses</span></dd>
           </dl>
         </div>
       </article>
@@ -747,44 +795,16 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 
     <div class="more">
       <div>
-        <h3 class="small" style="font-size:var(--step-0)"><span lang="en">Wenlin Village, Taipei</span><span lang="zh-Hant">台北 北投區文林里</span></h3>
-        <span><span lang="en">A small park turned into a community food forest with native flowers, herbs and trees, within strict height rules. With village chief Michelle Lee. 2025 – present.</span><span lang="zh-Hant">在嚴格的樹高規範下，與文林里里長 Michelle Lee 合作，將小公園轉為社區食物森林，種植台灣原生花草與樹木。2025 年至今。</span></span>
+        <h3 class="small" style="font-size:var(--step-0)"><span lang="en">Wenlin Village, Taipei</span></h3>
+        <span><span lang="en">A small park turned into a community food forest with native flowers, herbs and trees, within strict height rules. With village chief Michelle Lee. 2025 – present.</span></span>
       </div>
       <div>
-        <h3 class="small" style="font-size:var(--step-0)"><span lang="en">Bliss &amp; Wisdom Ecological Park, Yunlin</span><span lang="zh-Hant">雲林縣私立福智高級中學</span></h3>
-        <span><span lang="en">Multi-strata syntropic nest systems for education, soil health and biodiversity.</span><span lang="zh-Hant">多層次的趨合巢狀系統，用於教育並提升土壤健康與生物多樣性。</span></span>
+        <h3 class="small" style="font-size:var(--step-0)"><span lang="en">Bliss &amp; Wisdom Ecological Park, Yunlin</span></h3>
+        <span><span lang="en">Multi-strata syntropic nest systems for education, soil health and biodiversity.</span></span>
       </div>
       <div>
-        <h3 class="small" style="font-size:var(--step-0)"><span lang="en">Farach Residence, Costa Rica</span><span lang="zh-Hant">哥斯大黎加 Farach 私人住宅</span></h3>
-        <span><span lang="en">Private residence landscape with Farach Arquitectos, 2018.</span><span lang="zh-Hant">與 Farach Arquitectos 合作之私人住宅景觀，2018 年。</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section" id="services" aria-labelledby="services-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow"><span lang="en">Services</span><span lang="zh-Hant">服務項目</span></p>
-      <h2 id="services-title"><span lang="en">What the studio offers</span><span lang="zh-Hant">工作室提供的服務</span></h2>
-    </div>
-    <div class="services">
-      <div class="svc">
-        <h3><span lang="en">Design consultancy</span><span lang="zh-Hant">設計顧問</span></h3>
-        <p class="muted"><span lang="en">Syntropic agroforestry designs for farms, institutions, parks and rooftops, large and small, with priority on native Taiwanese species in high-density systems.</span><span lang="zh-Hant">為農場、機構、公園與屋頂提供大小規模的趨合農業設計，在高密度系統中優先採用台灣原生植物。</span></p>
-      </div>
-      <div class="svc">
-        <h3><span lang="en">Soil assessment</span><span lang="zh-Hant">土壤評估</span></h3>
-        <p class="muted"><span lang="en">Microbiometer and microscope readings of soil biology, read together with laboratory soil chemistry, to set a baseline and measure change.</span><span lang="zh-Hant">以 Microbiometer 與顯微鏡檢測土壤生物，並搭配實驗室土壤化學分析，建立基準並追蹤變化。</span></p>
-      </div>
-      <div class="svc">
-        <h3><span lang="en">Courses and workshops</span><span lang="zh-Hant">課程與工作坊</span></h3>
-        <p class="muted"><span lang="en">From a three-hour introduction to two- and five-day immersion courses with hands-on planting.</span><span lang="zh-Hant">從三小時的入門活動，到包含實際種植的兩日與五日沉浸式課程。</span></p>
-      </div>
-      <div class="svc">
-        <h3><span lang="en">Biomass and ecosystem management</span><span lang="zh-Hant">生物量與生態系統管理</span></h3>
-        <p class="muted"><span lang="en">Pruning plans, planting calendars and on-site guidance that use the life cycles of species to build fertility and structure.</span><span lang="zh-Hant">提供修剪計畫、種植曆與現場指導，運用植物的生命週期累積肥力與結構。</span></p>
+        <h3 class="small" style="font-size:var(--step-0)"><span lang="en">Farach Residence, Costa Rica</span></h3>
+        <span><span lang="en">Private residence landscape with Farach Arquitectos, 2018.</span></span>
       </div>
     </div>
   </div>
@@ -795,61 +815,61 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
   <section class="section" aria-labelledby="research-title">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow"><span lang="en">Research</span><span lang="zh-Hant">研究</span></p>
+        <p class="eyebrow"><span lang="en">Research</span></p>
         <div>
-          <h2 id="research-title"><span lang="en">Every site is also a field trial</span><span lang="zh-Hant">每個場域也是田間試驗</span></h2>
-          <p class="muted"><span lang="en">We measure soil, harvest and biodiversity on the sites we design, together with universities and research institutes. Results appear here once the studies are published and the partners have agreed.</span><span lang="zh-Hant">我們與大學及研究機構合作，在所設計的場域中量測土壤、收成與生物多樣性。研究正式發表並經合作夥伴同意後，結果將公布於此。</span></p>
+          <h2 id="research-title"><span lang="en">Every site is also a field trial</span></h2>
+          <p class="muted"><span lang="en">We measure soil, harvest and biodiversity on the sites we design, together with universities and research institutes. Results appear here once the studies are published and the partners have agreed.</span></p>
         </div>
       </div>
       <div class="tabs" data-tabs>
         <div role="tablist" aria-label="Research 研究" class="tablist" hidden>
-          <button role="tab" type="button" id="tab-ongoing" aria-controls="panel-ongoing" aria-selected="true"><span lang="en">Ongoing</span><span lang="zh-Hant">進行中</span></button>
-          <button role="tab" type="button" id="tab-published" aria-controls="panel-published" aria-selected="false" tabindex="-1"><span lang="en">Published &amp; press</span><span lang="zh-Hant">已發表與報導</span></button>
+          <button role="tab" type="button" id="tab-ongoing" aria-controls="panel-ongoing" aria-selected="true"><span lang="en">Ongoing</span></button>
+          <button role="tab" type="button" id="tab-published" aria-controls="panel-published" aria-selected="false" tabindex="-1"><span lang="en">Published &amp; press</span></button>
         </div>
         <div role="tabpanel" id="panel-ongoing" aria-labelledby="tab-ongoing" tabindex="0" class="panel">
-          <h3 class="panel-h"><span lang="en">Ongoing</span><span lang="zh-Hant">進行中</span></h3>
+          <h3 class="panel-h"><span lang="en">Ongoing</span></h3>
           <div class="studies">
           <article class="study">
-            <p class="study-meta"><span class="pc-tag"><span lang="en">Gengfutian · 2025–2026</span><span lang="zh-Hant">耕福田 · 2025–2026</span></span><span class="status"><span lang="en">Manuscript in preparation</span><span lang="zh-Hant">論文撰寫中</span></span></p>
-            <h3><span lang="en">Chili in syntropic beds without irrigation</span><span lang="zh-Hant">無灌溉趨合植床中的辣椒</span></h3>
-            <p class="muted"><span lang="en">Harvest, soil chemistry and soil biology of chili grown between syntropic tree lines, compared with a monoculture control.</span><span lang="zh-Hant">比較種植於趨合樹列間與單一栽培對照區的辣椒收成、土壤化學與土壤生物。</span></p>
+            <p class="study-meta"><span class="pc-tag"><span lang="en">Gengfutian · 2025–2026</span></span><span class="status"><span lang="en">Manuscript in preparation</span></span></p>
+            <h3><span lang="en">Chili in syntropic beds without irrigation</span></h3>
+            <p class="muted"><span lang="en">Harvest, soil chemistry and soil biology of chili grown between syntropic tree lines, compared with a monoculture control.</span></p>
           </article>
           <article class="study">
-            <p class="study-meta"><span class="pc-tag"><span lang="en">Gengfutian · 2026</span><span lang="zh-Hant">耕福田 · 2026</span></span><span class="status"><span lang="en">Analysis ongoing</span><span lang="zh-Hant">分析進行中</span></span></p>
-            <h3><span lang="en">The soil microbiome under tree lines</span><span lang="zh-Hant">樹列下的土壤微生物相</span></h3>
-            <p class="muted"><span lang="en">DNA sequencing of soil bacteria in syntropic and conventional plots, with Tzu Chi University.</span><span lang="zh-Hant">與慈濟大學合作，以 DNA 定序分析趨合區與慣行區的土壤細菌。</span></p>
+            <p class="study-meta"><span class="pc-tag"><span lang="en">Gengfutian · 2026</span></span><span class="status"><span lang="en">Analysis ongoing</span></span></p>
+            <h3><span lang="en">The soil microbiome under tree lines</span></h3>
+            <p class="muted"><span lang="en">DNA sequencing of soil bacteria in syntropic and conventional plots, with Tzu Chi University.</span></p>
           </article>
           <article class="study">
-            <p class="study-meta"><span class="pc-tag"><span lang="en">Hualien · since 2024</span><span lang="zh-Hant">花蓮 · 2024 年起</span></span><span class="status"><span lang="en">Ongoing</span><span lang="zh-Hant">持續進行</span></span></p>
-            <h3><span lang="en">Soil monitoring on demonstration sites</span><span lang="zh-Hant">示範場域的土壤監測</span></h3>
-            <p class="muted"><span lang="en">Organic matter, nutrients and microbial biomass, measured on the sites before planting and as the systems grow.</span><span lang="zh-Hant">於種植前及系統生長過程中，持續量測各場域的有機質、養分與微生物量。</span></p>
+            <p class="study-meta"><span class="pc-tag"><span lang="en">Hualien · since 2024</span></span><span class="status"><span lang="en">Ongoing</span></span></p>
+            <h3><span lang="en">Soil monitoring on demonstration sites</span></h3>
+            <p class="muted"><span lang="en">Organic matter, nutrients and microbial biomass, measured on the sites before planting and as the systems grow.</span></p>
           </article>
           </div>
           <div class="r-block">
-            <h3><span lang="en">Life above ground</span><span lang="zh-Hant">地面上的生命</span></h3>
-            <p class="muted small" style="max-width:40em"><span lang="en">Fungi, insects, pollinators and birds return to Gengfutian as the biomass grows.</span><span lang="zh-Hant">隨著生物量增加，真菌、昆蟲、授粉者與鳥類回到耕福田。</span></p>
+            <h3><span lang="en">Life above ground</span></h3>
+            <p class="muted small" style="max-width:40em"><span lang="en">Fungi, insects, pollinators and birds return to Gengfutian as the biomass grows.</span></p>
             <div class="bio">
-          <figure><img src="img/s-bio-mushroom.jpg" alt="Wild mushrooms growing on a decaying log in the mulch" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Fungi on wood mulch</span><span lang="zh-Hant">木質覆蓋物上的真菌</span></figcaption></figure>
-          <figure><img src="img/s-bio-grasshopper.jpg" alt="A large green grasshopper resting on a leaf" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Grasshopper in the canopy</span><span lang="zh-Hant">樹冠層中的蚱蜢</span></figcaption></figure>
-          <figure><img src="img/s-bio-pollinators.jpg" alt="Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Pollinators and birds</span><span lang="zh-Hant">授粉者與鳥類</span></figcaption></figure>
+          <figure><img src="img/s-bio-mushroom.jpg" alt="Wild mushrooms growing on a decaying log in the mulch" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Fungi on wood mulch</span></figcaption></figure>
+          <figure><img src="img/s-bio-grasshopper.jpg" alt="A large green grasshopper resting on a leaf" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Grasshopper in the canopy</span></figcaption></figure>
+          <figure><img src="img/s-bio-pollinators.jpg" alt="Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Pollinators and birds</span></figcaption></figure>
         </div>
           </div>
         </div>
         <div role="tabpanel" id="panel-published" aria-labelledby="tab-published" tabindex="0" class="panel">
-          <h3 class="panel-h"><span lang="en">Published &amp; press</span><span lang="zh-Hant">已發表與報導</span></h3>
+          <h3 class="panel-h"><span lang="en">Published &amp; press</span></h3>
           <div style="max-width:46rem">
           <div class="award">
-          <b><span lang="en">2026 Vision USR Award</span><span lang="zh-Hant">2026 遠見 USR 生態共好組 績優獎</span></b>
-          <span class="muted"><span lang="en">Eco-mutual benefit category, for the Tzu Chi University USR team. Responsible for the food forest work.</span><span lang="zh-Hant">以慈濟大學 USR 團隊成員身分獲獎，負責食物森林相關工作。</span></span>
+          <b><span lang="en">2026 Vision USR Award</span></b>
+          <span class="muted"><span lang="en">Eco-mutual benefit category, for the Tzu Chi University USR team. Responsible for the food forest work.</span></span>
         </div>
         <ul class="press">
-          <li><a href="https://foodforest.network/validating-syntropic-agroforestry/?lang=en" target="_blank" rel="noopener"><span><span lang="en">Validating syntropic agroforestry</span><span lang="zh-Hant">驗證趨合農業</span><span class="sr-only"> (opens in a new tab)</span></span><span>Food Forest Network</span></a></li>
+          <li><a href="https://foodforest.network/validating-syntropic-agroforestry/?lang=en" target="_blank" rel="noopener"><span><span lang="en">Validating syntropic agroforestry</span><span class="sr-only"> (opens in a new tab)</span></span><span>Food Forest Network</span></a></li>
           <li><a href="https://www.tcnews.com.tw/education/item/25755.html" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>慈大USR與加灣文健站齊推動太魯閣族趨合農法</span><span>慈濟新聞</span></a></li>
           <li><a href="https://www.tcnews.com.tw/education/item/29682.html" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>串聯產官學　慈大攜手推動花蓮永續農業新模式</span><span>慈濟新聞</span></a></li>
           <li><a href="https://www.tcnews.com.tw/education/item/29063.html" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>慈大USR前山桃花源　獲2026遠見USR生態共好組績優獎</span><span>慈濟新聞</span></a></li>
           <li><a href="https://usr.tcu.edu.tw/?p=1438" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>創意農村大作戰戶外教學：走入部落、走進土地</span><span>慈濟大學 USR</span></a></li>
           <li><a href="https://www.youtube.com/watch?v=CsMX1xkpZ2c" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>慈大USR計畫　提升土壤固碳量</span><span>大愛新聞</span></a></li>
-          <li><a href="https://bccnews.com.tw/archives/654220" target="_blank" rel="noopener"><span><span lang="en">News report</span><span lang="zh-Hant">新聞報導</span></span><span>中廣新聞網</span></a></li>
+          <li><a href="https://bccnews.com.tw/archives/654220" target="_blank" rel="noopener"><span><span lang="en">News report</span></span><span>中廣新聞網</span></a></li>
         </ul>
           </div>
         </div>
@@ -858,14 +878,13 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
   </section>
 </div>
 
-
 <!-- TEACHING -->
 <section class="section" id="teaching" aria-labelledby="teaching-title">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow"><span lang="en">Teaching</span><span lang="zh-Hant">教學</span></p>
-      <h2 id="teaching-title"><span lang="en">Learning by planting</span><span lang="zh-Hant">從種植中學習</span></h2>
-      <p class="muted"><span lang="en">Farmers, students, communities and government staff learn the method on real sites, then take it home to their own land.</span><span lang="zh-Hant">農民、學生、社區與公部門人員在實際場域學習方法，再將其帶回自己的土地。</span></p>
+      <p class="eyebrow"><span lang="en">Teaching</span></p>
+      <h2 id="teaching-title"><span lang="en">Learning by planting</span></h2>
+      <p class="muted"><span lang="en">Farmers, students, communities and government staff learn the method on real sites, then take it home to their own land.</span></p>
     </div>
     <div class="gallery">
       <img src="img/teach-course.jpg" alt="Course participants planting along a tree line" loading="lazy" width="1000" height="749">
@@ -875,28 +894,28 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
     </div>
     <div class="teach-cols">
       <div>
-        <h3><span lang="en">Courses</span><span lang="zh-Hant">課程</span></h3>
+        <h3><span lang="en">Courses</span></h3>
         <ul class="list">
-          <li><b><span lang="en">Syntropic Agroforestry Foundation</span><span lang="zh-Hant">趨合農業基礎課程</span></b><span><span lang="en">Principles, stratification, succession, design</span><span lang="zh-Hant">原理、分層、演替、設計</span></span></li>
-          <li><b><span lang="en">2-Day Intensive · 5-Day Immersion</span><span lang="zh-Hant">兩日密集實作 · 五日沉浸式課程</span></b><span><span lang="en">Theory followed by planting a full system</span><span lang="zh-Hant">理論課後實際種下完整系統</span></span></li>
-          <li><b><span lang="en">Forest Reset</span><span lang="zh-Hant">森林重啟（Forest Reset）</span></b><span><span lang="en">Restoring abandoned food forests</span><span lang="zh-Hant">廢棄食物森林的復育實作</span></span></li>
-          <li><b><span lang="en">BioComplete™ Composting</span><span lang="zh-Hant">BioComplete™ 堆肥</span></b><span><span lang="en">Biological compost and soil food web</span><span lang="zh-Hant">生物堆肥與土壤食物網</span></span></li>
+          <li><b><span lang="en">Syntropic Agroforestry Foundation</span></b><span><span lang="en">Principles, stratification, succession, design</span></span></li>
+          <li><b><span lang="en">2-Day Intensive · 5-Day Immersion</span></b><span><span lang="en">Theory followed by planting a full system</span></span></li>
+          <li><b><span lang="en">Forest Reset</span></b><span><span lang="en">Restoring abandoned food forests</span></span></li>
+          <li><b><span lang="en">BioComplete™ Composting</span></b><span><span lang="en">Biological compost and soil food web</span></span></li>
         </ul>
       </div>
       <div>
-        <h3><span lang="en">Talks</span><span lang="zh-Hant">演講</span></h3>
+        <h3><span lang="en">Talks</span></h3>
         <ul class="list">
-          <li><b><span lang="en">Ministry of Agriculture</span><span lang="zh-Hant">農業部</span></b><span><span lang="en">Soil health, multi-strata configuration, biomass cropping</span><span lang="zh-Hant">土壤健康、多層次配置、生物量作物</span></span></li>
-          <li><b><span lang="en">National Taiwan University</span><span lang="zh-Hant">國立臺灣大學</span></b><span><span lang="en">9th International Conference on Sustainable Future through Circular Economy</span><span lang="zh-Hant">第九屆循環經濟永續未來國際研討會</span></span></li>
-          <li><b><span lang="en">National Dong Hwa University</span><span lang="zh-Hant">國立東華大學</span></b><span><span lang="en">International Symposium on Inter-Island Sustainability</span><span lang="zh-Hant">國際島嶼永續發展研討會</span></span></li>
-          <li><b><span lang="en">University of Nottingham Malaysia</span><span lang="zh-Hant">馬來西亞諾丁漢大學</span></b><span><span lang="en">An Introduction to Syntropic Agroforestry, 2025</span><span lang="zh-Hant">趨合農業導論，2025 年</span></span></li>
+          <li><b><span lang="en">Ministry of Agriculture</span></b><span><span lang="en">Soil health, multi-strata configuration, biomass cropping</span></span></li>
+          <li><b><span lang="en">National Taiwan University</span></b><span><span lang="en">9th International Conference on Sustainable Future through Circular Economy</span></span></li>
+          <li><b><span lang="en">National Dong Hwa University</span></b><span><span lang="en">International Symposium on Inter-Island Sustainability</span></span></li>
+          <li><b><span lang="en">University of Nottingham Malaysia</span></b><span><span lang="en">An Introduction to Syntropic Agroforestry, 2025</span></span></li>
         </ul>
       </div>
     </div>
     <div class="book">
-      <p class="eyebrow"><span lang="en">Publication</span><span lang="zh-Hant">出版</span></p>
-      <h3><span lang="en">Syntropic Agroforestry: A Visual Guide for Taiwan</span><span lang="zh-Hant">趨合農業：台灣圖解指南</span></h3>
-      <p class="muted"><span lang="en">A bilingual illustrated guide with practical instructions for agroecology in Taiwan, including a glossary of terms. To be published soon.</span><span lang="zh-Hant">中英雙語圖解指南，提供適用於台灣農業生態的實作說明，並附術語表。即將出版。</span></p>
+      <p class="eyebrow"><span lang="en">Publication</span></p>
+      <h3><span lang="en">Syntropic Agroforestry: A Visual Guide for Taiwan</span></h3>
+      <p class="muted"><span lang="en">A bilingual illustrated guide with practical instructions for agroecology in Taiwan, including a glossary of terms. To be published soon.</span></p>
     </div>
   </div>
 </section>
@@ -908,25 +927,40 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
       <img src="img/tobias-field.jpg" alt="Tobias Chen in a food forest with course participants" loading="lazy" width="1200" height="676">
     </figure>
     <div>
-      <p class="eyebrow"><span lang="en">Founder</span><span lang="zh-Hant">創辦人</span></p>
-      <h2 id="about-title" style="margin-top:.9rem"><span lang="en">Tobias Chen</span><span lang="zh-Hant">陳拓彼 Tobias Chen</span></h2>
+      <p class="eyebrow"><span lang="en">Founder</span></p>
+      <h2 id="about-title" style="margin-top:.9rem"><span lang="en">Tobias Chen</span></h2>
       <div class="prose" style="margin-top:1.25rem">
-        <p><span lang="en">Soil health and regenerative agriculture specialist with over eleven years of practice in Costa Rica, the United States, Greece, Germany, Taiwan and Malaysia. He designs and manages the syntropic sites of the Tzu Chi University USR Center in Hualien and founded Studio Syntropy in 2026.</span><span lang="zh-Hant">土壤健康與再生農業專家，在哥斯大黎加、美國、希臘、德國、台灣與馬來西亞累積逾十一年實務經驗。目前負責慈濟大學 USR 中心各趨合農業場域的設計與管理，並於 2026 年創立趨合工作室。</span></p>
+        <p><span lang="en">Soil health and regenerative agriculture specialist with over eleven years of practice in Costa Rica, the United States, Greece, Germany, Taiwan and Malaysia. He designs and manages the syntropic sites of the Tzu Chi University USR Center in Hualien and founded Studio Syntropy in 2026.</span></p>
       </div>
     <div class="hero-meta about-facts">
-      <div><strong>11+</strong><span><span lang="en">years of practice in soil health and regenerative agriculture, in six countries</span><span lang="zh-Hant">年土壤健康與再生農業實務經驗，遍及六個國家</span></span></div>
+      <div><strong>11+</strong><span><span lang="en">years of practice in soil health and regenerative agriculture, in six countries</span></span></div>
       
-      <div><strong>10,000+ m²</strong><span><span lang="en">of syntropic systems implemented in Taiwan and Malaysia</span><span lang="zh-Hant">在台灣與馬來西亞完成施作的趨合系統面積</span></span></div>
-      <div><strong>2026</strong><span><span lang="en">Vision USR Award, with Tzu Chi University</span><span lang="zh-Hant">與慈濟大學共同獲得遠見 USR 獎</span></span></div>
+      <div><strong>10,000+ m²</strong><span><span lang="en">of syntropic systems implemented in Taiwan and Malaysia</span></span></div>
+      <div><strong>2026</strong><span><span lang="en">Vision USR Award, with Tzu Chi University</span></span></div>
     </div>
       <div class="cv">
-        <div class="cv-row"><span>2026</span><span><span lang="en">Plant Health Pyramid; Redox potential and pH (Regen Ag Academy)</span><span lang="zh-Hant">植物健康金字塔；氧化還原電位與 pH（Regen Ag Academy）</span></span></div>
-        <div class="cv-row"><span>2024, 2026</span><span><span lang="en">Syntropic agroforestry training with Namaste Messerschmidt (Brazil) and Scott Gallant</span><span lang="zh-Hant">隨 Namaste Messerschmidt（巴西）與 Scott Gallant 進修趨合農業</span></span></div>
-        <div class="cv-row"><span>2021</span><span><span lang="en">Soil Food Web School, Foundation and Lab Tech; Permaculture Design Course</span><span lang="zh-Hant">Soil Food Web School 基礎與實驗室技術認證；樸門設計課程</span></span></div>
-        <div class="cv-row"><span>2021–2024</span><span><span lang="en">Soil health consultant, Auenhof Pabstthum, Germany</span><span lang="zh-Hant">德國 Auenhof Pabstthum 土壤健康顧問</span></span></div>
-        <div class="cv-row"><span><span lang="en">Languages</span><span lang="zh-Hant">語言</span></span><span><span lang="en">German, English, Mandarin (learning), Spanish (basic)</span><span lang="zh-Hant">德文、英文、華語（學習中）、西班牙文（基礎）</span></span></div>
+        <div class="cv-row"><span>2026</span><span><span lang="en">Plant Health Pyramid; Redox potential and pH (Regen Ag Academy)</span></span></div>
+        <div class="cv-row"><span>2024, 2026</span><span><span lang="en">Syntropic agroforestry training with Namaste Messerschmidt (Brazil) and Scott Gallant</span></span></div>
+        <div class="cv-row"><span>2021</span><span><span lang="en">Soil Food Web School, Foundation and Lab Tech; Permaculture Design Course</span></span></div>
+        <div class="cv-row"><span>2021–2024</span><span><span lang="en">Soil health consultant, Auenhof Pabstthum, Germany</span></span></div>
+        <div class="cv-row"><span><span lang="en">Languages</span></span><span><span lang="en">German, English, Mandarin (learning), Spanish (basic)</span></span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section blog" id="blog" aria-labelledby="blog-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span lang="en">Blog</span></p>
+      <div>
+        <h2 id="blog-title"><span lang="en">Notes from the field</span></h2>
+        <p class="muted"><span lang="en">Projects, soil results and what grows, written when something worth sharing happens.</span></p>
+      </div>
+    </div>
+    <ul class="blog-list"><li><a class="bl" href="blog/validating-syntropic-agroforestry/index.html"><img src="img/blog/blog-res-1.jpg" alt="" loading="lazy" width="320" height="240"><span><time datetime="2026-10-07">7 October 2026</time><span class="bl-t keep" lang="en">Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health</span><span class="bl-x keep" lang="en">As syntropic agroforestry practitioners, we see natural cycles at work in our fields every day: the fast succession of our plots, life across every…</span></span></a></li><li><a class="bl" href="blog/global-views-usr-award-2026/index.html"><img src="img/blog/blog-tcu-5.jpg" alt="" loading="lazy" width="320" height="240"><span><time datetime="2026-04-09">9 April 2026</time><span class="bl-t keep" lang="en">Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests</span><span class="bl-x keep" lang="en">Tzu Chi University in Hualien, Taiwan, has received a Merit Award in the Ecological Common Good category at the 2026 Global Views USR Awards for its…</span></span></a></li><li><a class="bl" href="blog/healing-the-soil-after-the-flood/index.html"><img src="img/blog/blog-guf-4.jpg" alt="" loading="lazy" width="320" height="240"><span><time datetime="2025-11-25">25 November 2025</time><span class="bl-t keep" lang="en">Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu</span><span class="bl-x keep" lang="en">When we talk about syntropic agroforestry, we often focus on what happens above ground: the rapid growth of biomass, the use of every stratum, and…</span></span></a></li></ul>
+    <p class="blog-more"><a class="btn ghost" href="blog/index.html"><span lang="en">All posts</span> <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -934,23 +968,23 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 <div class="band" id="contact">
   <section class="section" aria-labelledby="contact-title">
     <div class="wrap">
-      <p class="eyebrow"><span lang="en">Contact</span><span lang="zh-Hant">聯絡</span></p>
-      <h2 id="contact-title" style="margin-top:.9rem"><span lang="en">Tell us about your land.</span><span lang="zh-Hant">歡迎與我們分享您的土地。</span></h2>
-      <p class="muted" style="margin-top:1rem;max-width:36em"><span lang="en">Site visits, design projects, and courses for your group or institution.</span><span lang="zh-Hant">現場勘查、設計案，以及團體或機構課程，皆歡迎洽詢。</span></p>
+      <p class="eyebrow"><span lang="en">Contact</span></p>
+      <h2 id="contact-title" style="margin-top:.9rem"><span lang="en">Tell us about your land.</span></h2>
+      <p class="muted" style="margin-top:1rem;max-width:36em"><span lang="en">Site visits, design projects, and courses for your group or institution.</span></p>
       <div class="contact-grid">
         <div class="contact-item">
-          <span class="muted"><span lang="en">Email</span><span lang="zh-Hant">電子郵件</span></span>
+          <span class="muted"><span lang="en">Email</span></span>
           <span class="val">studiosyntropy@proton.me</span>
-          <button class="copy" type="button" data-copy="studiosyntropy@proton.me"><span lang="en">Copy email</span><span lang="zh-Hant">複製電子郵件</span></button>
+          <button class="copy" type="button" data-copy="studiosyntropy@proton.me"><span lang="en">Copy email</span></button>
         </div>
         <div class="contact-item">
-          <span class="muted"><span lang="en">Phone</span><span lang="zh-Hant">電話</span></span>
+          <span class="muted"><span lang="en">Phone</span></span>
           <span class="val">+886 909 572 694</span>
-          <button class="copy" type="button" data-copy="+886909572694"><span lang="en">Copy phone number</span><span lang="zh-Hant">複製電話號碼</span></button>
+          <button class="copy" type="button" data-copy="+886909572694"><span lang="en">Copy phone number</span></button>
         </div>
         <div class="contact-item">
-          <span class="muted"><span lang="en">Based in</span><span lang="zh-Hant">所在地</span></span>
-          <span class="val"><span lang="en">Hualien &amp; Taipei, Taiwan</span><span lang="zh-Hant">台灣 花蓮、台北</span></span>
+          <span class="muted"><span lang="en">Based in</span></span>
+          <span class="val"><span lang="en">Hualien &amp; Taipei, Taiwan</span></span>
         </div>
       </div>
       <p class="sr-only" role="status" id="copy-status"></p>
@@ -961,62 +995,63 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
     <div class="foot-main">
       <div class="foot-brand">
         <img src="img/v8-horizontal-reversed.svg" alt="趨合工作室 studio syntropy" width="641" height="288" loading="lazy">
-        <p><span lang="en">Syntropic agroforestry design, courses and consultancy in Taiwan and Beyond.</span><span lang="zh-Hant">台灣及海外的趨合農業設計、課程與顧問服務。</span></p>
+        <p><span lang="en">Syntropic agroforestry design, courses and consultancy in Taiwan and Beyond.</span></p>
       </div>
       <nav class="foot-cols" aria-label="Footer 頁尾導覽">
         <div class="foot-col">
-          <h3 id="fc-studio"><span lang="en">Studio</span><span lang="zh-Hant">工作室</span></h3>
+          <h3 id="fc-studio"><span lang="en">Studio</span></h3>
           <ul aria-labelledby="fc-studio">
-            <li><a href="#approach"><span lang="en">Approach</span><span lang="zh-Hant">理念</span></a></li>
-            <li><a href="#services"><span lang="en">Services</span><span lang="zh-Hant">服務</span></a></li>
-            <li><a href="#about"><span lang="en">About</span><span lang="zh-Hant">關於</span></a></li>
-            <li><a href="#contact"><span lang="en">Contact</span><span lang="zh-Hant">聯絡</span></a></li>
+            <li><a href="#approach"><span lang="en">Approach</span></a></li>
+            <li><a href="#services"><span lang="en">Services</span></a></li>
+            <li><a href="#about"><span lang="en">About</span></a></li>
+            <li><a href="#contact"><span lang="en">Contact</span></a></li>
           </ul>
         </div>
         <div class="foot-col">
-          <h3 id="fc-work"><span lang="en">Work</span><span lang="zh-Hant">成果</span></h3>
+          <h3 id="fc-work"><span lang="en">Work</span></h3>
           <ul aria-labelledby="fc-work">
-            <li><a href="#story"><span lang="en">Story</span><span lang="zh-Hant">故事</span></a></li>
-            <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
-            <li><a href="#research"><span lang="en">Research</span><span lang="zh-Hant">研究</span></a></li>
-            <li><a href="#teaching"><span lang="en">Teaching</span><span lang="zh-Hant">教學</span></a></li>
-            <li><a href="#blog"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></a></li>
+            <li><a href="#story"><span lang="en">Story</span></a></li>
+            <li><a href="#projects"><span lang="en">Projects</span></a></li>
+            <li><a href="#research"><span lang="en">Research</span></a></li>
+            <li><a href="#teaching"><span lang="en">Teaching</span></a></li>
+            <li><a href="#blog"><span lang="en">Blog</span></a></li>
           </ul>
         </div>
         <div class="foot-col">
-          <h3 id="fc-info"><span lang="en">Information</span><span lang="zh-Hant">網站資訊</span></h3>
+          <h3 id="fc-info"><span lang="en">Information</span></h3>
           <ul aria-labelledby="fc-info">
-            <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="accessibility"><span lang="en">Accessibility</span><span lang="zh-Hant">無障礙說明</span></button></li>
-            <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="privacy"><span lang="en">Privacy</span><span lang="zh-Hant">隱私權說明</span></button></li>
-            <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="credits"><span lang="en">Credits</span><span lang="zh-Hant">致謝與圖片來源</span></button></li>
+            <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="accessibility"><span lang="en">Accessibility</span></button></li>
+            <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="privacy"><span lang="en">Privacy</span></button></li>
+            <li><button type="button" class="foot-toggle" aria-expanded="false" aria-controls="credits"><span lang="en">Credits</span></button></li>
           </ul>
         </div>
       </nav>
     </div>
     <section class="foot-panel" id="accessibility" aria-label="Accessibility 無障礙說明" hidden>
-      <p><span lang="en">This site aims to meet WCAG 2.2 level AA.</span><span lang="zh-Hant">本網站以符合 WCAG 2.2 AA 等級為目標。</span></p>
+      <p><span lang="en">This site aims to meet WCAG 2.2 level AA.</span></p>
         <ul>
-          <li><span lang="en">Running text in Atkinson Hyperlegible Next and Noto Sans TC, chosen for legibility; headings in Bricolage Grotesque.</span><span lang="zh-Hant">內文採用易讀字體 Atkinson Hyperlegible Next 與思源黑體（Noto Sans TC）；英文標題採用 Bricolage Grotesque。</span></li>
-          <li><span lang="en">Text size buttons (A, A+, A++) and full support for browser zoom up to 400%.</span><span lang="zh-Hant">提供字級按鈕（A、A+、A++），並完整支援瀏覽器放大至 400%。</span></li>
-          <li><span lang="en">Text contrast of at least 4.5:1, in light and dark mode.</span><span lang="zh-Hant">亮色與暗色模式下，文字對比度皆至少 4.5:1。</span></li>
-          <li><span lang="en">Full keyboard use, visible focus, a skip link, and before/after sliders that work with arrow keys.</span><span lang="zh-Hant">可完全以鍵盤操作、焦點清楚可見、提供跳過導覽連結，前後對照滑桿可用方向鍵操作。</span></li>
-          <li><span lang="en">Text descriptions for every informative photo.</span><span lang="zh-Hant">每張具資訊性的照片皆有文字描述。</span></li>
-          <li><span lang="en">Reduced motion is respected; nothing flashes or moves on its own.</span><span lang="zh-Hant">尊重「減少動態效果」設定；網頁不會自行閃爍或移動。</span></li>
+          <li><span lang="en">Running text in Atkinson Hyperlegible Next and Noto Sans TC, chosen for legibility; headings in Bricolage Grotesque.</span></li>
+          <li><span lang="en">Text size buttons (A, A+, A++) and full support for browser zoom up to 400%.</span></li>
+          <li><span lang="en">Text contrast of at least 4.5:1, in light and dark mode.</span></li>
+          <li><span lang="en">Full keyboard use, visible focus, a skip link, and before/after sliders that work with arrow keys.</span></li>
+          <li><span lang="en">Text descriptions for every informative photo.</span></li>
+          <li><span lang="en">Reduced motion is respected; nothing flashes or moves on its own.</span></li>
         </ul>
-        <p><span lang="en">If something is hard to use, please write to studiosyntropy@proton.me.</span><span lang="zh-Hant">若有任何使用上的困難，請來信 studiosyntropy@proton.me。</span></p>
+        <p><span lang="en">If something is hard to use, please write to studiosyntropy@proton.me.</span></p>
     </section>
     <section class="foot-panel" id="privacy" aria-label="Privacy 隱私權說明" hidden>
-      <p><span lang="en">This site uses no tracking, no advertising and no analytics cookies. Your choice of language and text size is saved only in your own browser. If you write to us, your message is used only to answer you and is not passed on.</span><span lang="zh-Hant">本網站不使用追蹤、廣告或分析類 Cookie。您選擇的語言與字級僅儲存在您自己的瀏覽器中。若您來信，內容僅用於回覆您，不會提供給第三方。</span></p>
+      <p><span lang="en">This site uses no tracking, no advertising and no analytics cookies. Your choice of language and text size is saved only in your own browser. If you write to us, your message is used only to answer you and is not passed on.</span></p>
     </section>
     <section class="foot-panel" id="credits" aria-label="Credits 致謝與圖片來源" hidden>
-      <p><span lang="en">Photos and designs: Studio Syntropy / Tobias Chen, unless noted. Research data: Tzu Chi University USR Center, with the partners named in the Research section. Logo and website: Studio Syntropy, 2026.</span><span lang="zh-Hant">照片與設計：趨合工作室／陳拓彼，另有標示者除外。研究數據：慈濟大學 USR 中心，及研究段落中所列之合作夥伴。標誌與網站：趨合工作室，2026 年。</span></p>
+      <p><span lang="en">Photos and designs: Studio Syntropy / Tobias Chen, unless noted. Research data: Tzu Chi University USR Center, with the partners named in the Research section. Logo and website: Studio Syntropy, 2026.</span></p>
     </section>
     <div class="foot-bottom">
-      <span>© 2026 趨合工作室 Studio Syntropy · <span lang="en">Registered studio in Taiwan</span><span lang="zh-Hant">台灣登記立案</span></span>
-      <a href="#top" class="to-top"><span lang="en">Back to top</span><span lang="zh-Hant">回到頂端</span><span aria-hidden="true">↑</span></a>
+      <span>© 2026 趨合工作室 Studio Syntropy · <span lang="en">Registered studio in Taiwan</span></span>
+      <a href="#top" class="to-top"><span lang="en">Back to top</span><span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 </div>
+
 </main>
 
 <script>
@@ -1024,16 +1059,6 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
   var root=document.documentElement;
   function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
   function read(k){try{return localStorage.getItem(k)}catch(e){return null}}
-
-  /* language */
-  function setLang(l){
-    root.setAttribute('lang',l);
-    document.querySelectorAll('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===l))});
-    store('ss-lang',l);
-    if(window.__renderJournal) window.__renderJournal();
-  }
-  setLang(read('ss-lang')==='zh-Hant'?'zh-Hant':'en');
-  document.querySelectorAll('[data-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang)})});
 
   /* text size */
   function setTs(n){
@@ -1097,171 +1122,6 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
   document.documentElement.classList.add('js');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var n=e.target.id.split('-')[1];links.forEach(function(a){if(a.dataset.step===n)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current')});e.target.classList.add('seen')}})},{rootMargin:'-45% 0px -45% 0px'});
   document.querySelectorAll('.step').forEach(function(st){io.observe(st)});
-})();
-/* ---------- Blog ---------- */
-(function(){
-  var root=document.documentElement;
-  var view=document.getElementById('journal-view'), admin=document.getElementById('journal-admin'), slot=document.getElementById('editor-slot');
-  var STATIC=[{"_id": "flood-soil-guangfu", "date": "2025-11-25", "title_en": "Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu", "cover": "img/blog/blog-guf-4.jpg", "cover_alt_en": "Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt", "body_en": "When we talk about syntropic agroforestry, we often focus on what happens above ground: the rapid growth of biomass, the use of every stratum, and eventually the harvest. Yet much of the work takes place beneath our feet, in the soil and its living cycles.\n\nIn September 2025, during Typhoon Ragasa, a barrier lake formed by an earlier typhoon overflowed. About 60 million tonnes of water and sediment swept through central Guangfu, Hualien, Taiwan, burying fields under silt and severely damaging their soil life.\n\n[Tzu Chi University joined the recovery effort.](https://usr.tcu.edu.tw/?p=1438)\n\nSince then, Prof. Chen Jun-Yao (陳俊堯) of Tzu Chi University has analysed how the soil bacterial community at our field sites is recovering. His data indicate that active management can speed up this recovery.\n\n![Table: mean relative abundance of the 15 most abundant bacterial genera at GFT, compared with the sites LS, BZ and LT; cells with 1% or more are coloured|The 15 most abundant bacterial genera at GFT, and their share at the other sites. Coloured cells: 1% or more.](img/blog/blog-guf-1.jpg)\n\n## The Baseline: What Healthy Soil Looks Like\n\nOur main reference is GFT (Gengfutian, 耕福田), sampled on 27 November 2025. The 2,000 m² site was a nine-year-old soursop orchard on very rocky soil. Thirteen months before sampling, half of it (1,000 m²) was converted into a diverse syntropic agroforestry system.\n\n![Syntropic tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind|GFT, Gengfutian: the main reference site.](img/blog/blog-guf-2.jpg)\n\nAll 15 of the most abundant bacterial genera at GFT, among them Bacillus, Sphingobium and Arenimonas, made up at least 1% of the community each. We take this as a picture of a functioning soil microbiome, supported by the active roots of a diverse planting. As a second reference, we sampled LS (Luoshan, 羅山), a site not affected by the flood, on 4 February 2026.\n\n## After the Flood: BZ and LT\n\nWe compared these references with two flood-affected sites: BZ (Pangcah Organic Farm) and LT (a private open field). Both were sampled on 25 November 2025, two months after the flood had left them bare and, in places, under up to a metre of silt.\n\nThe two sites differed mainly in the level of human intervention:\n\nBZ received substantial organic inputs, applied at irregular intervals, through the implementation of a syntropic agroforestry design.\n\n![Grey flood silt across the field at BZ, with dark patches of organic material and young plantings, mountains behind|BZ: organic inputs on the silt.](img/blog/blog-guf-3.jpg)\n![Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt|BZ: building syntropic beds.](img/blog/blog-guf-4.jpg)\n\nLT received few organic inputs and was sown with a grass and legume seed mix.\n\n![An open field at LT covered in grey flood silt under an overcast sky|LT after the flood.](img/blog/blog-guf-5.jpg)\n![Close view of thin grass seedlings growing out of grey silt|LT: grass and legume seed mix.](img/blog/blog-guf-6.jpg)\n\n## Succession in Action: The Effect of Organic Inputs\n\nSoil life recovers in stages, and the data reflect this:\n\n- Pioneer microbes colonise bare post-flood soil quickly, while others take much longer to return.\n- At BZ, seven of the 15 dominant GFT genera had already re-established at 1% or more of the community.\n- At LT, only one had: Exiguobacterium, a stress-tolerant genus.\n\n## Why Intervention Matters\n\nFor practitioners, the message is practical, and especially relevant as climate extremes become more frequent.\n\nOrganic inputs and active management, even when applied irregularly as at BZ, supported a partial recovery of the soil community within two months. Where inputs were low, as at LT, recovery was considerably slower.\n\nWhen we manage a system actively, we are not only planting, pruning and cutting grass; we are feeding the soil food web. A diverse microbial community supports plant health and resilience, and the plants in turn rebuild soil structure and habitat for further life. This reciprocal cycle is the engine of syntropy.\n\nTo follow this succession, we will compare these results with a new set of samples taken on 15 April 2026, and share how the soil community developed over the spring.\n\nOur thanks go to Prof. Chen Jun-Yao and Prof. Qiu Yi-Ru for their support and their work on this study.", "static": true}, {"_id": "global-views-usr-award", "date": "2026-04-09", "title_en": "Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests", "cover": "img/blog/blog-tcu-5.jpg", "cover_alt_en": "A large group of community members and partners holding a banner in front of trees", "body_en": "Tzu Chi University in Hualien, Taiwan, has received a Merit Award in the Ecological Common Good category at the [2026 Global Views USR Awards](https://www.tcnews.com.tw/education/item/29063.html) for its initiative “Front Mountain Shangri-La: Resilience and Common Good of Food Forest × Charitable Agriculture”. The award recognises the methods we apply and teach every day.\n\n![Gengfutian before: bare gravel with the first log lines and a small red tractor, young fruit trees around|Gengfutian before…](img/blog/blog-tcu-1.jpg)\n![Gengfutian after: a dense food forest of banana and young trees, with a person working among them|…and after.](img/blog/blog-tcu-2.jpg)\n\n## From Vulnerability to Resilience\n\nIn recent years, Hualien has faced strong earthquakes, typhoons and floods that destroyed farmland and much else besides. We realised that recovering from each disaster was not enough; we needed farming systems able to absorb the next one.\n\n![Rows of young trees and logs on stony ground below the mountains|Tree lines on stony ground…](img/blog/blog-tcu-3.jpg)\n![A dense green food forest below the mountains|…and the food forest they grew into.](img/blog/blog-tcu-4.jpg)\n\nWith syntropic agroforestry, we establish multi-layered, successional systems, and at Gengfutian, our demonstration farm, the results can be measured. In September 2025, topsoil under the tree lines held 10.6–15.1% organic matter, against 1.9% in the adjacent monoculture. In 2026, analyses by the World Vegetable Center found nearly eight times the microbial biomass in the syntropic soil. In a small chili trial the same year, syntropic plots gave 3.14 kg of fruit against 0.60 kg in the control plots, without irrigation after March and without fertiliser or sprays. These systems also support biodiversity, drainage and water-holding capacity, and help regulate the microclimate during extreme weather. Our aim is to help Hualien move from vulnerability towards climate resilience.\n\n## Bridging Traditional Knowledge and Modern Ecology\n\nThe work is as much about community as about soil and seeds. The project connects Truku (Taroko) communities in the mountains, Amis (Pangcah) settlements on the coast and farmers on the plains. Working directly with tribal elders, we find that Indigenous farming knowledge and syntropic design complement each other, so that natural cycles and cultural heritage are cared for together.\n\n![A large group of community members and partners holding a banner in front of trees|Community members and partners of the project.](img/blog/blog-tcu-5.jpg)\n\n## A Self-Sustaining Economic Web\n\nEcological resilience needs economic footing. To move beyond charity, the initiative uses Participatory Guarantee Systems (PGS) and links harvests to consumer cooperatives. Digital tools such as community currency apps help local farmers build a mutually supportive economy that keeps value within the community.\n\n## Taking Syntropy Global\n\nThe award is an encouraging milestone. It recognises our work in Taiwan, yet it also reflects the shared vision of the Food Forest Network and the Tzu Chi Foundation’s aim to relieve suffering and foster a more harmonious society through concrete, compassionate action. We see it as an invitation to explore syntropic agroforestry further and to find new partners who share our commitment to agroecology.\n\nTogether with our partners, we plan to turn our experience into practical manuals. Learning alongside overseas demonstration sites such as Noble Gateway Malaysia, and a partner site in Mozambique planned from 2027, we aim to translate local experience into models that international projects can use.\n\nWhen we plant a food forest, we design a more resilient future. Thank you to everyone who is restoring balance and carrying this work forward with us.", "static": true}, {"_id": "validating-syntropic-agroforestry", "date": "2026-10-07", "title_en": "Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health", "cover": "img/blog/blog-res-1.jpg", "cover_alt_en": "Gengfutian under an evening sky, with young fruit trees and a denser syntropic system with banana", "body_en": "As syntropic agroforestry practitioners, we see natural cycles at work in our fields every day: the fast succession of our plots, life across every stratum, and the resilience of our target crops. A recent research presentation, the result of a collaboration between [Tzu Chi University’s USR Center](https://usr.tcu.edu.tw/) and the [World Vegetable Center](https://www.worldveg.org/) (WorldVeg), now gives measured evidence of why these systems work so well beneath the surface.\n\n![Gengfutian under an evening sky: young fruit trees on grass on the left, a denser syntropic system with banana on the right|Gengfutian: control (left) and syntropic system (right).](img/blog/blog-res-1.jpg)\n\nThe trials took place at Gengfutian, our syntropic demonstration site in Hualien, Taiwan: a 1,000 m² soursop orchard converted to syntropic agroforestry, next to a 1,000 m² control. The study compared the germination, growth and health of pepper plants in syntropic soil, in the adjacent monoculture and in a conventional field in Tainan. The early results point to the role of a healthy soil food web.\n\n![Slide: experimental setup of the Hualien field trial, with photos of the monoculture and syntropic beds and how each was managed|Experimental setup of the field trial. Slide: WorldVeg.](img/blog/blog-res-2.jpg)\n\n## The Fungal Engine\n\nThe data show that our biomass management, with chop-and-drop pruning, woodchips and ground cover, changes soil chemistry and biology considerably.\n\nThe syntropic soil held 29% organic carbon, against 1.8% in the Hualien monoculture and 0.86% in the conventional field in Tainan. Its microbial biomass was nearly eight times that of the Hualien monoculture, and the community was strongly fungal-dominated, with a fungus-to-bacteria ratio of 3.8:1 against 0.2:1. A diverse microbial community of this kind allows plants to cultivate microbes around their roots and to draw on the interactions they depend on.\n\n![Slide: soil properties of monoculture soil in Hualien, syntropic soil in Hualien and monoculture soil in Tainan. Microbiome concentration 213, 1,637 and 236 µg/g; fungus-to-bacteria ratio 0.2:1, 3.8:1 and 0.4:1; pH 8.1, 7.5 and 7.2; carbon 1.8%, 29% and 0.86%; conductivity 0.08, 0.32 and 0.24 mS/dm; potassium 482, 2,424 and 80 ppm|Soil analysis. Slide: WorldVeg.](img/blog/blog-res-3.jpg)\n\n## Natural Immunity and Biocontrol\n\nA persistent challenge in growing a target crop such as pepper is soil-borne disease, above all Fusarium wilt. The researchers therefore isolated microbial strains from the soils in search of natural biocontrol agents.\n\n![Slide: Fusarium wilt incidence after applying biocontrol candidates in syntropic and monoculture soil, with photos of seedlings and their roots|Disease incidence after applying biocontrol candidates. Slide: WorldVeg.](img/blog/blog-res-4.jpg)\n\nThe syntropic soil yielded nearly twice as many bacterial and fungal strains as the Tainan monoculture soil, and about 80% of the most promising disease-suppressing microbes came from the syntropic plots. In greenhouse tests with soil deliberately infested with Fusarium, plants in syntropic soil showed no wilt, grew larger and formed thicker root systems. The diverse soil community does not only feed the plant; it also protects it, keeping potential pathogens in balance within the ecosystem.\n\n![Slide: pepper plants in syntropic soil with and without Fusarium. With Fusarium: 9 cm tall, 11 cm wide, 14 leaves; without: 6.5 cm, 7.3 cm, 10 leaves; no disease in either. The infested plants have thicker roots|Syntropic soil with and without Fusarium. Slide: WorldVeg.](img/blog/blog-res-5.jpg)\n\n## Field Results: Vigour and Yield\n\nAbove ground, the results mirror the soil. Four weeks after transplanting, plants in the syntropic plots were 46% taller and more than 50% wider than in the Hualien control, with about twice the vigour score.\n\nThe harvest followed the same pattern. From July to October 2026, the three syntropic plots gave 3.14 kg of pepper against 0.60 kg in the three control plots, without irrigation after March and without fertiliser or sprays. With three plots each, this is a strong trend rather than a proven difference. The syntropic plots also produce soursop, taro, edible fern, cocoa, cassava and herbs, so the pepper is only part of their yield.\n\n![Slide: plant measurements four weeks after transplanting. Height 30.8 cm syntropic, 21.1 cm Hualien control, 39.4 cm Tainan control; width 24.9, 16.4 and 39.2 cm; vigour 3.7, 1.8 and 3.2; beneficials: two spiders, bees and grasshoppers in the syntropic plots, one spider in the Hualien control|Plant measurements four weeks after transplanting. Slide: WorldVeg.](img/blog/blog-res-6.jpg)\n\nThis research supports what we see in the field: when our practices follow succession and natural cycles, we do more than grow food. We regenerate the soil, build resilient ecosystems and harvest in abundance.\n\nMany thanks to our colleagues at the World Vegetable Center, and Ilan Henzler, who led the study as a WorldVeg intern, for their careful work, and for their willingness to study these complex systems, with their many interactions, in a first set of trials. We hope there will be more to come.\n\n![Slide: acknowledgements to the WorldVeg Pathology Team, Tobias Chen and Yan-Lin at Tzu Chi University, and the World Vegetable Center, Tzu Chi University and the Joachim Herz Stiftung|Acknowledgements. Slide: WorldVeg.](img/blog/blog-res-7.jpg)\n\nLet the good times grow, so that future generations may live in harmony.", "static": true}];
-  var posts=[], drafts=[], canEdit=false, db=null, assets=null, openId=null, showAll=false, FALLBACK=view.innerHTML;
-  function L(){return root.lang==='zh-Hant'?'zh':'en'}
-  function T(en,zh){return L()==='zh'?zh:en}
-  function el(tag,attrs,kids){var e=document.createElement(tag);if(attrs)for(var k in attrs){if(k==='text')e.textContent=attrs[k];else if(k==='class')e.className=attrs[k];else e.setAttribute(k,attrs[k])}(kids||[]).forEach(function(c){if(c)e.appendChild(typeof c==='string'?document.createTextNode(c):c)});return e}
-  function pick(p,f){var v=p[f+'_'+L()];return v||p[f+'_en']||p[f+'_zh']||''}
-  function fmtDate(d){if(!d)return'';var x=new Date(d+'T00:00:00');if(isNaN(x))return d;return L()==='zh'?x.getFullYear()+' 年 '+(x.getMonth()+1)+' 月 '+x.getDate()+' 日':x.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}
-  function inline(text,parent){
-    var re=/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s)]+)/g,last=0,m;
-    while((m=re.exec(text))){parent.appendChild(document.createTextNode(text.slice(last,m.index)));var a=el('a',{href:m[2]||m[3],target:'_blank',rel:'noopener',text:m[1]||m[3]});a.appendChild(el('span',{class:'sr-only',text:T(' (opens in a new tab)','（在新分頁開啟）')}));parent.appendChild(a);last=m.index+m[0].length}
-    parent.appendChild(document.createTextNode(text.slice(last)));
-  }
-  function renderBody(text,container){
-    (text||'').replace(/\r/g,'').split(/\n{2,}/).forEach(function(block){
-      block=block.trim();if(!block)return;
-      if(block.indexOf('## ')===0){container.appendChild(el('h4',{text:block.slice(3)}));return}
-      var lines=block.split('\n');
-      var IM=/^!\[([^|\]]*)\|?([^\]]*)\]\(([^)\s]+)\)$/;
-      if(lines.every(function(l){return IM.test(l.trim())})){var wrap=el('div',{class:lines.length>1?'post-pair':'post-figs'});lines.forEach(function(l){var m=l.trim().match(IM);var f=el('figure');f.appendChild(el('img',{src:m[3],alt:m[1],loading:'lazy'}));if(m[2])f.appendChild(el('figcaption',{class:'media-cap',text:m[2]}));wrap.appendChild(f)});container.appendChild(wrap);return}
-      if(lines.every(function(l){return/^[-•] /.test(l)})){var ul=el('ul');lines.forEach(function(l){var li=el('li');inline(l.slice(2),li);ul.appendChild(li)});container.appendChild(ul);return}
-      var p=el('p');lines.forEach(function(l,i){if(i)p.appendChild(el('br'));inline(l,p)});container.appendChild(p);
-    });
-  }
-  function src(c){return /^img\//.test(c)?c:'/_blob/'+c}
-  function excerpt(p){var b=pick(p,'body').replace(/^## .*$/mg,'').replace(/^!\[.*$/mg,'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1').replace(/\s+/g,' ').trim();return b.length>170?b.slice(0,167)+'…':b}
-  function all(){var a=STATIC.concat(posts).map(function(p){return Object.assign({_status:'published'},p)});if(canEdit)a=a.concat(drafts.map(function(p){return Object.assign({_status:'draft'},p)}));return a.sort(function(x,y){return (y.date||'').localeCompare(x.date||'')})}
-
-  function render(){
-    view.textContent='';
-    var list=all();
-    if(openId){var p=list.filter(function(x){return x._id===openId})[0];if(p){renderPost(p);return}openId=null}
-    if(!list.length){
-      view.innerHTML=FALLBACK;
-      if(canEdit)view.insertBefore(el('p',{class:'hint',text:T('These cards show until the first post is published.','第一篇文章發佈前，會先顯示這些卡片。')}),view.firstChild);
-      return;
-    }
-    var shown=showAll?list:list.slice(0,3);
-    var grid=el('div',{class:'posts'+(shown.length===3&&!showAll?' lead':''),role:'list'});
-    shown.forEach(function(p){
-      var card=el('article',{class:'post-card',role:'listitem'});
-      if(p.cover){card.appendChild(el('img',{src:src(p.cover),alt:pick(p,'cover_alt'),loading:'lazy',width:'640',height:'360'}))}else{card.appendChild(el('div',{'aria-hidden':'true',class:'pc-blank'}))}
-      var pc=el('div',{class:'pc'});
-      if(p._status==='draft')pc.appendChild(el('span',{class:'draft-flag',text:T('Draft','草稿')}));
-      pc.appendChild(el('time',{datetime:p.date||'',text:fmtDate(p.date)}));
-      var a=el('a',{href:'#post-'+encodeURIComponent(p._id),text:pick(p,'title')||T('Untitled','未命名')});
-      a.addEventListener('click',function(ev){ev.preventDefault();openId=p._id;try{history.replaceState(null,'','#post-'+encodeURIComponent(p._id))}catch(e){}render();var h=view.querySelector('h3');h&&h.focus()});
-      pc.appendChild(el('h3',null,[a]));
-      pc.appendChild(el('p',{class:'muted',text:excerpt(p)}));
-      card.appendChild(pc);grid.appendChild(card);
-    });
-    view.appendChild(grid);
-    if(list.length>3){
-      var more=el('button',{type:'button',class:'btn ghost','aria-expanded':showAll?'true':'false'},[showAll?T('Show latest only','只顯示最新文章'):T('All posts','所有文章')+' ('+list.length+')']);
-      more.addEventListener('click',function(){showAll=!showAll;render();var b=view.querySelector('.blog-more button');b&&b.focus()});
-      view.appendChild(el('div',{class:'btn-row blog-more'},[more]));
-    }
-  }
-  function renderPost(p){
-    var art=el('article',{class:'post'});
-    var back=el('button',{type:'button',class:'btn ghost'},['← '+T('All posts','所有文章')]);
-    back.addEventListener('click',function(){openId=null;try{history.replaceState(null,'','#blog')}catch(e){}render();var f=view.querySelector('.post-card a');f&&f.focus()});
-    art.appendChild(el('div',{class:'btn-row'},[back]));
-    if(p._status==='draft')art.appendChild(el('span',{class:'draft-flag',text:T('Draft, not public','草稿，尚未公開')}));
-    art.appendChild(el('time',{datetime:p.date||'',text:fmtDate(p.date)}));
-    art.appendChild(el('h3',{tabindex:'-1',text:pick(p,'title')}));
-    if(p.cover)art.appendChild(el('img',{class:'cover',src:src(p.cover),alt:pick(p,'cover_alt')}));
-    var body=el('div',{class:'post-body'});if(L()==='zh'&&!p.body_zh){body.setAttribute('lang','en');body.classList.add('keep');art.appendChild(el('p',{class:'hint',text:'本文目前僅有英文版。'}))}renderBody(pick(p,'body'),body);art.appendChild(body);
-    if(canEdit&&!p.static){var ed=el('button',{type:'button',class:'btn'},[T('Edit post','編輯文章')]);ed.addEventListener('click',function(){openEditor(p)});art.appendChild(el('div',{class:'btn-row'},[ed]))}
-    view.appendChild(art);
-  }
-  window.__renderJournal=function(){render();if(slot.firstChild&&slot.__p!==undefined)openEditor(slot.__p,true)};
-
-  /* editor */
-  function field(id,labelEn,labelZh,type,val,hint){
-    var w=el('div',{class:'field'});
-    w.appendChild(el('label',{for:id,text:T(labelEn,labelZh)}));
-    var inp=type==='textarea'?el('textarea',{id:id}):el('input',{id:id,type:type});
-    if(type!=='file')inp.value=val||'';
-    w.appendChild(inp);if(hint)w.appendChild(el('span',{class:'hint',id:id+'-h',text:hint}));if(hint)inp.setAttribute('aria-describedby',id+'-h');
-    return w;
-  }
-  function openEditor(p,keep){
-    var prev={};
-    if(keep){['pe-title-en','pe-title-zh','pe-body-en','pe-body-zh','pe-date','pe-alt-en','pe-alt-zh'].forEach(function(k){var x=document.getElementById(k);if(x)prev[k]=x.value})}
-    slot.textContent='';slot.__p=p||null;
-    var isNew=!p, d=p||{date:new Date().toISOString().slice(0,10)};
-    var f=el('form',{class:'editor','aria-labelledby':'pe-h'});
-    f.appendChild(el('h3',{id:'pe-h',tabindex:'-1',text:isNew?T('New post','新增文章'):T('Edit post','編輯文章')}));
-    f.appendChild(field('pe-date','Date','日期','date',d.date));
-    f.appendChild(el('div',{class:'row'},[field('pe-title-en','Title (English)','標題（英文）','text',d.title_en),field('pe-title-zh','Title (Chinese)','標題（中文）','text',d.title_zh)]));
-    var bh=T('Leave an empty line between paragraphs. “## ” starts a subheading, “- ” a list item. Web links become clickable.','段落之間空一行。「## 」開頭為小標題，「- 」開頭為列點。網址會自動變成連結。');
-    f.appendChild(field('pe-body-en','Text (English)','內文（英文）','textarea',d.body_en,bh));
-    f.appendChild(field('pe-body-zh','Text (Chinese)','內文（中文）','textarea',d.body_zh));
-    var fileHint=assets?T('JPG or PNG, up to 20 MB.','JPG 或 PNG，最大 20 MB。'):T('Image upload is available to editors of this page.','圖片上傳僅限本頁編輯者使用。');
-    var ff=field('pe-cover','Cover photo','封面照片','file','',fileHint);ff.querySelector('input').setAttribute('accept','image/jpeg,image/png,image/webp');if(!assets)ff.querySelector('input').disabled=true;
-    f.appendChild(ff);
-    var cur=d.cover||null;
-    if(cur){var pv=el('img',{src:'/_blob/'+cur,alt:'',style:'max-width:16rem;border-radius:4px'});f.appendChild(pv)}
-    f.appendChild(el('div',{class:'row'},[field('pe-alt-en','Photo description (English)','照片描述（英文）','text',d.cover_alt_en,T('Describe the photo for people who cannot see it.','為看不到照片的讀者描述內容。')),field('pe-alt-zh','Photo description (Chinese)','照片描述（中文）','text',d.cover_alt_zh)]));
-    var status=el('p',{class:'status',role:'status'});
-    var bPub=el('button',{type:'submit',class:'btn'},[T('Publish','發佈')]);
-    var bDraft=el('button',{type:'button',class:'btn ghost'},[T('Save as draft','儲存草稿')]);
-    var bCancel=el('button',{type:'button',class:'btn ghost'},[T('Cancel','取消')]);
-    var row=el('div',{class:'btn-row'},[bPub,bDraft,bCancel]);
-    var bDel=null;
-    if(!isNew){bDel=el('button',{type:'button',class:'btn danger'},[T('Delete post','刪除文章')]);row.appendChild(bDel)}
-    f.appendChild(row);f.appendChild(status);
-    var confirmBox=el('div',{class:'btn-row',hidden:''});f.appendChild(confirmBox);
-    slot.appendChild(f);
-    Object.keys(prev).forEach(function(k){var x=document.getElementById(k);if(x)x.value=prev[k]});
-    if(!keep)document.getElementById('pe-h').focus();
-
-    function collect(){return{date:document.getElementById('pe-date').value||new Date().toISOString().slice(0,10),title_en:document.getElementById('pe-title-en').value.trim(),title_zh:document.getElementById('pe-title-zh').value.trim(),body_en:document.getElementById('pe-body-en').value,body_zh:document.getElementById('pe-body-zh').value,cover_alt_en:document.getElementById('pe-alt-en').value.trim(),cover_alt_zh:document.getElementById('pe-alt-zh').value.trim(),cover:cur||null,updated:new Date().toISOString()}}
-    function busy(b){[bPub,bDraft,bCancel,bDel].forEach(function(x){if(x)x.disabled=b})}
-    async function save(target){
-      var data=collect();
-      if(!data.title_en&&!data.title_zh){status.textContent=T('Add a title in English or Chinese first.','請先填寫英文或中文標題。');document.getElementById('pe-title-en').focus();return}
-      busy(true);status.textContent=T('Saving…','儲存中…');
-      try{
-        var file=document.getElementById('pe-cover').files[0];
-        if(file&&assets){status.textContent=T('Uploading photo…','上傳照片中…');var up=await assets.upload(file);data.cover=up.id;cur=up.id}
-        if(data.cover&&!(data.cover_alt_en||data.cover_alt_zh)){busy(false);status.textContent=T('Add a short photo description, so the photo is accessible.','請填寫簡短的照片描述，讓照片具備無障礙性。');document.getElementById('pe-alt-en').focus();return}
-        var id=(p&&p._id)||('p'+Date.now().toString(36));
-        var other=target==='posts'?'drafts':'posts';
-        await db.collection(target).doc(id).set(data);
-        if(p&&p._status&&((p._status==='published'&&target==='drafts')||(p._status==='draft'&&target==='posts')))await db.collection(other).doc(id).delete();
-        slot.textContent='';slot.__p=undefined;openId=id;status.textContent='';
-        var msg=target==='posts'?T('Published.','已發佈。'):T('Draft saved.','草稿已儲存。');
-        document.getElementById('copy-status').textContent=msg;
-        setTimeout(render,300);
-      }catch(e){busy(false);status.textContent=T('Could not save: ','無法儲存：')+(e&&e.code==='quota_exceeded'?T('storage is full.','儲存空間已滿。'):(e&&(e.message||e.code))||'error')}
-    }
-    f.addEventListener('submit',function(e){e.preventDefault();save('posts')});
-    bDraft.addEventListener('click',function(){save('drafts')});
-    bCancel.addEventListener('click',function(){slot.textContent='';slot.__p=undefined;document.getElementById('new-post').focus()});
-    if(bDel)bDel.addEventListener('click',function(){
-      confirmBox.textContent='';confirmBox.hidden=false;
-      var yes=el('button',{type:'button',class:'btn danger'},[T('Yes, delete permanently','是，永久刪除')]);
-      var no=el('button',{type:'button',class:'btn ghost'},[T('Keep the post','保留文章')]);
-      confirmBox.appendChild(el('span',{text:T('Delete this post? This cannot be undone.','確定刪除此文章？此動作無法復原。')}));confirmBox.appendChild(yes);confirmBox.appendChild(no);yes.focus();
-      no.addEventListener('click',function(){confirmBox.hidden=true;bDel.focus()});
-      yes.addEventListener('click',async function(){busy(true);try{await db.collection(p._status==='draft'?'drafts':'posts').doc(p._id).delete();slot.textContent='';slot.__p=undefined;openId=null;render()}catch(e){busy(false);status.textContent=T('Could not delete.','無法刪除。')}});
-    });
-  }
-
-  async function init(){
-    if(!window.claude||!window.claude.use){return}
-    var user=null;
-    try{user=await window.claude.use('user')}catch(e){}
-    try{canEdit=user?await user.canEdit():false}catch(e){canEdit=false}
-    try{db=await window.claude.use('db')}catch(e){db=null}
-    if(!db)return;
-    if(canEdit){try{assets=await window.claude.use('assets')}catch(e){assets=null}admin.hidden=false;document.getElementById('new-post').addEventListener('click',function(){openEditor(null)})}
-    function snap(arr){return arr.docs.map(function(d){return Object.assign({_id:d.id},d.data())})}
-    db.collection('posts').orderBy('date','desc').limit(200).onSnapshot(function(s){posts=snap(s);render()},function(){});
-    if(canEdit)db.collection('drafts').orderBy('date','desc').limit(200).onSnapshot(function(s){drafts=snap(s);render()},function(){});
-  }
-  function fromHash(){var m=location.hash.match(/^#post-(.+)$/);if(m){openId=decodeURIComponent(m[1]);render();var b=document.getElementById('blog');b&&b.scrollIntoView();var h=view.querySelector('h3');h&&h.focus()}}
-  render();fromHash();window.addEventListener('hashchange',fromHash);
-  init();
 })();
 </script>
 
