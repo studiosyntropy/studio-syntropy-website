@@ -28,8 +28,6 @@
  "img__hda-ba-after_jpg": "/_blob/c09cad6e02cabb694bb37ba03ade9f4e",
  "img__hda-ba-before_jpg": "/_blob/9c35c5fc6ff09381a2d95db5688e71a4",
  "img__hero-chili-gft_jpg": "/_blob/1da6b2f62b80c921dc3a486c5ee49457",
- "img__kira-aerial_jpg": "/_blob/2ff46e363db30a70dda495e07b30970d",
- "img__kira-design_jpg": "/_blob/6f3d32763d96f19b0abe86538f20cf89",
  "img__kira-treeline_jpg": "/_blob/8f189e1237ce2cddba845e7eecec7b0f",
  "img__ngm-group_jpg": "/_blob/a8418d934edf52426f65d7d8ddbdd2af",
  "img__roots_jpg": "/_blob/9d0f00620a7d144d9517172c8275fa38",
@@ -37,8 +35,6 @@
  "img__s-bio-mushroom_jpg": "/_blob/c55e4037e104fb1e23550e45aad2e394",
  "img__s-bio-pollinators_jpg": "/_blob/e0cde96dcd39a2d1e0dcbf4f2ca8755d",
  "img__s-gft-2024-11_jpg": "/_blob/444affd50a0996e20a6c82a97649f8e6",
- "img__s-hdares-jian-1_jpg": "/_blob/6e1ce4095793f501ead748f6a46c3c3d",
- "img__s-hdares-jian-2_jpg": "/_blob/8e7b4ba60a2e61090cd564dab292d6e5",
  "img__teach-course_jpg": "/_blob/a6cd08eb1d90d942a11ae59281fdc217",
  "img__teach-guidebook_jpg": "/_blob/030d9bc0562de72c7098b07ac5b3e3f2",
  "img__teach-students_jpg": "/_blob/458ec83a4bf3edf6818609a4640e4a15",
@@ -47,5 +43,9 @@
  "img__v8-favicon_png": "/_blob/b9cc843b498c8e227f94174737ae871e",
  "img__v8-horizontal-color_svg": "/_blob/649354298d70c89630175e8097aa1268",
  "img__v8-horizontal-reversed_svg": "/_blob/1e666e4f9c8967a485d05c814a132890",
- "img__gft-diverse-a2_jpg": "/_blob/e2456bdc68555c44a20193bfed38f474"
+ "img__gft-diverse-a2_jpg": "/_blob/e2456bdc68555c44a20193bfed38f474",
+ "img__hda-jian-castor_jpg": "/_blob/e71bd7685fff4c74aa3c3b605eab64db",
+ "img__hda-jian-perilla_jpg": "/_blob/95025760d7ca01d828f94815d4324db2",
+ "img__ngm-before-after_jpg": "/_blob/723ac1364f210c761c05beed8c878e6c",
+ "img__ngm-food-forest_jpg": "/_blob/79bf439c4ec1ca711792c0cf52a73ce1"
 }
