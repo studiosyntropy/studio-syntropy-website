@@ -45,6 +45,15 @@ Rules: every photo appears only once on the home page; before/after pairs are al
 - `build/build.py` turns these into the published pages: `index.html` (English), `zh/index.html` (Chinese), `blog/index.html` and one page per post under `blog/`, plus `sitemap.xml` and `robots.txt`.
 - New blog post: put the Word or Google Doc in "02_Post materials" and ask Claude to publish it.
 
+## Media register
+
+- Register page: https://claude.ai/artifact/AGjnAWLRhzq9wdUWUKjkDm (private to Tobias).
+- `content/media-origins.json`: where each website file came from (original on the Mac, date taken, source).
+- `build/media_register.py` reads the built pages and the origins file and writes `media-register.json` (where each file is used).
+- `content/media-thumbs.json`: thumbnail addresses in the register page.
+- After every website change Claude runs `build/build.py`, then `build/media_register.py`, and copies the result into the register page.
+- A daily scheduled check looks for originals that were moved or renamed on the Mac and updates the paths.
+
 ## Held-back research content
 
 The folder `_held` keeps the research data, the strata × succession table and the figures removed on 26 October 2026, until the researchers and institutions agree and the studies are published. It is not part of the published site. Ask Claude to restore a block.

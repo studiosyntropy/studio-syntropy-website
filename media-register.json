@@ -1,0 +1,1754 @@
+{
+ "updated": "2026-10-27 01:43",
+ "videos": 0,
+ "items": [
+  {
+   "id": "img__bed-mono_jpg",
+   "file": "bed-mono.jpg",
+   "web_path": "img/bed-mono.jpg",
+   "kind": "Photo",
+   "status": "Held back",
+   "description": "",
+   "width": 1074,
+   "height": 287,
+   "size_kb": 67,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Slide from a 2026 syntropic agroforestry Google Slides deck (downloaded into Downloads in Oct 2026)",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": []
+  },
+  {
+   "id": "img__bed-syn_jpg",
+   "file": "bed-syn.jpg",
+   "web_path": "img/bed-syn.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Syntropic bed: banana trunks, wood chips and pruned leaves with dense green cover",
+   "width": 1074,
+   "height": 348,
+   "size_kb": 76,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Slide from a 2026 syntropic agroforestry Google Slides deck (downloaded into Downloads in Oct 2026)",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "Syntropic bed: banana trunks, wood chips and pruned leaves with dense green cover",
+     "caption": "A syntropic bed covered with pruned biomass."
+    }
+   ]
+  },
+  {
+   "id": "img__bio-bee_jpg",
+   "file": "bio-bee.jpg",
+   "web_path": "img/bio-bee.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "A honeybee with pollen on its legs resting on the edge of a taro leaf",
+   "width": 900,
+   "height": 1200,
+   "size_kb": 78,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-27",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "A honeybee with pollen on its legs resting on the edge of a taro leaf",
+     "caption": "A honeybee on taro and a clearwing moth on Bidens, Gengfutian."
+    }
+   ]
+  },
+  {
+   "id": "img__bio-moth_jpg",
+   "file": "bio-moth.jpg",
+   "web_path": "img/bio-moth.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "A black and yellow clearwing moth on a Bidens flower among green leaves",
+   "width": 900,
+   "height": 1200,
+   "size_kb": 118,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-27",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "A black and yellow clearwing moth on a Bidens flower among green leaves",
+     "caption": "A honeybee on taro and a clearwing moth on Bidens, Gengfutian."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-guf-1_jpg",
+   "file": "blog-guf-1.jpg",
+   "web_path": "img/blog/blog-guf-1.jpg",
+   "kind": "Slide or chart",
+   "status": "In use",
+   "description": "Table: mean relative abundance of the 15 most abundant bacterial genera at GFT, compared with the sites LS, BZ and LT; cells with 1% or more are coloured",
+   "width": 1600,
+   "height": 1301,
+   "size_kb": 220,
+   "taken": "2026-05",
+   "original": "Documents/03_Projects/GUF/GUF_Soil-Bacterial-Community-Recovery-Top-15-Genera_2026-05-14.png",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_GUF-Healing-the-Soil-After-the-Flood-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "In the text",
+     "page_date": "2025-11-25",
+     "alt": "Table: mean relative abundance of the 15 most abundant bacterial genera at GFT, compared with the sites LS, BZ and LT; cells with 1% or more are coloured",
+     "caption": "The 15 most abundant bacterial genera at GFT, and their share at the other sites. Coloured cells: 1% or more."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-guf-2_jpg",
+   "file": "blog-guf-2.jpg",
+   "web_path": "img/blog/blog-guf-2.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Syntropic tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind",
+   "width": 1600,
+   "height": 901,
+   "size_kb": 418,
+   "taken": null,
+   "original": "Documents/09_Media/2026-04/MEDIA_223306_2026-04-29.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_GUF-Healing-the-Soil-After-the-Flood-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": "Probable match",
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "In the text",
+     "page_date": "2025-11-25",
+     "alt": "Syntropic tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind",
+     "caption": "GFT, Gengfutian: the main reference site."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-guf-3_jpg",
+   "file": "blog-guf-3.jpg",
+   "web_path": "img/blog/blog-guf-3.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Grey flood silt across the field at BZ, with dark patches of organic material and young plantings, mountains behind",
+   "width": 1600,
+   "height": 1200,
+   "size_kb": 500,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_GUF-Healing-the-Soil-After-the-Flood-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "In the text",
+     "page_date": "2025-11-25",
+     "alt": "Grey flood silt across the field at BZ, with dark patches of organic material and young plantings, mountains behind",
+     "caption": "BZ: organic inputs on the silt."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-guf-4_jpg",
+   "file": "blog-guf-4.jpg",
+   "web_path": "img/blog/blog-guf-4.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt",
+   "width": 1280,
+   "height": 720,
+   "size_kb": 244,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_181110_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_GUF-Healing-the-Soil-After-the-Flood-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Blog list",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Post list thumbnail",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Post list thumbnail",
+     "page_date": "2026-04-09",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Cover photo",
+     "page_date": "2025-11-25",
+     "alt": "Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "In the text",
+     "page_date": "2025-11-25",
+     "alt": "Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt",
+     "caption": "BZ: building syntropic beds."
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Share preview image",
+     "page_date": "2025-11-25",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Post list thumbnail",
+     "page_date": "2026-10-07",
+     "alt": "",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-guf-5_jpg",
+   "file": "blog-guf-5.jpg",
+   "web_path": "img/blog/blog-guf-5.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "An open field at LT covered in grey flood silt under an overcast sky",
+   "width": 1280,
+   "height": 960,
+   "size_kb": 188,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_181115_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_GUF-Healing-the-Soil-After-the-Flood-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "In the text",
+     "page_date": "2025-11-25",
+     "alt": "An open field at LT covered in grey flood silt under an overcast sky",
+     "caption": "LT after the flood."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-guf-6_jpg",
+   "file": "blog-guf-6.jpg",
+   "web_path": "img/blog/blog-guf-6.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Close view of thin grass seedlings growing out of grey silt",
+   "width": 1280,
+   "height": 960,
+   "size_kb": 326,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_181117_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_GUF-Healing-the-Soil-After-the-Flood-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "In the text",
+     "page_date": "2025-11-25",
+     "alt": "Close view of thin grass seedlings growing out of grey silt",
+     "caption": "LT: grass and legume seed mix."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-res-1_jpg",
+   "file": "blog-res-1.jpg",
+   "web_path": "img/blog/blog-res-1.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Gengfutian under an evening sky, with young fruit trees and a denser syntropic system with banana",
+   "width": 1280,
+   "height": 721,
+   "size_kb": 193,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_183203_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_RES-TzuChi-and-WorldVeg-Soil-Health-Validation-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Blog list",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Post list thumbnail",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Post list thumbnail",
+     "page_date": "2026-04-09",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Post list thumbnail",
+     "page_date": "2025-11-25",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Cover photo",
+     "page_date": "2026-10-07",
+     "alt": "Gengfutian under an evening sky, with young fruit trees and a denser syntropic system with banana",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "In the text",
+     "page_date": "2026-10-07",
+     "alt": "Gengfutian under an evening sky: young fruit trees on grass on the left, a denser syntropic system with banana on the right",
+     "caption": "Gengfutian: control (left) and syntropic system (right)."
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Share preview image",
+     "page_date": "2026-10-07",
+     "alt": "",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-res-2_jpg",
+   "file": "blog-res-2.jpg",
+   "web_path": "img/blog/blog-res-2.jpg",
+   "kind": "Slide or chart",
+   "status": "In use",
+   "description": "Slide: experimental setup of the Hualien field trial, with photos of the monoculture and syntropic beds and how each was managed",
+   "width": 1600,
+   "height": 1129,
+   "size_kb": 258,
+   "taken": "2026-05",
+   "original": "Documents/05_Research-Funding/RES/WorldVeg/Screenshots/RES_Capsicum-Study-Experimental-Setup-Hualien-Field-Trial_2026-05-14.png",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_RES-TzuChi-and-WorldVeg-Soil-Health-Validation-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": "WorldVeg",
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "In the text",
+     "page_date": "2026-10-07",
+     "alt": "Slide: experimental setup of the Hualien field trial, with photos of the monoculture and syntropic beds and how each was managed",
+     "caption": "Experimental setup of the field trial. Slide: WorldVeg."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-res-3_jpg",
+   "file": "blog-res-3.jpg",
+   "web_path": "img/blog/blog-res-3.jpg",
+   "kind": "Slide or chart",
+   "status": "In use",
+   "description": "Slide: soil properties of monoculture soil in Hualien, syntropic soil in Hualien and monoculture soil in Tainan. Microbiome concentration 213, 1,637 and 236 µg/g; fungus-to-bacteria ratio 0.2:1, 3.8:1 and 0.4:1; pH 8.1, 7.5 and 7.2; carbon 1.8%, 29% and 0.86%; conductivity 0.08, 0.32 and 0.24 mS/dm; potassium 482, 2,424 and 80 ppm",
+   "width": 1600,
+   "height": 1095,
+   "size_kb": 153,
+   "taken": "2026-05",
+   "original": "Documents/05_Research-Funding/RES/WorldVeg/Screenshots/RES_Capsicum-Study-Soil-Microbial-Analysis-Table-2_2026-05-14.png",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_RES-TzuChi-and-WorldVeg-Soil-Health-Validation-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": "WorldVeg",
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "In the text",
+     "page_date": "2026-10-07",
+     "alt": "Slide: soil properties of monoculture soil in Hualien, syntropic soil in Hualien and monoculture soil in Tainan. Microbiome concentration 213, 1,637 and 236 µg/g; fungus-to-bacteria ratio 0.2:1, 3.8:1 and 0.4:1; pH 8.1, 7.5 and 7.2; carbon 1.8%, 29% and 0.86%; conductivity 0.08, 0.32 and 0.24 mS/dm; potassium 482, 2,424 and 80 ppm",
+     "caption": "Soil analysis. Slide: WorldVeg."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-res-4_jpg",
+   "file": "blog-res-4.jpg",
+   "web_path": "img/blog/blog-res-4.jpg",
+   "kind": "Slide or chart",
+   "status": "In use",
+   "description": "Slide: Fusarium wilt incidence after applying biocontrol candidates in syntropic and monoculture soil, with photos of seedlings and their roots",
+   "width": 1600,
+   "height": 1087,
+   "size_kb": 180,
+   "taken": "2026-05",
+   "original": "Documents/05_Research-Funding/RES/WorldVeg/Screenshots/RES_Capsicum-Study-Disease-Incidence-After-BCA-2_2026-05-14.png",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_RES-TzuChi-and-WorldVeg-Soil-Health-Validation-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": "WorldVeg",
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "In the text",
+     "page_date": "2026-10-07",
+     "alt": "Slide: Fusarium wilt incidence after applying biocontrol candidates in syntropic and monoculture soil, with photos of seedlings and their roots",
+     "caption": "Disease incidence after applying biocontrol candidates. Slide: WorldVeg."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-res-5_jpg",
+   "file": "blog-res-5.jpg",
+   "web_path": "img/blog/blog-res-5.jpg",
+   "kind": "Slide or chart",
+   "status": "In use",
+   "description": "Slide: pepper plants in syntropic soil with and without Fusarium. With Fusarium: 9 cm tall, 11 cm wide, 14 leaves; without: 6.5 cm, 7.3 cm, 10 leaves; no disease in either. The infested plants have thicker roots",
+   "width": 1600,
+   "height": 1093,
+   "size_kb": 182,
+   "taken": "2026-05",
+   "original": "Documents/05_Research-Funding/RES/WorldVeg/Screenshots/RES_Capsicum-Study-Syntropic-Soil-With-and-Without-Fusarium-2_2026-05-14.png",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_RES-TzuChi-and-WorldVeg-Soil-Health-Validation-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": "WorldVeg",
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "In the text",
+     "page_date": "2026-10-07",
+     "alt": "Slide: pepper plants in syntropic soil with and without Fusarium. With Fusarium: 9 cm tall, 11 cm wide, 14 leaves; without: 6.5 cm, 7.3 cm, 10 leaves; no disease in either. The infested plants have thicker roots",
+     "caption": "Syntropic soil with and without Fusarium. Slide: WorldVeg."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-res-6_jpg",
+   "file": "blog-res-6.jpg",
+   "web_path": "img/blog/blog-res-6.jpg",
+   "kind": "Slide or chart",
+   "status": "In use",
+   "description": "Slide: plant measurements four weeks after transplanting. Height 30.8 cm syntropic, 21.1 cm Hualien control, 39.4 cm Tainan control; width 24.9, 16.4 and 39.2 cm; vigour 3.7, 1.8 and 3.2; beneficials: two spiders, bees and grasshoppers in the syntropic plots, one spider in the Hualien control",
+   "width": 1600,
+   "height": 1114,
+   "size_kb": 226,
+   "taken": "2026-05",
+   "original": "Documents/05_Research-Funding/RES/WorldVeg/Screenshots/RES_Capsicum-Study-Plant-Growth-and-Disease-Results-Table-2_2026-05-14.png",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_RES-TzuChi-and-WorldVeg-Soil-Health-Validation-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": "WorldVeg",
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "In the text",
+     "page_date": "2026-10-07",
+     "alt": "Slide: plant measurements four weeks after transplanting. Height 30.8 cm syntropic, 21.1 cm Hualien control, 39.4 cm Tainan control; width 24.9, 16.4 and 39.2 cm; vigour 3.7, 1.8 and 3.2; beneficials: two spiders, bees and grasshoppers in the syntropic plots, one spider in the Hualien control",
+     "caption": "Plant measurements four weeks after transplanting. Slide: WorldVeg."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-res-7_jpg",
+   "file": "blog-res-7.jpg",
+   "web_path": "img/blog/blog-res-7.jpg",
+   "kind": "Slide or chart",
+   "status": "In use",
+   "description": "Slide: acknowledgements to the WorldVeg Pathology Team, Tobias Chen and Yan-Lin at Tzu Chi University, and the World Vegetable Center, Tzu Chi University and the Joachim Herz Stiftung",
+   "width": 1600,
+   "height": 1107,
+   "size_kb": 150,
+   "taken": "2026-05",
+   "original": "Documents/05_Research-Funding/RES/WorldVeg/Screenshots/RES_Capsicum-Study-Acknowledgements-WorldVeg-TCU-2_2026-05-14.png",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_RES-TzuChi-and-WorldVeg-Soil-Health-Validation-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": "WorldVeg",
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "In the text",
+     "page_date": "2026-10-07",
+     "alt": "Slide: acknowledgements to the WorldVeg Pathology Team, Tobias Chen and Yan-Lin at Tzu Chi University, and the World Vegetable Center, Tzu Chi University and the Joachim Herz Stiftung",
+     "caption": "Acknowledgements. Slide: WorldVeg."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-tcu-1_jpg",
+   "file": "blog-tcu-1.jpg",
+   "web_path": "img/blog/blog-tcu-1.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Gengfutian before: bare gravel with the first log lines and a small red tractor, young fruit trees around",
+   "width": 1280,
+   "height": 960,
+   "size_kb": 438,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_185530_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_TCU-Global-Views-USR-Award-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "In the text",
+     "page_date": "2026-04-09",
+     "alt": "Gengfutian before: bare gravel with the first log lines and a small red tractor, young fruit trees around",
+     "caption": "The first log lines on bare gravel at Gengfutian."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-tcu-2_jpg",
+   "file": "blog-tcu-2.jpg",
+   "web_path": "img/blog/blog-tcu-2.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Gengfutian after: a dense food forest of banana and young trees, with a person working among them",
+   "width": 1280,
+   "height": 721,
+   "size_kb": 215,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_185524_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_TCU-Global-Views-USR-Award-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "In the text",
+     "page_date": "2026-04-09",
+     "alt": "Gengfutian after: a dense food forest of banana and young trees, with a person working among them",
+     "caption": "Tree lines grown into a food forest."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-tcu-3_jpg",
+   "file": "blog-tcu-3.jpg",
+   "web_path": "img/blog/blog-tcu-3.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Before: rows of young trees with logs on stony ground below the mountains",
+   "width": 1280,
+   "height": 960,
+   "size_kb": 403,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_185527_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_TCU-Global-Views-USR-Award-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "In the text",
+     "page_date": "2026-04-09",
+     "alt": "Before: rows of young trees with logs on stony ground below the mountains",
+     "caption": "Gengfutian, the same view before and after. Drag the line or use the arrow keys."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-tcu-4_jpg",
+   "file": "blog-tcu-4.jpg",
+   "web_path": "img/blog/blog-tcu-4.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "After: the same view as a dense green food forest",
+   "width": 1280,
+   "height": 721,
+   "size_kb": 237,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_185521_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_TCU-Global-Views-USR-Award-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "In the text",
+     "page_date": "2026-04-09",
+     "alt": "After: the same view as a dense green food forest",
+     "caption": "Gengfutian, the same view before and after. Drag the line or use the arrow keys."
+    }
+   ]
+  },
+  {
+   "id": "img__blog__blog-tcu-5_jpg",
+   "file": "blog-tcu-5.jpg",
+   "web_path": "img/blog/blog-tcu-5.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "A large group of community members and partners holding a banner in front of trees",
+   "width": 1280,
+   "height": 853,
+   "size_kb": 370,
+   "taken": null,
+   "original": "Documents/09_Media/2026-05/MEDIA_191957_2026-05-14.jpg",
+   "copy": null,
+   "embedded_in": "Documents/06_Publications/BLOG/Articles/BLOG_TCU-Global-Views-USR-Award-Revised_2026-10-23.docx",
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-26",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Blog list",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Post list thumbnail",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Cover photo",
+     "page_date": "2026-04-09",
+     "alt": "A large group of community members and partners holding a banner in front of trees",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "In the text",
+     "page_date": "2026-04-09",
+     "alt": "A large group of community members and partners holding a banner in front of trees",
+     "caption": "Community members and partners of the project."
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Share preview image",
+     "page_date": "2026-04-09",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Post list thumbnail",
+     "page_date": "2025-11-25",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Post list thumbnail",
+     "page_date": "2026-10-07",
+     "alt": "",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__dqm-after_jpg",
+   "file": "dqm-after.jpg",
+   "web_path": "img/dqm-after.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "After, December 2024: dense young food forest with banana and fruit trees below the mountains",
+   "width": 1280,
+   "height": 960,
+   "size_kb": 374,
+   "taken": "2024-12",
+   "original": "Documents/03_Projects/DQM/DQM_DQM-After_2026-07-01.jpg",
+   "copy": "Documents/09_Media/2024-11/MEDIA_043935_2024-11-05.jpeg",
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "After, December 2024: dense young food forest with banana and fruit trees below the mountains",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__dqm-before_jpg",
+   "file": "dqm-before.jpg",
+   "web_path": "img/dqm-before.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Before, May 2024: sparse young fruit trees on dry grassland inside a fence",
+   "width": 1024,
+   "height": 768,
+   "size_kb": 249,
+   "taken": "2024-05",
+   "original": "Documents/03_Projects/DQM/DQM_DQM-Before_2026-07-01.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": "Probable match (cropped)",
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Before, May 2024: sparse young fruit trees on dry grassland inside a fence",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__gft-ba-after_jpg",
+   "file": "gft-ba-after.jpg",
+   "web_path": "img/gft-ba-after.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "After: the same area as a dense, closed food forest with banana, below the mountain",
+   "width": 1280,
+   "height": 720,
+   "size_kb": 303,
+   "taken": "2026-09",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026; not in 09_Media",
+   "edit": "Resized and cropped to 16:9",
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-27",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "After: the same area as a dense, closed food forest with banana, below the mountain",
+     "caption": "Gengfutian, September 2025 and September 2026. Drag the line or use the arrow keys."
+    }
+   ]
+  },
+  {
+   "id": "img__gft-ba-before_jpg",
+   "file": "gft-ba-before.jpg",
+   "web_path": "img/gft-ba-before.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Before: young tree lines with logs and pruned branches on stony ground, the old orchard and houses behind",
+   "width": 1280,
+   "height": 720,
+   "size_kb": 367,
+   "taken": "2025-09",
+   "original": "Documents/09_Media/2025-09/MEDIA_152611_2025-09-25.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": "Cropped to 16:9",
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-27",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "Before: young tree lines with logs and pruned branches on stony ground, the old orchard and houses behind",
+     "caption": "Gengfutian, September 2025 and September 2026. Drag the line or use the arrow keys."
+    }
+   ]
+  },
+  {
+   "id": "img__hda-ba-after_jpg",
+   "file": "hda-ba-after.jpg",
+   "web_path": "img/hda-ba-after.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "After: the same area with flowering cosmos in the alley between tall tree lines with banana and castor",
+   "width": 1280,
+   "height": 720,
+   "size_kb": 242,
+   "taken": "2026-10",
+   "original": "Documents/09_Media/2026-10/MEDIA_085521_2026-10-03.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-27",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "After: the same area with flowering cosmos in the alley between tall tree lines with banana and castor",
+     "caption": "HDARES demonstration plot, February and October 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__hda-ba-before_jpg",
+   "file": "hda-ba-before.jpg",
+   "web_path": "img/hda-ba-before.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Before: an open lawn with string lines marking the future tree lines, a pile of wood chips on the right and a palm in the foreground",
+   "width": 1280,
+   "height": 720,
+   "size_kb": 178,
+   "taken": "2026-02",
+   "original": "Documents/09_Media/2026-07/MEDIA_130704_2026-07-02.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-27",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Before: an open lawn with string lines marking the future tree lines, a pile of wood chips on the right and a palm in the foreground",
+     "caption": "HDARES demonstration plot, February and October 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__hero-chili-gft_jpg",
+   "file": "hero-chili-gft.jpg",
+   "web_path": "img/hero-chili-gft.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "",
+   "width": 2000,
+   "height": 1000,
+   "size_kb": 423,
+   "taken": "2026-10",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 23 Oct 2026 (\"Chili GFT\")",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Top photo",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Share preview image",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Share preview image",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__hero-gengfutian-2026-04_jpg",
+   "file": "hero-gengfutian-2026-04.jpg",
+   "web_path": "img/hero-gengfutian-2026-04.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Wide view of Gengfutian in April 2026: young tree lines with banana and moringa between mulched beds",
+   "width": 1950,
+   "height": 450,
+   "size_kb": 268,
+   "taken": "2026-04",
+   "original": "Documents/02_Studio-Syntropy/Branding/Logo-2026/STUDIO_Kind-Harvest-Header-GFT426_2026-04-21.png",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "Wide view of Gengfutian in April 2026: young tree lines with banana and moringa between mulched beds",
+     "caption": "Gengfutian, April 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__kira-aerial_jpg",
+   "file": "kira-aerial.jpg",
+   "web_path": "img/kira-aerial.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Aerial view of Kira Organic Farm with vegetable beds surrounded by forest",
+   "width": 1280,
+   "height": 960,
+   "size_kb": 346,
+   "taken": "2026-10",
+   "original": "Documents/03_Projects/MY-KOF/MY-KOF_Aerial_2026-10-22.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Aerial view of Kira Organic Farm with vegetable beds surrounded by forest",
+     "caption": "Kira Organic Farm: the site, a tree line right after planting, and its 18 m design, 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__kira-design_jpg",
+   "file": "kira-design.jpg",
+   "web_path": "img/kira-design.jpg",
+   "kind": "Slide or chart",
+   "status": "In use",
+   "description": "Design of an 18 m tree line with banana, ficus, gliricidia and moringa",
+   "width": 1280,
+   "height": 960,
+   "size_kb": 92,
+   "taken": "2026-10",
+   "original": "Documents/03_Projects/MY-KOF/MY-KOF_Tree-Line-Design-18m_2026-10-14.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Design of an 18 m tree line with banana, ficus, gliricidia and moringa",
+     "caption": "Kira Organic Farm: the site, a tree line right after planting, and its 18 m design, 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__kira-treeline_jpg",
+   "file": "kira-treeline.jpg",
+   "web_path": "img/kira-treeline.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "A new tree line at Kira Organic Farm right after planting: bamboo stakes and young banana in a thick layer of pruned leaves",
+   "width": 960,
+   "height": 1280,
+   "size_kb": 462,
+   "taken": "2026-09",
+   "original": "Documents/09_Media/2026-10/MEDIA_085523_2026-10-03.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-27",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "A new tree line at Kira Organic Farm right after planting: bamboo stakes and young banana in a thick layer of pruned leaves",
+     "caption": "Kira Organic Farm: the site, a tree line right after planting, and its 18 m design, 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__ngm-group_jpg",
+   "file": "ngm-group.jpg",
+   "web_path": "img/ngm-group.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Course participants at the Noble Gateway food forest in Malaysia, September 2026",
+   "width": 1024,
+   "height": 768,
+   "size_kb": 201,
+   "taken": "2026-09",
+   "original": "Documents/03_Projects/MY-NGM/MY-NGM_Group-Photo-Edit_2026-09.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Teaching",
+     "page_date": null,
+     "alt": "Course participants at the Noble Gateway food forest in Malaysia, September 2026",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__roots_jpg",
+   "file": "roots.jpg",
+   "web_path": "img/roots.jpg",
+   "kind": "Photo",
+   "status": "Held back",
+   "description": "",
+   "width": 1233,
+   "height": 399,
+   "size_kb": 48,
+   "taken": "2026-04",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "WorldVeg greenhouse test photo from a 2026 slide deck",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": []
+  },
+  {
+   "id": "img__s-bio-grasshopper_jpg",
+   "file": "s-bio-grasshopper.jpg",
+   "web_path": "img/s-bio-grasshopper.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "A large green grasshopper resting on a leaf",
+   "width": 1600,
+   "height": 900,
+   "size_kb": 191,
+   "taken": null,
+   "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Bio-Grasshopper_2026-10-23.png",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Research",
+     "page_date": null,
+     "alt": "A large green grasshopper resting on a leaf",
+     "caption": "Grasshopper in the canopy"
+    }
+   ]
+  },
+  {
+   "id": "img__s-bio-mushroom_jpg",
+   "file": "s-bio-mushroom.jpg",
+   "web_path": "img/s-bio-mushroom.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Wild mushrooms growing on a decaying log in the mulch",
+   "width": 1600,
+   "height": 900,
+   "size_kb": 118,
+   "taken": null,
+   "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Bio-Mushroom_2026-10-23.png",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Research",
+     "page_date": null,
+     "alt": "Wild mushrooms growing on a decaying log in the mulch",
+     "caption": "Fungi on wood mulch"
+    }
+   ]
+  },
+  {
+   "id": "img__s-bio-pollinators_jpg",
+   "file": "s-bio-pollinators.jpg",
+   "web_path": "img/s-bio-pollinators.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower",
+   "width": 1600,
+   "height": 900,
+   "size_kb": 204,
+   "taken": null,
+   "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Bio-Pollinators_2026-10-23.png",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Research",
+     "page_date": null,
+     "alt": "Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower",
+     "caption": "Pollinators and birds"
+    }
+   ]
+  },
+  {
+   "id": "img__s-gft-2024-11_jpg",
+   "file": "s-gft-2024-11.jpg",
+   "web_path": "img/s-gft-2024-11.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Open gravel ground with the first log lines laid out, a small tractor and the old orchard behind",
+   "width": 1600,
+   "height": 702,
+   "size_kb": 338,
+   "taken": "2024-11",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Gengfutian before photo from a 2026 slide deck (text overlay cropped out)",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "Open gravel ground with the first log lines laid out, a small tractor and the old orchard behind",
+     "caption": "Gengfutian Farm, Tzu Chi University, Hualien."
+    }
+   ]
+  },
+  {
+   "id": "img__s-hdares-jian-1_jpg",
+   "file": "s-hdares-jian-1.jpg",
+   "web_path": "img/s-hdares-jian-1.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Ji'an demonstration plot: a mulched planting line with young trees and potted seedlings beside a gravel path",
+   "width": 1600,
+   "height": 900,
+   "size_kb": 321,
+   "taken": "2026-05",
+   "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Hdares-Jian-1_2026-10-23.png",
+   "copy": "Documents/09_Media/2026-05/MEDIA_062007_2026-05-29.jpg",
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Ji'an demonstration plot: a mulched planting line with young trees and potted seedlings beside a gravel path",
+     "caption": "Indigenous Crop Department plot, Ji'an, 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__s-hdares-jian-2_jpg",
+   "file": "s-hdares-jian-2.jpg",
+   "web_path": "img/s-hdares-jian-2.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Ji'an demonstration plot: tree lines with banana, cassava and young trees between mulched beds",
+   "width": 1600,
+   "height": 900,
+   "size_kb": 276,
+   "taken": "2026",
+   "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Hdares-Jian-2_2026-10-23.png",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Ji'an demonstration plot: tree lines with banana, cassava and young trees between mulched beds",
+     "caption": "Indigenous Crop Department plot, Ji'an, 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__teach-course_jpg",
+   "file": "teach-course.jpg",
+   "web_path": "img/teach-course.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Course participants planting along a tree line",
+   "width": 1000,
+   "height": 749,
+   "size_kb": 222,
+   "taken": "2025-05",
+   "original": "Documents/09_Media/2025-05/MEDIA_101519_2025-05-05.jpeg",
+   "copy": "Documents/02_Studio-Syntropy/Photos-Selection-2026-06/Photos-3-001-6/STUDIO_IMG-101433-570_2025-05-05.jpg",
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Teaching",
+     "page_date": null,
+     "alt": "Course participants planting along a tree line",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__teach-guidebook_jpg",
+   "file": "teach-guidebook.jpg",
+   "web_path": "img/teach-guidebook.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Course participants holding copies of the guidebook",
+   "width": 1000,
+   "height": 749,
+   "size_kb": 123,
+   "taken": null,
+   "original": "Documents/02_Studio-Syntropy/Photos-Selection-2026-06/Photos-3-001-7/STUDIO_1770265188098_2026-06-03.jpg",
+   "copy": null,
+   "embedded_in": null,
+   "source": null,
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Teaching",
+     "page_date": null,
+     "alt": "Course participants holding copies of the guidebook",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__teach-students_jpg",
+   "file": "teach-students.jpg",
+   "web_path": "img/teach-students.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "International students planting a new syntropic plot below the mountains",
+   "width": 1000,
+   "height": 750,
+   "size_kb": 193,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Original not found in the connected folders",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Teaching",
+     "page_date": null,
+     "alt": "International students planting a new syntropic plot below the mountains",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__tobias-field_jpg",
+   "file": "tobias-field.jpg",
+   "web_path": "img/tobias-field.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Tobias Chen in a food forest with course participants",
+   "width": 1200,
+   "height": 676,
+   "size_kb": 208,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Original not found in the connected folders",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "About",
+     "page_date": null,
+     "alt": "Tobias Chen in a food forest with course participants",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__v8-app-icon_png",
+   "file": "v8-app-icon.png",
+   "web_path": "img/v8-app-icon.png",
+   "kind": "Logo",
+   "status": "In use",
+   "description": "",
+   "width": 180,
+   "height": 180,
+   "size_kb": 13,
+   "taken": "2026-10-23",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Logo v8 Print set (Documents/02_Studio-Syntropy/Branding/Logo-2026)",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Phone home-screen icon",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Phone home-screen icon",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Phone home-screen icon",
+     "page_date": "2026-04-09",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Phone home-screen icon",
+     "page_date": "2025-11-25",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Phone home-screen icon",
+     "page_date": "2026-10-07",
+     "alt": "",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__v8-favicon_png",
+   "file": "v8-favicon.png",
+   "web_path": "img/v8-favicon.png",
+   "kind": "Logo",
+   "status": "In use",
+   "description": "",
+   "width": 32,
+   "height": 32,
+   "size_kb": 7,
+   "taken": "2026-10-23",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Logo v8 Print set (Documents/02_Studio-Syntropy/Branding/Logo-2026)",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Browser tab icon",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Browser tab icon",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Browser tab icon",
+     "page_date": "2026-04-09",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Browser tab icon",
+     "page_date": "2025-11-25",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Browser tab icon",
+     "page_date": "2026-10-07",
+     "alt": "",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__v8-horizontal-color_svg",
+   "file": "v8-horizontal-color.svg",
+   "web_path": "img/v8-horizontal-color.svg",
+   "kind": "Logo",
+   "status": "In use",
+   "description": "",
+   "width": null,
+   "height": null,
+   "size_kb": 136,
+   "taken": "2026-10-23",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Logo v8 Print set (Documents/02_Studio-Syntropy/Branding/Logo-2026)",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Header (logo)",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Header (logo)",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Header (logo)",
+     "page_date": "2026-04-09",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Header (logo)",
+     "page_date": "2025-11-25",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Header (logo)",
+     "page_date": "2026-10-07",
+     "alt": "",
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "img__v8-horizontal-reversed_svg",
+   "file": "v8-horizontal-reversed.svg",
+   "web_path": "img/v8-horizontal-reversed.svg",
+   "kind": "Logo",
+   "status": "In use",
+   "description": "趨合工作室 studio syntropy",
+   "width": null,
+   "height": null,
+   "size_kb": 136,
+   "taken": "2026-10-23",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Logo v8 Print set (Documents/02_Studio-Syntropy/Branding/Logo-2026)",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Header (logo, dark mode)",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Footer (logo)",
+     "page_date": null,
+     "alt": "趨合工作室 studio syntropy",
+     "caption": ""
+    },
+    {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Header (logo, dark mode)",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Header (logo, dark mode)",
+     "page_date": "2026-04-09",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Header (logo, dark mode)",
+     "page_date": "2025-11-25",
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Header (logo, dark mode)",
+     "page_date": "2026-10-07",
+     "alt": "",
+     "caption": ""
+    }
+   ]
+  }
+ ]
+}
