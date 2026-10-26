@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27 02:00",
+ "updated": "2026-10-27 02:39",
  "videos": 0,
  "items": [
   {
@@ -1008,6 +1008,66 @@
    ]
   },
   {
+   "id": "img__hda-jian-castor_jpg",
+   "file": "hda-jian-castor.jpg",
+   "web_path": "img/hda-jian-castor.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Ji'an demonstration plot: rows of herbs and green manure between castor and young trees, under a large shade tree",
+   "width": 1280,
+   "height": 721,
+   "size_kb": 254,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": null,
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Ji'an demonstration plot: rows of herbs and green manure between castor and young trees, under a large shade tree",
+     "caption": "Indigenous Crop Department plot, Ji'an, 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__hda-jian-perilla_jpg",
+   "file": "hda-jian-perilla.jpg",
+   "web_path": "img/hda-jian-perilla.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Ji'an demonstration plot: three people harvesting along a row of purple perilla beside a tree line with banana and pigeon pea",
+   "width": 1280,
+   "height": 721,
+   "size_kb": 277,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": null,
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Ji'an demonstration plot: three people harvesting along a row of purple perilla beside a tree line with banana and pigeon pea",
+     "caption": "Indigenous Crop Department plot, Ji'an, 2026."
+    }
+   ]
+  },
+  {
    "id": "img__hero-chili-gft_jpg",
    "file": "hero-chili-gft.jpg",
    "web_path": "img/hero-chili-gft.jpg",
@@ -1054,66 +1114,6 @@
    ]
   },
   {
-   "id": "img__kira-aerial_jpg",
-   "file": "kira-aerial.jpg",
-   "web_path": "img/kira-aerial.jpg",
-   "kind": "Photo",
-   "status": "In use",
-   "description": "Aerial view of Kira Organic Farm with vegetable beds surrounded by forest",
-   "width": 1280,
-   "height": 960,
-   "size_kb": 346,
-   "taken": "2026-10",
-   "original": "Documents/03_Projects/MY-KOF/MY-KOF_Aerial_2026-10-22.jpg",
-   "copy": null,
-   "embedded_in": null,
-   "source": null,
-   "edit": null,
-   "credit": null,
-   "note": null,
-   "added_to_site": "2026-10-23",
-   "uses": [
-    {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
-     "section": "Projects",
-     "page_date": null,
-     "alt": "Aerial view of Kira Organic Farm with vegetable beds surrounded by forest",
-     "caption": "Kira Organic Farm: the site, a tree line right after planting, and its 18 m design, 2026."
-    }
-   ]
-  },
-  {
-   "id": "img__kira-design_jpg",
-   "file": "kira-design.jpg",
-   "web_path": "img/kira-design.jpg",
-   "kind": "Slide or chart",
-   "status": "In use",
-   "description": "Design of an 18 m tree line with banana, ficus, gliricidia and moringa",
-   "width": 1280,
-   "height": 960,
-   "size_kb": 92,
-   "taken": "2026-10",
-   "original": "Documents/03_Projects/MY-KOF/MY-KOF_Tree-Line-Design-18m_2026-10-14.jpg",
-   "copy": null,
-   "embedded_in": null,
-   "source": null,
-   "edit": null,
-   "credit": null,
-   "note": null,
-   "added_to_site": "2026-10-23",
-   "uses": [
-    {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
-     "section": "Projects",
-     "page_date": null,
-     "alt": "Design of an 18 m tree line with banana, ficus, gliricidia and moringa",
-     "caption": "Kira Organic Farm: the site, a tree line right after planting, and its 18 m design, 2026."
-    }
-   ]
-  },
-  {
    "id": "img__kira-treeline_jpg",
    "file": "kira-treeline.jpg",
    "web_path": "img/kira-treeline.jpg",
@@ -1139,7 +1139,67 @@
      "section": "Projects",
      "page_date": null,
      "alt": "A new tree line at Kira Organic Farm right after planting: bamboo stakes and young banana in a thick layer of pruned leaves",
-     "caption": "Kira Organic Farm: the site, a tree line right after planting, and its 18 m design, 2026."
+     "caption": "Noble Gateway, Hulu Langat: before and after, and the food forest today. Right: a new tree line at Kira Organic Farm, 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__ngm-before-after_jpg",
+   "file": "ngm-before-after.jpg",
+   "web_path": "img/ngm-before-after.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Noble Gateway, labelled before and after: a tilled bed in a grass field, then banana, cassava and young trees growing on a bed edged with logs",
+   "width": 1600,
+   "height": 901,
+   "size_kb": 376,
+   "taken": null,
+   "original": "Documents/03_Projects/MY-NGM/MY-NGM_Before-After_2026-10-21.png",
+   "copy": null,
+   "embedded_in": null,
+   "source": "Before/after composite from the Portfolio",
+   "edit": "Resized to 1600 px",
+   "credit": null,
+   "note": "Composite image; before and after are not the same view",
+   "added_to_site": "2026-10-23",
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Noble Gateway, labelled before and after: a tilled bed in a grass field, then banana, cassava and young trees growing on a bed edged with logs",
+     "caption": "Noble Gateway, Hulu Langat: before and after, and the food forest today. Right: a new tree line at Kira Organic Farm, 2026."
+    }
+   ]
+  },
+  {
+   "id": "img__ngm-food-forest_jpg",
+   "file": "ngm-food-forest.jpg",
+   "web_path": "img/ngm-food-forest.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Walking through the dense food forest at Noble Gateway, between banana, castor and tall grasses",
+   "width": 1280,
+   "height": 720,
+   "size_kb": 234,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026",
+   "edit": null,
+   "credit": null,
+   "note": null,
+   "added_to_site": null,
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Projects",
+     "page_date": null,
+     "alt": "Walking through the dense food forest at Noble Gateway, between banana, castor and tall grasses",
+     "caption": "Noble Gateway, Hulu Langat: before and after, and the food forest today. Right: a new tree line at Kira Organic Farm, 2026."
     }
    ]
   },
@@ -1311,66 +1371,6 @@
      "page_date": null,
      "alt": "Open gravel ground with the first log lines laid out, a small tractor and the old orchard behind",
      "caption": "Gengfutian Farm, Tzu Chi University, Hualien."
-    }
-   ]
-  },
-  {
-   "id": "img__s-hdares-jian-1_jpg",
-   "file": "s-hdares-jian-1.jpg",
-   "web_path": "img/s-hdares-jian-1.jpg",
-   "kind": "Photo",
-   "status": "In use",
-   "description": "Ji'an demonstration plot: a mulched planting line with young trees and potted seedlings beside a gravel path",
-   "width": 1600,
-   "height": 900,
-   "size_kb": 321,
-   "taken": "2026-05",
-   "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Hdares-Jian-1_2026-10-23.png",
-   "copy": "Documents/09_Media/2026-05/MEDIA_062007_2026-05-29.jpg",
-   "embedded_in": null,
-   "source": null,
-   "edit": null,
-   "credit": null,
-   "note": null,
-   "added_to_site": "2026-10-23",
-   "uses": [
-    {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
-     "section": "Projects",
-     "page_date": null,
-     "alt": "Ji'an demonstration plot: a mulched planting line with young trees and potted seedlings beside a gravel path",
-     "caption": "Indigenous Crop Department plot, Ji'an, 2026."
-    }
-   ]
-  },
-  {
-   "id": "img__s-hdares-jian-2_jpg",
-   "file": "s-hdares-jian-2.jpg",
-   "web_path": "img/s-hdares-jian-2.jpg",
-   "kind": "Photo",
-   "status": "In use",
-   "description": "Ji'an demonstration plot: tree lines with banana, cassava and young trees between mulched beds",
-   "width": 1600,
-   "height": 900,
-   "size_kb": 276,
-   "taken": "2026",
-   "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Hdares-Jian-2_2026-10-23.png",
-   "copy": null,
-   "embedded_in": null,
-   "source": null,
-   "edit": null,
-   "credit": null,
-   "note": null,
-   "added_to_site": "2026-10-23",
-   "uses": [
-    {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
-     "section": "Projects",
-     "page_date": null,
-     "alt": "Ji'an demonstration plot: tree lines with banana, cassava and young trees between mulched beds",
-     "caption": "Indigenous Crop Department plot, Ji'an, 2026."
     }
    ]
   },

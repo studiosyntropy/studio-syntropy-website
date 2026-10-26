@@ -53,14 +53,6 @@
   "original": "Documents/09_Media/2026-10/MEDIA_085523_2026-10-03.jpg",
   "taken": "2026-09"
  },
- "img/kira-aerial.jpg": {
-  "original": "Documents/03_Projects/MY-KOF/MY-KOF_Aerial_2026-10-22.jpg",
-  "taken": "2026-10"
- },
- "img/kira-design.jpg": {
-  "original": "Documents/03_Projects/MY-KOF/MY-KOF_Tree-Line-Design-18m_2026-10-14.jpg",
-  "taken": "2026-10"
- },
  "img/ngm-group.jpg": {
   "original": "Documents/03_Projects/MY-NGM/MY-NGM_Group-Photo-Edit_2026-09.jpg",
   "taken": "2026-09"
@@ -91,15 +83,6 @@
  "img/s-bio-pollinators.jpg": {
   "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Bio-Pollinators_2026-10-23.png",
   "taken": null
- },
- "img/s-hdares-jian-1.jpg": {
-  "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Hdares-Jian-1_2026-10-23.png",
-  "copy": "Documents/09_Media/2026-05/MEDIA_062007_2026-05-29.jpg",
-  "taken": "2026-05"
- },
- "img/s-hdares-jian-2.jpg": {
-  "original": "Documents/02_Studio-Syntropy/Graphics/Website/STUDIO_Website-Hdares-Jian-2_2026-10-23.png",
-  "taken": "2026"
  },
  "img/teach-course.jpg": {
   "original": "Documents/09_Media/2025-05/MEDIA_101519_2025-05-05.jpeg",
@@ -241,6 +224,28 @@
   "original": null,
   "source": "Sent by Tobias in the chat on 27 Oct 2026; not in 09_Media",
   "taken": "2025-11",
+  "edit": "Resized to 1600 px"
+ },
+ "img/hda-jian-castor.jpg": {
+  "original": null,
+  "source": "Sent by Tobias in the chat on 27 Oct 2026",
+  "taken": null
+ },
+ "img/hda-jian-perilla.jpg": {
+  "original": null,
+  "source": "Sent by Tobias in the chat on 27 Oct 2026",
+  "taken": null
+ },
+ "img/ngm-food-forest.jpg": {
+  "original": null,
+  "source": "Sent by Tobias in the chat on 27 Oct 2026",
+  "taken": null
+ },
+ "img/ngm-before-after.jpg": {
+  "original": "Documents/03_Projects/MY-NGM/MY-NGM_Before-After_2026-10-21.png",
+  "source": "Before/after composite from the Portfolio",
+  "taken": null,
+  "note": "Composite image; before and after are not the same view",
   "edit": "Resized to 1600 px"
  }
 }
