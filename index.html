@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="img/v8-app-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Noto+Sans+TC:wght@400;500;700&display=swap">
 <style>
 /* Layout: a field notebook read top to bottom. Paper ground, forest ink, the leaf greens and sun of the v5 mark.
    Type: Atkinson Hyperlegible Next (Braille Institute, designed for low-vision readers) + Noto Sans TC. Sans only. */
@@ -407,6 +407,61 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
 .post-card{position:relative}.post-card h3 a::after{content:"";position:absolute;inset:0}.post-card:focus-within{outline:3px solid var(--focus);outline-offset:3px}.post-card h3 a:focus-visible{outline:0}
 .story-end{margin-top:clamp(2rem,5vw,3.5rem)}
 .about-facts{margin:0 0 clamp(2rem,4vw,3rem)}
+
+/* ===== v10: stronger editorial look ===== */
+:root{--display:"Bricolage Grotesque","Atkinson Hyperlegible Next","Noto Sans TC",sans-serif}
+h1,h2,.step-text h3,.study h3,.leafed h3,.proj h3,.post-card h3{font-family:var(--display);font-optical-sizing:auto}
+html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-family:var(--font-zh)}
+h2{font-weight:800;letter-spacing:-.03em}
+/* full-bleed hero */
+.hero-full{position:relative;isolation:isolate;min-height:calc(100svh - 6rem);display:grid;align-items:end;padding:0;color:#F5F1E6;background:#0D140F;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;z-index:-2}
+.hero-full::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(10,18,12,.95) 0%,rgba(10,18,12,.86) 45%,rgba(10,18,12,.6) 68%,rgba(10,18,12,.15) 90%,rgba(10,18,12,.05) 100%)}
+.hero-over{text-shadow:0 1px 12px rgba(10,18,12,.6)}.hero-full .btn{text-shadow:none}
+.hero-over{display:grid;gap:1.25rem 3rem;padding-top:clamp(8rem,30vh,16rem);padding-bottom:clamp(1.5rem,4vw,2.5rem);width:100%}
+.hero-full .eyebrow{color:#F3DDB0}
+.hero-full .display{color:#F5F1E6;max-width:12em!important}
+.hero-full .lede{color:#EDE7D6}
+.hero-full .btn{background:#F5F1E6;color:#1D3A26;border-color:#F5F1E6}
+.hero-full .btn.ghost{background:transparent;color:#F5F1E6}
+.hero-full :focus-visible{outline-color:#8EC5FF}
+.hero-cap{font-size:.875rem;color:#D9D3C2;border-top:1px solid rgba(245,241,230,.25);padding-top:.75rem;margin-top:.5rem}
+@media (min-width:980px){.hero-over{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:end}.hero-over .eyebrow,.hero-cap{grid-column:1/-1}}
+@media (max-width:640px){.hero-full{min-height:88svh}.hero-full::after{background:linear-gradient(to top,rgba(10,18,12,.95) 0%,rgba(10,18,12,.88) 55%,rgba(10,18,12,.4) 80%,rgba(10,18,12,.1) 100%)}}
+@media (forced-colors:active){.hero-full::after{background:Canvas}.hero-bg{display:none}}
+/* bands */
+.band + .section,.section + .band,.band .section,.sunband,.sunband + .section,.blog{border-top:0!important}
+.story.band{--ink:#F5F1E6;--ink-soft:#C9D1C0;--moss:#E3B45A;--line:rgba(245,241,230,.22);--paper:var(--band)}
+.story.band .story-rail{background:var(--band)}
+.story.band .story-rail a[aria-current]{border-bottom-color:#E3B45A}
+.step-text h3{font-size:clamp(2rem,1.4rem + 2.6vw,3.4rem);line-height:1.05;letter-spacing:-.03em;font-weight:800}
+html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
+.step-text p:not(.step-date){font-size:var(--step-1);line-height:1.6}
+.sunband{background:#D7A23E;color:#1D3A26;--ink:#1D3A26;--ink-soft:#1D3A26;--moss:#1D3A26;--line:rgba(29,58,38,.35);--paper-2:#E3B65E}
+.sunband :focus-visible{outline-color:#0B3D91}
+.sunband .three{counter-reset:ap}
+.sunband .leafed{counter-increment:ap;border-top:2px solid #1D3A26;padding-top:1rem}
+.sunband .leafed::before{content:counter(ap,decimal-leading-zero);content:counter(ap,decimal-leading-zero) / "";font-family:var(--display);font-weight:800;font-size:clamp(3.5rem,2.5rem + 4vw,6.5rem);line-height:.9;letter-spacing:-.04em}
+.sunband .leafed h3{font-size:var(--step-2);font-weight:800;letter-spacing:-.02em}
+/* projects: oversized numbers */
+.projects{counter-reset:pj}
+.proj{counter-increment:pj}
+.proj-text::before{content:counter(pj,decimal-leading-zero);content:counter(pj,decimal-leading-zero) / "";font-family:var(--display);font-weight:800;font-size:clamp(3rem,2rem + 3.5vw,5.5rem);line-height:.9;color:var(--moss);letter-spacing:-.04em}
+.proj h3{font-size:var(--step-2);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+/* research tabs */
+.tablist{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:clamp(1.5rem,3vw,2.5rem);border-bottom:1px solid rgba(245,241,230,.25)}
+.tablist [role=tab]{font:inherit;font-weight:700;font-size:var(--step-0);min-height:48px;padding:0 1.1rem;background:transparent;color:var(--band-soft);border:0;border-bottom:3px solid transparent;margin-bottom:-1px;cursor:pointer}
+.tablist [role=tab]:hover{color:var(--band-ink);text-decoration:underline}
+.tablist [role=tab][aria-selected=true]{color:var(--band-ink);border-bottom-color:#E3B45A}
+.tabs-on .panel-h{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.panel-h{margin:2rem 0 1rem}
+.studies{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(18rem,100%),1fr));gap:clamp(1.5rem,3vw,2.5rem)}
+.study{display:grid;gap:.6rem;align-content:start;padding-top:1rem;border-top:2px solid #E3B45A}
+.study h3{font-size:var(--step-2);font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.study-meta{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
+.band .pc-tag{color:#E3B45A}
+.status{font-size:.875rem;font-weight:700;border:1.5px solid currentColor;border-radius:999px;padding:.1rem .65rem;color:var(--band-ink)}
+.post-card h3{font-weight:800;letter-spacing:-.015em}
 </style>
 
 <style>body{margin:0}[hidden]{display:none!important}</style>
@@ -456,9 +511,10 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
 <div id="top"></div>
 
 <!-- HERO -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero-grid">
-    <p class="eyebrow hero-eyebrow"><span lang="en">Syntropic agroforestry · Taiwan &amp; Southeast Asia</span><span lang="zh-Hant">趨合農業 · 台灣與東南亞</span></p>
+<section class="hero hero-full" aria-labelledby="hero-title">
+  <img class="hero-bg" src="img/hero-chili-gft.jpg" alt="" width="2000" height="1000" fetchpriority="high">
+  <div class="wrap hero-over">
+    <p class="eyebrow"><span lang="en">Syntropic agroforestry · Taiwan &amp; Southeast Asia</span><span lang="zh-Hant">趨合農業 · 台灣與東南亞</span></p>
     <h1 id="hero-title" class="display">
       <span lang="en">Designing land that grows toward abundance.</span>
       <span lang="zh-Hant" class="zh-h1">讓土地<wbr>朝向豐饒<wbr>生長的設計。</span>
@@ -467,14 +523,8 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
       <p class="lede"><span lang="en">Studio Syntropy integrates natural ecosystem processes into farms and designed landscapes. We plan with succession, strata and soil life, so that land builds its own fertility over time.</span><span lang="zh-Hant">趨合工作室將自然生態系統的運作融入農場與景觀設計。我們以演替、層次與土壤生命為依據進行規劃，讓土地隨時間建立自身的肥力。</span></p>
       <p class="hero-links"><a class="btn" href="#story"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span> <span aria-hidden="true">↓</span></a> <a class="btn ghost" href="#blog"><span lang="en">Read the blog</span><span lang="zh-Hant">閱讀部落格</span></a></p>
     </div>
+    <p class="hero-cap"><span lang="en">Photo: chili peppers in a syntropic tree line, Gengfutian Farm, Hualien, October 2026.</span><span lang="zh-Hant">照片：花蓮耕福田農場趨合樹列中的辣椒，2026 年 10 月。</span></p>
   </div>
-  <figure class="hero-bleed">
-    <img class="hero-img" src="img/hero-chili-gft.jpg" alt="Red and green chili peppers growing between moringa and young trees in a syntropic tree line, next to a path of logs" width="2000" height="1000" fetchpriority="high">
-    <figcaption class="wrap fig-cap">
-      <span><span lang="en">Chili peppers in a syntropic tree line at Gengfutian Farm, Hualien. No irrigation since March, no fertiliser, no sprays.</span><span lang="zh-Hant">花蓮耕福田農場趨合樹列中的辣椒：自三月起未灌溉、未施肥、未噴藥。</span></span>
-      <span><span lang="en">October 2026</span><span lang="zh-Hant">2026 年 10 月</span></span>
-    </figcaption>
-  </figure>
 </section>
 
 <!-- BLOG -->
@@ -497,17 +547,17 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
         <article class="post-card">
           <img src="img/s-gft-2026-05.jpg" alt="Dense young food forest at Gengfutian, May 2026" loading="lazy" width="1600" height="702">
           <div class="pc">
-            <span class="pc-tag"><span lang="en">Research</span><span lang="zh-Hant">研究</span></span>
-            <h3><a href="#research"><span lang="en">5.3× more chili, without irrigation</span><span lang="zh-Hant">不灌溉，辣椒收成 5.3 倍</span></a></h3>
-            <p class="muted"><span lang="en">Results of the 2025–2026 chili trial with the World Vegetable Center: harvest, soil carbon and soil life compared with a monoculture control.</span><span lang="zh-Hant">與世界蔬菜中心合作的 2025–2026 辣椒試驗結果：收成、土壤碳與土壤生命，與單一栽培對照區比較。</span></p>
+            <span class="pc-tag"><span lang="en">Story</span><span lang="zh-Hant">故事</span></span>
+            <h3><a href="#story"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span></a></h3>
+            <p class="muted"><span lang="en">Two years at Gengfutian Farm, from bare gravel to a layered food forest, told in five steps.</span><span lang="zh-Hant">耕福田農場的兩年：從裸露礫石地到分層的食物森林，分五個步驟呈現。</span></p>
           </div>
         </article>
         <article class="post-card">
-          <img src="img/s-gft-2024-11.jpg" alt="Open gravel ground at Gengfutian with the first log lines, November 2024" loading="lazy" width="1600" height="702">
+          <img src="img/teach-course.jpg" alt="Course participants planting a syntropic tree line" loading="lazy" width="1200" height="900">
           <div class="pc">
-            <span class="pc-tag"><span lang="en">Story</span><span lang="zh-Hant">故事</span></span>
-            <h3><a href="#story"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span></a></h3>
-            <p class="muted"><span lang="en">Eighteen months at Gengfutian Farm, told step by step with photos and soil data.</span><span lang="zh-Hant">耕福田農場的十八個月，以照片與土壤數據逐步呈現。</span></p>
+            <span class="pc-tag"><span lang="en">Teaching</span><span lang="zh-Hant">教學</span></span>
+            <h3><a href="#teaching"><span lang="en">Learning by planting</span><span lang="zh-Hant">從種植中學習</span></a></h3>
+            <p class="muted"><span lang="en">Courses for farmers, students, communities and government staff in Taiwan.</span><span lang="zh-Hant">為台灣的農友、學生、社區與公部門人員開設的課程。</span></p>
           </div>
         </article>
         <article class="post-card">
@@ -524,25 +574,23 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
 </section>
 
 <!-- STORY -->
-<section class="section story" id="story" aria-labelledby="story-title">
+<section class="section story band" id="story" aria-labelledby="story-title">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow"><span lang="en">Gengfutian Farm · 2024–2026</span><span lang="zh-Hant">耕福田農場 · 2024–2026</span></p>
       <div>
         <h2 id="story-title"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span></h2>
-        <p class="muted"><span lang="en">Eighteen months on stony ground, in five steps. Scroll at your own pace.</span><span lang="zh-Hant">一塊礫石地上的十八個月，分為五個步驟。請依自己的步調往下閱讀。</span></p>
+        <p class="muted"><span lang="en">Two years on stony ground, in five steps. Scroll at your own pace.</span><span lang="zh-Hant">一塊礫石地上的兩年，分為五個步驟。請依自己的步調往下閱讀。</span></p>
       </div>
     </div>
-    <nav class="story-rail" aria-label="Story steps 故事步驟"><ol><li><a href="#step-1" data-step="1">2024.11</a></li><li><a href="#step-2" data-step="2">2025.09</a></li><li><a href="#step-3" data-step="3">2026.04</a></li><li><a href="#step-4" data-step="4">2026.05</a></li><li><a href="#step-5" data-step="5">2026.10</a></li></ol></nav>
+    <nav class="story-rail" aria-label="Story steps 故事步驟"><ol><li><a href="#step-1" data-step="1">2024.11</a></li><li><a href="#step-2" data-step="2">2025.09</a></li><li><a href="#step-3" data-step="3">2026.03</a></li><li><a href="#step-4" data-step="4">2026.05</a></li><li><a href="#step-5" data-step="5">2026.10</a></li></ol></nav>
     <ol class="steps">
       <li class="step" id="step-1">
         <div class="step-media"><figure><img src="img/s-gft-2024-11.jpg" alt="Open gravel ground with the first log lines laid out, a small tractor and the old orchard behind" loading="lazy" width="1600" height="702"><figcaption class="media-cap"><span lang="en">Gengfutian Farm, Tzu Chi University, Hualien.</span><span lang="zh-Hant">花蓮慈濟大學耕福田農場。</span></figcaption></figure></div>
         <div class="step-text">
           <p class="step-date"><span lang="en">November 2024</span><span lang="zh-Hant">2024 年 11 月</span></p>
           <h3><span lang="en">Gravel and an old orchard</span><span lang="zh-Hant">礫石地與老果園</span></h3>
-          <p><span lang="en">A ten-year-old soursop orchard on shallow, stony, calcareous ground. The first log lines are laid out on bare gravel.</span><span lang="zh-Hant">一座十年的刺果番荔枝果園，位於淺薄、多石的石灰質土地上。第一批原木線鋪在裸露的礫石上。</span></p>
-          <p class="step-fig"><strong>1.8 %</strong> <span lang="en">organic matter in the topsoil</span><span lang="zh-Hant">表土有機質</span></p>
-          <p class="step-src"><span lang="en">Soil test, December 2024</span><span lang="zh-Hant">土壤檢測，2024 年 12 月</span></p>
+          <p><span lang="en">A ten-year-old soursop orchard on shallow, stony, calcareous ground, with almost no organic matter. The first log lines are laid out on bare gravel.</span><span lang="zh-Hant">一座十年的刺果番荔枝果園，位於淺薄、多石、幾乎沒有有機質的石灰質土地上。第一批原木線鋪在裸露的礫石上。</span></p>
         </div>
       </li>
       <li class="step" id="step-2">
@@ -551,18 +599,14 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
           <p class="step-date"><span lang="en">September 2025</span><span lang="zh-Hant">2025 年 9 月</span></p>
           <h3><span lang="en">Soil builds under the tree lines</span><span lang="zh-Hant">樹列下的土壤開始累積</span></h3>
           <p><span lang="en">Pruned biomass, wood chips and banana trunks are laid along the tree lines. The soil beneath them changes first; the open inter-rows follow later.</span><span lang="zh-Hant">修剪下的生物量、木屑與香蕉莖沿著樹列鋪放。樹列下方的土壤最先改變，行間空地隨後跟進。</span></p>
-          <p class="step-fig"><strong>15.1 %</strong> <span lang="en">organic matter in the tree lines, against 1.9 % in the monoculture control</span><span lang="zh-Hant">樹列有機質，單一栽培對照區為 1.9 %</span></p>
-          <p class="step-src"><span lang="en">HDARES soil report S1140692</span><span lang="zh-Hant">花蓮農改場土壤報告 S1140692</span></p>
         </div>
       </li>
       <li class="step" id="step-3">
-        <div class="step-media"><figure><img src="img/roots.jpg" alt="Pepper seedlings from the greenhouse test with strong root systems in syntropic soil" loading="lazy" width="1233" height="399"><figcaption class="media-cap"><span lang="en">Greenhouse test at WorldVeg, April 2026.</span><span lang="zh-Hant">世界蔬菜中心溫室試驗，2026 年 4 月。</span></figcaption></figure></div>
+        <div class="step-media"><figure><img src="img/hero-gengfutian-2026-04.jpg" alt="Wide view of Gengfutian in April 2026: young tree lines with banana and moringa between mulched beds" loading="lazy" width="1950" height="450"><figcaption class="media-cap"><span lang="en">Gengfutian, April 2026.</span><span lang="zh-Hant">耕福田，2026 年 4 月。</span></figcaption></figure></div>
         <div class="step-text">
-          <p class="step-date"><span lang="en">March–April 2026</span><span lang="zh-Hant">2026 年 3–4 月</span></p>
+          <p class="step-date"><span lang="en">March 2026</span><span lang="zh-Hant">2026 年 3 月</span></p>
           <h3><span lang="en">Chili planted, then no more water</span><span lang="zh-Hant">種下辣椒，之後不再灌溉</span></h3>
-          <p><span lang="en">Chili seedlings go into syntropic beds and into a monoculture control. After 21 March the syntropic plots receive no irrigation, no fertiliser and no sprays. In the greenhouse, WorldVeg tests the soil against Fusarium wilt.</span><span lang="zh-Hant">辣椒苗種入趨合植床與單一栽培對照區。3 月 21 日之後，趨合試驗區不再灌溉、施肥或噴藥。世界蔬菜中心同時在溫室中測試土壤對鐮孢菌萎凋病的抵抗力。</span></p>
-          <p class="step-fig"><strong>0</strong> <span lang="en">plants wilted in syntropic soil inoculated with Fusarium</span><span lang="zh-Hant">株在接種鐮孢菌的趨合土壤中萎凋</span></p>
-          <p class="step-src"><span lang="en">World Vegetable Center seminar, 16 April 2026</span><span lang="zh-Hant">世界蔬菜中心研討會，2026 年 4 月 16 日</span></p>
+          <p><span lang="en">Chili seedlings go into the syntropic beds between the tree lines. After 21 March they receive no irrigation, no fertiliser and no sprays; the trees, mulch and soil life have to carry them.</span><span lang="zh-Hant">辣椒苗種入樹列之間的趨合植床。3 月 21 日之後不再灌溉、施肥或噴藥，由樹木、覆蓋物與土壤生命支撐它們生長。</span></p>
         </div>
       </li>
       <li class="step" id="step-4">
@@ -578,9 +622,7 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
         <div class="step-text">
           <p class="step-date"><span lang="en">May 2026</span><span lang="zh-Hant">2026 年 5 月</span></p>
           <h3><span lang="en">A closed food forest</span><span lang="zh-Hant">成林的食物森林</span></h3>
-          <p><span lang="en">Eighteen months after the first logs, the same view shows a dense, layered food forest. Below ground, the soil has become fungal-dominated, as in a forest.</span><span lang="zh-Hant">鋪下第一批原木十八個月後，同一視角已是茂密、分層的食物森林。地表之下，土壤轉為以真菌為主，就像森林一樣。</span></p>
-          <p class="step-fig"><strong>7.7×</strong> <span lang="en">microbial biomass compared with the monoculture: 1,637 against 213 µg/g</span><span lang="zh-Hant">單一栽培的微生物量倍數：1,637 對 213 µg/g</span></p>
-          <p class="step-src"><span lang="en">World Vegetable Center soil analysis, 2026</span><span lang="zh-Hant">世界蔬菜中心土壤分析，2026 年</span></p>
+          <p><span lang="en">Eighteen months after the first logs, the same view shows a dense, layered food forest. Shade, leaf litter and roots keep the ground cool and covered.</span><span lang="zh-Hant">鋪下第一批原木十八個月後，同一視角已是茂密、分層的食物森林。樹蔭、落葉與根系讓地面保持涼爽與覆蓋。</span></p>
         </div>
       </li>
       <li class="step" id="step-5">
@@ -588,9 +630,7 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
         <div class="step-text">
           <p class="step-date"><span lang="en">July–October 2026</span><span lang="zh-Hant">2026 年 7–10 月</span></p>
           <h3><span lang="en">Harvest, and life returns</span><span lang="zh-Hant">收成，生命回歸</span></h3>
-          <p><span lang="en">The syntropic plots keep fruiting into October, after the control has stopped. Spiders, bees and grasshoppers live among the plants; the control had one spider.</span><span lang="zh-Hant">趨合試驗區持續結果至十月，對照區早已停止。植物間可見蜘蛛、蜜蜂與蚱蜢；對照區僅見一隻蜘蛛。</span></p>
-          <p class="step-fig"><strong>5.3×</strong> <span lang="en">more chili than the monoculture control: 3.14 kg against 0.60 kg</span><span lang="zh-Hant">對照區的辣椒收成倍數：3.14 公斤對 0.60 公斤</span></p>
-          <p class="step-src"><span lang="en">Harvest records, Gengfutian</span><span lang="zh-Hant">耕福田收成紀錄</span></p>
+          <p><span lang="en">The chili plants keep fruiting into October, through the dry months, without irrigation. Spiders, bees, wasps, grasshoppers and birds live among them.</span><span lang="zh-Hant">辣椒在乾燥的月份中未經灌溉，仍持續結果至十月。植物間可見蜘蛛、蜜蜂、胡蜂、蚱蜢與鳥類。</span></p>
         </div>
       </li>
     </ol>
@@ -599,7 +639,7 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
 </section>
 
 <!-- APPROACH -->
-<section class="section" id="approach" aria-labelledby="approach-title">
+<section class="section sunband" id="approach" aria-labelledby="approach-title">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow"><span lang="en">Approach</span><span lang="zh-Hant">理念</span></p>
@@ -620,60 +660,6 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
       </div>
     </div>
 
-    <div class="consortium">
-      <h3><span lang="en">Strata and succession together: one consortium</span><span lang="zh-Hant">分層與演替結合：一個植物聯盟</span></h3>
-      <p class="muted" style="max-width:44em"><span lang="en">Each cell is one niche, defined by height (stratum) and life span (stage). Plants in the same cell compete; plants in different cells cooperate. Example for the lowlands of eastern Taiwan.</span><span lang="zh-Hant">每一格是一個生態位，由高度（層次）與壽命（演替階段）決定。同一格的植物彼此競爭，不同格的植物彼此合作。以下為台灣東部平地的範例。</span></p>
-      <div class="table-scroll" role="region" aria-labelledby="ctable-cap" tabindex="0">
-        <table class="ctable">
-          <caption id="ctable-cap" class="sr-only">Example consortium by stratum and successional stage 依層次與演替階段排列的植物聯盟範例</caption>
-          <thead>
-            <tr>
-              <th scope="col"><span lang="en">Stratum · cover</span><span lang="zh-Hant">層次 · 覆蓋度</span></th>
-              <th scope="col"><span lang="en">Placenta 1</span><span lang="zh-Hant">胎盤期一</span><span class="d">0–6 <span lang="en">months</span><span lang="zh-Hant">個月</span></span></th>
-              <th scope="col"><span lang="en">Placenta 2</span><span lang="zh-Hant">胎盤期二</span><span class="d">6–24 <span lang="en">months</span><span lang="zh-Hant">個月</span></span></th>
-              <th scope="col"><span lang="en">Secondary 1</span><span lang="zh-Hant">次生期一</span><span class="d">2–5 <span lang="en">years</span><span lang="zh-Hant">年</span></span></th>
-              <th scope="col"><span lang="en">Secondary 2</span><span lang="zh-Hant">次生期二</span><span class="d">5–21 <span lang="en">years</span><span lang="zh-Hant">年</span></span></th>
-              <th scope="col"><span lang="en">Climax</span><span lang="zh-Hant">頂極期</span><span class="d">21+ <span lang="en">years</span><span lang="zh-Hant">年</span></span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="--c:var(--ink)">
-              <th scope="row"><span class="sw" aria-hidden="true"></span><span lang="en">Emergent</span><span lang="zh-Hant">突出層</span><span class="d">~20%</span></th>
-              <td><span lang="en">Corn</span><span lang="zh-Hant">玉米</span></td>
-              <td><span lang="en">Papaya</span><span lang="zh-Hant">木瓜</span></td>
-              <td><span lang="en">Moringa</span><span lang="zh-Hant">辣木</span></td>
-              <td><span lang="en">Taiwan acacia</span><span lang="zh-Hant">相思樹</span></td>
-              <td><span lang="en">Coconut</span><span lang="zh-Hant">椰子</span></td>
-            </tr>
-            <tr style="--c:var(--moss)">
-              <th scope="row"><span class="sw" aria-hidden="true"></span><span lang="en">High</span><span lang="zh-Hant">高層</span><span class="d">~40%</span></th>
-              <td><span lang="en">Tomato</span><span lang="zh-Hant">番茄</span></td>
-              <td><span lang="en">Cassava</span><span lang="zh-Hant">樹薯</span></td>
-              <td><span lang="en">Banana</span><span lang="zh-Hant">香蕉</span></td>
-              <td><span lang="en">Fig</span><span lang="zh-Hant">無花果</span></td>
-              <td><span lang="en">Mango, avocado</span><span lang="zh-Hant">芒果、酪梨</span></td>
-            </tr>
-            <tr style="--c:var(--leaf)">
-              <th scope="row"><span class="sw" aria-hidden="true"></span><span lang="en">Medium</span><span lang="zh-Hant">中層</span><span class="d">~60%</span></th>
-              <td><span lang="en">Jack bean</span><span lang="zh-Hant">刀豆</span></td>
-              <td><span lang="en">Lemongrass</span><span lang="zh-Hant">香茅</span></td>
-              <td><span lang="en">Pigeon pea</span><span lang="zh-Hant">樹豆</span></td>
-              <td><span lang="en">Guava, citrus</span><span lang="zh-Hant">芭樂、柑橘</span></td>
-              <td><span lang="en">Indigenous cinnamon</span><span lang="zh-Hant">土肉桂</span></td>
-            </tr>
-            <tr style="--c:var(--sun)">
-              <th scope="row"><span class="sw" aria-hidden="true"></span><span lang="en">Low</span><span lang="zh-Hant">低層</span><span class="d">~80%</span></th>
-              <td><span lang="en">Sweet potato</span><span lang="zh-Hant">地瓜</span></td>
-              <td><span lang="en">Ginger, taro</span><span lang="zh-Hant">薑、芋頭</span></td>
-              <td><span lang="en">Pineapple</span><span lang="zh-Hant">鳳梨</span></td>
-              <td><span lang="en">Coffee</span><span lang="zh-Hant">咖啡</span></td>
-              <td><span lang="en">Cocoa</span><span lang="zh-Hant">可可</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="media-cap"><span lang="en">Cover: the share of ground each stratum shades when the system is mature.</span><span lang="zh-Hant">覆蓋度：系統成熟時，各層所遮蔽的地面比例。</span></p>
-    </div>
   </div>
 </section>
 
@@ -803,159 +789,49 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow"><span lang="en">Research</span><span lang="zh-Hant">研究</span></p>
-        <h2 id="research-title"><span lang="en">Measuring what happens in the soil</span><span lang="zh-Hant">量測土壤中的變化</span></h2>
-        <p class="muted"><span lang="en">Chili pepper (<i>Capsicum annuum</i>) trial at Gengfutian, 2025–2026: Tzu Chi University USR Center with the World Vegetable Center (WorldVeg) Plant Pathology team, soil DNA sequencing by Prof. Chen Jun-Yao (陳俊堯), Tzu Chi University, and soil chemistry by HDARES. Syntropic plots were not irrigated after 21 March 2026 and received no fertiliser or sprays.</span><span lang="zh-Hant">耕福田辣椒（<i>Capsicum annuum</i>）試驗，2025–2026：慈濟大學 USR 中心與世界蔬菜中心（WorldVeg）植物病理團隊合作，土壤 DNA 定序由慈濟大學陳俊堯教授執行，土壤化學分析由花蓮農改場完成。趨合試驗區自 2026 年 3 月 21 日後未再灌溉，全程未施肥、未噴藥。</span></p>
-      </div>
-
-      <div class="findings">
-        <div class="finding"><strong>5.3×</strong><span><span lang="en">chili harvest</span><span lang="zh-Hant">辣椒收成</span></span><small><span lang="en">more than the monoculture control: 3.14 kg vs 0.60 kg, July–October 2026</span><span lang="zh-Hant">相較單一栽培對照區：3.14 公斤對 0.60 公斤，2026 年 7–10 月</span></small></div>
-        <div class="finding"><strong>7.7×</strong><span><span lang="en">microbial biomass</span><span lang="zh-Hant">微生物量</span></span><small><span lang="en">1,637 vs 213 µg/g, fungal-dominated (F:B 3.8:1)</span><span lang="zh-Hant">1,637 對 213 µg/g，以真菌為主（F:B 3.8:1）</span></small></div>
-        <div class="finding"><strong>0</strong><span><span lang="en">plants with Fusarium wilt</span><span lang="zh-Hant">株感染鐮孢菌萎凋病</span></span><small><span lang="en">in syntropic soil inoculated with Fusarium (greenhouse)</span><span lang="zh-Hant">於接種鐮孢菌的趨合土壤中（溫室試驗）</span></small></div>
-        <div class="finding"><strong>3–5×</strong><span><span lang="en"><i>Streptomyces</i> in the soil</span><span lang="zh-Hant">土壤中的<i>鏈黴菌</i></span></span><small><span lang="en">a genus known for plant-protective strains (Prof. Chen)</span><span lang="zh-Hant">以保護植物的菌株聞名（陳教授）</span></small></div>
-      </div>
-
-      <!-- Harvest chart -->
-      <div class="r-block">
-        <h3><span lang="en">Harvest per date, three plots of 10 plants each</span><span lang="zh-Hant">各採收日產量，每處理三區、每區 10 株</span></h3>
-        <div class="legend" aria-hidden="true">
-          <span><i style="background:var(--sunlight)"></i><span lang="en">Syntropic</span><span lang="zh-Hant">趨合</span></span>
-          <span><i style="background:#9AA593"></i><span lang="en">Monoculture control</span><span lang="zh-Hant">單一栽培對照</span></span>
-        </div>
-        <figure style="margin:0">
-          <svg class="chart" viewBox="0 0 720 330" role="img" aria-labelledby="hv-t hv-d">
-            <title id="hv-t">Chili harvest per date, syntropic versus control</title>
-            <desc id="hv-d">9 July: 672 g versus 180 g. 16 August: 1,426 g versus 416 g. 30 September: 313 g versus 0 g. 7 October: 730 g versus 0 g.</desc>
-            <g class="grid">
-              <line x1="60" x2="700" y1="270" y2="270"/><line x1="60" x2="700" y1="210" y2="210"/><line x1="60" x2="700" y1="150" y2="150"/><line x1="60" x2="700" y1="90" y2="90"/><line x1="60" x2="700" y1="30" y2="30"/>
-            </g>
-            <g text-anchor="end"><text x="52" y="275">0</text><text x="52" y="215">400</text><text x="52" y="155">800</text><text x="52" y="95">1200</text><text x="52" y="35">1600 g</text></g>
-            <!-- scale: 0.15 px per g -->
-            <g>
-              <rect x="88" y="169.1" width="52" height="100.9" fill="#D7A23E"/><rect x="144" y="243" width="52" height="27" fill="#9AA593"/>
-              <rect x="248" y="56.1" width="52" height="213.9" fill="#D7A23E"/><rect x="304" y="207.6" width="52" height="62.4" fill="#9AA593"/>
-              <rect x="408" y="223.1" width="52" height="46.9" fill="#D7A23E"/><rect x="464" y="268" width="52" height="2" fill="#9AA593"/>
-              <rect x="568" y="160.5" width="52" height="109.5" fill="#D7A23E"/><rect x="624" y="268" width="52" height="2" fill="#9AA593"/>
-            </g>
-            <g text-anchor="middle" font-weight="700">
-              <text x="114" y="161">672</text><text x="170" y="235">180</text>
-              <text x="274" y="48">1,426</text><text x="330" y="199">416</text>
-              <text x="434" y="215">313</text><text x="490" y="260">0</text>
-              <text x="594" y="152">730</text><text x="650" y="260">0</text>
-            </g>
-            <g text-anchor="middle"><text x="142" y="296">9 Jul</text><text x="302" y="296">16 Aug</text><text x="462" y="296">30 Sep</text><text x="622" y="296">7 Oct</text><text x="380" y="322">2026</text></g>
-          </svg>
-          <figcaption class="media-cap"><span lang="en">After August only the syntropic plots kept fruiting. 30 September includes 175.5 g weighed for two plots together.</span><span lang="zh-Hant">八月之後只有趨合區持續結果。9 月 30 日數值含兩區合併秤重的 175.5 公克。</span></figcaption>
-        </figure>
-        <details class="data">
-          <summary><span lang="en">Show the harvest data as a table</span><span lang="zh-Hant">以表格顯示收成數據</span></summary>
-          <div class="tscroll">
-            <table class="dtable">
-              <caption><span lang="en">Fresh fruit per harvest (g)</span><span lang="zh-Hant">每次採收鮮果重（公克）</span></caption>
-              <thead><tr><th scope="col"><span lang="en">Date</span><span lang="zh-Hant">日期</span></th><th scope="col"><span lang="en">Syntropic</span><span lang="zh-Hant">趨合</span></th><th scope="col"><span lang="en">Control</span><span lang="zh-Hant">對照</span></th></tr></thead>
-              <tbody>
-                <tr><td>2026-07-09</td><td>672.4</td><td>179.7</td></tr>
-                <tr><td>2026-08-16</td><td>1,426.0</td><td>415.7</td></tr>
-                <tr><td>2026-09-30</td><td>312.8</td><td>0</td></tr>
-                <tr><td>2026-10-07</td><td>730.0</td><td>0</td></tr>
-                <tr><th scope="row"><span lang="en">Total</span><span lang="zh-Hant">合計</span></th><td class="hi">3,141.2</td><td>595.4</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </details>
-      </div>
-
-      <!-- Soil tables -->
-      <div class="r-block r-grid">
-        <div class="tscroll">
-          <table class="dtable">
-            <caption><span lang="en">Soil at the start, Gengfutian, September 2025 (topsoil)</span><span lang="zh-Hant">試驗開始時的土壤，耕福田，2025 年 9 月（表土）</span></caption>
-            <thead><tr>
-              <th scope="col"><span lang="en">Measure</span><span lang="zh-Hant">項目</span></th>
-              <th scope="col"><span lang="en">Site 2024</span><span lang="zh-Hant">2024 基地</span></th>
-              <th scope="col"><span lang="en">Control</span><span lang="zh-Hant">對照</span></th>
-              <th scope="col"><span lang="en">Tree line 1</span><span lang="zh-Hant">樹列一</span></th>
-              <th scope="col"><span lang="en">Tree line 2</span><span lang="zh-Hant">樹列二</span></th>
-            </tr></thead>
-            <tbody>
-              <tr><th scope="row"><span lang="en">Organic matter (%)</span><span lang="zh-Hant">有機質（%）</span></th><td>1.8</td><td>1.9</td><td class="hi">15.1</td><td class="hi">10.6</td></tr>
-              <tr><th scope="row"><span lang="en">Potassium (mg/kg)</span><span lang="zh-Hant">鉀（mg/kg）</span></th><td>~17</td><td>19</td><td class="hi">897</td><td class="hi">508</td></tr>
-              <tr><th scope="row"><span lang="en">Magnesium (mg/kg)</span><span lang="zh-Hant">鎂（mg/kg）</span></th><td>~89</td><td>66</td><td class="hi">684</td><td class="hi">332</td></tr>
-              <tr><th scope="row">pH</th><td>7.4</td><td>8.2</td><td>7.7</td><td>7.8</td></tr>
-              <tr><th scope="row"><span lang="en">Microbial biomass (µg/g)</span><span lang="zh-Hant">微生物量（µg/g）</span></th><td>—</td><td>120</td><td class="hi" colspan="2" style="text-align:center">232</td></tr>
-              <tr><th scope="row"><span lang="en">Fungi : bacteria</span><span lang="zh-Hant">真菌：細菌</span></th><td>—</td><td>0.1 : 1</td><td class="hi" colspan="2" style="text-align:center">0.4 : 1</td></tr>
-            </tbody>
-          </table>
-          <p class="media-cap"><span lang="en">Chemistry: HDARES report S1140692. Biology: Microbiometer, 9 September 2025. The 2024 site values come from an earlier test made for another purpose.</span><span lang="zh-Hant">化學：花蓮農改場報告 S1140692。生物：Microbiometer，2025 年 9 月 9 日。2024 年基地數值來自另一用途的早期檢測。</span></p>
-        </div>
-        <div class="tscroll">
-          <table class="dtable">
-            <caption><span lang="en">WorldVeg soil analysis, 2026</span><span lang="zh-Hant">世界蔬菜中心土壤分析，2026 年</span></caption>
-            <thead><tr>
-              <th scope="col"><span lang="en">Measure</span><span lang="zh-Hant">項目</span></th>
-              <th scope="col"><span lang="en">Syntropic, Hualien</span><span lang="zh-Hant">趨合，花蓮</span></th>
-              <th scope="col"><span lang="en">Monoculture, Hualien</span><span lang="zh-Hant">單一栽培，花蓮</span></th>
-              <th scope="col"><span lang="en">Monoculture, Tainan</span><span lang="zh-Hant">單一栽培，台南</span></th>
-            </tr></thead>
-            <tbody>
-              <tr><th scope="row"><span lang="en">Microbial biomass (µg/g)</span><span lang="zh-Hant">微生物量（µg/g）</span></th><td class="hi">1,637</td><td>213</td><td>236</td></tr>
-              <tr><th scope="row"><span lang="en">Fungi : bacteria</span><span lang="zh-Hant">真菌：細菌</span></th><td class="hi">3.8 : 1</td><td>0.2 : 1</td><td>0.4 : 1</td></tr>
-              <tr><th scope="row"><span lang="en">Organic carbon (%)</span><span lang="zh-Hant">有機碳（%）</span></th><td class="hi">29</td><td>1.8</td><td>0.86</td></tr>
-              <tr><th scope="row"><span lang="en">Potassium (ppm)</span><span lang="zh-Hant">鉀（ppm）</span></th><td class="hi">2,424</td><td>482</td><td>80</td></tr>
-              <tr><th scope="row">pH</th><td>7.5</td><td>8.1</td><td>7.2</td></tr>
-              <tr><th scope="row"><span lang="en">Microbial isolates</span><span lang="zh-Hant">分離菌株數</span></th><td class="hi">84</td><td>—</td><td>46</td></tr>
-            </tbody>
-          </table>
-          <p class="media-cap"><span lang="en">About 80% of the best biocontrol candidates against Fusarium came from the syntropic soil; 22 strains were deposited in the WorldVeg microbial bank.</span><span lang="zh-Hant">對抗鐮孢菌的最佳生物防治候選菌株中，約 80% 來自趨合土壤；共 22 株已存入世界蔬菜中心微生物庫。</span></p>
-        </div>
-      </div>
-
-      <!-- Bacteria -->
-      <div class="r-block r-grid">
         <div>
-          <h3><span lang="en">Soil bacteria, 5 cm depth</span><span lang="zh-Hant">土壤細菌，深度 5 公分</span></h3>
-          <p class="muted small" style="margin:.5rem 0 1.25rem"><span lang="en">Relative abundance (%) in DNA sequencing by Prof. Chen Jun-Yao, April 2026. Mean of four syntropic positions against the soursop control.</span><span lang="zh-Hant">陳俊堯教授 DNA 定序之相對豐度（%），2026 年 4 月。四個趨合採樣點的平均值，對照為刺果番荔枝單一栽培。</span></p>
-          <div class="legend" aria-hidden="true" style="margin-bottom:1rem">
-            <span><i style="background:var(--sunlight)"></i><span lang="en">Syntropic</span><span lang="zh-Hant">趨合</span></span>
-            <span><i style="background:#9AA593"></i><span lang="en">Control</span><span lang="zh-Hant">對照</span></span>
-          </div>
-          <ul class="genera">
-            <li><span><i>Streptomyces</i></span><span class="bars"><span class="brow"><span class="track"><span class="bar s" style="width:calc(1.4/5.4*100%)"></span></span><b>1.4 %</b></span><span class="brow"><span class="track"><span class="bar c" style="width:calc(.5/5.4*100%)"></span></span><b>0.5 %</b></span></span></li>
-            <li><span><i>Pir4</i> (Planctomycetota)</span><span class="bars"><span class="brow"><span class="track"><span class="bar s" style="width:calc(2.2/5.4*100%)"></span></span><b>2.2 %</b></span><span class="brow"><span class="track"><span class="bar c" style="width:calc(.5/5.4*100%)"></span></span><b>0.5 %</b></span></span></li>
-            <li><span><i>Hyphomicrobium</i></span><span class="bars"><span class="brow"><span class="track"><span class="bar s" style="width:calc(1.3/5.4*100%)"></span></span><b>1.3 %</b></span><span class="brow"><span class="track"><span class="bar c" style="width:calc(.4/5.4*100%)"></span></span><b>0.4 %</b></span></span></li>
-            <li><span><i>Ilumatobacter</i></span><span class="bars"><span class="brow"><span class="track"><span class="bar s" style="width:calc(1.3/5.4*100%)"></span></span><b>1.3 %</b></span><span class="brow"><span class="track"><span class="bar c" style="width:calc(.2/5.4*100%)"></span></span><b>0.2 %</b></span></span></li>
-            <li><span><i>Gaiella</i></span><span class="bars"><span class="brow"><span class="track"><span class="bar s" style="width:calc(1.9/5.4*100%)"></span></span><b>1.9 %</b></span><span class="brow"><span class="track"><span class="bar c" style="width:calc(5.4/5.4*100%)"></span></span><b>5.4 %</b></span></span></li>
-          </ul>
-          <p class="media-cap" style="margin-top:1rem"><span lang="en">Syntropic soil held more <i>Streptomyces</i> and other actinobacteria and planctomycetes. The control was dominated by <i>Gaiella</i>, typical of low-carbon soils.</span><span lang="zh-Hant">趨合土壤含有較多<i>鏈黴菌</i>及其他放線菌與浮霉菌；對照土壤則以低碳土壤常見的 <i>Gaiella</i> 為主。</span></p>
-        </div>
-        <div style="display:grid;gap:1.25rem">
-          <div>
-            <div class="photo-pair">
-              <figure><img src="img/bed-mono.jpg" alt="Monoculture control bed: banana trunk mulch on stony, mostly bare soil" loading="lazy" width="1073" height="287"><figcaption class="media-cap"><span lang="en">Control bed</span><span lang="zh-Hant">對照區</span></figcaption></figure>
-              <figure><img src="img/bed-syn.jpg" alt="Syntropic bed: banana trunks, wood chips and pruned leaves with dense green cover" loading="lazy" width="1073" height="348"><figcaption class="media-cap"><span lang="en">Syntropic bed</span><span lang="zh-Hant">趨合區</span></figcaption></figure>
-            </div>
-          </div>
-          <figure style="margin:0">
-            <img src="img/roots.jpg" alt="Pepper seedlings from the greenhouse test: plants in Fusarium-inoculated syntropic soil (left) have thicker root systems than plants in uninoculated syntropic soil (right); none wilted" loading="lazy" width="1233" height="399" style="background:#fff">
-            <figcaption class="media-cap"><span lang="en">Greenhouse test at WorldVeg: syntropic soil with Fusarium (left) and without (right). No plant wilted; the inoculated plants grew larger.</span><span lang="zh-Hant">世界蔬菜中心溫室試驗：含鐮孢菌（左）與不含（右）的趨合土壤。皆未萎凋，接種組的植株反而更大。</span></figcaption>
-          </figure>
+          <h2 id="research-title"><span lang="en">Every site is also a field trial</span><span lang="zh-Hant">每個場域也是田間試驗</span></h2>
+          <p class="muted"><span lang="en">We measure soil, harvest and biodiversity on the sites we design, together with universities and research institutes. Results appear here once the studies are published and the partners have agreed.</span><span lang="zh-Hant">我們與大學及研究機構合作，在所設計的場域中量測土壤、收成與生物多樣性。研究正式發表並經合作夥伴同意後，結果將公布於此。</span></p>
         </div>
       </div>
-
-      <div class="r-block">
-        <h3><span lang="en">Life above ground</span><span lang="zh-Hant">地面上的生命</span></h3>
-        <p class="muted small" style="max-width:40em"><span lang="en">Fungi, insects and pollinators came back to Gengfutian with the biomass. At four weeks the syntropic chili plots had spiders, bees and grasshoppers; the control had one spider.</span><span lang="zh-Hant">隨著生物量增加，真菌、昆蟲與授粉者回到耕福田。移植四週後，趨合辣椒區可見蜘蛛、蜜蜂與蚱蜢；對照區僅見一隻蜘蛛。</span></p>
-        <div class="bio">
+      <div class="tabs" data-tabs>
+        <div role="tablist" aria-label="Research 研究" class="tablist" hidden>
+          <button role="tab" type="button" id="tab-ongoing" aria-controls="panel-ongoing" aria-selected="true"><span lang="en">Ongoing</span><span lang="zh-Hant">進行中</span></button>
+          <button role="tab" type="button" id="tab-published" aria-controls="panel-published" aria-selected="false" tabindex="-1"><span lang="en">Published &amp; press</span><span lang="zh-Hant">已發表與報導</span></button>
+        </div>
+        <div role="tabpanel" id="panel-ongoing" aria-labelledby="tab-ongoing" tabindex="0" class="panel">
+          <h3 class="panel-h"><span lang="en">Ongoing</span><span lang="zh-Hant">進行中</span></h3>
+          <div class="studies">
+          <article class="study">
+            <p class="study-meta"><span class="pc-tag"><span lang="en">Gengfutian · 2025–2026</span><span lang="zh-Hant">耕福田 · 2025–2026</span></span><span class="status"><span lang="en">Manuscript in preparation</span><span lang="zh-Hant">論文撰寫中</span></span></p>
+            <h3><span lang="en">Chili in syntropic beds without irrigation</span><span lang="zh-Hant">無灌溉趨合植床中的辣椒</span></h3>
+            <p class="muted"><span lang="en">Harvest, soil chemistry and soil biology of chili grown between syntropic tree lines, compared with a monoculture control.</span><span lang="zh-Hant">比較種植於趨合樹列間與單一栽培對照區的辣椒收成、土壤化學與土壤生物。</span></p>
+          </article>
+          <article class="study">
+            <p class="study-meta"><span class="pc-tag"><span lang="en">Gengfutian · 2026</span><span lang="zh-Hant">耕福田 · 2026</span></span><span class="status"><span lang="en">Analysis ongoing</span><span lang="zh-Hant">分析進行中</span></span></p>
+            <h3><span lang="en">The soil microbiome under tree lines</span><span lang="zh-Hant">樹列下的土壤微生物相</span></h3>
+            <p class="muted"><span lang="en">DNA sequencing of soil bacteria in syntropic and conventional plots, with Tzu Chi University.</span><span lang="zh-Hant">與慈濟大學合作，以 DNA 定序分析趨合區與慣行區的土壤細菌。</span></p>
+          </article>
+          <article class="study">
+            <p class="study-meta"><span class="pc-tag"><span lang="en">Hualien · since 2024</span><span lang="zh-Hant">花蓮 · 2024 年起</span></span><span class="status"><span lang="en">Ongoing</span><span lang="zh-Hant">持續進行</span></span></p>
+            <h3><span lang="en">Soil monitoring on demonstration sites</span><span lang="zh-Hant">示範場域的土壤監測</span></h3>
+            <p class="muted"><span lang="en">Organic matter, nutrients and microbial biomass, measured on the sites before planting and as the systems grow.</span><span lang="zh-Hant">於種植前及系統生長過程中，持續量測各場域的有機質、養分與微生物量。</span></p>
+          </article>
+          </div>
+          <div class="r-block">
+            <h3><span lang="en">Life above ground</span><span lang="zh-Hant">地面上的生命</span></h3>
+            <p class="muted small" style="max-width:40em"><span lang="en">Fungi, insects, pollinators and birds return to Gengfutian as the biomass grows.</span><span lang="zh-Hant">隨著生物量增加，真菌、昆蟲、授粉者與鳥類回到耕福田。</span></p>
+            <div class="bio">
           <figure><img src="img/s-bio-mushroom.jpg" alt="Wild mushrooms growing on a decaying log in the mulch" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Fungi on wood mulch</span><span lang="zh-Hant">木質覆蓋物上的真菌</span></figcaption></figure>
           <figure><img src="img/s-bio-grasshopper.jpg" alt="A large green grasshopper resting on a leaf" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Grasshopper in the canopy</span><span lang="zh-Hant">樹冠層中的蚱蜢</span></figcaption></figure>
           <figure><img src="img/s-bio-pollinators.jpg" alt="Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Pollinators and birds</span><span lang="zh-Hant">授粉者與鳥類</span></figcaption></figure>
         </div>
-      </div>
-
-      <p class="note r-block" style="margin-top:2.5rem"><span lang="en">Manuscript in preparation: Henzler, I., Chen, T. and Maxwell, L., WorldVeg and Tzu Chi University. With three plots per treatment, the harvest difference is a strong trend that is not yet statistically conclusive (p ≈ 0.05–0.15).</span><span lang="zh-Hant">論文撰寫中：Henzler, I.、Chen, T.、Maxwell, L.，世界蔬菜中心與慈濟大學。每處理僅三區，收成差異為明顯趨勢，尚未達統計上的定論（p ≈ 0.05–0.15）。</span></p>
-
-      <div class="r-block" style="max-width:46rem">
-        <h3><span lang="en">Recognition and press</span><span lang="zh-Hant">獲獎與報導</span></h3>
-        <div class="award">
+          </div>
+        </div>
+        <div role="tabpanel" id="panel-published" aria-labelledby="tab-published" tabindex="0" class="panel">
+          <h3 class="panel-h"><span lang="en">Published &amp; press</span><span lang="zh-Hant">已發表與報導</span></h3>
+          <div style="max-width:46rem">
+          <div class="award">
           <b><span lang="en">2026 Vision USR Award</span><span lang="zh-Hant">2026 遠見 USR 生態共好組 績優獎</span></b>
           <span class="muted"><span lang="en">Eco-mutual benefit category, for the Tzu Chi University USR team. Responsible for the food forest work.</span><span lang="zh-Hant">以慈濟大學 USR 團隊成員身分獲獎，負責食物森林相關工作。</span></span>
         </div>
@@ -968,6 +844,8 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
           <li><a href="https://www.youtube.com/watch?v=CsMX1xkpZ2c" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>慈大USR計畫　提升土壤固碳量</span><span>大愛新聞</span></a></li>
           <li><a href="https://bccnews.com.tw/archives/654220" target="_blank" rel="noopener"><span><span lang="en">News report</span><span lang="zh-Hant">新聞報導</span></span><span>中廣新聞網</span></a></li>
         </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1030,7 +908,7 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
       </div>
     <div class="hero-meta about-facts">
       <div><strong>11+</strong><span><span lang="en">years of practice in soil health and regenerative agriculture, in six countries</span><span lang="zh-Hant">年土壤健康與再生農業實務經驗，遍及六個國家</span></span></div>
-      <div><strong>5.3×</strong><span><span lang="en">more chili harvest than the monoculture control, Gengfutian 2026</span><span lang="zh-Hant">倍辣椒收成：趨合區相較於單一栽培對照區（耕福田，2026）</span></span></div>
+      
       <div><strong>10,000+ m²</strong><span><span lang="en">of syntropic systems implemented in Taiwan and Malaysia</span><span lang="zh-Hant">在台灣與馬來西亞完成施作的趨合系統面積</span></span></div>
       <div><strong>2026</strong><span><span lang="en">Vision USR Award, with Tzu Chi University</span><span lang="zh-Hant">與慈濟大學共同獲得遠見 USR 獎</span></span></div>
     </div>
@@ -1111,11 +989,11 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
     <section class="foot-panel" id="accessibility" aria-label="Accessibility 無障礙說明" hidden>
       <p><span lang="en">This site aims to meet WCAG 2.2 level AA.</span><span lang="zh-Hant">本網站以符合 WCAG 2.2 AA 等級為目標。</span></p>
         <ul>
-          <li><span lang="en">Typefaces chosen for legibility: Atkinson Hyperlegible Next and Noto Sans TC.</span><span lang="zh-Hant">採用易讀字體：Atkinson Hyperlegible Next 與思源黑體（Noto Sans TC）。</span></li>
+          <li><span lang="en">Running text in Atkinson Hyperlegible Next and Noto Sans TC, chosen for legibility; headings in Bricolage Grotesque.</span><span lang="zh-Hant">內文採用易讀字體 Atkinson Hyperlegible Next 與思源黑體（Noto Sans TC）；英文標題採用 Bricolage Grotesque。</span></li>
           <li><span lang="en">Text size buttons (A, A+, A++) and full support for browser zoom up to 400%.</span><span lang="zh-Hant">提供字級按鈕（A、A+、A++），並完整支援瀏覽器放大至 400%。</span></li>
           <li><span lang="en">Text contrast of at least 4.5:1, in light and dark mode.</span><span lang="zh-Hant">亮色與暗色模式下，文字對比度皆至少 4.5:1。</span></li>
           <li><span lang="en">Full keyboard use, visible focus, a skip link, and before/after sliders that work with arrow keys.</span><span lang="zh-Hant">可完全以鍵盤操作、焦點清楚可見、提供跳過導覽連結，前後對照滑桿可用方向鍵操作。</span></li>
-          <li><span lang="en">Text descriptions for every photo and chart, and charts also available as tables.</span><span lang="zh-Hant">每張照片與圖表皆有文字描述，圖表也提供表格版本。</span></li>
+          <li><span lang="en">Text descriptions for every informative photo.</span><span lang="zh-Hant">每張具資訊性的照片皆有文字描述。</span></li>
           <li><span lang="en">Reduced motion is respected; nothing flashes or moves on its own.</span><span lang="zh-Hant">尊重「減少動態效果」設定；網頁不會自行閃爍或移動。</span></li>
         </ul>
         <p><span lang="en">If something is hard to use, please write to studiosyntropy@proton.me.</span><span lang="zh-Hant">若有任何使用上的困難，請來信 studiosyntropy@proton.me。</span></p>
@@ -1192,6 +1070,19 @@ html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!im
 </script>
 
 <script>
+/* ---------- Research tabs ---------- */
+(function(){
+  document.querySelectorAll('[data-tabs]').forEach(function(box){
+    var list=box.querySelector('[role=tablist]'),tabs=[].slice.call(box.querySelectorAll('[role=tab]'));
+    list.hidden=false;box.classList.add('tabs-on');
+    function sel(t,focus){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on});if(focus)t.focus()}
+    tabs.forEach(function(t,i){
+      t.addEventListener('click',function(){sel(t)});
+      t.addEventListener('keydown',function(e){var k=e.key,n=null;if(k==='ArrowRight')n=tabs[(i+1)%tabs.length];if(k==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];if(k==='Home')n=tabs[0];if(k==='End')n=tabs[tabs.length-1];if(n){e.preventDefault();sel(n,true)}});
+    });
+    sel(tabs[0]);
+  });
+})();
 /* ---------- Story rail ---------- */
 (function(){
   var links=[].slice.call(document.querySelectorAll('.story-rail a'));
