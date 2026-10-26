@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27 01:43",
+ "updated": "2026-10-27 01:56",
  "videos": 0,
  "items": [
   {
@@ -918,6 +918,36 @@
    ]
   },
   {
+   "id": "img__gft-diverse-a2_jpg",
+   "file": "gft-diverse-a2.jpg",
+   "web_path": "img/gft-diverse-a2.jpg",
+   "kind": "Photo",
+   "status": "In use",
+   "description": "Tree line A2 at Gengfutian: banana with a bunch of fruit, moringa, taro, cassava and young fruit trees above a mulch of cut leaves, mountains behind",
+   "width": 1600,
+   "height": 1200,
+   "size_kb": 614,
+   "taken": null,
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Sent by Tobias in the chat on 27 Oct 2026; not in 09_Media",
+   "edit": "Resized to 1600 px",
+   "credit": null,
+   "note": null,
+   "added_to_site": null,
+   "uses": [
+    {
+     "page": "Home (English and Chinese)",
+     "url": "https://studio-syntropy.com/",
+     "section": "Story \"From rock to food forest\"",
+     "page_date": null,
+     "alt": "Tree line A2 at Gengfutian: banana with a bunch of fruit, moringa, taro, cassava and young fruit trees above a mulch of cut leaves, mountains behind",
+     "caption": "Tree line A2 at Gengfutian: banana, moringa, taro and cassava growing together."
+    }
+   ]
+  },
+  {
    "id": "img__hda-ba-after_jpg",
    "file": "hda-ba-after.jpg",
    "web_path": "img/hda-ba-after.jpg",
@@ -1020,36 +1050,6 @@
      "page_date": null,
      "alt": "",
      "caption": ""
-    }
-   ]
-  },
-  {
-   "id": "img__hero-gengfutian-2026-04_jpg",
-   "file": "hero-gengfutian-2026-04.jpg",
-   "web_path": "img/hero-gengfutian-2026-04.jpg",
-   "kind": "Photo",
-   "status": "In use",
-   "description": "Wide view of Gengfutian in April 2026: young tree lines with banana and moringa between mulched beds",
-   "width": 1950,
-   "height": 450,
-   "size_kb": 268,
-   "taken": "2026-04",
-   "original": "Documents/02_Studio-Syntropy/Branding/Logo-2026/STUDIO_Kind-Harvest-Header-GFT426_2026-04-21.png",
-   "copy": null,
-   "embedded_in": null,
-   "source": null,
-   "edit": null,
-   "credit": null,
-   "note": null,
-   "added_to_site": "2026-10-23",
-   "uses": [
-    {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
-     "section": "Story \"From rock to food forest\"",
-     "page_date": null,
-     "alt": "Wide view of Gengfutian in April 2026: young tree lines with banana and moringa between mulched beds",
-     "caption": "Gengfutian, April 2026."
     }
    ]
   },
