@@ -20,9 +20,8 @@ If the new photo shows something else (another place, another date), ask Claude 
 | File in `img/` | Where on the page | Shape on the page |
 |---|---|---|
 | `hero-chili-gft.jpg` | Large photo at the top | 2 : 1 (4 : 3 on phones) |
-| `s-gft-2024-11.jpg` | Gengfutian, before (slider) | 16 : 7 |
-| `s-gft-2026-05.jpg` | Gengfutian, after (slider) | 16 : 7 |
-| `hero-gengfutian-2026-04.jpg` | Gengfutian, wide photo under the slider | very wide, 4.3 : 1 |
+| `s-gft-2024-11.jpg` | Story step 1, story slider (before), blog card | 16 : 7 |
+| `s-gft-2026-05.jpg` | Story slider (after), first blog card | 16 : 7 |
 | `dqm-before.jpg` | Ching Mei's Food Forest, before (slider) | 4 : 3 |
 | `dqm-after.jpg` | Ching Mei's Food Forest, after (slider) | 4 : 3 |
 | `hdares-alley.jpg` | HDARES, large photo | 16 : 9 |
@@ -32,14 +31,14 @@ If the new photo shows something else (another place, another date), ask Claude 
 | `kira-aerial.jpg` | Malaysia, Kira Organic Farm photo | 4 : 3 |
 | `kira-design.jpg` | Malaysia, Kira tree line drawing | 4 : 3 (shown whole, white background) |
 | `bed-mono.jpg` | Research, control bed | 3 : 1 |
-| `bed-syn.jpg` | Research, syntropic bed | 3 : 1 |
-| `roots.jpg` | Research, root photo from the greenhouse test | shown whole |
+| `bed-syn.jpg` | Research, syntropic bed; story step 2 | 3 : 1 |
+| `roots.jpg` | Research root photo; story step 3 | shown whole |
 | `s-bio-mushroom.jpg` | Research, "Life above ground", left | 16 : 9 |
 | `s-bio-grasshopper.jpg` | Research, "Life above ground", middle | 16 : 9 |
-| `s-bio-pollinators.jpg` | Research, "Life above ground", right | 16 : 9 |
+| `s-bio-pollinators.jpg` | Research "Life above ground" right; story step 5 | 16 : 9 |
 | `teach-course.jpg` | Teaching, photo 1 | 4 : 3 |
 | `teach-students.jpg` | Teaching, photo 2 | 4 : 3 |
-| `ngm-group.jpg` | Teaching, photo 3 | 4 : 3 |
+| `ngm-group.jpg` | Teaching photo 3; third blog card | 4 : 3 |
 | `teach-guidebook.jpg` | Teaching, photo 4 | 4 : 3 |
 | `tobias-field.jpg` | About, portrait | 4 : 3 |
 

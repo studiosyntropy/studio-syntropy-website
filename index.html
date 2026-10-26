@@ -252,7 +252,7 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
 .award{margin-top:1.25rem;padding:1.25rem 1.4rem;border:1.5px solid var(--sunlight);display:grid;gap:.3rem}
 
 /* journal */
-.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1.5rem}
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(19rem,100%),1fr));gap:1.5rem}
 .post-card{display:grid;grid-template-rows:auto 1fr;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--paper)}
 .post-card img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--paper-2)}
 .post-card .pc{display:grid;gap:.5rem;padding:1.1rem 1.2rem 1.3rem;align-content:start}
@@ -334,6 +334,79 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
 @media (max-width:640px){.foot-brand img{height:4.25rem}}
 @media (max-width:440px){.foot-brand img{height:3.75rem;margin-left:-.3rem}}
 @media (max-width:360px){.foot-brand img{height:3.1rem}}
+
+/* ===== editorial layer (v9) ===== */
+h2{font-size:clamp(2.1rem,1.5rem + 2.6vw,3.6rem);letter-spacing:-.02em;line-height:1.1}
+html[lang="zh-Hant"] h2{line-height:1.3;letter-spacing:.02em}
+@media (min-width:900px){
+  .sec-head{max-width:none;grid-template-columns:13rem minmax(0,44rem);column-gap:clamp(2rem,4vw,4rem)}
+  .sec-head>.eyebrow{padding-top:.9rem;border-top:2px solid var(--moss);align-self:start}
+  .sec-head>:not(.eyebrow){grid-column:2}
+}
+.hero{padding-top:clamp(2.5rem,7vw,6rem);padding-bottom:0}
+.hero-grid{display:grid;gap:1.5rem 3rem}
+.display{font-size:clamp(2.6rem,1.4rem + 5.2vw,6.4rem)!important;line-height:1.02!important;letter-spacing:-.035em!important;max-width:11em!important}
+html[lang="zh-Hant"] .display{line-height:1.22!important;letter-spacing:.02em!important}
+.hero-side{display:grid;gap:1.5rem;align-content:end}
+.hero-side .lede{margin:0}
+.hero-links{display:flex;flex-wrap:wrap;gap:.75rem}
+@media (min-width:980px){
+  .hero-grid{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);align-items:end}
+  .hero-eyebrow{grid-column:1/-1}
+  .hero-side .lede{font-size:var(--step-0)}
+}
+.hero-bleed{margin:clamp(2.5rem,6vw,4.5rem) 0 0}
+.hero-bleed .hero-img{aspect-ratio:auto;height:min(78vh,52vw);min-height:20rem}
+@media (max-width:640px){.hero-bleed .hero-img{height:auto;aspect-ratio:4/3;min-height:0}}
+.hero-bleed .fig-cap{padding-bottom:.5rem}
+.hero + .section{border-top:0}
+/* blog */
+.blog{background:var(--paper-2)}
+.blog .post-card{background:var(--paper);border:0;border-radius:4px}
+.pc-tag{font-size:var(--step--1);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--moss)}
+.pc-blank{aspect-ratio:16/9;background:var(--line)}
+@media (min-width:900px){
+  .blog .posts.lead,.blog #blog-fallback{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
+  .blog .posts.lead>:first-child,.blog #blog-fallback>:first-child{grid-row:span 2}
+  .blog .posts.lead>:first-child img,.blog #blog-fallback>:first-child img,.blog .posts.lead>:first-child .pc-blank{aspect-ratio:auto;height:100%;min-height:22rem;max-height:30rem}
+  .blog .posts.lead>:first-child h3,.blog #blog-fallback>:first-child h3{font-size:var(--step-2)}
+  .blog .posts.lead>:not(:first-child),.blog #blog-fallback>:not(:first-child){grid-template-columns:40% 1fr;grid-template-rows:auto}
+  .blog .posts.lead>:not(:first-child) img,.blog #blog-fallback>:not(:first-child) img,.blog .posts.lead>:not(:first-child) .pc-blank{height:100%;aspect-ratio:auto}
+}
+.blog-more{margin-top:1.5rem}
+.post-card:has(h3 a:hover) img{opacity:.92}
+/* story */
+.story-rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 6rem);z-index:5;background:var(--paper);border-block:1px solid var(--line);margin:0 0 clamp(2rem,4vw,3rem)}
+.story-rail ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr)}
+.story-rail a{display:flex;align-items:center;justify-content:center;min-height:48px;font-size:var(--step--1);font-variant-numeric:tabular-nums;text-decoration:none;color:var(--ink-soft);border-bottom:3px solid transparent;margin-bottom:-1px}
+.story-rail a:hover{color:var(--ink);text-decoration:underline}
+.story-rail a[aria-current]{color:var(--ink);font-weight:700;border-bottom-color:var(--moss)}
+@media (max-width:640px){.story-rail{top:calc(env(safe-area-inset-top,0px) + 5rem)}.story-rail a{font-size:.9375rem;letter-spacing:-.01em}.story-rail{overflow-x:auto}.story-rail ol{min-width:20rem}}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:clamp(3rem,8vw,6rem)}
+.step{display:grid;gap:1.5rem 3rem;scroll-margin-top:11rem}
+.step figure{margin:0}
+.step-media img{width:100%;border-radius:4px}
+.media-cap{font-size:var(--step--1);color:var(--ink-soft);padding-top:.6rem}
+.step-text{display:grid;gap:.9rem;align-content:start;max-width:34rem}
+.step-date{font-size:var(--step--1);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--moss);font-variant-numeric:tabular-nums}
+.step-text h3{font-size:var(--step-2)}
+.step-fig{display:grid;gap:.2rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--ink-soft);font-size:var(--step--1)}
+.step-fig strong{font-size:clamp(2.6rem,1.8rem + 3vw,4.5rem);line-height:1;color:var(--moss);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.step-src{font-size:.875rem;color:var(--ink-soft)}
+@media (min-width:900px){
+  .step{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);min-height:70vh;align-items:start}
+  .step-media{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10.5rem)}
+  .step-text{padding-top:clamp(2rem,12vh,7rem);padding-bottom:20vh}
+  .step:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}
+  .step:nth-child(even) .step-media{order:2}
+}
+@media (prefers-reduced-motion:no-preference){
+  .js .step .step-text{opacity:.35;transform:translateY(1.5rem);transition:opacity .6s ease,transform .6s ease}
+  .js .step.seen .step-text{opacity:1;transform:none}
+}
+.post-card{position:relative}.post-card h3 a::after{content:"";position:absolute;inset:0}.post-card:focus-within{outline:3px solid var(--focus);outline-offset:3px}.post-card h3 a:focus-visible{outline:0}
+.story-end{margin-top:clamp(2rem,5vw,3.5rem)}
+.about-facts{margin:0 0 clamp(2rem,4vw,3rem)}
 </style>
 
 <style>body{margin:0}[hidden]{display:none!important}</style>
@@ -350,11 +423,11 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
     <div class="head-right">
       <nav class="nav" id="site-nav" aria-label="Main" data-open="false">
         <ul>
+          <li><a href="#story"><span lang="en">Story</span><span lang="zh-Hant">故事</span></a></li>
           <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
-          <li><a href="#services"><span lang="en">Services</span><span lang="zh-Hant">服務</span></a></li>
           <li><a href="#research"><span lang="en">Research</span><span lang="zh-Hant">研究</span></a></li>
-          <li><a href="#journal"><span lang="en">Journal</span><span lang="zh-Hant">日誌</span></a></li>
-          <li><a href="#teaching"><span lang="en">Teaching</span><span lang="zh-Hant">教學</span></a></li>
+          <li><a href="#blog"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></a></li>
+          <li><a href="#services"><span lang="en">Services</span><span lang="zh-Hant">服務</span></a></li>
           <li><a href="#contact"><span lang="en">Contact</span><span lang="zh-Hant">聯絡</span></a></li>
         </ul>
         <div class="seg seg-size-m" role="group" aria-label="Text size 字級">
@@ -384,29 +457,144 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-title">
-  <div class="wrap">
-    <p class="eyebrow"><span lang="en">Syntropic agroforestry · Taiwan &amp; Southeast Asia</span><span lang="zh-Hant">趨合農業 · 台灣與東南亞</span></p>
-    <h1 id="hero-title" style="margin-top:1rem">
+  <div class="wrap hero-grid">
+    <p class="eyebrow hero-eyebrow"><span lang="en">Syntropic agroforestry · Taiwan &amp; Southeast Asia</span><span lang="zh-Hant">趨合農業 · 台灣與東南亞</span></p>
+    <h1 id="hero-title" class="display">
       <span lang="en">Designing land that grows toward abundance.</span>
       <span lang="zh-Hant" class="zh-h1">讓土地<wbr>朝向豐饒<wbr>生長的設計。</span>
     </h1>
-    <p class="lede">
-      <span lang="en">Studio Syntropy integrates natural ecosystem processes into farms and designed landscapes. We plan with succession, strata and soil life, so that land builds its own fertility over time.</span>
-      <span lang="zh-Hant">趨合工作室將自然生態系統的運作融入農場與景觀設計。我們以演替、層次與土壤生命為依據進行規劃，讓土地隨時間建立自身的肥力。</span>
-    </p>
-    <figure class="hero-fig">
-      <img class="hero-img" src="img/hero-chili-gft.jpg" alt="Red and green chili peppers growing between moringa and young trees in a syntropic tree line, next to a path of logs" width="2000" height="1000" fetchpriority="high">
-      <figcaption class="fig-cap">
-        <span><span lang="en">Chili peppers in a syntropic tree line at Gengfutian Farm, Hualien. No irrigation since March, no fertiliser, no sprays.</span><span lang="zh-Hant">花蓮耕福田農場趨合樹列中的辣椒：自三月起未灌溉、未施肥、未噴藥。</span></span>
-        <span><span lang="en">October 2026</span><span lang="zh-Hant">2026 年 10 月</span></span>
-      </figcaption>
-    </figure>
-    <div class="hero-meta">
-      <div><strong>11+</strong><span><span lang="en">years of practice in soil health and regenerative agriculture, in six countries</span><span lang="zh-Hant">年土壤健康與再生農業實務經驗，遍及六個國家</span></span></div>
-      <div><strong>5.3×</strong><span><span lang="en">more chili harvest than the monoculture control, Gengfutian 2026</span><span lang="zh-Hant">倍辣椒收成：趨合區相較於單一栽培對照區（耕福田，2026）</span></span></div>
-      <div><strong>10,000+ m²</strong><span><span lang="en">of syntropic systems implemented in Taiwan and Malaysia</span><span lang="zh-Hant">在台灣與馬來西亞完成施作的趨合系統面積</span></span></div>
-      <div><strong>2026</strong><span><span lang="en">Vision USR Award, with Tzu Chi University</span><span lang="zh-Hant">與慈濟大學共同獲得遠見 USR 獎</span></span></div>
+    <div class="hero-side">
+      <p class="lede"><span lang="en">Studio Syntropy integrates natural ecosystem processes into farms and designed landscapes. We plan with succession, strata and soil life, so that land builds its own fertility over time.</span><span lang="zh-Hant">趨合工作室將自然生態系統的運作融入農場與景觀設計。我們以演替、層次與土壤生命為依據進行規劃，讓土地隨時間建立自身的肥力。</span></p>
+      <p class="hero-links"><a class="btn" href="#story"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span> <span aria-hidden="true">↓</span></a> <a class="btn ghost" href="#blog"><span lang="en">Read the blog</span><span lang="zh-Hant">閱讀部落格</span></a></p>
     </div>
+  </div>
+  <figure class="hero-bleed">
+    <img class="hero-img" src="img/hero-chili-gft.jpg" alt="Red and green chili peppers growing between moringa and young trees in a syntropic tree line, next to a path of logs" width="2000" height="1000" fetchpriority="high">
+    <figcaption class="wrap fig-cap">
+      <span><span lang="en">Chili peppers in a syntropic tree line at Gengfutian Farm, Hualien. No irrigation since March, no fertiliser, no sprays.</span><span lang="zh-Hant">花蓮耕福田農場趨合樹列中的辣椒：自三月起未灌溉、未施肥、未噴藥。</span></span>
+      <span><span lang="en">October 2026</span><span lang="zh-Hant">2026 年 10 月</span></span>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- BLOG -->
+<section class="section blog" id="blog" aria-labelledby="blog-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></p>
+      <div>
+        <h2 id="blog-title"><span lang="en">Notes from the field</span><span lang="zh-Hant">田野筆記</span></h2>
+        <p class="muted"><span lang="en">Projects, soil results, courses and what grows, written once a month or when something special happens.</span><span lang="zh-Hant">專案進度、土壤結果、課程與生長中的一切，每月更新，或在特別的時刻發佈。</span></p>
+      </div>
+    </div>
+    <div id="journal-admin" hidden class="btn-row" style="margin-bottom:1.5rem">
+      <button type="button" class="btn" id="new-post"><span aria-hidden="true">＋</span><span lang="en">New post</span><span lang="zh-Hant">新增文章</span></button>
+      <span class="hint"><span lang="en">Only you see this button. Drafts stay hidden until you publish them.</span><span lang="zh-Hant">只有您看得到此按鈕。草稿在發佈前不會公開。</span></span>
+    </div>
+    <div id="editor-slot"></div>
+    <div id="journal-view" aria-live="polite">
+      <div class="posts" id="blog-fallback">
+        <article class="post-card">
+          <img src="img/s-gft-2026-05.jpg" alt="Dense young food forest at Gengfutian, May 2026" loading="lazy" width="1600" height="702">
+          <div class="pc">
+            <span class="pc-tag"><span lang="en">Research</span><span lang="zh-Hant">研究</span></span>
+            <h3><a href="#research"><span lang="en">5.3× more chili, without irrigation</span><span lang="zh-Hant">不灌溉，辣椒收成 5.3 倍</span></a></h3>
+            <p class="muted"><span lang="en">Results of the 2025–2026 chili trial with the World Vegetable Center: harvest, soil carbon and soil life compared with a monoculture control.</span><span lang="zh-Hant">與世界蔬菜中心合作的 2025–2026 辣椒試驗結果：收成、土壤碳與土壤生命，與單一栽培對照區比較。</span></p>
+          </div>
+        </article>
+        <article class="post-card">
+          <img src="img/s-gft-2024-11.jpg" alt="Open gravel ground at Gengfutian with the first log lines, November 2024" loading="lazy" width="1600" height="702">
+          <div class="pc">
+            <span class="pc-tag"><span lang="en">Story</span><span lang="zh-Hant">故事</span></span>
+            <h3><a href="#story"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span></a></h3>
+            <p class="muted"><span lang="en">Eighteen months at Gengfutian Farm, told step by step with photos and soil data.</span><span lang="zh-Hant">耕福田農場的十八個月，以照片與土壤數據逐步呈現。</span></p>
+          </div>
+        </article>
+        <article class="post-card">
+          <img src="img/ngm-group.jpg" alt="Course participants at the Noble Gateway food forest in Malaysia" loading="lazy" width="1024" height="768">
+          <div class="pc">
+            <span class="pc-tag"><span lang="en">Course</span><span lang="zh-Hant">課程</span></span>
+            <h3><a href="#p-my"><span lang="en">Teaching in Malaysia</span><span lang="zh-Hant">在馬來西亞授課</span></a></h3>
+            <p class="muted"><span lang="en">Design courses and tree line plans with Noble Gateway and Kira Organic Farm, 2025–2026.</span><span lang="zh-Hant">2025–2026 年與 Noble Gateway 及 Kira 有機農場合作的設計課程與樹列規劃。</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section story" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span lang="en">Gengfutian Farm · 2024–2026</span><span lang="zh-Hant">耕福田農場 · 2024–2026</span></p>
+      <div>
+        <h2 id="story-title"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span></h2>
+        <p class="muted"><span lang="en">Eighteen months on stony ground, in five steps. Scroll at your own pace.</span><span lang="zh-Hant">一塊礫石地上的十八個月，分為五個步驟。請依自己的步調往下閱讀。</span></p>
+      </div>
+    </div>
+    <nav class="story-rail" aria-label="Story steps 故事步驟"><ol><li><a href="#step-1" data-step="1">2024.11</a></li><li><a href="#step-2" data-step="2">2025.09</a></li><li><a href="#step-3" data-step="3">2026.04</a></li><li><a href="#step-4" data-step="4">2026.05</a></li><li><a href="#step-5" data-step="5">2026.10</a></li></ol></nav>
+    <ol class="steps">
+      <li class="step" id="step-1">
+        <div class="step-media"><figure><img src="img/s-gft-2024-11.jpg" alt="Open gravel ground with the first log lines laid out, a small tractor and the old orchard behind" loading="lazy" width="1600" height="702"><figcaption class="media-cap"><span lang="en">Gengfutian Farm, Tzu Chi University, Hualien.</span><span lang="zh-Hant">花蓮慈濟大學耕福田農場。</span></figcaption></figure></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">November 2024</span><span lang="zh-Hant">2024 年 11 月</span></p>
+          <h3><span lang="en">Gravel and an old orchard</span><span lang="zh-Hant">礫石地與老果園</span></h3>
+          <p><span lang="en">A ten-year-old soursop orchard on shallow, stony, calcareous ground. The first log lines are laid out on bare gravel.</span><span lang="zh-Hant">一座十年的刺果番荔枝果園，位於淺薄、多石的石灰質土地上。第一批原木線鋪在裸露的礫石上。</span></p>
+          <p class="step-fig"><strong>1.8 %</strong> <span lang="en">organic matter in the topsoil</span><span lang="zh-Hant">表土有機質</span></p>
+          <p class="step-src"><span lang="en">Soil test, December 2024</span><span lang="zh-Hant">土壤檢測，2024 年 12 月</span></p>
+        </div>
+      </li>
+      <li class="step" id="step-2">
+        <div class="step-media"><figure><img src="img/bed-syn.jpg" alt="Syntropic bed: banana trunks, wood chips and pruned leaves with dense green cover" loading="lazy" width="1074" height="348"><figcaption class="media-cap"><span lang="en">A syntropic bed covered with pruned biomass.</span><span lang="zh-Hant">覆蓋修剪生物量的趨合植床。</span></figcaption></figure></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">September 2025</span><span lang="zh-Hant">2025 年 9 月</span></p>
+          <h3><span lang="en">Soil builds under the tree lines</span><span lang="zh-Hant">樹列下的土壤開始累積</span></h3>
+          <p><span lang="en">Pruned biomass, wood chips and banana trunks are laid along the tree lines. The soil beneath them changes first; the open inter-rows follow later.</span><span lang="zh-Hant">修剪下的生物量、木屑與香蕉莖沿著樹列鋪放。樹列下方的土壤最先改變，行間空地隨後跟進。</span></p>
+          <p class="step-fig"><strong>15.1 %</strong> <span lang="en">organic matter in the tree lines, against 1.9 % in the monoculture control</span><span lang="zh-Hant">樹列有機質，單一栽培對照區為 1.9 %</span></p>
+          <p class="step-src"><span lang="en">HDARES soil report S1140692</span><span lang="zh-Hant">花蓮農改場土壤報告 S1140692</span></p>
+        </div>
+      </li>
+      <li class="step" id="step-3">
+        <div class="step-media"><figure><img src="img/roots.jpg" alt="Pepper seedlings from the greenhouse test with strong root systems in syntropic soil" loading="lazy" width="1233" height="399"><figcaption class="media-cap"><span lang="en">Greenhouse test at WorldVeg, April 2026.</span><span lang="zh-Hant">世界蔬菜中心溫室試驗，2026 年 4 月。</span></figcaption></figure></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">March–April 2026</span><span lang="zh-Hant">2026 年 3–4 月</span></p>
+          <h3><span lang="en">Chili planted, then no more water</span><span lang="zh-Hant">種下辣椒，之後不再灌溉</span></h3>
+          <p><span lang="en">Chili seedlings go into syntropic beds and into a monoculture control. After 21 March the syntropic plots receive no irrigation, no fertiliser and no sprays. In the greenhouse, WorldVeg tests the soil against Fusarium wilt.</span><span lang="zh-Hant">辣椒苗種入趨合植床與單一栽培對照區。3 月 21 日之後，趨合試驗區不再灌溉、施肥或噴藥。世界蔬菜中心同時在溫室中測試土壤對鐮孢菌萎凋病的抵抗力。</span></p>
+          <p class="step-fig"><strong>0</strong> <span lang="en">plants wilted in syntropic soil inoculated with Fusarium</span><span lang="zh-Hant">株在接種鐮孢菌的趨合土壤中萎凋</span></p>
+          <p class="step-src"><span lang="en">World Vegetable Center seminar, 16 April 2026</span><span lang="zh-Hant">世界蔬菜中心研討會，2026 年 4 月 16 日</span></p>
+        </div>
+      </li>
+      <li class="step" id="step-4">
+        <div class="step-media"><figure class="ba" style="--ar:1600/702">
+            <img class="before" src="img/s-gft-2024-11.jpg" alt="Before, November 2024: open gravel ground with the first log lines laid out, a small tractor and the old orchard behind" loading="lazy" width="1600" height="702">
+            <img class="after" src="img/s-gft-2026-05.jpg" alt="After, May 2026: the same view as a dense, closed food forest of young trees" loading="lazy" width="1600" height="702">
+            <span class="divider" aria-hidden="true"></span><span class="knob" aria-hidden="true">⇆</span>
+            <span class="lbl b" aria-hidden="true">2024.11</span><span class="lbl a" aria-hidden="true">2026.05</span>
+            <input type="range" min="0" max="100" value="50" id="ba-gft" aria-label="Before and after comparison, Gengfutian Farm">
+            
+          </figure>
+          <p class="media-cap"><span lang="en">Same view, November 2024 and May 2026. Drag the line or use the arrow keys.</span><span lang="zh-Hant">同一視角，2024 年 11 月與 2026 年 5 月。拖曳分隔線或使用方向鍵。</span></p></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">May 2026</span><span lang="zh-Hant">2026 年 5 月</span></p>
+          <h3><span lang="en">A closed food forest</span><span lang="zh-Hant">成林的食物森林</span></h3>
+          <p><span lang="en">Eighteen months after the first logs, the same view shows a dense, layered food forest. Below ground, the soil has become fungal-dominated, as in a forest.</span><span lang="zh-Hant">鋪下第一批原木十八個月後，同一視角已是茂密、分層的食物森林。地表之下，土壤轉為以真菌為主，就像森林一樣。</span></p>
+          <p class="step-fig"><strong>7.7×</strong> <span lang="en">microbial biomass compared with the monoculture: 1,637 against 213 µg/g</span><span lang="zh-Hant">單一栽培的微生物量倍數：1,637 對 213 µg/g</span></p>
+          <p class="step-src"><span lang="en">World Vegetable Center soil analysis, 2026</span><span lang="zh-Hant">世界蔬菜中心土壤分析，2026 年</span></p>
+        </div>
+      </li>
+      <li class="step" id="step-5">
+        <div class="step-media"><figure><img src="img/s-bio-pollinators.jpg" alt="Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="en">Pollinators and birds at Gengfutian.</span><span lang="zh-Hant">耕福田的授粉者與鳥類。</span></figcaption></figure></div>
+        <div class="step-text">
+          <p class="step-date"><span lang="en">July–October 2026</span><span lang="zh-Hant">2026 年 7–10 月</span></p>
+          <h3><span lang="en">Harvest, and life returns</span><span lang="zh-Hant">收成，生命回歸</span></h3>
+          <p><span lang="en">The syntropic plots keep fruiting into October, after the control has stopped. Spiders, bees and grasshoppers live among the plants; the control had one spider.</span><span lang="zh-Hant">趨合試驗區持續結果至十月，對照區早已停止。植物間可見蜘蛛、蜜蜂與蚱蜢；對照區僅見一隻蜘蛛。</span></p>
+          <p class="step-fig"><strong>5.3×</strong> <span lang="en">more chili than the monoculture control: 3.14 kg against 0.60 kg</span><span lang="zh-Hant">對照區的辣椒收成倍數：3.14 公斤對 0.60 公斤</span></p>
+          <p class="step-src"><span lang="en">Harvest records, Gengfutian</span><span lang="zh-Hant">耕福田收成紀錄</span></p>
+        </div>
+      </li>
+    </ol>
+    <p class="story-end"><a class="btn ghost" href="#research"><span lang="en">See all research data</span><span lang="zh-Hant">查看完整研究數據</span> <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -499,30 +687,6 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
     </div>
 
     <div class="projects">
-      <article class="proj" aria-labelledby="p-gft">
-        <div class="proj-media">
-          <figure class="ba" style="--ar:1600/702">
-            <img class="before" src="img/s-gft-2024-11.jpg" alt="Before, November 2024: open gravel ground with the first log lines laid out, a small tractor and the old orchard behind" loading="lazy" width="1600" height="702">
-            <img class="after" src="img/s-gft-2026-05.jpg" alt="After, May 2026: the same view as a dense, closed food forest of young trees" loading="lazy" width="1600" height="702">
-            <span class="divider" aria-hidden="true"></span><span class="knob" aria-hidden="true">⇆</span>
-            <span class="lbl b" aria-hidden="true">2024.11</span><span class="lbl a" aria-hidden="true">2026.05</span>
-            <input type="range" min="0" max="100" value="50" id="ba-gft" aria-label="Before and after comparison, Gengfutian Farm">
-          </figure>
-          <figure class="pano"><img src="img/hero-gengfutian-2026-04.jpg" alt="Gengfutian Farm: a dense food forest with banana and fruit trees on the left, the original open gravel ground on the right" loading="lazy" width="1950" height="450"><figcaption class="media-cap"><span lang="en">April 2026: the food forest beside the original gravel ground.</span><span lang="zh-Hant">2026 年 4 月：食物森林與原本的礫石地並列。</span></figcaption></figure>
-        </div>
-        <div class="proj-text">
-          <span class="tag"><span lang="en">Education &amp; research</span><span lang="zh-Hant">教育與研究</span></span>
-          <h3 id="p-gft"><span lang="en">From rock to food forest</span><span lang="zh-Hant">從礫石地到食物森林</span></h3>
-          <p><span lang="en">Gengfutian Farm is the syntropic demonstration, education and research farm of the Tzu Chi University USR Center. A former soursop orchard on shallow, stony, calcareous soil became a 1,000 m² system with high-density plant layer combinations. It is also the site of the chili trial with the World Vegetable Center.</span><span lang="zh-Hant">耕福田農場是慈濟大學 USR 中心的趨合農業示範、教學與研究農場。原本位於淺薄、多石、石灰質土壤上的刺果番荔枝果園，轉型為 1,000 平方公尺、具高密度植物層次組合的系統，也是與世界蔬菜中心合作進行辣椒試驗的場域。</span></p>
-          <dl class="facts">
-            <dt><span lang="en">Place</span><span lang="zh-Hant">地點</span></dt><dd><span lang="en">Tzu Chi University, Hualien</span><span lang="zh-Hant">花蓮 慈濟大學</span></dd>
-            <dt><span lang="en">Area</span><span lang="zh-Hant">面積</span></dt><dd>1,000 m²</dd>
-            <dt><span lang="en">Period</span><span lang="zh-Hant">期間</span></dt><dd><span lang="en">2024 – present</span><span lang="zh-Hant">2024 年至今</span></dd>
-            <dt><span lang="en">Role</span><span lang="zh-Hant">角色</span></dt><dd><span lang="en">Design, implementation, management</span><span lang="zh-Hant">設計、施作、管理</span></dd>
-          </dl>
-        </div>
-      </article>
-
       <article class="proj" aria-labelledby="p-dqm">
         <div class="proj-media">
           <figure class="ba" style="--ar:4/3">
@@ -809,27 +973,6 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
   </section>
 </div>
 
-<!-- JOURNAL -->
-<section class="section" id="journal" aria-labelledby="journal-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow"><span lang="en">Journal</span><span lang="zh-Hant">日誌</span></p>
-      <h2 id="journal-title"><span lang="en">News from the field</span><span lang="zh-Hant">田野消息</span></h2>
-      <p class="muted"><span lang="en">Monthly notes on projects, soil results, courses and what grows.</span><span lang="zh-Hant">每月記錄專案進度、土壤結果、課程與生長中的一切。</span></p>
-    </div>
-    <div id="journal-admin" hidden class="btn-row" style="margin-bottom:1.5rem">
-      <button type="button" class="btn" id="new-post"><span aria-hidden="true">＋</span><span lang="en">New post</span><span lang="zh-Hant">新增文章</span></button>
-      <span class="hint"><span lang="en">Only you see this button. Drafts stay hidden until you publish them.</span><span lang="zh-Hant">只有您看得到此按鈕。草稿在發佈前不會公開。</span></span>
-    </div>
-    <div id="editor-slot"></div>
-    <div id="journal-view" aria-live="polite">
-      <div class="empty" id="journal-empty">
-        <b><span lang="en">The first posts are on their way.</span><span lang="zh-Hant">第一篇文章即將發佈。</span></b>
-        <span class="muted"><span lang="en">New posts appear here once they are published.</span><span lang="zh-Hant">文章發佈後會顯示於此。</span></span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- TEACHING -->
 <section class="section" id="teaching" aria-labelledby="teaching-title">
@@ -885,6 +1028,12 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
       <div class="prose" style="margin-top:1.25rem">
         <p><span lang="en">Soil health and regenerative agriculture specialist with over eleven years of practice in Costa Rica, the United States, Greece, Germany, Taiwan and Malaysia. He designs and manages the syntropic sites of the Tzu Chi University USR Center in Hualien and founded Studio Syntropy in 2026.</span><span lang="zh-Hant">土壤健康與再生農業專家，在哥斯大黎加、美國、希臘、德國、台灣與馬來西亞累積逾十一年實務經驗。目前負責慈濟大學 USR 中心各趨合農業場域的設計與管理，並於 2026 年創立趨合工作室。</span></p>
       </div>
+    <div class="hero-meta about-facts">
+      <div><strong>11+</strong><span><span lang="en">years of practice in soil health and regenerative agriculture, in six countries</span><span lang="zh-Hant">年土壤健康與再生農業實務經驗，遍及六個國家</span></span></div>
+      <div><strong>5.3×</strong><span><span lang="en">more chili harvest than the monoculture control, Gengfutian 2026</span><span lang="zh-Hant">倍辣椒收成：趨合區相較於單一栽培對照區（耕福田，2026）</span></span></div>
+      <div><strong>10,000+ m²</strong><span><span lang="en">of syntropic systems implemented in Taiwan and Malaysia</span><span lang="zh-Hant">在台灣與馬來西亞完成施作的趨合系統面積</span></span></div>
+      <div><strong>2026</strong><span><span lang="en">Vision USR Award, with Tzu Chi University</span><span lang="zh-Hant">與慈濟大學共同獲得遠見 USR 獎</span></span></div>
+    </div>
       <div class="cv">
         <div class="cv-row"><span>2026</span><span><span lang="en">Plant Health Pyramid; Redox potential and pH (Regen Ag Academy)</span><span lang="zh-Hant">植物健康金字塔；氧化還原電位與 pH（Regen Ag Academy）</span></span></div>
         <div class="cv-row"><span>2024, 2026</span><span><span lang="en">Syntropic agroforestry training with Namaste Messerschmidt (Brazil) and Scott Gallant</span><span lang="zh-Hant">隨 Namaste Messerschmidt（巴西）與 Scott Gallant 進修趨合農業</span></span></div>
@@ -942,10 +1091,11 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
         <div class="foot-col">
           <h3 id="fc-work"><span lang="en">Work</span><span lang="zh-Hant">成果</span></h3>
           <ul aria-labelledby="fc-work">
+            <li><a href="#story"><span lang="en">Story</span><span lang="zh-Hant">故事</span></a></li>
             <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
             <li><a href="#research"><span lang="en">Research</span><span lang="zh-Hant">研究</span></a></li>
             <li><a href="#teaching"><span lang="en">Teaching</span><span lang="zh-Hant">教學</span></a></li>
-            <li><a href="#journal"><span lang="en">Journal</span><span lang="zh-Hant">日誌</span></a></li>
+            <li><a href="#blog"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></a></li>
           </ul>
         </div>
         <div class="foot-col">
@@ -1042,11 +1192,19 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
 </script>
 
 <script>
-/* ---------- Journal (blog) ---------- */
+/* ---------- Story rail ---------- */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.story-rail a'));
+  if(!links.length||!('IntersectionObserver' in window))return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var n=e.target.id.split('-')[1];links.forEach(function(a){if(a.dataset.step===n)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current')});e.target.classList.add('seen')}})},{rootMargin:'-45% 0px -45% 0px'});
+  document.querySelectorAll('.step').forEach(function(st){io.observe(st)});
+})();
+/* ---------- Blog ---------- */
 (function(){
   var root=document.documentElement;
   var view=document.getElementById('journal-view'), admin=document.getElementById('journal-admin'), slot=document.getElementById('editor-slot');
-  var posts=[], drafts=[], canEdit=false, db=null, assets=null, openId=null;
+  var posts=[], drafts=[], canEdit=false, db=null, assets=null, openId=null, showAll=false, FALLBACK=view.innerHTML;
   function L(){return root.lang==='zh-Hant'?'zh':'en'}
   function T(en,zh){return L()==='zh'?zh:en}
   function el(tag,attrs,kids){var e=document.createElement(tag);if(attrs)for(var k in attrs){if(k==='text')e.textContent=attrs[k];else if(k==='class')e.className=attrs[k];else e.setAttribute(k,attrs[k])}(kids||[]).forEach(function(c){if(c)e.appendChild(typeof c==='string'?document.createTextNode(c):c)});return e}
@@ -1074,23 +1232,30 @@ details.data summary{cursor:pointer;min-height:44px;display:inline-flex;align-it
     var list=all();
     if(openId){var p=list.filter(function(x){return x._id===openId})[0];if(p){renderPost(p);return}openId=null}
     if(!list.length){
-      var e=el('div',{class:'empty'},[el('b',{text:T('The first posts are on their way.','第一篇文章即將發佈。')}),el('span',{class:'muted',text:canEdit?T('Write the first one with “New post”.','請按「新增文章」撰寫第一篇。'):T('New posts appear here once they are published.','文章發佈後會顯示於此。')})]);
-      view.appendChild(e);return;
+      view.innerHTML=FALLBACK;
+      if(canEdit)view.insertBefore(el('p',{class:'hint',text:T('These cards show until the first post is published.','第一篇文章發佈前，會先顯示這些卡片。')}),view.firstChild);
+      return;
     }
-    var grid=el('div',{class:'posts',role:'list'});
-    list.forEach(function(p){
+    var shown=showAll?list:list.slice(0,3);
+    var grid=el('div',{class:'posts'+(shown.length===3&&!showAll?' lead':''),role:'list'});
+    shown.forEach(function(p){
       var card=el('article',{class:'post-card',role:'listitem'});
-      if(p.cover){card.appendChild(el('img',{src:'/_blob/'+p.cover,alt:pick(p,'cover_alt'),loading:'lazy',width:'640',height:'360'}))}else{card.appendChild(el('div',{'aria-hidden':'true',style:'aspect-ratio:16/9;background:var(--paper-2)'}))}
+      if(p.cover){card.appendChild(el('img',{src:'/_blob/'+p.cover,alt:pick(p,'cover_alt'),loading:'lazy',width:'640',height:'360'}))}else{card.appendChild(el('div',{'aria-hidden':'true',class:'pc-blank'}))}
       var pc=el('div',{class:'pc'});
       if(p._status==='draft')pc.appendChild(el('span',{class:'draft-flag',text:T('Draft','草稿')}));
       pc.appendChild(el('time',{datetime:p.date||'',text:fmtDate(p.date)}));
-      var a=el('a',{href:'#journal',text:pick(p,'title')||T('Untitled','未命名')});
+      var a=el('a',{href:'#blog',text:pick(p,'title')||T('Untitled','未命名')});
       a.addEventListener('click',function(ev){ev.preventDefault();openId=p._id;render();var h=view.querySelector('h3');h&&h.focus()});
       pc.appendChild(el('h3',null,[a]));
       pc.appendChild(el('p',{class:'muted',text:excerpt(p)}));
       card.appendChild(pc);grid.appendChild(card);
     });
     view.appendChild(grid);
+    if(list.length>3){
+      var more=el('button',{type:'button',class:'btn ghost','aria-expanded':showAll?'true':'false'},[showAll?T('Show latest only','只顯示最新文章'):T('All posts','所有文章')+' ('+list.length+')']);
+      more.addEventListener('click',function(){showAll=!showAll;render();var b=view.querySelector('.blog-more button');b&&b.focus()});
+      view.appendChild(el('div',{class:'btn-row blog-more'},[more]));
+    }
   }
   function renderPost(p){
     var art=el('article',{class:'post'});
