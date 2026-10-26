@@ -52,7 +52,7 @@ Rules: every photo appears only once on the home page; before/after pairs are al
 - `build/media_register.py` reads the built pages and the origins file and writes `media-register.json` (where each file is used).
 - `content/media-thumbs.json`: thumbnail addresses in the register page.
 - After every website change Claude runs `build/build.py`, then `build/media_register.py`, and copies the result into the register page.
-- A daily scheduled check looks for originals that were moved or renamed on the Mac and updates the paths.
+- Moved or renamed originals: Claude rescans the Mac folders on request (a daily scheduled check is pending approval).
 
 ## Held-back research content
 
