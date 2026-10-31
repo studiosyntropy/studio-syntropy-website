@@ -42,7 +42,8 @@ Rules: every photo appears only once on the home page; before/after pairs are al
 
 - `src/index.html` is the one source page with English and Chinese side by side.
 - `content/blog/` holds the blog posts, one file each (title, date, description, cover photo, then the text).
-- `build/build.py` turns these into the published pages: `index.html` (English), `zh/index.html` (Chinese), `blog/index.html` and one page per post under `blog/`, plus `sitemap.xml` and `robots.txt`.
+- `build/build.py` turns these into the published pages: `index.html` (English), `zh/index.html` (Chinese), the Research and Courses & talks pages (`research/`, `teaching/`, each also under `zh/`), `blog/index.html` and one page per post under `blog/`, plus `sitemap.xml` and `robots.txt`.
+- In `src/index.html`, sections wrapped in `<!--PAGE:name--> … <!--/PAGE-->` become their own page instead of appearing on the home page.
 - New blog post: put the Word or Google Doc in "02_Post materials" and ask Claude to publish it.
 
 ## Media register

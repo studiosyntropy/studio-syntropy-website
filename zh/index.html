@@ -523,6 +523,17 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 @media (max-width:560px){.post-pair{grid-template-columns:1fr}}
 .post-end{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.75rem}
 .blog-index{list-style:none;margin:0;padding:0}
+
+/* ===== v12: research and teaching as own pages ===== */
+.more-line{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.more-line p{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem 1rem;padding-block:1.1rem;margin:0}
+.more-line .eyebrow{margin-right:.5rem}
+.more-line a{font-weight:700;font-size:var(--step-1);min-height:44px;display:inline-flex;align-items:center;text-underline-offset:4px}
+.more-line .sep{color:var(--ink-soft)}
+.more-line + .section{border-top:0}
+.page-top .sec-head h1{font-family:var(--display);font-size:clamp(2.1rem,1.5rem + 2.6vw,3.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:0}
+html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-height:1.3;letter-spacing:.02em}
+.crumbs-band{padding-top:1.25rem}
 </style>
 
 <style>body{margin:0}[hidden]{display:none!important}</style>
@@ -542,10 +553,10 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
           <li><a href="#services"><span lang="zh-Hant">服務</span></a></li>
           <li><a href="#projects"><span lang="zh-Hant">案例</span></a></li>
           <li><a href="#story"><span lang="zh-Hant">故事</span></a></li>
-          <li><a href="#research"><span lang="zh-Hant">研究</span></a></li>
+          <li><a href="../zh/research/index.html"><span lang="zh-Hant">研究</span></a></li>
+          <li><a href="../zh/teaching/index.html"><span lang="zh-Hant">課程</span></a></li>
           <li><a href="#blog"><span lang="zh-Hant">部落格</span></a></li>
-          <li><a href="#about"><span lang="zh-Hant">關於</span></a></li>
-          <li><a href="#contact"><span lang="zh-Hant">聯絡</span></a></li>
+                    <li><a href="#contact"><span lang="zh-Hant">聯絡</span></a></li>
         </ul>
         <div class="seg seg-size-m" role="group" aria-label="Text size 字級">
           <button type="button" id="ts-0m" data-ts="0" aria-pressed="true" aria-label="Normal text size">A</button>
@@ -712,7 +723,7 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
         </div>
       </li>
     </ol>
-    <p class="story-end"><a class="btn ghost" href="#research"><span lang="zh-Hant">場域研究</span> <span aria-hidden="true">→</span></a></p>
+    <p class="story-end"><a class="btn ghost" href="../zh/research/index.html"><span lang="zh-Hant">場域研究</span> <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -815,116 +826,6 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
   </div>
 </section>
 
-<!-- RESEARCH -->
-<div class="band" id="research">
-  <section class="section" aria-labelledby="research-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow"><span lang="zh-Hant">研究</span></p>
-        <div>
-          <h2 id="research-title"><span lang="zh-Hant">每個場域也是田間試驗</span></h2>
-          <p class="muted"><span lang="zh-Hant">我們與大學及研究機構合作，在所設計的場域中量測土壤、收成與生物多樣性。研究正式發表並經合作夥伴同意後，結果將公布於此。</span></p>
-        </div>
-      </div>
-      <div class="tabs" data-tabs>
-        <div role="tablist" aria-label="Research 研究" class="tablist" hidden>
-          <button role="tab" type="button" id="tab-ongoing" aria-controls="panel-ongoing" aria-selected="true"><span lang="zh-Hant">進行中</span></button>
-          <button role="tab" type="button" id="tab-published" aria-controls="panel-published" aria-selected="false" tabindex="-1"><span lang="zh-Hant">已發表與報導</span></button>
-        </div>
-        <div role="tabpanel" id="panel-ongoing" aria-labelledby="tab-ongoing" tabindex="0" class="panel">
-          <h3 class="panel-h"><span lang="zh-Hant">進行中</span></h3>
-          <div class="studies">
-          <article class="study">
-            <p class="study-meta"><span class="pc-tag"><span lang="zh-Hant">耕福田 · 2025–2026</span></span><span class="status"><span lang="zh-Hant">論文撰寫中</span></span></p>
-            <h3><span lang="zh-Hant">無灌溉趨合植床中的辣椒</span></h3>
-            <p class="muted"><span lang="zh-Hant">比較種植於趨合樹列間與單一栽培對照區的辣椒收成、土壤化學與土壤生物。</span></p>
-          </article>
-          <article class="study">
-            <p class="study-meta"><span class="pc-tag"><span lang="zh-Hant">耕福田 · 2026</span></span><span class="status"><span lang="zh-Hant">分析進行中</span></span></p>
-            <h3><span lang="zh-Hant">樹列下的土壤微生物相</span></h3>
-            <p class="muted"><span lang="zh-Hant">與慈濟大學合作，以 DNA 定序分析趨合區與慣行區的土壤細菌。</span></p>
-          </article>
-          <article class="study">
-            <p class="study-meta"><span class="pc-tag"><span lang="zh-Hant">花蓮 · 2024 年起</span></span><span class="status"><span lang="zh-Hant">持續進行</span></span></p>
-            <h3><span lang="zh-Hant">示範場域的土壤監測</span></h3>
-            <p class="muted"><span lang="zh-Hant">於種植前及系統生長過程中，持續量測各場域的有機質、養分與微生物量。</span></p>
-          </article>
-          </div>
-          <div class="r-block">
-            <h3><span lang="zh-Hant">地面上的生命</span></h3>
-            <p class="muted small" style="max-width:40em"><span lang="zh-Hant">隨著生物量增加，真菌、昆蟲、授粉者與鳥類回到耕福田。</span></p>
-            <div class="bio">
-          <figure><img src="../img/s-bio-mushroom.jpg" alt="Wild mushrooms growing on a decaying log in the mulch" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="zh-Hant">木質覆蓋物上的真菌</span></figcaption></figure>
-          <figure><img src="../img/s-bio-grasshopper.jpg" alt="A large green grasshopper resting on a leaf" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="zh-Hant">樹冠層中的蚱蜢</span></figcaption></figure>
-          <figure><img src="../img/s-bio-pollinators.jpg" alt="Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower" loading="lazy" width="1600" height="900"><figcaption class="media-cap"><span lang="zh-Hant">授粉者與鳥類</span></figcaption></figure>
-        </div>
-          </div>
-        </div>
-        <div role="tabpanel" id="panel-published" aria-labelledby="tab-published" tabindex="0" class="panel">
-          <h3 class="panel-h"><span lang="zh-Hant">已發表與報導</span></h3>
-          <div style="max-width:46rem">
-          <div class="award">
-          <b><span lang="zh-Hant">2026 遠見 USR 生態共好組 績優獎</span></b>
-          <span class="muted"><span lang="zh-Hant">以慈濟大學 USR 團隊成員身分獲獎，負責食物森林相關工作。</span></span>
-        </div>
-        <ul class="press">
-          <li><a href="https://foodforest.network/validating-syntropic-agroforestry/?lang=en" target="_blank" rel="noopener"><span><span lang="zh-Hant">驗證趨合農業</span><span class="sr-only"> (opens in a new tab)</span></span><span>Food Forest Network</span></a></li>
-          <li><a href="https://www.tcnews.com.tw/education/item/25755.html" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>慈大USR與加灣文健站齊推動太魯閣族趨合農法</span><span>慈濟新聞</span></a></li>
-          <li><a href="https://www.tcnews.com.tw/education/item/29682.html" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>串聯產官學　慈大攜手推動花蓮永續農業新模式</span><span>慈濟新聞</span></a></li>
-          <li><a href="https://www.tcnews.com.tw/education/item/29063.html" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>慈大USR前山桃花源　獲2026遠見USR生態共好組績優獎</span><span>慈濟新聞</span></a></li>
-          <li><a href="https://usr.tcu.edu.tw/?p=1438" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>創意農村大作戰戶外教學：走入部落、走進土地</span><span>慈濟大學 USR</span></a></li>
-          <li><a href="https://www.youtube.com/watch?v=CsMX1xkpZ2c" target="_blank" rel="noopener" lang="zh-Hant" class="keep"><span>慈大USR計畫　提升土壤固碳量</span><span>大愛新聞</span></a></li>
-          <li><a href="https://bccnews.com.tw/archives/654220" target="_blank" rel="noopener"><span><span lang="zh-Hant">新聞報導</span></span><span>中廣新聞網</span></a></li>
-        </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- TEACHING -->
-<section class="section" id="teaching" aria-labelledby="teaching-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow"><span lang="zh-Hant">教學</span></p>
-      <h2 id="teaching-title"><span lang="zh-Hant">從種植中學習</span></h2>
-      <p class="muted"><span lang="zh-Hant">農民、學生、社區與公部門人員在實際場域學習方法，再將其帶回自己的土地。</span></p>
-    </div>
-    <div class="gallery">
-      <img src="../img/teach-course.jpg" alt="Course participants planting along a tree line" loading="lazy" width="1000" height="749">
-      <img src="../img/teach-students.jpg" alt="International students planting a new syntropic plot below the mountains" loading="lazy" width="1000" height="750">
-      <img src="../img/ngm-group.jpg" alt="Course participants at the Noble Gateway food forest in Malaysia, September 2026" loading="lazy" width="1024" height="768">
-      <img src="../img/teach-guidebook.jpg" alt="Course participants holding copies of the guidebook" loading="lazy" width="1000" height="749">
-    </div>
-    <div class="teach-cols">
-      <div>
-        <h3><span lang="zh-Hant">課程</span></h3>
-        <ul class="list">
-          <li><b><span lang="zh-Hant">趨合農業基礎課程</span></b><span><span lang="zh-Hant">原理、分層、演替、設計</span></span></li>
-          <li><b><span lang="zh-Hant">兩日密集實作 · 五日沉浸式課程</span></b><span><span lang="zh-Hant">理論課後實際種下完整系統</span></span></li>
-          <li><b><span lang="zh-Hant">森林重啟（Forest Reset）</span></b><span><span lang="zh-Hant">廢棄食物森林的復育實作</span></span></li>
-          <li><b><span lang="zh-Hant">BioComplete™ 堆肥</span></b><span><span lang="zh-Hant">生物堆肥與土壤食物網</span></span></li>
-        </ul>
-      </div>
-      <div>
-        <h3><span lang="zh-Hant">演講</span></h3>
-        <ul class="list">
-          <li><b><span lang="zh-Hant">農業部</span></b><span><span lang="zh-Hant">土壤健康、多層次配置、生物量作物</span></span></li>
-          <li><b><span lang="zh-Hant">國立臺灣大學</span></b><span><span lang="zh-Hant">第九屆循環經濟永續未來國際研討會</span></span></li>
-          <li><b><span lang="zh-Hant">國立東華大學</span></b><span><span lang="zh-Hant">國際島嶼永續發展研討會</span></span></li>
-          <li><b><span lang="zh-Hant">馬來西亞諾丁漢大學</span></b><span><span lang="zh-Hant">趨合農業導論，2025 年</span></span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="book">
-      <p class="eyebrow"><span lang="zh-Hant">出版</span></p>
-      <h3><span lang="zh-Hant">趨合農業：台灣圖解指南</span></h3>
-      <p class="muted"><span lang="zh-Hant">中英雙語圖解指南，提供適用於台灣農業生態的實作說明，並附術語表。即將出版。</span></p>
-    </div>
-  </div>
-</section>
-
 <!-- ABOUT -->
 <section class="section" id="about" aria-labelledby="about-title">
   <div class="wrap about">
@@ -953,6 +854,16 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
     </div>
   </div>
 </section>
+
+<!-- MORE -->
+<nav class="more-line" aria-label="More from the studio 更多內容">
+  <div class="wrap">
+    <p><span class="eyebrow"><span lang="zh-Hant">另見</span></span>
+      <a href="../zh/research/index.html"><span lang="zh-Hant">場域研究</span></a><span class="sep" aria-hidden="true">·</span>
+      <a href="../zh/teaching/index.html"><span lang="zh-Hant">課程與演講</span></a><span class="sep" aria-hidden="true">·</span>
+      <a href="../zh/teaching/index.html#guidebook"><span lang="zh-Hant">圖解指南</span></a></p>
+  </div>
+</nav>
 
 <!-- BLOG -->
 <section class="section blog" id="blog" aria-labelledby="blog-title">
@@ -1017,8 +928,8 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
           <ul aria-labelledby="fc-work">
             <li><a href="#story"><span lang="zh-Hant">故事</span></a></li>
             <li><a href="#projects"><span lang="zh-Hant">案例</span></a></li>
-            <li><a href="#research"><span lang="zh-Hant">研究</span></a></li>
-            <li><a href="#teaching"><span lang="zh-Hant">教學</span></a></li>
+            <li><a href="../zh/research/index.html"><span lang="zh-Hant">研究</span></a></li>
+            <li><a href="../zh/teaching/index.html"><span lang="zh-Hant">課程與演講</span></a></li>
             <li><a href="#blog"><span lang="zh-Hant">部落格</span></a></li>
           </ul>
         </div>

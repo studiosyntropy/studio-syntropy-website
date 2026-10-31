@@ -12,7 +12,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://studio-syntropy.com'
 SECTIONS = {'top': 'Top photo', 'services': 'Services', 'approach': 'Approach', 'story': 'Story "From rock to food forest"',
             'projects': 'Projects', 'research': 'Research', 'teaching': 'Teaching', 'about': 'About', 'blog': 'Blog list', 'contact': 'Contact'}
-PAGES = {'index.html': ('Home (English)', SITE + '/'), 'zh/index.html': ('Home (Chinese)', SITE + '/zh'), 'blog/index.html': ('Blog overview', SITE + '/blog')}
+PAGES = {'index.html': ('Home (English)', SITE + '/'), 'zh/index.html': ('Home (Chinese)', SITE + '/zh'), 'blog/index.html': ('Blog overview', SITE + '/blog'),
+         'research/index.html': ('Research page (English)', SITE + '/research'), 'zh/research/index.html': ('Research page (Chinese)', SITE + '/zh/research'),
+         'teaching/index.html': ('Courses & talks page (English)', SITE + '/teaching'), 'zh/teaching/index.html': ('Courses & talks page (Chinese)', SITE + '/zh/teaching')}
 
 def page_info(rel, html):
     if rel in PAGES: return PAGES[rel] + (None,)
@@ -32,7 +34,7 @@ def main():
     origins = json.load(open(os.path.join(ROOT, 'content/media-origins.json'), encoding='utf-8'))
     files = sorted(f for f in glob.glob('img/**/*.*', root_dir=ROOT, recursive=True))
     uses = {f: [] for f in files}
-    for rel in ['index.html', 'zh/index.html', 'blog/index.html'] + sorted(glob.glob('blog/*/index.html', root_dir=ROOT)):
+    for rel in ['index.html', 'zh/index.html', 'research/index.html', 'zh/research/index.html', 'teaching/index.html', 'zh/teaching/index.html', 'blog/index.html'] + sorted(glob.glob('blog/*/index.html', root_dir=ROOT)):
         html = open(os.path.join(ROOT, rel), encoding='utf-8').read()
         page, url, pdate = page_info(rel, html)
         main = html[html.index('<main'):html.index('</main>')]

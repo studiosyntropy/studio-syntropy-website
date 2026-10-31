@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27 02:55",
+ "updated": "2026-10-31 16:38",
  "videos": 0,
  "items": [
   {
@@ -1134,6 +1134,22 @@
      "caption": ""
     },
     {
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
+     "section": "Share preview image",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
+     "section": "Share preview image",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
      "page": "Blog overview",
      "url": "https://studio-syntropy.com/blog",
      "section": "Share preview image",
@@ -1254,8 +1270,8 @@
    "added_to_site": "2026-10-23",
    "uses": [
     {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
      "section": "Teaching",
      "page_date": null,
      "alt": "Course participants at the Noble Gateway food forest in Malaysia, September 2026",
@@ -1305,8 +1321,8 @@
    "added_to_site": "2026-10-23",
    "uses": [
     {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
      "section": "Research",
      "page_date": null,
      "alt": "A large green grasshopper resting on a leaf",
@@ -1335,8 +1351,8 @@
    "added_to_site": "2026-10-23",
    "uses": [
     {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
      "section": "Research",
      "page_date": null,
      "alt": "Wild mushrooms growing on a decaying log in the mulch",
@@ -1365,8 +1381,8 @@
    "added_to_site": "2026-10-23",
    "uses": [
     {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
      "section": "Research",
      "page_date": null,
      "alt": "Three photos: a wasp under a leaf, a bird on a treetop, and a bee on a banana flower",
@@ -1425,8 +1441,8 @@
    "added_to_site": "2026-10-23",
    "uses": [
     {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
      "section": "Teaching",
      "page_date": null,
      "alt": "Course participants planting along a tree line",
@@ -1455,8 +1471,8 @@
    "added_to_site": "2026-10-23",
    "uses": [
     {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
      "section": "Teaching",
      "page_date": null,
      "alt": "Course participants holding copies of the guidebook",
@@ -1485,8 +1501,8 @@
    "added_to_site": "2026-10-23",
    "uses": [
     {
-     "page": "Home (English and Chinese)",
-     "url": "https://studio-syntropy.com/",
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
      "section": "Teaching",
      "page_date": null,
      "alt": "International students planting a new syntropic plot below the mountains",
@@ -1547,6 +1563,22 @@
     {
      "page": "Home (English and Chinese)",
      "url": "https://studio-syntropy.com/",
+     "section": "Phone home-screen icon",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
+     "section": "Phone home-screen icon",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
      "section": "Phone home-screen icon",
      "page_date": null,
      "alt": "",
@@ -1615,6 +1647,22 @@
      "caption": ""
     },
     {
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
+     "section": "Browser tab icon",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
+     "section": "Browser tab icon",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
      "page": "Blog overview",
      "url": "https://studio-syntropy.com/blog",
      "section": "Browser tab icon",
@@ -1671,6 +1719,22 @@
     {
      "page": "Home (English and Chinese)",
      "url": "https://studio-syntropy.com/",
+     "section": "Header (logo)",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
+     "section": "Header (logo)",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
      "section": "Header (logo)",
      "page_date": null,
      "alt": "",
@@ -1744,6 +1808,22 @@
      "section": "Footer (logo)",
      "page_date": null,
      "alt": "趨合工作室 studio syntropy",
+     "caption": ""
+    },
+    {
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
+     "section": "Header (logo, dark mode)",
+     "page_date": null,
+     "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
+     "section": "Header (logo, dark mode)",
+     "page_date": null,
+     "alt": "",
      "caption": ""
     },
     {

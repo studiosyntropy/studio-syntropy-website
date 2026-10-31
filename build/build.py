@@ -156,6 +156,11 @@ def build():
     src = open(os.path.join(ROOT, 'src/index.html'), encoding='utf-8').read()
     i = src.index('<a class="skip"')
     head, body = src[:i], src[i:]
+    # pages kept out of the home page flow: <!--PAGE:name--> ... <!--/PAGE-->
+    pages = {}
+    for m in list(re.finditer(r'<!--PAGE:(\w+)-->\n(.*?)\n<!--/PAGE-->\n*', body, re.S)):
+        pages[m.group(1)] = m.group(2)
+    body = re.sub(r'<!--PAGE:(\w+)-->\n.*?\n<!--/PAGE-->\n*', '', body, flags=re.S)
     posts = read_posts()
     latest = posts[0]
     written = []
@@ -164,8 +169,15 @@ def build():
         path = os.path.join(ROOT, rel); os.makedirs(os.path.dirname(path), exist_ok=True)
         open(path, 'w', encoding='utf-8').write(text); written.append(rel)
 
-    def lang_body(lang, prefix, href_en, href_zh, home=None):
-        b = strip_lang(body, OTHER[lang])
+    def link_pages(b, lang, prefix):
+        root = prefix + ('zh/' if lang == 'zh-Hant' else '')
+        return (b.replace('href="#research"', 'href="%sresearch/index.html"' % root)
+                 .replace('href="#teaching"', 'href="%steaching/index.html"' % root)
+                 .replace('href="#guidebook"', 'href="%steaching/index.html#guidebook"' % root))
+
+    def lang_body(lang, prefix, href_en, href_zh, home=None, src_body=None):
+        b = strip_lang(src_body if src_body is not None else body, OTHER[lang])
+        b = link_pages(b, lang, prefix)
         b = b.replace('{{HREF_EN}}', href_en).replace('{{HREF_ZH}}', href_zh)
         b = b.replace('{{CUR_EN}}', 'aria-current="page"' if lang == 'en' else '').replace('{{CUR_ZH}}', 'aria-current="page"' if lang == 'zh-Hant' else '')
         return fix_paths(b, prefix, home)
@@ -192,8 +204,9 @@ def build():
         write(rel, page_head(head, lang, seo['title'], seo['desc'], canon, alt_home, SITE + '/img/hero-chili-gft.jpg', 'website', org, prefix) + b + '\n</body>\n</html>\n')
 
     # ---- shell for sub-pages: English home body with <main> replaced
-    def shell(prefix, main_html):
-        b = lang_body('en', prefix, prefix + 'index.html', prefix + 'zh/index.html', home=prefix + 'index.html')
+    def shell(prefix, main_html, lang='en', href_en=None, href_zh=None):
+        home = prefix + ('zh/' if lang == 'zh-Hant' else '') + 'index.html'
+        b = lang_body(lang, prefix, href_en or prefix + 'index.html', href_zh or prefix + 'zh/index.html', home=home)
         a = b.index('<main id="main" tabindex="-1">') + len('<main id="main" tabindex="-1">'); z = b.index('</main>')
         return b[:a] + '\n' + main_html + '\n' + b[z:]
 
@@ -230,9 +243,33 @@ def build():
           'blogPost': [{'@type': 'BlogPosting', 'headline': p['title'], 'url': '%s/blog/%s' % (SITE, p['slug']), 'datePublished': p['date']} for p in posts]}
     write('blog/index.html', page_head(head, 'en', 'Blog: notes from the field | Studio Syntropy', 'Field notes from Studio Syntropy: syntropic agroforestry projects, soil research and food forests in Hualien, Taiwan and beyond.', SITE + '/blog', [('en', SITE + '/blog')], SITE + '/img/hero-chili-gft.jpg', 'website', ld, pre) + shell(pre, main) + '\n</body>\n</html>\n')
 
+    # ---- research and teaching pages
+    PAGE_SEO = {
+     'research': {'en': ('Research: syntropic agroforestry field trials in Hualien | Studio Syntropy', 'Soil, harvest and biodiversity measured on the syntropic agroforestry sites of Studio Syntropy in Hualien, Taiwan, with universities and research institutes; publications and press.'),
+                  'zh-Hant': ('場域研究：花蓮趨合農業田間試驗｜趨合工作室', '趨合工作室與大學及研究機構合作，在花蓮的趨合農業場域量測土壤、收成與生物多樣性；相關發表與媒體報導。')},
+     'teaching': {'en': ('Courses and talks on syntropic agroforestry in Taiwan | Studio Syntropy', 'Syntropic agroforestry courses, workshops and talks by Studio Syntropy in Taiwan and Malaysia, and the guidebook Syntropic Agroforestry: A Visual Guide for Taiwan.'),
+                  'zh-Hant': ('趨合農業課程與演講｜趨合工作室', '趨合工作室在台灣與馬來西亞開設的趨合農業課程、工作坊與演講，以及《趨合農業：台灣圖解指南》。')},
+    }
+    for name, block in pages.items():
+        urls = {'en': '%s/%s' % (SITE, name), 'zh-Hant': '%s/zh/%s' % (SITE, name)}
+        alts = [('en', urls['en']), ('zh-Hant', urls['zh-Hant']), ('x-default', urls['en'])]
+        for lang, rel, pre, href_en, href_zh in [('en', '%s/index.html' % name, '../', 'index.html', '../zh/%s/index.html' % name),
+                                                ('zh-Hant', 'zh/%s/index.html' % name, '../../', '../../%s/index.html' % name, 'index.html')]:
+            blk = strip_lang(block, OTHER[lang])
+            blk = re.sub(r'<h2 id="(\w+-title)"([^>]*)>(.*?)</h2>', r'<h1 id="\1"\2>\3</h1>', blk, count=1, flags=re.S)
+            blk = fix_paths(link_pages(blk, lang, pre), pre, pre + ('zh/' if lang == 'zh-Hant' else '') + 'index.html')
+            blk = blk.replace('<h3', '<h3 aria-level="2"').replace('<h4', '<h4 aria-level="3"')  # no h2 on these pages: keep the look, fix the outline
+            main = '<div class="page-top">\n' + blk + '\n</div>'
+            title, desc = PAGE_SEO[name][lang]
+            ld = {'@context': 'https://schema.org', '@type': 'WebPage', 'name': title, 'url': urls[lang], 'inLanguage': lang, 'isPartOf': {'@id': SITE + '/#studio'}}
+            out = shell(pre, main, lang, href_en, href_zh)
+            selfh = 'href="%s%s/index.html"' % (pre + ('zh/' if lang == 'zh-Hant' else ''), name)
+            out = out.replace('<li><a ' + selfh + '>', '<li><a ' + selfh + ' aria-current="page">')
+            write(rel, page_head(head, lang, title, desc, urls[lang], alts, SITE + '/img/hero-chili-gft.jpg', 'website', ld, pre) + out + '\n</body>\n</html>\n')
+
     # ---- sitemap & robots
     today = datetime.date.today().isoformat()
-    urls = [(SITE + '/', today), (SITE + '/zh', today), (SITE + '/blog', posts[0]['date'])] + [('%s/blog/%s' % (SITE, p['slug']), p['date']) for p in posts]
+    urls = [(SITE + '/', today), (SITE + '/zh', today), (SITE + '/research', today), (SITE + '/zh/research', today), (SITE + '/teaching', today), (SITE + '/zh/teaching', today), (SITE + '/blog', posts[0]['date'])] + [('%s/blog/%s' % (SITE, p['slug']), p['date']) for p in posts]
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</urlset>\n' % ''.join('  <url><loc>%s</loc><lastmod>%s</lastmod></url>\n' % u for u in urls))
     write('robots.txt', 'User-agent: *\n%s\nSitemap: %s/sitemap.xml\n' % ('Allow: /' if LAUNCH else 'Disallow: /', SITE))
     return written
