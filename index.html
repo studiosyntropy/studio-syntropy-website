@@ -209,6 +209,7 @@ html[lang="zh-Hant"] .hero h1{line-height:1.35}
 /* services */
 .services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
 @media (max-width:760px){.services{grid-template-columns:1fr}}
+@media (min-width:761px){.services.three-up{grid-template-columns:repeat(3,minmax(0,1fr))}.services.three-up .svc{padding:1.75rem 2rem;border-right:1px solid var(--line)}.services.three-up .svc:first-child{padding-left:0}.services.three-up .svc:last-child{padding-right:0;border-right:0}}
 .svc{display:grid;gap:.6rem;padding:1.75rem 0;border-bottom:1px solid var(--line);align-content:start}
 @media (min-width:761px){.svc:nth-child(odd){padding-right:2.5rem;border-right:1px solid var(--line)}.svc:nth-child(even){padding-left:2.5rem}}
 
@@ -551,8 +552,8 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       <nav class="nav" id="site-nav" aria-label="Main" data-open="false">
         <ul>
           <li><a href="#services"><span lang="en">Services</span></a></li>
-          <li><a href="#projects"><span lang="en">Projects</span></a></li>
           <li><a href="#story"><span lang="en">Story</span></a></li>
+          <li><a href="#projects"><span lang="en">Projects</span></a></li>
           <li><a href="research/index.html"><span lang="en">Research</span></a></li>
           <li><a href="teaching/index.html"><span lang="en">Courses</span></a></li>
           <li><a href="#blog"><span lang="en">Blog</span></a></li>
@@ -608,22 +609,18 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       <p class="eyebrow"><span lang="en">Services</span></p>
       <h2 id="services-title"><span lang="en">What the studio offers</span></h2>
     </div>
-    <div class="services">
+    <div class="services three-up">
       <div class="svc">
-        <h3><span lang="en">Design consultancy</span></h3>
-        <p class="muted"><span lang="en">Syntropic agroforestry designs for farms, institutions, parks and rooftops, large and small, with priority on native Taiwanese species in high-density systems.</span></p>
+        <h3><span lang="en">Design and implementation</span></h3>
+        <p class="muted"><span lang="en">Syntropic agroforestry systems for farms, institutions, parks and rooftops, large and small, designed and planted with you, with priority on native Taiwanese species in high-density systems.</span></p>
       </div>
       <div class="svc">
-        <h3><span lang="en">Soil assessment</span></h3>
-        <p class="muted"><span lang="en">Microbiometer and microscope readings of soil biology, read together with laboratory soil chemistry, to set a baseline and measure change.</span></p>
+        <h3><span lang="en">Consultancy</span></h3>
+        <p class="muted"><span lang="en">Site visits, soil assessment with microscope and laboratory analysis, pruning plans, planting calendars and regular guidance for existing systems.</span></p>
       </div>
       <div class="svc">
         <h3><span lang="en">Courses and workshops</span></h3>
         <p class="muted"><span lang="en">From a three-hour introduction to two- and five-day immersion courses with hands-on planting.</span></p>
-      </div>
-      <div class="svc">
-        <h3><span lang="en">Biomass and ecosystem management</span></h3>
-        <p class="muted"><span lang="en">Pruning plans, planting calendars and on-site guidance that use the life cycles of species to build fertility and structure.</span></p>
       </div>
     </div>
   </div>
@@ -647,7 +644,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       </div>
       <div class="leafed" style="--c:var(--moss)">
         <h3><span lang="en">Strata in space</span></h3>
-        <p class="muted"><span lang="en">Every plant has a place in the light: emergent, high, medium or low. Filling all strata at high density uses the sunlight completely and builds biomass fast.</span></p>
+        <p class="muted"><span lang="en">Every plant has a place in the light: emergent, high, medium or low. Filling all strata at high density captures the light at every level and steadily builds biomass.</span></p>
       </div>
     </div>
 
@@ -679,7 +676,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
         <div class="step-text">
           <p class="step-date"><span lang="en">September 2025</span></p>
           <h3><span lang="en">Soil builds under the tree lines</span></h3>
-          <p><span lang="en">Pruned biomass, wood chips and banana trunks are laid along the tree lines. The soil beneath them changes first; the open inter-rows follow later.</span></p>
+          <p><span lang="en">Pruned biomass, wood chips and banana trunks are laid along the tree lines, and the soil beneath them changes first. Soil and succession develop together: what grows on its own, from grasses to herbs, shrubs and trees, hints at the state of the soil life, such as its balance of fungi and bacteria, and at which plants the land is ready to carry.</span></p>
         </div>
       </li>
       <li class="step" id="step-3">
@@ -703,7 +700,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
           <p class="step-date"><span lang="en">July–October 2026</span></p>
           <h3><span lang="en">Harvest, and life returns</span></h3>
           <p><span lang="en">Chili plants keep fruiting into October, through the dry months, without irrigation.</span></p>
-          <p><span lang="en">Flowers in every layer feed honeybees, moths and other pollinators. Spiders, wasps and birds hunt among the plants and keep plant-eating insects in balance, so no sprays are needed.</span></p>
+          <p><span lang="en">Flowers in every layer feed honeybees, moths and other pollinators. Spiders, wasps and birds hunt among the plants and keep plant-eating insects in balance. Well-nourished plants also build strong immune systems of their own, forming lipids and secondary metabolites that limit insect damage. No sprays are needed.</span></p>
         </div>
       </li>
       <li class="step" id="step-5">
@@ -719,7 +716,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
         <div class="step-text">
           <p class="step-date"><span lang="en">September 2026</span></p>
           <h3><span lang="en">A closed food forest</span></h3>
-          <p><span lang="en">Less than two years after the first logs, the tree lines have grown into a dense, layered food forest. Shade, leaf litter and roots keep the ground cool and covered.</span></p>
+          <p><span lang="en">Less than two years after the first logs, the tree lines have grown into a dense, layered food forest. Shade, leaf litter and roots keep the ground cool and covered. From here, management in four- to six-week cycles keeps the system young and productive, rather than letting it grow into a senescent jungle.</span></p>
         </div>
       </li>
     </ol>
@@ -836,13 +833,13 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       <p class="eyebrow"><span lang="en">Founder</span></p>
       <h2 id="about-title" style="margin-top:.9rem"><span lang="en">Tobias Chen</span></h2>
       <div class="prose" style="margin-top:1.25rem">
-        <p><span lang="en">Soil health and regenerative agriculture specialist with over eleven years of practice in Costa Rica, the United States, Greece, Germany, Taiwan and Malaysia. He designs and manages the syntropic sites of the Tzu Chi University USR Center in Hualien and founded Studio Syntropy in 2026.</span></p>
+        <p><span lang="en">Soil health and regenerative agriculture specialist with over eleven years of practice in Costa Rica, the United States, Greece, Germany, Taiwan and Malaysia. He designs and manages the syntropic sites of the Tzu Chi University USR Center in Hualien, and works with public institutions such as the Hualien District Agricultural Research and Extension Station and its Organic Center on demonstration plots, courses and consultancy. He founded Studio Syntropy in 2026 to bring this work to farms, communities and institutions.</span></p>
       </div>
     <div class="hero-meta about-facts">
       <div><strong>11+</strong><span><span lang="en">years of practice in soil health and regenerative agriculture, in six countries</span></span></div>
       
       <div><strong>10,000+ m²</strong><span><span lang="en">of syntropic systems implemented in Taiwan and Malaysia</span></span></div>
-      <div><strong>2026</strong><span><span lang="en">Vision USR Award, with Tzu Chi University</span></span></div>
+      <div><strong>2026</strong><span><a href="blog/global-views-usr-award-2026/index.html"><span lang="en">Global Views USR Award, with Tzu Chi University</span></a></span></div>
     </div>
       <div class="cv">
         <div class="cv-row"><span>2026</span><span><span lang="en">Plant Health Pyramid; Redox potential and pH (Regen Ag Academy)</span></span></div>
@@ -900,7 +897,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
         </div>
         <div class="contact-item">
           <span class="muted"><span lang="en">Based in</span></span>
-          <span class="val"><span lang="en">Hualien &amp; Taipei, Taiwan</span></span>
+          <span class="val"><span lang="en">Hualien, Taiwan</span></span>
         </div>
       </div>
       <p class="sr-only" role="status" id="copy-status"></p>

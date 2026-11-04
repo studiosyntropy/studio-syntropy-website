@@ -191,6 +191,7 @@ html[lang="zh-Hant"] .hero h1{line-height:1.35}
 /* services */
 .services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
 @media (max-width:760px){.services{grid-template-columns:1fr}}
+@media (min-width:761px){.services.three-up{grid-template-columns:repeat(3,minmax(0,1fr))}.services.three-up .svc{padding:1.75rem 2rem;border-right:1px solid var(--line)}.services.three-up .svc:first-child{padding-left:0}.services.three-up .svc:last-child{padding-right:0;border-right:0}}
 .svc{display:grid;gap:.6rem;padding:1.75rem 0;border-bottom:1px solid var(--line);align-content:start}
 @media (min-width:761px){.svc:nth-child(odd){padding-right:2.5rem;border-right:1px solid var(--line)}.svc:nth-child(even){padding-left:2.5rem}}
 
@@ -530,8 +531,8 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       <nav class="nav" id="site-nav" aria-label="Main" data-open="false">
         <ul>
           <li><a href="#services"><span lang="en">Services</span><span lang="zh-Hant">服務</span></a></li>
-          <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
           <li><a href="#story"><span lang="en">Story</span><span lang="zh-Hant">故事</span></a></li>
+          <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
           <li><a href="#research"><span lang="en">Research</span><span lang="zh-Hant">研究</span></a></li>
           <li><a href="#teaching"><span lang="en">Courses</span><span lang="zh-Hant">課程</span></a></li>
           <li><a href="#blog"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></a></li>
@@ -587,22 +588,18 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       <p class="eyebrow"><span lang="en">Services</span><span lang="zh-Hant">服務項目</span></p>
       <h2 id="services-title"><span lang="en">What the studio offers</span><span lang="zh-Hant">工作室提供的服務</span></h2>
     </div>
-    <div class="services">
+    <div class="services three-up">
       <div class="svc">
-        <h3><span lang="en">Design consultancy</span><span lang="zh-Hant">設計顧問</span></h3>
-        <p class="muted"><span lang="en">Syntropic agroforestry designs for farms, institutions, parks and rooftops, large and small, with priority on native Taiwanese species in high-density systems.</span><span lang="zh-Hant">為農場、機構、公園與屋頂提供大小規模的趨合農業設計，在高密度系統中優先採用台灣原生植物。</span></p>
+        <h3><span lang="en">Design and implementation</span><span lang="zh-Hant">設計與施作</span></h3>
+        <p class="muted"><span lang="en">Syntropic agroforestry systems for farms, institutions, parks and rooftops, large and small, designed and planted with you, with priority on native Taiwanese species in high-density systems.</span><span lang="zh-Hant">為農場、機構、公園與屋頂規劃大小規模的趨合農業系統，與您一同設計並種植，在高密度系統中優先採用台灣原生植物。</span></p>
       </div>
       <div class="svc">
-        <h3><span lang="en">Soil assessment</span><span lang="zh-Hant">土壤評估</span></h3>
-        <p class="muted"><span lang="en">Microbiometer and microscope readings of soil biology, read together with laboratory soil chemistry, to set a baseline and measure change.</span><span lang="zh-Hant">以 Microbiometer 與顯微鏡檢測土壤生物，並搭配實驗室土壤化學分析，建立基準並追蹤變化。</span></p>
+        <h3><span lang="en">Consultancy</span><span lang="zh-Hant">顧問諮詢</span></h3>
+        <p class="muted"><span lang="en">Site visits, soil assessment with microscope and laboratory analysis, pruning plans, planting calendars and regular guidance for existing systems.</span><span lang="zh-Hant">現場勘查、以顯微鏡與實驗室分析進行土壤評估、修剪計畫、種植曆，以及既有系統的定期輔導。</span></p>
       </div>
       <div class="svc">
         <h3><span lang="en">Courses and workshops</span><span lang="zh-Hant">課程與工作坊</span></h3>
         <p class="muted"><span lang="en">From a three-hour introduction to two- and five-day immersion courses with hands-on planting.</span><span lang="zh-Hant">從三小時的入門活動，到包含實際種植的兩日與五日沉浸式課程。</span></p>
-      </div>
-      <div class="svc">
-        <h3><span lang="en">Biomass and ecosystem management</span><span lang="zh-Hant">生物量與生態系統管理</span></h3>
-        <p class="muted"><span lang="en">Pruning plans, planting calendars and on-site guidance that use the life cycles of species to build fertility and structure.</span><span lang="zh-Hant">提供修剪計畫、種植曆與現場指導，運用植物的生命週期累積肥力與結構。</span></p>
       </div>
     </div>
   </div>
@@ -626,7 +623,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       </div>
       <div class="leafed" style="--c:var(--moss)">
         <h3><span lang="en">Strata in space</span><span lang="zh-Hant">空間上的分層</span></h3>
-        <p class="muted"><span lang="en">Every plant has a place in the light: emergent, high, medium or low. Filling all strata at high density uses the sunlight completely and builds biomass fast.</span><span lang="zh-Hant">每株植物在光中都有自己的位置：突出層、高層、中層或低層。高密度地填滿各層，能完整利用陽光並快速累積生物量。</span></p>
+        <p class="muted"><span lang="en">Every plant has a place in the light: emergent, high, medium or low. Filling all strata at high density captures the light at every level and steadily builds biomass.</span><span lang="zh-Hant">每株植物在光中都有自己的位置：突出層、高層、中層或低層。高密度地填滿各層，能在每個層次承接陽光，並穩定累積生物量。</span></p>
       </div>
     </div>
 
@@ -658,7 +655,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
         <div class="step-text">
           <p class="step-date"><span lang="en">September 2025</span><span lang="zh-Hant">2025 年 9 月</span></p>
           <h3><span lang="en">Soil builds under the tree lines</span><span lang="zh-Hant">樹列下的土壤開始累積</span></h3>
-          <p><span lang="en">Pruned biomass, wood chips and banana trunks are laid along the tree lines. The soil beneath them changes first; the open inter-rows follow later.</span><span lang="zh-Hant">修剪下的生物量、木屑與香蕉莖沿著樹列鋪放。樹列下方的土壤最先改變，行間空地隨後跟進。</span></p>
+          <p><span lang="en">Pruned biomass, wood chips and banana trunks are laid along the tree lines, and the soil beneath them changes first. Soil and succession develop together: what grows on its own, from grasses to herbs, shrubs and trees, hints at the state of the soil life, such as its balance of fungi and bacteria, and at which plants the land is ready to carry.</span><span lang="zh-Hant">修剪下的生物量、木屑與香蕉莖沿著樹列鋪放，樹列下方的土壤最先改變。土壤與演替一同發展：自然長出的植物，從禾草、草本植物到灌木與喬木，透露出土壤生命的狀態，例如真菌與細菌的比例，也顯示這片土地已準備好承載哪些植物。</span></p>
         </div>
       </li>
       <li class="step" id="step-3">
@@ -682,7 +679,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
           <p class="step-date"><span lang="en">July–October 2026</span><span lang="zh-Hant">2026 年 7–10 月</span></p>
           <h3><span lang="en">Harvest, and life returns</span><span lang="zh-Hant">收成，生命回歸</span></h3>
           <p><span lang="en">Chili plants keep fruiting into October, through the dry months, without irrigation.</span><span lang="zh-Hant">辣椒在乾燥的月份中未經灌溉，仍持續結果至十月。</span></p>
-          <p><span lang="en">Flowers in every layer feed honeybees, moths and other pollinators. Spiders, wasps and birds hunt among the plants and keep plant-eating insects in balance, so no sprays are needed.</span><span lang="zh-Hant">各層次的花朵供養蜜蜂、蛾類與其他授粉者。蜘蛛、胡蜂與鳥類在植物間覓食，讓食草昆蟲維持平衡，因此無需噴藥。</span></p>
+          <p><span lang="en">Flowers in every layer feed honeybees, moths and other pollinators. Spiders, wasps and birds hunt among the plants and keep plant-eating insects in balance. Well-nourished plants also build strong immune systems of their own, forming lipids and secondary metabolites that limit insect damage. No sprays are needed.</span><span lang="zh-Hant">各層次的花朵供養蜜蜂、蛾類與其他授粉者。蜘蛛、胡蜂與鳥類在植物間覓食，讓食草昆蟲維持平衡。營養充足的植物也建立起強健的免疫系統，形成脂質與植物二次代謝物，減少蟲害。因此無需噴藥。</span></p>
         </div>
       </li>
       <li class="step" id="step-5">
@@ -698,7 +695,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
         <div class="step-text">
           <p class="step-date"><span lang="en">September 2026</span><span lang="zh-Hant">2026 年 9 月</span></p>
           <h3><span lang="en">A closed food forest</span><span lang="zh-Hant">成林的食物森林</span></h3>
-          <p><span lang="en">Less than two years after the first logs, the tree lines have grown into a dense, layered food forest. Shade, leaf litter and roots keep the ground cool and covered.</span><span lang="zh-Hant">鋪下第一批原木不到兩年，樹列已長成茂密、分層的食物森林。樹蔭、落葉與根系讓地面保持涼爽與覆蓋。</span></p>
+          <p><span lang="en">Less than two years after the first logs, the tree lines have grown into a dense, layered food forest. Shade, leaf litter and roots keep the ground cool and covered. From here, management in four- to six-week cycles keeps the system young and productive, rather than letting it grow into a senescent jungle.</span><span lang="zh-Hant">鋪下第一批原木不到兩年，樹列已長成茂密、分層的食物森林。樹蔭、落葉與根系讓地面保持涼爽與覆蓋。此後每四至六週進行一次管理，讓系統保持年輕與生產力，而不致長成老化的叢林。</span></p>
         </div>
       </li>
     </ol>
@@ -855,7 +852,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
           <h3 class="panel-h"><span lang="en">Published &amp; press</span><span lang="zh-Hant">已發表與報導</span></h3>
           <div style="max-width:46rem">
           <div class="award">
-          <b><span lang="en">2026 Vision USR Award</span><span lang="zh-Hant">2026 遠見 USR 生態共好組 績優獎</span></b>
+          <b><span lang="en">2026 Global Views USR Award</span><span lang="zh-Hant">2026 遠見 USR 生態共好組 績優獎</span></b>
           <span class="muted"><span lang="en">Eco-mutual benefit category, for the Tzu Chi University USR team. Responsible for the food forest work.</span><span lang="zh-Hant">以慈濟大學 USR 團隊成員身分獲獎，負責食物森林相關工作。</span></span>
         </div>
         <ul class="press">
@@ -929,13 +926,13 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       <p class="eyebrow"><span lang="en">Founder</span><span lang="zh-Hant">創辦人</span></p>
       <h2 id="about-title" style="margin-top:.9rem"><span lang="en">Tobias Chen</span><span lang="zh-Hant">陳拓彼 Tobias Chen</span></h2>
       <div class="prose" style="margin-top:1.25rem">
-        <p><span lang="en">Soil health and regenerative agriculture specialist with over eleven years of practice in Costa Rica, the United States, Greece, Germany, Taiwan and Malaysia. He designs and manages the syntropic sites of the Tzu Chi University USR Center in Hualien and founded Studio Syntropy in 2026.</span><span lang="zh-Hant">土壤健康與再生農業專家，在哥斯大黎加、美國、希臘、德國、台灣與馬來西亞累積逾十一年實務經驗。目前負責慈濟大學 USR 中心各趨合農業場域的設計與管理，並於 2026 年創立趨合工作室。</span></p>
+        <p><span lang="en">Soil health and regenerative agriculture specialist with over eleven years of practice in Costa Rica, the United States, Greece, Germany, Taiwan and Malaysia. He designs and manages the syntropic sites of the Tzu Chi University USR Center in Hualien, and works with public institutions such as the Hualien District Agricultural Research and Extension Station and its Organic Center on demonstration plots, courses and consultancy. He founded Studio Syntropy in 2026 to bring this work to farms, communities and institutions.</span><span lang="zh-Hant">土壤健康與再生農業專家，在哥斯大黎加、美國、希臘、德國、台灣與馬來西亞累積逾十一年實務經驗。目前負責慈濟大學 USR 中心各趨合農業場域的設計與管理，並與農業部花蓮區農業改良場及其有機中心等公部門機構合作，推動示範區、課程與顧問諮詢。2026 年創立趨合工作室，將這些經驗帶給農場、社區與機構。</span></p>
       </div>
     <div class="hero-meta about-facts">
       <div><strong>11+</strong><span><span lang="en">years of practice in soil health and regenerative agriculture, in six countries</span><span lang="zh-Hant">年土壤健康與再生農業實務經驗，遍及六個國家</span></span></div>
       
       <div><strong>10,000+ m²</strong><span><span lang="en">of syntropic systems implemented in Taiwan and Malaysia</span><span lang="zh-Hant">在台灣與馬來西亞完成施作的趨合系統面積</span></span></div>
-      <div><strong>2026</strong><span><span lang="en">Vision USR Award, with Tzu Chi University</span><span lang="zh-Hant">與慈濟大學共同獲得遠見 USR 獎</span></span></div>
+      <div><strong>2026</strong><span><a href="blog/global-views-usr-award-2026/index.html"><span lang="en">Global Views USR Award, with Tzu Chi University</span><span lang="zh-Hant">與慈濟大學共同獲得遠見 USR 獎</span></a></span></div>
     </div>
       <div class="cv">
         <div class="cv-row"><span>2026</span><span><span lang="en">Plant Health Pyramid; Redox potential and pH (Regen Ag Academy)</span><span lang="zh-Hant">植物健康金字塔；氧化還原電位與 pH（Regen Ag Academy）</span></span></div>
@@ -993,7 +990,7 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
         </div>
         <div class="contact-item">
           <span class="muted"><span lang="en">Based in</span><span lang="zh-Hant">所在地</span></span>
-          <span class="val"><span lang="en">Hualien &amp; Taipei, Taiwan</span><span lang="zh-Hant">台灣 花蓮、台北</span></span>
+          <span class="val"><span lang="en">Hualien, Taiwan</span><span lang="zh-Hant">台灣 花蓮</span></span>
         </div>
       </div>
       <p class="sr-only" role="status" id="copy-status"></p>

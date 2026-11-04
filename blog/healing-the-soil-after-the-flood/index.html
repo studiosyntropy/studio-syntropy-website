@@ -207,6 +207,7 @@ html[lang="zh-Hant"] .hero h1{line-height:1.35}
 /* services */
 .services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
 @media (max-width:760px){.services{grid-template-columns:1fr}}
+@media (min-width:761px){.services.three-up{grid-template-columns:repeat(3,minmax(0,1fr))}.services.three-up .svc{padding:1.75rem 2rem;border-right:1px solid var(--line)}.services.three-up .svc:first-child{padding-left:0}.services.three-up .svc:last-child{padding-right:0;border-right:0}}
 .svc{display:grid;gap:.6rem;padding:1.75rem 0;border-bottom:1px solid var(--line);align-content:start}
 @media (min-width:761px){.svc:nth-child(odd){padding-right:2.5rem;border-right:1px solid var(--line)}.svc:nth-child(even){padding-left:2.5rem}}
 
@@ -549,8 +550,8 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
       <nav class="nav" id="site-nav" aria-label="Main" data-open="false">
         <ul>
           <li><a href="../../index.html#services"><span lang="en">Services</span></a></li>
-          <li><a href="../../index.html#projects"><span lang="en">Projects</span></a></li>
           <li><a href="../../index.html#story"><span lang="en">Story</span></a></li>
+          <li><a href="../../index.html#projects"><span lang="en">Projects</span></a></li>
           <li><a href="../../research/index.html"><span lang="en">Research</span></a></li>
           <li><a href="../../teaching/index.html"><span lang="en">Courses</span></a></li>
           <li><a href="../../index.html#blog"><span lang="en">Blog</span></a></li>

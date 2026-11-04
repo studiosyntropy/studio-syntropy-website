@@ -147,7 +147,7 @@ def fix_paths(body, prefix, home):
     """Rewrite asset paths for pages in sub-folders and point in-page anchors at the home page."""
     if prefix:
         body = re.sub(r'(src|href)="img/', r'\1="%simg/' % prefix, body)
-        body = body.replace('href="blog/index.html"', 'href="%sblog/index.html"' % prefix)
+        body = body.replace('href="blog/', 'href="%sblog/' % prefix)
     if home:
         body = re.sub(r'href="#(?!main|top\b)([\w-]+)"', r'href="%s#\1"' % home, body)
     return body
