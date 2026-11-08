@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/card", "destination": "/img/card-en.png", "permanent": false },
+    { "source": "/zh/card", "destination": "/img/card-zh.png", "permanent": false }
+  ]
 }
