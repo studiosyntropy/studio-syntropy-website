@@ -250,8 +250,8 @@ def build():
                   'zh-Hant': ('場域研究：花蓮趨合農業田間試驗｜趨合工作室', '趨合工作室與大學及研究機構合作，在花蓮的趨合農業場域量測土壤、收成與生物多樣性；相關發表與媒體報導。')},
      'teaching': {'en': ('Courses and talks on syntropic agroforestry in Taiwan | Studio Syntropy', 'Syntropic agroforestry courses, workshops and talks by Studio Syntropy in Taiwan and Malaysia, and the guidebook Syntropic Agroforestry: A Visual Guide for Taiwan.'),
                   'zh-Hant': ('趨合農業課程與演講｜趨合工作室', '趨合工作室在台灣與馬來西亞開設的趨合農業課程、工作坊與演講，以及《趨合農業：台灣圖解指南》。')},
-     'tools': {'en': ('Tools for syntropic agroforestry in Taiwan | Studio Syntropy', 'A free bilingual plant reference for syntropic agroforestry in Taiwan, and the planning, design review and exam tools Studio Syntropy uses in its courses and projects.'),
-               'zh-Hant': ('趨合農業工具｜趨合工作室', '免費的臺灣趨合農業雙語植物資料庫，以及趨合工作室在課程與專案中使用的規劃、設計審查與考試工具。')},
+     'tools': {'en': ('Tools for syntropic agroforestry in Taiwan | Studio Syntropy', 'A free bilingual plant reference for syntropic agroforestry in Taiwan and the course exam of Studio Syntropy, both in beta and open to feedback.'),
+               'zh-Hant': ('趨合農業工具｜趨合工作室', '臺灣趨合農業的免費雙語植物資料庫，以及趨合工作室的課程考試；兩者皆為測試版，歡迎回饋。')},
     }
     for name, block in pages.items():
         urls = {'en': '%s/%s' % (SITE, name), 'zh-Hant': '%s/zh/%s' % (SITE, name)}
