@@ -94,23 +94,23 @@ html[lang="zh-Hant"] .eyebrow{letter-spacing:.16em}
 
 /* header */
 .site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
-.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:6rem}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:2.5rem;min-height:6rem;max-width:92rem}
 .brand{display:block;flex:0 0 auto;border-radius:4px}
 .brand img{height:5.25rem;width:auto;margin-block:-.5rem}
 .logo-dark{display:none}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo-light{display:none}:root:not([data-theme="light"]) .logo-dark{display:block}}
 :root[data-theme="dark"] .logo-light{display:none}
 :root[data-theme="dark"] .logo-dark{display:block}
-.head-right{display:flex;align-items:center;gap:.75rem}
+.head-right{display:flex;align-items:center;gap:1.25rem}
 .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.1rem}
-.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 .6rem;white-space:nowrap;text-decoration:none;font-size:var(--step-0);font-weight:500;color:var(--ink);border-radius:6px}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 .55rem;white-space:nowrap;text-decoration:none;font-size:var(--step--1);font-weight:500;letter-spacing:.01em;color:var(--ink);border-radius:6px}
 .nav a:hover{background:var(--paper-2);text-decoration:underline}
-.tools{display:flex;gap:.5rem;align-items:center}
-.seg{display:inline-flex;border:1.5px solid var(--ink-soft);border-radius:999px;padding:2px}
-.seg button{white-space:nowrap;font:inherit;font-size:.95rem;font-weight:500;border:0;background:transparent;color:var(--ink);min-width:44px;min-height:40px;padding:0 .7rem;border-radius:999px;cursor:pointer;line-height:1}
+.tools{display:flex;gap:.4rem;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px}
+.seg button{white-space:nowrap;font:inherit;font-size:.8125rem;font-weight:500;border:0;background:transparent;color:var(--ink);min-width:34px;min-height:34px;padding:0 .55rem;border-radius:999px;cursor:pointer;line-height:1}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 .menu-btn{display:none;white-space:nowrap;font:inherit;font-weight:700;min-height:48px;padding:0 1rem;border:1.5px solid var(--ink-soft);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}
-@media (max-width:1330px){
+@media (max-width:1179px){
   .menu-btn{display:inline-flex;align-items:center}
   .nav{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem var(--gutter-r) 1rem var(--gutter)}
   .nav[data-open="false"]{display:none}
@@ -482,7 +482,7 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 .post .cover{max-height:28rem;object-fit:cover}
 
 /* ===== v11: language links, compact blog, latest line, tall pairs ===== */
-.seg a{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;font-size:.95rem;font-weight:500;color:var(--ink);min-width:44px;min-height:40px;padding:0 .7rem;border-radius:999px;text-decoration:none;line-height:1}
+.seg a{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;font-size:.8125rem;font-weight:500;color:var(--ink);min-width:34px;min-height:34px;padding:0 .6rem;border-radius:999px;text-decoration:none;line-height:1}
 .seg a:hover{text-decoration:underline}
 .seg a[aria-current]{background:var(--ink);color:var(--paper)}
 @media (max-width:440px){.seg a{min-width:40px;padding:0 .5rem}}
@@ -632,8 +632,8 @@ document.addEventListener('click',function(e){
         </div>
         <div class="seg seg-size" role="group" aria-label="Text size 字級">
           <button type="button" id="ts-0" data-ts="0" aria-pressed="true" aria-label="Normal text size">A</button>
-          <button type="button" id="ts-1" data-ts="1" aria-pressed="false" aria-label="Larger text" style="font-size:1.1rem">A+</button>
-          <button type="button" id="ts-2" data-ts="2" aria-pressed="false" aria-label="Largest text" style="font-size:1.2rem">A++</button>
+          <button type="button" id="ts-1" data-ts="1" aria-pressed="false" aria-label="Larger text" style="font-size:.9rem">A+</button>
+          <button type="button" id="ts-2" data-ts="2" aria-pressed="false" aria-label="Largest text" style="font-size:1rem">A++</button>
         </div>
         <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><span lang="en">Menu</span></button>
       </div>
