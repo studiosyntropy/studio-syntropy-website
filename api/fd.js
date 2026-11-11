@@ -3,7 +3,7 @@
 // plus one encrypted file per application with fitness/safety answers, deleted after the day.
 // Admin actions only work on the Vercel-protected address (Vercel sign-in required):
 //   https://studio-syntropy-website-studiosyntropys-projects.vercel.app/admin/field-days
-import { put, get, del } from '@vercel/blob';
+import { put, get, del, head, BlobNotFoundError, BlobPreconditionFailedError } from '@vercel/blob';
 import crypto from 'node:crypto';
 
 const DB = 'fd/db.json';
@@ -58,9 +58,14 @@ async function readBlob(path) {
   return { txt: await new Response(r.stream).text(), etag: r.blob.etag };
 }
 async function load() {
-  const r = await readBlob(DB);
+  // The version tag (etag) must come from the Blob API (head), not from the file download:
+  // only the API's etag is accepted by put(..., { ifMatch }). Read the tag first, then the content,
+  // so a write in between makes the save fail and retry instead of overwriting newer data.
+  let etag = null;
+  try { etag = (await head(DB)).etag; } catch (e) { if (!(e instanceof BlobNotFoundError || /does not exist|not.?found/i.test((e && e.message) || ''))) throw e; }
+  const r = etag ? await readBlob(DB) : null;
   if (!r) return { db: { v: 1, days: [], apps: [], people: [] }, etag: null };
-  return { db: dec(r.txt), etag: r.etag };
+  return { db: dec(r.txt), etag };
 }
 // Read, change and write the document; retries when someone else wrote in between.
 async function mutate(fn) {
@@ -72,7 +77,7 @@ async function mutate(fn) {
       await put(DB, enc(db), etag ? { ...PUT_OPTS, ifMatch: etag } : PUT_OPTS);
       return out;
     } catch (e) {
-      if (e && (e.name === 'BlobPreconditionFailedError' || /precondition/i.test(e.message || ''))) { await sleep(120 + Math.random() * 400); continue; }
+      if (e instanceof BlobPreconditionFailedError || /precondition/i.test((e && e.message) || '')) { await sleep(120 + Math.random() * 400); continue; }
       throw e;
     }
   }
