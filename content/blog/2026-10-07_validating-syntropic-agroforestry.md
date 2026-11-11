@@ -19,7 +19,7 @@ The trials took place at Gengfutian, our syntropic demonstration site in Hualien
 
 The data show that our biomass management, with chop-and-drop pruning, woodchips and ground cover, changes soil chemistry and biology considerably.
 
-The syntropic soil held 29% organic carbon, against 1.8% in the Hualien monoculture and 0.86% in the conventional field in Tainan. Its microbial biomass was nearly eight times that of the Hualien monoculture, and the community was strongly fungal-dominated, with a fungus-to-bacteria ratio of 3.8:1 against 0.2:1. A diverse microbial community of this kind allows plants to cultivate microbes around their roots and to draw on the interactions they depend on.
+The syntropic topsoil, sampled at 10 cm depth in a layer rich in decomposed mulch, held 29% organic carbon, against 1.8% in the Hualien monoculture and 0.86% in the conventional field in Tainan. Its microbial biomass was nearly eight times that of the Hualien monoculture, and the community was strongly fungal-dominated, with a fungus-to-bacteria ratio of 3.8:1 against 0.2:1. A diverse microbial community of this kind allows plants to cultivate microbes around their roots and to draw on the interactions they depend on.
 
 ![Slide: soil properties of monoculture soil in Hualien, syntropic soil in Hualien and monoculture soil in Tainan. Microbiome concentration 213, 1,637 and 236 µg/g; fungus-to-bacteria ratio 0.2:1, 3.8:1 and 0.4:1; pH 8.1, 7.5 and 7.2; carbon 1.8%, 29% and 0.86%; conductivity 0.08, 0.32 and 0.24 mS/dm; potassium 482, 2,424 and 80 ppm|Soil analysis. Slide: WorldVeg.](img/blog/blog-res-3.jpg)
 

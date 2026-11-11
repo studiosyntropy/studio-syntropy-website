@@ -109,7 +109,7 @@ def short(t, n=150): return t if len(t) <= n else t[:t.rfind(' ', 0, n)] + '…'
 HEAD_SEO = {
  'en': dict(title='Studio Syntropy | Syntropic agroforestry design, courses and consultancy in Taiwan',
             desc='Studio Syntropy (趨合工作室) designs syntropic agroforestry systems and food forests in Hualien, Taiwan and beyond: design consultancy, courses, soil assessment and biomass management.'),
- 'zh-Hant': dict(title='趨合工作室 Studio Syntropy｜趨合農業與食物森林設計、課程及顧問（花蓮・台灣）',
+ 'zh-Hant': dict(title='趨合工作室 Studio Syntropy｜趨合農業設計、課程及顧問（花蓮・台灣）',
             desc='趨合工作室在花蓮及台灣各地設計趨合農業系統與食物森林，提供設計顧問、課程與工作坊、土壤評估及生物量管理服務。'),
 }
 

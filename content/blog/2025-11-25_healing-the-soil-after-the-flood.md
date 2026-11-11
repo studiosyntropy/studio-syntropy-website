@@ -41,7 +41,7 @@ LT received few organic inputs and was sown with a grass and legume seed mix.
 ![An open field at LT covered in grey flood silt under an overcast sky|LT after the flood.](img/blog/blog-guf-5.jpg)
 ![Close view of thin grass seedlings growing out of grey silt|LT: grass and legume seed mix.](img/blog/blog-guf-6.jpg)
 
-## Succession in Action: The Effect of Organic Inputs
+## Succession in Action: Early Signs of Recovery
 
 Soil life recovers in stages, and the data reflect this:
 
