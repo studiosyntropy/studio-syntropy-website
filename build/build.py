@@ -173,6 +173,7 @@ def build():
         root = prefix + ('zh/' if lang == 'zh-Hant' else '')
         return (b.replace('href="#research"', 'href="%sresearch/index.html"' % root)
                  .replace('href="#teaching"', 'href="%steaching/index.html"' % root)
+                 .replace('href="#tools"', 'href="%stools/index.html"' % root)
                  .replace('href="#guidebook"', 'href="%steaching/index.html#guidebook"' % root))
 
     def lang_body(lang, prefix, href_en, href_zh, home=None, src_body=None):
@@ -249,6 +250,8 @@ def build():
                   'zh-Hant': ('場域研究：花蓮趨合農業田間試驗｜趨合工作室', '趨合工作室與大學及研究機構合作，在花蓮的趨合農業場域量測土壤、收成與生物多樣性；相關發表與媒體報導。')},
      'teaching': {'en': ('Courses and talks on syntropic agroforestry in Taiwan | Studio Syntropy', 'Syntropic agroforestry courses, workshops and talks by Studio Syntropy in Taiwan and Malaysia, and the guidebook Syntropic Agroforestry: A Visual Guide for Taiwan.'),
                   'zh-Hant': ('趨合農業課程與演講｜趨合工作室', '趨合工作室在台灣與馬來西亞開設的趨合農業課程、工作坊與演講，以及《趨合農業：台灣圖解指南》。')},
+     'tools': {'en': ('Tools for syntropic agroforestry in Taiwan | Studio Syntropy', 'A free bilingual plant reference for syntropic agroforestry in Taiwan, and the planning, design review and exam tools Studio Syntropy uses in its courses and projects.'),
+               'zh-Hant': ('趨合農業工具｜趨合工作室', '免費的臺灣趨合農業雙語植物資料庫，以及趨合工作室在課程與專案中使用的規劃、設計審查與考試工具。')},
     }
     for name, block in pages.items():
         urls = {'en': '%s/%s' % (SITE, name), 'zh-Hant': '%s/zh/%s' % (SITE, name)}
@@ -269,7 +272,7 @@ def build():
 
     # ---- sitemap & robots
     today = datetime.date.today().isoformat()
-    urls = [(SITE + '/', today), (SITE + '/zh', today), (SITE + '/research', today), (SITE + '/zh/research', today), (SITE + '/teaching', today), (SITE + '/zh/teaching', today), (SITE + '/blog', posts[0]['date'])] + [('%s/blog/%s' % (SITE, p['slug']), p['date']) for p in posts]
+    urls = [(SITE + '/', today), (SITE + '/zh', today), (SITE + '/research', today), (SITE + '/zh/research', today), (SITE + '/teaching', today), (SITE + '/zh/teaching', today), (SITE + '/tools', today), (SITE + '/zh/tools', today), (SITE + '/blog', posts[0]['date'])] + [('%s/blog/%s' % (SITE, p['slug']), p['date']) for p in posts]
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</urlset>\n' % ''.join('  <url><loc>%s</loc><lastmod>%s</lastmod></url>\n' % u for u in urls))
     write('robots.txt', 'User-agent: *\n%s\nSitemap: %s/sitemap.xml\n' % ('Allow: /' if LAUNCH else 'Disallow: /', SITE))
     return written
