@@ -14,7 +14,7 @@ Run:  python3 build/build.py
 """
 import html, json, os, re, glob, datetime
 
-LAUNCH = False
+LAUNCH = True
 SITE = 'https://studio-syntropy.com'
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OTHER = {'en': 'zh-Hant', 'zh-Hant': 'en'}
@@ -158,9 +158,9 @@ def build():
     head, body = src[:i], src[i:]
     # pages kept out of the home page flow: <!--PAGE:name--> ... <!--/PAGE-->
     pages = {}
-    for m in list(re.finditer(r'<!--PAGE:(\w+)-->\n(.*?)\n<!--/PAGE-->\n*', body, re.S)):
+    for m in list(re.finditer(r'<!--PAGE:([\w-]+)-->\n(.*?)\n<!--/PAGE-->\n*', body, re.S)):
         pages[m.group(1)] = m.group(2)
-    body = re.sub(r'<!--PAGE:(\w+)-->\n.*?\n<!--/PAGE-->\n*', '', body, flags=re.S)
+    body = re.sub(r'<!--PAGE:([\w-]+)-->\n.*?\n<!--/PAGE-->\n*', '', body, flags=re.S)
     posts = read_posts()
     latest = posts[0]
     written = []
@@ -174,6 +174,7 @@ def build():
         return (b.replace('href="#research"', 'href="%sresearch/index.html"' % root)
                  .replace('href="#teaching"', 'href="%steaching/index.html"' % root)
                  .replace('href="#tools"', 'href="%stools/index.html"' % root)
+                 .replace('href="#field-days"', 'href="%sfield-days/index.html"' % root)
                  .replace('href="#guidebook"', 'href="%steaching/index.html#guidebook"' % root))
 
     def lang_body(lang, prefix, href_en, href_zh, home=None, src_body=None):
@@ -209,7 +210,8 @@ def build():
         home = prefix + ('zh/' if lang == 'zh-Hant' else '') + 'index.html'
         b = lang_body(lang, prefix, href_en or prefix + 'index.html', href_zh or prefix + 'zh/index.html', home=home)
         a = b.index('<main id="main" tabindex="-1">') + len('<main id="main" tabindex="-1">'); z = b.index('</main>')
-        return b[:a] + '\n' + main_html + '\n' + b[z:]
+        foot = re.search(r'<footer class="wrap foot".*?</footer>', b, re.S).group(0)  # same footer (with Privacy, Accessibility, Credits) on every page
+        return b[:a] + '\n' + main_html + '\n<div class="band band-foot">\n  ' + foot + '\n</div>\n' + b[z:]
 
     # ---- post pages
     for idx, p in enumerate(posts):
@@ -250,6 +252,8 @@ def build():
                   'zh-Hant': ('場域研究：花蓮趨合農業田間試驗｜趨合工作室', '趨合工作室與大學及研究機構合作，在花蓮的趨合農業場域量測土壤、收成與生物多樣性；相關發表與媒體報導。')},
      'teaching': {'en': ('Courses and talks on syntropic agroforestry in Taiwan | Studio Syntropy', 'Syntropic agroforestry courses, workshops and talks by Studio Syntropy in Taiwan and Malaysia, and the guidebook Syntropic Agroforestry: A Visual Guide for Taiwan.'),
                   'zh-Hant': ('趨合農業課程與演講｜趨合工作室', '趨合工作室在台灣與馬來西亞開設的趨合農業課程、工作坊與演講，以及《趨合農業：台灣圖解指南》。')},
+     'field-days': {'en': ('Field Days: learning, volunteer and paid days in syntropic agroforestry | Studio Syntropy', 'Open days on the syntropic agroforestry sites of Studio Syntropy in Hualien, Taiwan: learning days, volunteer days, paid work for experienced hands and courses. Choose a date and apply.'),
+                    'zh-Hant': ('田間日：趨合農業的學習、志工與有薪工作日｜趨合工作室', '趨合工作室在花蓮趨合農業場域的開放日：學習日、志工日、給有經驗者的有薪工作，以及課程。選擇日期即可申請。')},
      'tools': {'en': ('Tools for syntropic agroforestry in Taiwan | Studio Syntropy', 'A free bilingual plant reference for syntropic agroforestry in Taiwan and the course exam of Studio Syntropy, both in beta and open to feedback.'),
                'zh-Hant': ('趨合農業工具｜趨合工作室', '臺灣趨合農業的免費雙語植物資料庫，以及趨合工作室的課程考試；兩者皆為測試版，歡迎回饋。')},
     }
@@ -272,9 +276,9 @@ def build():
 
     # ---- sitemap & robots
     today = datetime.date.today().isoformat()
-    urls = [(SITE + '/', today), (SITE + '/zh', today), (SITE + '/research', today), (SITE + '/zh/research', today), (SITE + '/teaching', today), (SITE + '/zh/teaching', today), (SITE + '/tools', today), (SITE + '/zh/tools', today), (SITE + '/blog', posts[0]['date'])] + [('%s/blog/%s' % (SITE, p['slug']), p['date']) for p in posts]
+    urls = [(SITE + '/', today), (SITE + '/zh', today), (SITE + '/research', today), (SITE + '/zh/research', today), (SITE + '/teaching', today), (SITE + '/zh/teaching', today), (SITE + '/tools', today), (SITE + '/zh/tools', today), (SITE + '/field-days', today), (SITE + '/zh/field-days', today), (SITE + '/blog', posts[0]['date'])] + [('%s/blog/%s' % (SITE, p['slug']), p['date']) for p in posts]
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</urlset>\n' % ''.join('  <url><loc>%s</loc><lastmod>%s</lastmod></url>\n' % u for u in urls))
-    write('robots.txt', 'User-agent: *\n%s\nSitemap: %s/sitemap.xml\n' % ('Allow: /' if LAUNCH else 'Disallow: /', SITE))
+    write('robots.txt', 'User-agent: *\n%s\nSitemap: %s/sitemap.xml\n' % ('Allow: /\nDisallow: /admin/\nDisallow: /api/' if LAUNCH else 'Disallow: /', SITE))
     return written
 
 if __name__ == '__main__':

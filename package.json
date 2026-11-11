@@ -1,0 +1,9 @@
+{
+  "name": "studio-syntropy-website",
+  "private": true,
+  "type": "module",
+  "description": "Static site; api/fd.js runs Field Days (田間日) on Vercel Functions.",
+  "dependencies": {
+    "@vercel/blob": "2.9.0"
+  }
+}

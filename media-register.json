@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12 02:16",
+ "updated": "2026-11-12 02:39",
  "videos": 0,
  "items": [
   {
@@ -1861,11 +1861,27 @@
      "caption": ""
     },
     {
+     "page": "Research page (English and Chinese)",
+     "url": "https://studio-syntropy.com/research",
+     "section": "Footer (logo)",
+     "page_date": null,
+     "alt": "趨合工作室 studio syntropy",
+     "caption": ""
+    },
+    {
      "page": "Courses & talks page (English and Chinese)",
      "url": "https://studio-syntropy.com/teaching",
      "section": "Header (logo, dark mode)",
      "page_date": null,
      "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Courses & talks page (English and Chinese)",
+     "url": "https://studio-syntropy.com/teaching",
+     "section": "Footer (logo)",
+     "page_date": null,
+     "alt": "趨合工作室 studio syntropy",
      "caption": ""
     },
     {
@@ -1877,11 +1893,27 @@
      "caption": ""
     },
     {
+     "page": "Blog overview",
+     "url": "https://studio-syntropy.com/blog",
+     "section": "Footer (logo)",
+     "page_date": null,
+     "alt": "趨合工作室 studio syntropy",
+     "caption": ""
+    },
+    {
      "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Header (logo, dark mode)",
      "page_date": "2026-04-09",
      "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
+     "section": "Footer (logo)",
+     "page_date": "2026-04-09",
+     "alt": "趨合工作室 studio syntropy",
      "caption": ""
     },
     {
@@ -1893,11 +1925,27 @@
      "caption": ""
     },
     {
+     "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
+     "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
+     "section": "Footer (logo)",
+     "page_date": "2025-11-25",
+     "alt": "趨合工作室 studio syntropy",
+     "caption": ""
+    },
+    {
      "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
      "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
      "section": "Header (logo, dark mode)",
      "page_date": "2026-10-07",
      "alt": "",
+     "caption": ""
+    },
+    {
+     "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
+     "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
+     "section": "Footer (logo)",
+     "page_date": "2026-10-07",
+     "alt": "趨合工作室 studio syntropy",
      "caption": ""
     }
    ]

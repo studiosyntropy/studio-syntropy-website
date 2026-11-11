@@ -1,6 +1,8 @@
 # Studio Syntropy website
 
-Website for studio-syntropy.com. This is the test version: search engines are told not to list it (robots noindex) until launch.
+Website for studio-syntropy.com. Open to search engines since 12 November 2026 (`LAUNCH = True` in `build/build.py`).
+
+Fonts are hosted on the site itself in `fonts/` (Fontsource copies of Atkinson Hyperlegible Next, Bricolage Grotesque and Noto Sans TC, SIL Open Font License); the site makes no requests to Google.
 
 Every change saved to this repository is published to Vercel automatically within about a minute.
 
@@ -46,6 +48,17 @@ Rules: every photo appears only once on the home page; before/after pairs are al
 - In `src/index.html`, sections wrapped in `<!--PAGE:name--> … <!--/PAGE-->` become their own page instead of appearing on the home page.
 - New blog post: put the Word or Google Doc in "02_Post materials" and ask Claude to publish it.
 - Visitor statistics: Vercel Web Analytics (cookieless, Vercel Pro plan), loaded by a small script at the end of the `<style>` block in `src/index.html`. The same script counts PDF downloads and clicks on links to other sites as custom events ("PDF download", "Outbound link"). The footer Privacy panel describes this; update it if the statistics change.
+
+## Field Days · 田間日
+
+Public page: https://studio-syntropy.com/field-days (and `/zh/field-days`). Admin page (Vercel sign-in required): https://studio-syntropy-website-studiosyntropys-projects.vercel.app/admin/field-days
+
+- Page text lives in `src/index.html` (`<!--PAGE:field-days-->` block); the list of days and the application form are built by `js/fd.js` (English and Chinese strings at the top).
+- `api/fd.js` is the server part (Vercel Function, Tokyo region). Data is one encrypted file in the private Vercel Blob store `field-days` (Tokyo); fitness and safety answers are kept in separate encrypted files and deleted after the day. Key: environment variable `FD_KEY`. Never change or delete it, or the data cannot be read.
+- Admin actions only work on the Vercel-protected address above; on studio-syntropy.com they are refused.
+- Day types: learning day, volunteer day (organiser: Tzu Chi University USR Center), paid work (asks for the right to work in Taiwan; applications reviewed), course.
+- Places go in order of application; when a confirmed person cancels, the first on the waiting list moves up. Hours count once marked "Attended" on the admin page. Levels: Pioneer (first day), Secondary (10 h), Climax stage (50 h).
+- Automatic emails switch on when the environment variables `RESEND_API_KEY`, `FD_FROM` (sender, on a verified domain) and `FD_NOTIFY` (studio address for new applications) are set; until then the admin page offers prefilled email links.
 
 ## Media register
 

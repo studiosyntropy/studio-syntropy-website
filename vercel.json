@@ -2,7 +2,33 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/card", "destination": "/img/card-en.png", "permanent": false },
-    { "source": "/zh/card", "destination": "/img/card-zh.png", "permanent": false }
+    {
+      "source": "/card",
+      "destination": "/img/card-en.png",
+      "permanent": false
+    },
+    {
+      "source": "/zh/card",
+      "destination": "/img/card-zh.png",
+      "permanent": false
+    }
+  ],
+  "regions": [
+    "hnd1"
+  ],
+  "headers": [
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
   ]
 }

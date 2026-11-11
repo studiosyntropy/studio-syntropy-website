@@ -4,9 +4,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="img/v8-favicon.png">
 <link rel="apple-touch-icon" href="img/v8-app-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 /* Layout: a field notebook read top to bottom. Paper ground, forest ink, the leaf greens and sun of the v5 mark.
    Type: Atkinson Hyperlegible Next (Braille Institute, designed for low-vision readers) + Noto Sans TC. Sans only. */
@@ -89,15 +87,15 @@ html[lang="zh-Hant"] .eyebrow{letter-spacing:.16em}
 :root[data-theme="dark"] .logo-light{display:none}
 :root[data-theme="dark"] .logo-dark{display:block}
 .head-right{display:flex;align-items:center;gap:.75rem}
-.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem}
-.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 .8rem;text-decoration:none;font-size:var(--step-0);font-weight:500;color:var(--ink);border-radius:6px}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.1rem}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 .6rem;white-space:nowrap;text-decoration:none;font-size:var(--step-0);font-weight:500;color:var(--ink);border-radius:6px}
 .nav a:hover{background:var(--paper-2);text-decoration:underline}
 .tools{display:flex;gap:.5rem;align-items:center}
 .seg{display:inline-flex;border:1.5px solid var(--ink-soft);border-radius:999px;padding:2px}
 .seg button{white-space:nowrap;font:inherit;font-size:.95rem;font-weight:500;border:0;background:transparent;color:var(--ink);min-width:44px;min-height:40px;padding:0 .7rem;border-radius:999px;cursor:pointer;line-height:1}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 .menu-btn{display:none;white-space:nowrap;font:inherit;font-weight:700;min-height:48px;padding:0 1rem;border:1.5px solid var(--ink-soft);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}
-@media (max-width:1240px){
+@media (max-width:1330px){
   .menu-btn{display:inline-flex;align-items:center}
   .nav{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem var(--gutter-r) 1rem var(--gutter)}
   .nav[data-open="false"]{display:none}
@@ -518,6 +516,56 @@ html[lang="zh-Hant"] .step-text h3{line-height:1.3;letter-spacing:.02em}
 .page-top .sec-head h1{font-family:var(--display);font-size:clamp(2.1rem,1.5rem + 2.6vw,3.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:0}
 html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-height:1.3;letter-spacing:.02em}
 .crumbs-band{padding-top:1.25rem}
+.band-foot .foot{border-top:0}
+
+/* ===== Field Days · 田間日 ===== */
+.fd-learning{--fd-c:#3F6B2A}.fd-volunteer{--fd-c:#A3442C}.fd-paid{--fd-c:#8A5A12}.fd-course{--fd-c:#2A5F7D}
+:root[data-theme="dark"] .fd-learning{--fd-c:#A4C262}:root[data-theme="dark"] .fd-volunteer{--fd-c:#F0A08A}:root[data-theme="dark"] .fd-paid{--fd-c:#E3B45A}:root[data-theme="dark"] .fd-course{--fd-c:#8EC5E8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .fd-learning{--fd-c:#A4C262}:root:not([data-theme="light"]) .fd-volunteer{--fd-c:#F0A08A}:root:not([data-theme="light"]) .fd-paid{--fd-c:#E3B45A}:root:not([data-theme="light"]) .fd-course{--fd-c:#8EC5E8}}
+.fd-types{list-style:none;margin:0 0 2.5rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.fd-type{border:1px solid var(--line);border-left:6px solid var(--fd-c);border-radius:6px;padding:1rem 1.1rem;background:var(--paper-2)}
+.fd-type p{margin:.5rem 0 0;color:var(--ink-soft);font-size:var(--step--1)}
+.fd-badge{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;color:var(--ink);border:1.5px solid var(--fd-c);border-radius:999px;padding:.15rem .7rem .15rem .45rem;line-height:1.4}
+.fd-badge svg{width:1.3em;height:1.3em;flex:none;color:var(--fd-c);stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fd-month{font-size:var(--step-1);margin:2.25rem 0 .75rem;padding-bottom:.35rem;border-bottom:1px solid var(--line)}
+.fd-list{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.fd-day article{border:1px solid var(--line);border-left:6px solid var(--fd-c);border-radius:6px;padding:1.1rem 1.25rem;background:var(--paper)}
+.fd-day h4{font-size:var(--step-1);margin:.15rem 0 .5rem}
+.fd-date{margin:0;font-weight:700;color:var(--ink-soft)}
+.fd-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;margin:0 0 .5rem}
+.fd-places{font-weight:700}.fd-places.is-full{color:var(--ink-soft)}
+.fd-facts{display:grid;grid-template-columns:max-content 1fr;gap:.1rem 1rem;margin:.25rem 0 .5rem}
+.fd-facts dt{color:var(--ink-soft)}.fd-facts dd{margin:0}
+.fd-desc{white-space:pre-line;max-width:46rem}
+.fd-empty{border:1px dashed var(--line);border-radius:6px;padding:1.25rem;max-width:46rem}
+.fd-formslot{margin-top:1rem}
+.fd-form{display:grid;gap:1.1rem;max-width:40rem;padding:1.25rem;border:1px solid var(--line);border-radius:6px;background:var(--paper-2)}
+.fd-form h5{font-size:var(--step-1);margin:0}
+.fd-form h6{font-size:var(--step-0);margin:0 0 .35rem}
+.fd-field{display:grid;gap:.3rem;margin:0;padding:0;border:0;min-width:0}
+.fd-field label,.fd-field legend{font-weight:700;padding:0}
+.fd-opt{font-weight:400;color:var(--ink-soft)}
+.fd-hint{color:var(--ink-soft);font-size:var(--step--1)}
+.fd-err{color:#9B1C1C;font-weight:700}
+:root[data-theme="dark"] .fd-err{color:#FFB4A8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .fd-err{color:#FFB4A8}}
+.fd-field input[type=text],.fd-field input[type=email],.fd-field input[type=tel],.fd-field textarea{font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--ink-soft);border-radius:4px;padding:.6rem .75rem;min-height:48px;width:100%}
+.fd-field [aria-invalid=true]{border-color:#9B1C1C;border-width:2px}
+.fd-choice{display:flex;align-items:flex-start;gap:.6rem;min-height:44px;padding:.25rem 0}
+.fd-choice input{width:1.4rem;height:1.4rem;margin:.2rem 0 0;flex:none;accent-color:var(--band)}
+.fd-choice label{font-weight:400;cursor:pointer}
+.fd-privacy{font-size:var(--step--1);border-left:3px solid var(--line);padding-left:1rem}
+.fd-privacy p{margin:0;color:var(--ink-soft)}
+.fd-summary{border:2px solid #9B1C1C;border-radius:6px;padding:1rem}
+.fd-summary ul{margin:.25rem 0 0;padding-left:1.25rem}
+.fd-trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fd-done{border:2px solid var(--moss);border-radius:6px;padding:1.1rem 1.25rem;max-width:40rem}
+.fd-done-h{font-weight:700;font-size:var(--step-1);margin:0 0 .25rem}
+.fd-check-box{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line);max-width:40rem}
+.fd-check-box .fd-form{background:transparent;padding:0;border:0}
+.fd-how{margin-top:2.5rem;max-width:46rem}
+.fd-how summary{font-weight:700;cursor:pointer;min-height:44px;display:flex;align-items:center}
+.fd-how ul{padding-left:1.25rem}
 </style>
 <script>
 /* Visitor statistics: Vercel Web Analytics, cookieless. PDF downloads and links to other sites are counted as custom events. */
@@ -548,6 +596,7 @@ document.addEventListener('click',function(e){
           <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
           <li><a href="#research"><span lang="en">Research</span><span lang="zh-Hant">研究</span></a></li>
           <li><a href="#teaching"><span lang="en">Courses</span><span lang="zh-Hant">課程</span></a></li>
+          <li><a href="#field-days"><span lang="en">Field Days</span><span lang="zh-Hant">田間日</span></a></li>
           <li><a href="#tools"><span lang="en">Tools</span><span lang="zh-Hant">工具</span></a></li>
           <li><a href="#blog"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></a></li>
                     <li><a href="#contact"><span lang="en">Contact</span><span lang="zh-Hant">聯絡</span></a></li>
@@ -958,6 +1007,55 @@ document.addEventListener('click',function(e){
 </section>
 <!--/PAGE-->
 
+<!--PAGE:field-days-->
+<!-- FIELD DAYS -->
+<section class="section" id="field-days" aria-labelledby="fd-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span lang="en">Field Days</span><span lang="zh-Hant">田間日</span></p>
+      <h2 id="fd-title"><span lang="en">Field Days: learn and work with us in the field</span><span lang="zh-Hant">田間日：與我們一起在田間學習與工作</span></h2>
+      <p class="muted"><span lang="en">Days on our syntropic agroforestry sites that are open to you: learning days, volunteer days, paid work for experienced hands, and courses. Choose a date, send a short application, and we will meet in the field. Every confirmed hour is added to your record, so your experience grows visibly over the seasons.</span><span lang="zh-Hant">我們的趨合農業場域開放給您參與的日子：學習日、志工日、給有經驗者的有薪工作，以及課程。選擇日期、送出簡短的申請，我們田間見。每一個經確認的時數都會記入您的紀錄，讓您的經驗隨著季節清楚累積。</span></p>
+    </div>
+    <template id="fd-ico-learning"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21v-9"/><path d="M12 12C12 7.5 8.5 5 4 5c0 4.5 3.5 7 8 7z"/><path d="M12 10c0-3.5 3-6 8-6 0 3.5-3 6-8 6z"/></svg></template>
+    <template id="fd-ico-volunteer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg></template>
+    <template id="fd-ico-paid"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M14.6 9.4h-3.3a1.8 1.8 0 0 0 0 3.6h1.4a1.8 1.8 0 0 1 0 3.6H9.4M12 7.4v2M12 16.6v2"/></svg></template>
+    <template id="fd-ico-course"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.5 5.5H9a3 3 0 0 1 3 3V20a2.5 2.5 0 0 0-2.5-2.5h-6z"/><path d="M20.5 5.5H15a3 3 0 0 0-3 3V20a2.5 2.5 0 0 1 2.5-2.5h6z"/></svg></template>
+    <ul class="fd-types" aria-label="Types of days 日子的類型">
+      <li class="fd-type fd-learning"><span class="fd-badge fd-learning"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21v-9"/><path d="M12 12C12 7.5 8.5 5 4 5c0 4.5 3.5 7 8 7z"/><path d="M12 10c0-3.5 3-6 8-6 0 3.5-3 6-8 6z"/></svg><span><span lang="en">Learning day</span><span lang="zh-Hant">學習日</span></span></span>
+        <p><span lang="en">Hands-on learning on a Studio Syntropy site, open to everyone, including visitors from abroad.</span><span lang="zh-Hant">在趨合工作室場域動手學習，開放所有人參加，包括來自海外的訪客。</span></p></li>
+      <li class="fd-type fd-volunteer"><span class="fd-badge fd-volunteer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span><span lang="en">Volunteer day</span><span lang="zh-Hant">志工日</span></span></span>
+        <p><span lang="en">Volunteer service at Gengfutian Farm, organised by the Tzu Chi University USR Center.</span><span lang="zh-Hant">在耕福田農場的志願服務，由慈濟大學USR教學研究中心主辦。</span></p></li>
+      <li class="fd-type fd-paid"><span class="fd-badge fd-paid"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M14.6 9.4h-3.3a1.8 1.8 0 0 0 0 3.6h1.4a1.8 1.8 0 0 1 0 3.6H9.4M12 7.4v2M12 16.6v2"/></svg><span><span lang="en">Paid work</span><span lang="zh-Hant">有薪工作</span></span></span>
+        <p><span lang="en">Paid day work for experienced people on design and client sites, insured from the first hour. Requires the right to work in Taiwan.</span><span lang="zh-Hant">為有經驗者提供的日薪工作，地點在設計案與客戶場域，自第一小時起即有保險。須具備在台灣工作的資格。</span></p></li>
+      <li class="fd-type fd-course"><span class="fd-badge fd-course"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.5 5.5H9a3 3 0 0 1 3 3V20a2.5 2.5 0 0 0-2.5-2.5h-6z"/><path d="M20.5 5.5H15a3 3 0 0 0-3 3V20a2.5 2.5 0 0 1 2.5-2.5h6z"/></svg><span><span lang="en">Course</span><span lang="zh-Hant">課程</span></span></span>
+        <p><span lang="en">Syntropic agroforestry courses. The details needed for accident insurance are requested after your place is confirmed.</span><span lang="zh-Hant">趨合農業課程。意外保險所需的資料，將在您的名額確認後再向您索取。</span></p></li>
+    </ul>
+    <h3 class="sr-only"><span lang="en">Open days</span><span lang="zh-Hant">開放的日子</span></h3>
+    <div id="fd-app" class="fd-app"><p class="muted"><span lang="en">Loading open days…</span><span lang="zh-Hant">正在載入開放的日子……</span></p></div>
+    <noscript><p><span lang="en">Field Days needs JavaScript. You can also apply by writing to studiosyntropy@proton.me.</span><span lang="zh-Hant">田間日需要啟用 JavaScript。您也可以來信 studiosyntropy@proton.me 申請。</span></p></noscript>
+    <details class="fd-how">
+      <summary><span lang="en">How Field Days work</span><span lang="zh-Hant">田間日如何進行</span></summary>
+      <ul>
+        <li><span lang="en">Places are given in order of application, and the waiting list moves up automatically. For paid work, applications are reviewed.</span><span lang="zh-Hant">名額依申請順序分配，候補名單會自動遞補。有薪工作的申請將經審核。</span></li>
+        <li><span lang="en">Every hour you spend with us is recorded once the studio confirms it after the day. Your record follows ecological succession: Pioneer after your first day, Secondary from 10 hours, Climax stage from 50 hours. Experienced people may be invited to paid work.</span><span lang="zh-Hant">您與我們共度的每一小時，在當天結束後經工作室確認即會記錄。您的紀錄依循生態演替：參加第一天後為「先鋒」，滿 10 小時為「次生」，滿 50 小時為「頂極階段」。經驗豐富者可能受邀參與有薪工作。</span></li>
+        <li><span lang="en">Visitors from abroad are warmly welcome on learning days and courses. Paid work requires the right to work in Taiwan.</span><span lang="zh-Hant">歡迎來自海外的訪客參加學習日與課程。有薪工作須具備在台灣工作的資格。</span></li>
+        <li><span lang="en">We ask only what we need: answers about fitness and safety are deleted after the day, and you can ask us at any time to see or delete your record.</span><span lang="zh-Hant">我們只詢問必要的資料：關於身體狀況與安全的回答於當天結束後刪除，您也可以隨時要求查詢或刪除您的紀錄。</span></li>
+      </ul>
+    </details>
+    <section class="fd-check-box" aria-labelledby="fd-check-h">
+      <h3 id="fd-check-h"><span lang="en">Check or cancel an application</span><span lang="zh-Hant">查詢或取消申請</span></h3>
+      <form id="fd-check" class="fd-form" novalidate>
+        <div class="fd-field"><label for="fd-c-email"><span lang="en">Email used in the application</span><span lang="zh-Hant">申請時使用的電子郵件</span></label><input id="fd-c-email" name="email" type="email" autocomplete="email" maxlength="200"></div>
+        <div class="fd-field"><label for="fd-c-ref"><span lang="en">Reference (for example FD-7K3QX)</span><span lang="zh-Hant">申請編號（例如 FD-7K3QX）</span></label><input id="fd-c-ref" name="ref" type="text" autocapitalize="characters" maxlength="20"></div>
+        <p class="btn-row"><button class="btn ghost" type="submit"><span lang="en">Check</span><span lang="zh-Hant">查詢</span></button><button class="btn danger" type="button" id="fd-cancel"><span lang="en">Cancel this application</span><span lang="zh-Hant">取消這項申請</span></button></p>
+        <p id="fd-check-out" class="fd-result" role="status"></p>
+      </form>
+    </section>
+  </div>
+</section>
+<script src="/js/fd.js" defer></script>
+<!--/PAGE-->
+
 <!-- ABOUT -->
 <section class="section" id="about" aria-labelledby="about-title">
   <div class="wrap about">
@@ -1063,6 +1161,7 @@ document.addEventListener('click',function(e){
             <li><a href="#projects"><span lang="en">Projects</span><span lang="zh-Hant">案例</span></a></li>
             <li><a href="#research"><span lang="en">Research</span><span lang="zh-Hant">研究</span></a></li>
             <li><a href="#teaching"><span lang="en">Courses &amp; talks</span><span lang="zh-Hant">課程與演講</span></a></li>
+            <li><a href="#field-days"><span lang="en">Field Days</span><span lang="zh-Hant">田間日</span></a></li>
             <li><a href="#tools"><span lang="en">Tools</span><span lang="zh-Hant">工具</span></a></li>
             <li><a href="#blog"><span lang="en">Blog</span><span lang="zh-Hant">部落格</span></a></li>
           </ul>
@@ -1092,7 +1191,7 @@ document.addEventListener('click',function(e){
     <section class="foot-panel" id="privacy" aria-label="Privacy 隱私權說明" hidden>
       <p><span lang="en">This site uses no advertising and no cookies.</span><span lang="zh-Hant">本網站不使用廣告，也不使用 Cookie。</span></p>
       <p><span lang="en">To learn which pages are read, we count visits with Vercel Web Analytics, a service of our web host. It records the page, the site you came from, your country, and the type of device and browser, and it counts downloads of PDF files and clicks on links to other sites. It sets no cookies and stores no personal data: visitors are counted with an anonymous code that is deleted after 24 hours, and we see only totals. Vercel Inc. processes these statistics on servers outside Taiwan.</span><span lang="zh-Hant">為了解哪些頁面受到閱讀，我們使用網站主機服務商提供的 Vercel Web Analytics 統計造訪情形。此服務記錄瀏覽的頁面、您來自的網站、您所在的國家，以及裝置與瀏覽器類型，並統計 PDF 檔案的下載次數與前往其他網站的連結點擊次數。此服務不設定 Cookie，也不儲存個人資料：訪客以匿名代碼計算，該代碼於 24 小時後刪除，我們只看到總數。這些統計資料由 Vercel Inc. 在台灣境外的伺服器處理。</span></p>
-      <p><span lang="en">Your choice of language and text size is saved only in your own browser. If you write to us, your message is used only to answer you and is not passed on.</span><span lang="zh-Hant">您選擇的語言與字級僅儲存在您自己的瀏覽器中。若您來信，內容僅用於回覆您，不會提供給第三方。</span></p>
+      <p><span lang="en">Your choice of language and text size is saved only in your own browser. If you write to us, your message is used only to answer you and is not passed on. Applications for Field Days are handled as described in the notice on that page.</span><span lang="zh-Hant">您選擇的語言與字級僅儲存在您自己的瀏覽器中。若您來信，內容僅用於回覆您，不會提供給第三方。田間日的申請資料，依該頁面所載的說明處理。</span></p>
     </section>
     <section class="foot-panel" id="credits" aria-label="Credits 致謝與圖片來源" hidden>
       <p><span lang="en">Method: syntropic agriculture, founded by Ernst Götsch (<a href="https://agendagotsch.com/en/" target="_blank" rel="noopener">agendagotsch.com<span class="sr-only"> (opens in a new tab)</span></a>).</span><span lang="zh-Hant">方法：趨合農業，由恩斯特・葛奇（Ernst Götsch）創立（<a href="https://agendagotsch.com/en/" target="_blank" rel="noopener">agendagotsch.com<span class="sr-only">（在新分頁開啟）</span></a>）。</span></p>

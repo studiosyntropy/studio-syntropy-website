@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Field Days admin | Studio Syntropy</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+:root{--paper:#F5F1E6;--paper-2:#EAE3D1;--ink:#1D3A26;--ink-soft:#4A5A4C;--line:#CFC5AC;--moss:#3F6B2A;--warn:#9B1C1C;--focus:#0B5CAD;color-scheme:light}
+@media (prefers-color-scheme: dark){:root{--paper:#131C15;--paper-2:#1C2820;--ink:#EEE9DB;--ink-soft:#C3CBBA;--line:#3A4C40;--moss:#9DC27B;--warn:#FFB4A8;--focus:#8EC5FF;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Atkinson Hyperlegible Next","Noto Sans TC",system-ui,sans-serif;font-size:1.0625rem;line-height:1.6}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:72rem;margin:0 auto;padding:1rem 16px 4rem}
+h1{font-family:"Bricolage Grotesque","Atkinson Hyperlegible Next",sans-serif;font-size:2rem;margin:.5rem 0}
+h2{font-size:1.4rem;margin:2.5rem 0 .75rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}
+h3{font-size:1.15rem;margin:0}
+.muted{color:var(--ink-soft)}
+.btn{font:inherit;font-weight:700;min-height:44px;padding:0 1rem;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.small{min-height:36px;padding:0 .8rem;font-size:.95rem}
+.btn.danger{background:transparent;color:var(--warn);border-color:var(--warn)}
+.row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.note{border-left:4px solid var(--line);padding:.5rem 1rem;background:var(--paper-2)}
+.warn{border-left-color:var(--warn)}
+form.day{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.9rem 1.2rem;padding:1.2rem;border:1px solid var(--line);border-radius:6px;background:var(--paper-2)}
+form.day .wide{grid-column:1/-1}
+label{display:grid;gap:.25rem;font-weight:700}
+label small{font-weight:400;color:var(--ink-soft)}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--ink-soft);border-radius:4px;padding:.45rem .6rem;min-height:44px}
+label.cb{display:flex;gap:.5rem;align-items:center;font-weight:400}
+label.cb input{min-height:auto;width:1.3rem;height:1.3rem}
+.day-card{border:1px solid var(--line);border-left:6px solid var(--c,#999);border-radius:6px;padding:1rem 1.1rem;margin:.75rem 0;background:var(--paper)}
+.t-learning{--c:#3F6B2A}.t-volunteer{--c:#A3442C}.t-paid{--c:#8A5A12}.t-course{--c:#2A5F7D}
+.counts span{margin-right:1rem}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border-bottom:1px solid var(--line);padding:.45rem .4rem;text-align:left;vertical-align:top}
+th{font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft)}
+.scroll{overflow-x:auto}
+td input[type=number]{width:5.5rem}
+td input.tasks{width:11rem}
+.health{color:var(--warn);font-weight:700}
+.lvl{font-weight:700}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="muted"><a href="/field-days">studio-syntropy.com/field-days</a> · Studio Syntropy 趨合工作室</p>
+  <h1>Field Days admin</h1>
+  <div id="msg" role="status"></div>
+  <main id="app" hidden>
+    <div class="row">
+      <button class="btn" type="button" id="add">Add a day</button>
+      <button class="btn ghost" type="button" id="reload">Reload</button>
+      <button class="btn ghost" type="button" id="csv">Export people (CSV)</button>
+    </div>
+    <p id="mailnote" class="note" hidden>Automatic emails are not active yet. Use the “Email” links to write to applicants from your own mail app.</p>
+    <section id="editor" hidden aria-labelledby="ed-h">
+      <h2 id="ed-h">Day</h2>
+      <form class="day" id="dayform">
+        <input type="hidden" name="id">
+        <label>Date<input type="date" name="date" required></label>
+        <label>Start<input type="time" name="start" required value="08:30"></label>
+        <label>End<input type="time" name="end" required value="12:30"></label>
+        <label>Type<select name="type"><option value="learning">Learning day 學習日</option><option value="volunteer">Volunteer day 志工日</option><option value="paid">Paid work 有薪工作</option><option value="course">Course 課程</option></select></label>
+        <label>Places<input type="number" name="capacity" min="1" max="200" value="10" required></label>
+        <label>Status<select name="status"><option value="open">Open for applications</option><option value="closed">Closed (hidden from the page)</option><option value="cancelled">Cancelled</option></select></label>
+        <label class="cb"><input type="checkbox" name="review"> Review every application (recommended for paid work)</label>
+        <label>Title (English)<input name="title_en" maxlength="120" placeholder="e.g. Planting a new tree line"></label>
+        <label>Title (中文) <small>optional: Claude can translate</small><input name="title_zh" maxlength="120"></label>
+        <label>Place (English)<input name="place_en" maxlength="160" placeholder="e.g. Gengfutian Farm, Ji'an, Hualien"></label>
+        <label>Place (中文)<input name="place_zh" maxlength="160"></label>
+        <label>Organiser (English)<input name="org_en" maxlength="160"></label>
+        <label>Organiser (中文)<input name="org_zh" maxlength="160"></label>
+        <label class="wide">Description (English) <small>tasks, what to bring, meeting point</small><textarea name="desc_en" rows="4" maxlength="1500"></textarea></label>
+        <label class="wide">Description (中文)<textarea name="desc_zh" rows="4" maxlength="1500"></textarea></label>
+        <div class="row wide"><button class="btn" type="submit">Save day</button><button class="btn ghost" type="button" id="cancelEdit">Close</button><button class="btn danger" type="button" id="deleteDay" hidden>Delete this day</button><span id="dayerr" class="health" role="alert"></span></div>
+      </form>
+    </section>
+    <h2>Upcoming days</h2>
+    <div id="upcoming"></div>
+    <h2>Past days <small class="muted">(confirm attendance and hours here)</small></h2>
+    <div id="past"></div>
+    <h2>People</h2>
+    <p class="muted">Levels follow succession: Pioneer after the first confirmed day, Secondary from 10 hours, Climax stage from 50 hours.</p>
+    <label style="max-width:24rem">Search<input type="search" id="q" placeholder="name or email"></label>
+    <div class="scroll"><table id="people"><thead><tr><th>Name</th><th>Contact</th><th>Hours</th><th>Days</th><th>No-shows</th><th>Level</th><th>Last day</th><th>Experience</th><th></th></tr></thead><tbody></tbody></table></div>
+  </main>
+</div>
+<script src="/admin/field-days/admin.js"></script>
+</body>
+</html>
