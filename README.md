@@ -45,6 +45,7 @@ Rules: every photo appears only once on the home page; before/after pairs are al
 - `build/build.py` turns these into the published pages: `index.html` (English), `zh/index.html` (Chinese), the Research and Courses & talks pages (`research/`, `teaching/`, each also under `zh/`), `blog/index.html` and one page per post under `blog/`, plus `sitemap.xml` and `robots.txt`.
 - In `src/index.html`, sections wrapped in `<!--PAGE:name--> … <!--/PAGE-->` become their own page instead of appearing on the home page.
 - New blog post: put the Word or Google Doc in "02_Post materials" and ask Claude to publish it.
+- Visitor statistics: Vercel Web Analytics (cookieless, Vercel Pro plan), loaded by a small script at the end of the `<style>` block in `src/index.html`. The same script counts PDF downloads and clicks on links to other sites as custom events ("PDF download", "Outbound link"). The footer Privacy panel describes this; update it if the statistics change.
 
 ## Media register
 
