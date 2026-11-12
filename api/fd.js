@@ -176,6 +176,17 @@ ${gft ? `<p style="margin:16px 0 0;font-size:12px;color:#777">${h(W.osm)}</p>` :
 </div>`;
   return [subject, text, html];
 }
+function cancelMail(p, a, d) {
+  const zh = p.lang === 'zh', L = zh ? 1 : 0;
+  const t = (d.title && (zh ? d.title.zh || d.title.en : d.title.en)) || TYPE_LABEL[d.type][L];
+  const when = zh ? `${d.date}，${d.start}–${d.end}` : `${d.date}, ${d.start}–${d.end}`;
+  const subject = zh ? `田間日 ${d.date}：已取消申請` : `Field Days ${d.date}: cancellation confirmed`;
+  const lines = zh
+    ? [`${p.name} 您好：`, '', '您的申請已成功取消。', '', t, `日期：${when}`, `申請編號：${a.ref}`, '', '歡迎您改選其他日子：', recordUrl(p), '此連結僅供您本人使用，請勿轉寄。', '', '趨合工作室 Studio Syntropy']
+    : [`Dear ${p.name},`, '', 'Your cancellation has gone through.', '', t, `Date: ${when}`, `Reference: ${a.ref}`, '', 'You are welcome to choose another day. Your record:', recordUrl(p), 'This link is personal; please keep it to yourself.', '', 'Studio Syntropy 趨合工作室'];
+  const html = `<div style="font-family:'Atkinson Hyperlegible Next',Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#1D3A26;max-width:600px">${lines.map((l, i) => l === recordUrl(p) ? `<p style="margin:0"><a href="${h(l)}" style="color:#1D3A26;font-weight:700">${zh ? '開啟我的紀錄' : 'Open my record'}</a></p>` : l ? `<p style="margin:0${i === 2 ? ';font-weight:700' : ''}">${h(l)}</p>` : '<p style="margin:0">&nbsp;</p>').join('')}</div>`;
+  return [subject, lines.join('\n'), html];
+}
 function linkMail(p) {
   return p.lang === 'zh'
     ? ['您的田間日紀錄', `${p.name} 您好：\n\n這是您田間日紀錄的連結，可查看您的時數與即將參加的日子，也可在此取消申請：\n${recordUrl(p)}\n此連結僅供您本人使用，請勿轉寄。\n\n趨合工作室 Studio Syntropy`]
@@ -276,7 +287,11 @@ async function cancel(b) {
     out = { ok: true, ref: own.a.ref, status: 'cancelled' };
     notice = [{ ...own.p }, { ...own.a }, { ...d }];
   });
-  if (notice) await studioNotice('cancel', ...notice);
+  if (notice) {
+    const [cs, ct, ch] = cancelMail(...notice);
+    await mail(notice[0].email, cs, ct, ch);
+    await studioNotice('cancel', ...notice);
+  }
   return out;
 }
 
@@ -315,7 +330,11 @@ async function recordCancel(b) {
     out = { ok: true, status: 'cancelled' };
     notice = [{ ...p }, { ...a }, { ...d }];
   });
-  if (notice) await studioNotice('cancel', ...notice);
+  if (notice) {
+    const [cs, ct, ch] = cancelMail(...notice);
+    await mail(notice[0].email, cs, ct, ch);
+    await studioNotice('cancel', ...notice);
+  }
   return out;
 }
 // Sends the record link again. Same answer whether or not the address is known; at most once per 10 minutes per person.
