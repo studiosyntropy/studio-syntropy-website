@@ -15,6 +15,9 @@ const AVAIL = ['full', 'am', 'pm'];
 const RTW = ['citizen', 'permit', 'student', 'none'];
 const STATUS = ['confirmed', 'waitlist', 'review', 'declined', 'cancelled'];
 const TYPE_LABEL = { learning: ['Learning day', '學習日'], volunteer: ['Volunteer day', '志工日'], paid: ['Paid work', '有薪工作'], course: ['Course', '課程'] };
+const STATUS_LABEL = { confirmed: 'Confirmed', waitlist: 'Waiting list', review: 'To review', declined: 'Declined', cancelled: 'Cancelled' };
+const SITE = 'https://studio-syntropy.com';
+const ADMIN_URL = 'https://studio-syntropy-website-studiosyntropys-projects.vercel.app/admin/field-days';
 
 // ---------------------------------------------------------------- helpers
 const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date());
@@ -100,6 +103,11 @@ function promote(db, day) {
   if (next) { next.status = 'confirmed'; next.updated = now(); next.promoted = now(); }
   return next || null;
 }
+// Personal record link: a long random key per person, sent only to their own email address.
+// It sits after # in the address, so it never reaches server logs or visitor statistics.
+function ensureKey(p) { if (!p.key) p.key = rid(24); return p.key; }
+const recordUrl = p => `${SITE}/${p.lang === 'zh' ? 'zh/' : ''}field-days#me=${p.key}`;
+const levelOf = (h, days) => (h >= 50 ? 'climax' : h >= 10 ? 'secondary' : days > 0 ? 'pioneer' : '');
 function verifiedHours(db, personId) {
   return db.apps.filter(a => a.personId === personId && a.attended === true).reduce((s, a) => s + (+a.hours || 0), 0);
 }
@@ -123,9 +131,22 @@ function applicantMail(p, a, d) {
                 : { confirmed: 'Your place is confirmed.', waitlist: 'This day is full. You are on the waiting list, and we will contact you if a place opens.', review: 'Your application has been received; we will reply within a few days.' };
   const subject = zh ? `田間日 ${d.date}：${t}` : `Field Days ${d.date}: ${t}`;
   const body = zh
-    ? `${p.name} 您好：\n\n${st[a.status] || ''}\n\n${t}\n日期：${d.date}，${d.start}–${d.end}\n地點：${(d.place && (d.place.zh || d.place.en)) || ''}\n申請編號：${a.ref}\n\n查詢或取消申請：https://studio-syntropy.com/zh/field-days\n\n趨合工作室 Studio Syntropy`
-    : `Dear ${p.name},\n\n${st[a.status] || ''}\n\n${t}\nDate: ${d.date}, ${d.start}–${d.end}\nPlace: ${(d.place && d.place.en) || ''}\nReference: ${a.ref}\n\nCheck or cancel your application: https://studio-syntropy.com/field-days\n\nStudio Syntropy 趨合工作室`;
+    ? `${p.name} 您好：\n\n${st[a.status] || ''}\n\n${t}\n日期：${d.date}，${d.start}–${d.end}\n地點：${(d.place && (d.place.zh || d.place.en)) || ''}\n申請編號：${a.ref}\n\n您的田間日紀錄（時數與即將參加的日子，也可在此取消申請）：\n${recordUrl(p)}\n此連結僅供您本人使用，請勿轉寄。\n\n趨合工作室 Studio Syntropy`
+    : `Dear ${p.name},\n\n${st[a.status] || ''}\n\n${t}\nDate: ${d.date}, ${d.start}–${d.end}\nPlace: ${(d.place && d.place.en) || ''}\nReference: ${a.ref}\n\nYour Field Days record, with your hours and upcoming days, where you can also cancel:\n${recordUrl(p)}\nThis link is personal; please keep it to yourself.\n\nStudio Syntropy 趨合工作室`;
   return [subject, body];
+}
+function linkMail(p) {
+  return p.lang === 'zh'
+    ? ['您的田間日紀錄', `${p.name} 您好：\n\n這是您田間日紀錄的連結，可查看您的時數與即將參加的日子，也可在此取消申請：\n${recordUrl(p)}\n此連結僅供您本人使用，請勿轉寄。\n\n趨合工作室 Studio Syntropy`]
+    : ['Your Field Days record', `Dear ${p.name},\n\nHere is the link to your Field Days record, with your hours and upcoming days, where you can also cancel:\n${recordUrl(p)}\nThis link is personal; please keep it to yourself.\n\nStudio Syntropy 趨合工作室`];
+}
+// Notices for the studio inbox only (FD_NOTIFY). Never sent to applicants.
+function studioNotice(kind, p, a, d) {
+  const day = `${d.date}, ${d.start}–${d.end} · ${TYPE_LABEL[d.type][0]}${d.title && d.title.en ? ' · ' + d.title.en : ''}`;
+  const who = [`Name: ${p.name}`, `Email: ${p.email}`, p.phone ? `Phone: ${p.phone}` : '', p.line ? `LINE: ${p.line}` : ''].filter(Boolean).join('\n');
+  const head = kind === 'cancel' ? 'Cancelled application' : 'New application';
+  return mail(process.env.FD_NOTIFY, `Field Days: ${kind === 'cancel' ? 'cancellation' : 'new application'} for ${d.date} (${STATUS_LABEL[a.status] || a.status})`,
+    `${head} · for the studio only\n\n${who}\nDay: ${day}\nStatus: ${STATUS_LABEL[a.status] || a.status}\nReference: ${a.ref}\n\nAdmin page (studio only; opens after signing in to Vercel):\n${ADMIN_URL}`);
 }
 
 // ---------------------------------------------------------------- public actions
@@ -165,6 +186,7 @@ async function apply(b) {
     if (!p) { p = { id: rid(9), email, created: now() }; db.people.push(p); }
     Object.assign(p, { name, phone: fields.phone || p.phone || '', line: fields.line || p.line || '', lang: fields.lang,
                        exp: [...new Set([...(p.exp || []).filter(x => x !== 'none'), ...fields.exp])], expNote: fields.expNote || p.expNote || '', updated: now() });
+    ensureKey(p);
     const dup = db.apps.find(a => a.personId === p.id && a.dayId === d.id && !['cancelled', 'declined'].includes(a.status));
     if (dup) { result = { ok: true, dup: true, ref: dup.ref, status: dup.status, day: publicDay(db, d) }; return; }
     const status = d.review ? 'review' : (count(db, d.id, 'confirmed') < d.capacity ? 'confirmed' : 'waitlist');
@@ -181,8 +203,7 @@ async function apply(b) {
       const [p, a, d] = mailArgs;
       const [s, m] = applicantMail(p, a, d);
       await mail(p.email, s, m);
-      await mail(process.env.FD_NOTIFY, `Field Days: new application for ${d.date} (${a.status})`,
-        `${p.name} applied for ${d.date} ${d.start}–${d.end} (${TYPE_LABEL[d.type][0]}). Status: ${a.status}.\nOpen the admin page: https://studio-syntropy-website-studiosyntropys-projects.vercel.app/admin/field-days`);
+      await studioNotice('new', p, a, d);
     }
   }
   return result;
@@ -202,7 +223,7 @@ async function status(b) {
   return { ok: true, ref: own.a.ref, status: own.a.status, day: d ? publicDay(db, d) : null };
 }
 async function cancel(b) {
-  let out = { error: 'notfound' };
+  let out = { error: 'notfound' }, notice = null;
   await mutate(async db => {
     const own = await findOwn(db, b);
     if (!own) return { noSave: true };
@@ -212,8 +233,64 @@ async function cancel(b) {
     own.a.status = 'cancelled'; own.a.updated = now();
     if (was === 'confirmed') promote(db, d);
     out = { ok: true, ref: own.a.ref, status: 'cancelled' };
+    notice = [{ ...own.p }, { ...own.a }, { ...d }];
   });
+  if (notice) await studioNotice('cancel', ...notice);
   return out;
+}
+
+// ---------------------------------------------------------------- personal record (link with key)
+function personByKey(db, b) {
+  const key = str(b.key, 64);
+  return key.length >= 20 ? db.people.find(x => x.key && x.key === key) : null;
+}
+async function record(b) {
+  const { db } = await load();
+  const p = personByKey(db, b);
+  if (!p) return { error: 'notfound' };
+  const t = today();
+  const apps = db.apps.filter(a => a.personId === p.id).map(a => {
+    const d = db.days.find(x => x.id === a.dayId);
+    if (!d) return null;
+    return { ref: a.ref, status: a.status, attended: a.attended, hours: a.attended === true ? (+a.hours || 0) : null, past: d.date < t,
+             canCancel: !['cancelled', 'declined'].includes(a.status) && a.attended === null && d.date >= t,
+             day: { date: d.date, start: d.start, end: d.end, type: d.type, title: d.title, place: d.place } };
+  }).filter(Boolean).sort((x, y) => (x.day.date + x.day.start).localeCompare(y.day.date + y.day.start));
+  const hours = verifiedHours(db, p.id), days = apps.filter(a => a.attended === true).length;
+  return { ok: true, name: p.name, hours, days, level: levelOf(hours, days), apps };
+}
+async function recordCancel(b) {
+  const r = str(b.ref, 20).toUpperCase();
+  let out = { error: 'notfound' }, notice = null;
+  await mutate(db => {
+    const p = personByKey(db, b);
+    const a = p && db.apps.find(x => x.ref === r && x.personId === p.id);
+    if (!a) return { noSave: true };
+    const d = db.days.find(x => x.id === a.dayId);
+    if (['cancelled', 'declined'].includes(a.status) || a.attended !== null || (d && d.date < today())) { out = { ok: true, unchanged: true, status: a.status }; return { noSave: true }; }
+    const was = a.status;
+    a.status = 'cancelled'; a.updated = now();
+    if (was === 'confirmed') promote(db, d);
+    out = { ok: true, status: 'cancelled' };
+    notice = [{ ...p }, { ...a }, { ...d }];
+  });
+  if (notice) await studioNotice('cancel', ...notice);
+  return out;
+}
+// Sends the record link again. Same answer whether or not the address is known; at most once per 10 minutes per person.
+async function sendLink(b) {
+  const email = str(b.email, 200).toLowerCase();
+  if (!emailOk(email)) return { error: 'invalid' };
+  if (!(process.env.RESEND_API_KEY && process.env.FD_FROM)) return { ok: true, mail: false };
+  let target = null;
+  await mutate(db => {
+    const p = db.people.find(x => x.email === email);
+    if (!p || (p.linkSent && Date.now() - Date.parse(p.linkSent) < 10 * 60 * 1000)) return { noSave: true };
+    ensureKey(p); p.linkSent = now();
+    target = { ...p };
+  });
+  if (target) { const [s, m] = linkMail(target); await mail(target.email, s, m); }
+  return { ok: true };
 }
 
 // ---------------------------------------------------------------- admin actions
@@ -230,7 +307,12 @@ async function purgeHealth(db) {
 }
 async function adminState() {
   let removed = [];
-  await mutate(async db => { removed = await purgeHealth(db); if (!removed.length) return { noSave: true }; });
+  await mutate(async db => {
+    removed = await purgeHealth(db);
+    let keys = 0;
+    db.people.forEach(p => { if (!p.key) { ensureKey(p); keys++; } });
+    if (!removed.length && !keys) return { noSave: true };
+  });
   const { db } = await load();
   const health = {};
   await Promise.all(db.apps.filter(a => a.health).map(async a => {
@@ -324,9 +406,12 @@ export default async function handler(req, res) {
       if (a === 'apply') { const r = await apply(b); return res.status(r.error === 'invalid' ? 422 : r.error ? 409 : 200).json(r); }
       if (a === 'status') { const r = await status(b); return res.status(r.error ? 404 : 200).json(r); }
       if (a === 'cancel') { const r = await cancel(b); return res.status(r.error ? 404 : 200).json(r); }
+      if (a === 'me') { const r = await record(b); return res.status(r.error ? 404 : 200).json(r); }
+      if (a === 'me-cancel') { const r = await recordCancel(b); return res.status(r.error ? 404 : 200).json(r); }
+      if (a === 'link') { const r = await sendLink(b); return res.status(r.error ? 422 : 200).json(r); }
     }
     if (a.startsWith('admin')) {
-      if (!admin) return res.status(403).json({ error: 'admin', open: 'https://studio-syntropy-website-studiosyntropys-projects.vercel.app/admin/field-days' });
+      if (!admin) return res.status(403).json({ error: 'admin' });
       if (req.method === 'GET' && a === 'admin') return res.status(200).json(await adminState());
       if (req.method === 'POST') {
         if (!String(req.headers['content-type'] || '').startsWith('application/json')) return res.status(415).json({ error: 'json' });

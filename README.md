@@ -58,7 +58,9 @@ Public page: https://studio-syntropy.com/field-days (and `/zh/field-days`). The 
 - Admin actions only work on the Vercel-protected address above; on studio-syntropy.com they are refused.
 - Day types: learning day, volunteer day (organiser: Tzu Chi University USR Center), paid work (asks for the right to work in Taiwan; applications reviewed), course.
 - Places go in order of application; when a confirmed person cancels, the first on the waiting list moves up. Hours count once marked "Attended" on the admin page. Levels: Pioneer (first day), Secondary (10 h), Climax stage (50 h).
-- Automatic emails switch on when the environment variables `RESEND_API_KEY`, `FD_FROM` (sender, on a verified domain) and `FD_NOTIFY` (studio address for new applications) are set; until then the admin page offers prefilled email links.
+- Personal record: every applicant gets a private link (`/field-days#me=…`, a long random key per person) in their confirmation email. It shows their hours, level and days, and lets them cancel upcoming days. The "Send me my link" form on the page emails it again (at most once per 10 minutes per person; same answer for unknown addresses). The admin page's prefilled emails include the link too.
+- The studio notice (to `FD_NOTIFY`) is the only email that contains the admin address; applicants never receive it, and the admin page only opens after signing in to Vercel.
+- Automatic emails are on since 12 November 2026 (Resend, domain studio-syntropy.com verified, region Tokyo): environment variables `RESEND_API_KEY`, `FD_FROM` (`Studio Syntropy <fielddays@studio-syntropy.com>`) and `FD_NOTIFY` (`studiosyntropy@proton.me`, also the reply-to address). Without them the admin page offers prefilled email links.
 
 ## Media register
 

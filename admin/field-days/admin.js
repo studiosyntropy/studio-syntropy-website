@@ -35,9 +35,11 @@
     };
     var place = (zh ? d.place.zh || d.place.en : d.place.en) || '';
     var subject = zh ? '田間日 ' + d.date + '：' + title : 'Field Days ' + d.date + ': ' + title;
+    var url = p.key ? 'https://studio-syntropy.com/' + (zh ? 'zh/' : '') + 'field-days#me=' + p.key : '';
+    var rec = url ? (zh ? '\n\n您的田間日紀錄：\n' + url + '\n此連結僅供您本人使用，請勿轉寄。' : '\n\nYour Field Days record:\n' + url + '\nThis link is personal; please keep it to yourself.') : '';
     var body = zh
-      ? p.name + ' 您好：\n\n' + (lines[a.status] || '') + '\n\n' + title + '\n日期：' + d.date + '，' + d.start + '–' + d.end + '\n地點：' + place + '\n申請編號：' + a.ref + '\n\n趨合工作室 Studio Syntropy'
-      : 'Dear ' + p.name + ',\n\n' + (lines[a.status] || '') + '\n\n' + title + '\nDate: ' + d.date + ', ' + d.start + '–' + d.end + '\nPlace: ' + place + '\nReference: ' + a.ref + '\n\nStudio Syntropy 趨合工作室';
+      ? p.name + ' 您好：\n\n' + (lines[a.status] || '') + '\n\n' + title + '\n日期：' + d.date + '，' + d.start + '–' + d.end + '\n地點：' + place + '\n申請編號：' + a.ref + rec + '\n\n趨合工作室 Studio Syntropy'
+      : 'Dear ' + p.name + ',\n\n' + (lines[a.status] || '') + '\n\n' + title + '\nDate: ' + d.date + ', ' + d.start + '–' + d.end + '\nPlace: ' + place + '\nReference: ' + a.ref + rec + '\n\nStudio Syntropy 趨合工作室';
     return 'mailto:' + encodeURIComponent(p.email) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   }
 

@@ -581,6 +581,20 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
 .fd-done-h{font-weight:700;font-size:var(--step-1);margin:0 0 .25rem}
 .fd-check-box{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line);max-width:40rem}
 .fd-check-box .fd-form{background:transparent;padding:0;border:0}
+#fd-link-h{margin-top:2.5rem}
+.fd-me{margin:0 0 2.5rem;padding:1.25rem 1.35rem;border:2px solid var(--moss);border-radius:6px;max-width:46rem;background:var(--paper)}
+.fd-me h3{margin:0 0 .25rem}
+.fd-me h4{font-size:var(--step-0);margin:1.5rem 0 .6rem}
+.fd-me-hello{margin:0}
+.fd-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.75rem;margin:1rem 0 0}
+.fd-stats div{border:1px solid var(--line);border-radius:6px;padding:.6rem .85rem;background:var(--paper-2)}
+.fd-stats dt{font-size:var(--step--1);color:var(--ink-soft)}
+.fd-stats dd{margin:0;font-weight:700;font-size:var(--step-1)}
+.fd-mylist{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
+.fd-mylist li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem;border-left:4px solid var(--fd-c);padding:.3rem 0 .3rem .9rem}
+.fd-mylist p{margin:0}
+.fd-my-s{color:var(--ink-soft);font-size:var(--step--1)}
+.fd-me .fd-note{font-size:var(--step--1);color:var(--ink-soft);margin:1rem 0 0}
 .fd-how{margin-top:2.5rem;max-width:46rem}
 .fd-how summary{font-weight:700;cursor:pointer;min-height:44px;display:flex;align-items:center}
 .fd-how ul{padding-left:1.25rem}
@@ -677,6 +691,7 @@ document.addEventListener('click',function(e){
         <li><span lang="zh-Hant">名額依申請順序分配，候補名單會自動遞補。有薪工作的申請將經審核。</span></li>
         <li><span lang="zh-Hant">您與我們共度的每一小時，在當天結束後經工作室確認即會記錄。您的紀錄依循生態演替：參加第一天後為「先鋒」，滿 10 小時為「次生」，滿 50 小時為「頂極階段」。經驗豐富者可能受邀參與有薪工作。</span></li>
         <li><span lang="zh-Hant">歡迎來自海外的訪客參加學習日與課程。有薪工作須具備在台灣工作的資格。</span></li>
+        <li><span lang="zh-Hant">首次申請後，您會收到一封附有個人紀錄連結的電子郵件，可查看您的時數與即將參加的日子，也可在那裡取消申請。</span></li>
         <li><span lang="zh-Hant">我們只詢問必要的資料：關於身體狀況與安全的回答於當天結束後刪除，您也可以隨時要求查詢或刪除您的紀錄。</span></li>
       </ul>
     </details>
@@ -687,6 +702,13 @@ document.addEventListener('click',function(e){
         <div class="fd-field"><label for="fd-c-ref"><span lang="zh-Hant">申請編號（例如 FD-7K3QX）</span></label><input id="fd-c-ref" name="ref" type="text" autocapitalize="characters" maxlength="20"></div>
         <p class="btn-row"><button class="btn ghost" type="submit"><span lang="zh-Hant">查詢</span></button><button class="btn danger" type="button" id="fd-cancel"><span lang="zh-Hant">取消這項申請</span></button></p>
         <p id="fd-check-out" class="fd-result" role="status"></p>
+      </form>
+      <h3 aria-level="2" id="fd-link-h"><span lang="zh-Hant">您的個人紀錄</span></h3>
+      <p class="muted"><span lang="zh-Hant">您的確認信中附有個人紀錄的連結：可查看您的時數、階段與即將參加的日子，也可在那裡取消申請。找不到那封信嗎？我們可以再寄一次連結給您。</span></p>
+      <form id="fd-link" class="fd-form" novalidate>
+        <div class="fd-field"><label for="fd-l-email"><span lang="zh-Hant">申請時使用的電子郵件</span></label><input id="fd-l-email" name="email" type="email" autocomplete="email" maxlength="200"></div>
+        <p class="btn-row"><button class="btn ghost" type="submit"><span lang="zh-Hant">寄給我連結</span></button></p>
+        <p id="fd-link-out" class="fd-result" role="status"></p>
       </form>
     </section>
   </div>

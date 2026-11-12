@@ -30,9 +30,15 @@
             rtwNone: '有薪工作須具備在台灣工作的資格。歡迎您參加學習日與課程。' },
     netErr: '申請未能送出。請再試一次，或來信 ' + MAIL + '。', closed: '這一天已不再開放。',
     ok: { confirmed: '您的名額已確認。', waitlist: '這一天已額滿。您已列入候補名單，若有名額釋出，我們會與您聯絡。', review: '謝謝您。我們已收到您的申請，將在幾天內回覆。' },
-    dup: '您已申請過這一天。', refLine: function (r) { return '您的申請編號：' + r + '。請保留此編號，以便在下方查詢或取消申請。'; },
+    dup: '您已申請過這一天。', refLine: function (r) { return '您的申請編號：' + r + '。確認信將寄到您的信箱，內含您個人紀錄的連結，也可在那裡取消申請。'; },
     ics: '加入我的行事曆', st: { confirmed: '已確認', waitlist: '候補中', review: '審核中', declined: '這次未獲選', cancelled: '已取消' },
-    notfound: '找不到符合此電子郵件與編號的申請。', confirmCancel: '確定要取消這項申請嗎？', cancelled: '您的申請已取消。', unchanged: '這項申請已無法再更改。', stLine: '申請狀態：'
+    notfound: '找不到符合此電子郵件與編號的申請。', confirmCancel: '確定要取消這項申請嗎？', cancelled: '您的申請已取消。', unchanged: '這項申請已無法再更改。', stLine: '申請狀態：',
+    recH: '您的田間日紀錄', hello: function (n) { return n + ' 您好。'; }, level: '階段', levels: { pioneer: '先鋒', secondary: '次生', climax: '頂極階段', '': '參加第一天後開始' },
+    hours: '已確認時數', daysDone: '已參加天數', upcoming: '即將參加', past: '過去的日子', noUpcoming: '目前沒有即將參加的日子。請在下方選擇日期。',
+    h: function (x) { return x + ' 小時'; }, attended: '已參加', noShow: '未出席', cancelBtn: '取消這一天',
+    recNote: '每一天結束後，經工作室確認即會加入時數。階段依循生態演替：參加第一天後為「先鋒」，滿 10 小時為「次生」，滿 50 小時為「頂極階段」。',
+    recPrivate: '此頁面僅供您本人使用。如需查詢、更正或刪除您的資料，請來信 ' + MAIL + '。', recBad: '此連結無效。請在下方申請新的連結。', recLoading: '正在載入您的紀錄……',
+    linkSent: '若此電子郵件在我們的紀錄中，我們已寄出連結。請一併查看垃圾郵件匣。', linkInvalid: '請輸入有效的電子郵件地址。'
   } : {
     loading: 'Loading open days…', loadErr: 'The open days could not be loaded. Please reload the page.',
     empty: 'There are no open days at the moment. New dates will appear here.',
@@ -56,9 +62,15 @@
             rtwNone: 'Paid work requires the right to work in Taiwan. Learning days and courses are open to you.' },
     netErr: 'The application could not be sent. Please try again, or write to ' + MAIL + '.', closed: 'This day is no longer open.',
     ok: { confirmed: 'Your place is confirmed.', waitlist: 'This day is full. You are on the waiting list, and we will contact you if a place opens.', review: 'Thank you. Your application has been received; we will reply within a few days.' },
-    dup: 'You have already applied for this day.', refLine: function (r) { return 'Your reference: ' + r + '. Keep it to check or cancel your application below.'; },
+    dup: 'You have already applied for this day.', refLine: function (r) { return 'Your reference: ' + r + '. A confirmation is on its way to your inbox, with a personal link to your record, where you can also cancel.'; },
     ics: 'Add to my calendar', st: { confirmed: 'Confirmed', waitlist: 'On the waiting list', review: 'Being reviewed', declined: 'Not selected this time', cancelled: 'Cancelled' },
-    notfound: 'No application found with this email and reference.', confirmCancel: 'Do you want to cancel this application?', cancelled: 'Your application has been cancelled.', unchanged: 'This application can no longer be changed.', stLine: 'Status: '
+    notfound: 'No application found with this email and reference.', confirmCancel: 'Do you want to cancel this application?', cancelled: 'Your application has been cancelled.', unchanged: 'This application can no longer be changed.', stLine: 'Status: ',
+    recH: 'Your Field Days record', hello: function (n) { return 'Welcome, ' + n + '.'; }, level: 'Level', levels: { pioneer: 'Pioneer', secondary: 'Secondary', climax: 'Climax stage', '': 'Starts with your first day' },
+    hours: 'Confirmed hours', daysDone: 'Days attended', upcoming: 'Upcoming', past: 'Earlier days', noUpcoming: 'No upcoming days. Choose a date below.',
+    h: function (x) { return x + ' h'; }, attended: 'Attended', noShow: 'Did not attend', cancelBtn: 'Cancel this day',
+    recNote: 'Hours are added once the studio confirms them after each day. Levels follow ecological succession: Pioneer after your first day, Secondary from 10 hours, Climax stage from 50 hours.',
+    recPrivate: 'This page is personal. To see, correct or delete your data, write to ' + MAIL + '.', recBad: 'This link is not valid. Request a new link below.', recLoading: 'Loading your record…',
+    linkSent: 'If this address is in our records, we have sent you a link. Please also check your spam folder.', linkInvalid: 'Please enter a valid email address.'
   };
   var TYPE = {
     learning: ZH ? '學習日' : 'Learning day', volunteer: ZH ? '志工日' : 'Volunteer day',
@@ -266,6 +278,72 @@
     document.getElementById('fd-cancel').addEventListener('click', function () { if (window.confirm(T.confirmCancel)) run('cancel'); });
   }
 
+  // ---------------------------------------------------------------- personal record (link from the confirmation email)
+  var meKey = (location.hash.match(/^#me=([A-Za-z0-9_-]{20,64})$/) || [])[1] || '';
+  var meBox = null;
+  function showRecord(focus) {
+    if (!meKey) return;
+    if (!meBox) {
+      meBox = el('section', { 'class': 'fd-me', id: 'fd-me', 'aria-labelledby': 'fd-me-h', tabindex: '-1' });
+      var head = document.querySelector('#field-days .sec-head');
+      if (head) head.parentNode.insertBefore(meBox, head.nextSibling); else root.parentNode.insertBefore(meBox, root);
+    }
+    meBox.innerHTML = '';
+    meBox.appendChild(el('h3', { id: 'fd-me-h', text: T.recH }));
+    var status = el('p', { 'class': 'muted', role: 'status', text: T.recLoading }); meBox.appendChild(status);
+    post('me', { key: meKey }).then(function (r) {
+      status.remove();
+      if (!r.ok) { meBox.appendChild(el('p', { text: r.error === 'notfound' ? T.recBad : T.netErr })); return; }
+      meBox.appendChild(el('p', { 'class': 'fd-me-hello', text: T.hello(r.name) }));
+      meBox.appendChild(el('dl', { 'class': 'fd-stats' }, [
+        el('div', {}, [el('dt', { text: T.level }), el('dd', { text: T.levels[r.level] || T.levels[''] })]),
+        el('div', {}, [el('dt', { text: T.hours }), el('dd', { text: T.h(r.hours) })]),
+        el('div', {}, [el('dt', { text: T.daysDone }), el('dd', { text: String(r.days) })])]));
+      var up = r.apps.filter(function (a) { return !a.past && a.status !== 'cancelled' && a.status !== 'declined'; });
+      var past = r.apps.filter(function (a) { return a.past || a.status === 'cancelled' || a.status === 'declined'; }).reverse();
+      meBox.appendChild(el('h4', { text: T.upcoming }));
+      if (!up.length) meBox.appendChild(el('p', { text: T.noUpcoming }));
+      else meBox.appendChild(el('ul', { 'class': 'fd-mylist' }, up.map(function (a) { return myItem(a, true); })));
+      if (past.length) { meBox.appendChild(el('h4', { text: T.past })); meBox.appendChild(el('ul', { 'class': 'fd-mylist' }, past.map(function (a) { return myItem(a, false); }))); }
+      meBox.appendChild(el('p', { 'class': 'fd-note', text: T.recNote }));
+      meBox.appendChild(el('p', { 'class': 'fd-note', text: T.recPrivate }));
+      if (focus) { meBox.focus(); }
+    }, function () { status.textContent = T.netErr; });
+  }
+  function myItem(a, upcoming) {
+    var d = a.day, info = el('div', {}, [
+      el('p', { 'class': 'fd-date' }, [el('time', { datetime: d.date, text: fmtDay(d.date) }), ' · ', d.start + '–' + d.end]),
+      el('p', { 'class': 'fd-my-t' }, [el('b', { text: pick(d.title) || TYPE[d.type] }), pick(d.place) ? ' · ' + pick(d.place) : '']),
+      el('p', { 'class': 'fd-my-s', text: a.attended === true ? T.attended + ' · ' + T.h(a.hours) : a.attended === false ? T.noShow : (T.st[a.status] || a.status) + ' · ' + a.ref })]);
+    var li = el('li', { 'class': 'fd-' + d.type }, [info]);
+    if (upcoming && a.canCancel) {
+      var b = el('button', { type: 'button', 'class': 'btn danger', 'aria-label': T.cancelBtn + ': ' + fmtDay(d.date) }, [T.cancelBtn]);
+      b.addEventListener('click', function () {
+        if (!window.confirm(T.confirmCancel)) return;
+        b.disabled = true;
+        post('me-cancel', { key: meKey, ref: a.ref }).then(function () { showRecord(true); load(); }, function () { b.disabled = false; });
+      });
+      li.appendChild(b);
+    }
+    return li;
+  }
+  window.addEventListener('hashchange', function () {
+    var k = (location.hash.match(/^#me=([A-Za-z0-9_-]{20,64})$/) || [])[1] || '';
+    if (k && k !== meKey) { meKey = k; showRecord(true); }
+  });
+
+  var lf = document.getElementById('fd-link');
+  if (lf) {
+    var lout = document.getElementById('fd-link-out');
+    lf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = lf.elements.email.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { lout.textContent = T.linkInvalid; return; }
+      lout.textContent = '…';
+      post('link', { email: email }).then(function (r) { lout.textContent = r.error ? T.linkInvalid : T.linkSent; }, function () { lout.textContent = T.netErr; });
+    });
+  }
+
   function load() {
     root.setAttribute('aria-busy', 'true');
     if (!days.length) root.innerHTML = '<p class="muted">' + T.loading + '</p>';
@@ -274,4 +352,5 @@
     }, function () { root.removeAttribute('aria-busy'); root.innerHTML = ''; root.appendChild(el('p', { text: T.loadErr })); });
   }
   load();
+  showRecord(true);
 })();
