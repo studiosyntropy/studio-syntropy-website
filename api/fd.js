@@ -130,8 +130,8 @@ const GFT = {
   forest: 'https://www.google.com/maps/search/?api=1&query=23.9950603%2C121.5615374',
   img: `${SITE}/img/gengfutian-directions.png`,
   addr: ['Tzu Chi University dormitory entrance, Sec. 2, Jianguo Rd., Ji’an Township, Hualien County (corner of Mingyi 5th St.)', '花蓮縣吉安鄉建國路二段，慈濟大學宿舍入口（明義五街口）'],
-  route: ['From the entrance (A), follow the campus road west along the north side of the dormitories, go around the Zhimei Building (致美樓) at the west end and turn south to the classroom (B). The food forest lies about 80 m further south-west.',
-          '從入口（A）沿宿舍北側的校園道路向西行，到西端繞過致美樓後向南轉，即抵達教室（B）。食物森林位於教室西南方約 80 公尺處。'],
+  route: ['From the entrance (A), go straight for about 30 m, then turn right onto the paved campus road. Follow it through all its turns, west along the north side of the dormitories, then left (south) along the Zhimei Building (致美樓) to where the pavement ends. Turn right, then left onto the unpaved path; the classroom (B) is straight ahead. The food forest lies about 80 m further south-west.',
+          '從入口（A）直行約 30 公尺後，右轉進入校園柏油路。沿著道路的每個轉彎前行，經宿舍北側向西，再沿致美樓向左（南）轉，走到柏油路盡頭。接著先右轉再左轉走上未鋪面小徑，教室（B）就在正前方。食物森林位於教室西南方約 80 公尺處。'],
 };
 const isGft = d => /gengfutian|耕福田/i.test((d.place && `${d.place.en} ${d.place.zh}`) || '');
 const dirUrl = zh => `${SITE}/${zh ? 'zh/' : ''}field-days#getting-there`;

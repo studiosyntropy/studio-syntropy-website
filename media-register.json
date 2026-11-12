@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12 22:32",
+ "updated": "2026-11-12 22:55",
  "videos": 0,
  "items": [
   {
@@ -908,16 +908,16 @@
    "description": "",
    "width": 1700,
    "height": 940,
-   "size_kb": 117,
+   "size_kb": 118,
    "taken": "2026-11-12",
    "original": null,
    "copy": null,
    "embedded_in": null,
-   "source": "Directions map made by Claude on 12 Nov 2026 from OpenStreetMap map tiles; route traced from Tobias's hand-drawn sketch on a Google Maps screenshot (12 Nov 2026)",
+   "source": "Directions map made by Claude on 12 Nov 2026 from OpenStreetMap map tiles; route follows the OpenStreetMap campus roads as Tobias described them (paved road solid, unpaved path dotted)",
    "edit": "Saturation reduced; route, markers A/B, food forest star, labels (EN/ZH), north arrow and 50 m scale added",
    "credit": "Map data © OpenStreetMap contributors",
    "note": null,
-   "added_to_site": null,
+   "added_to_site": "2026-11-12",
    "uses": []
   },
   {
