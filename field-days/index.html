@@ -596,6 +596,13 @@ html[lang="zh-Hant"] .page-top .sec-head h1{font-family:var(--font-zh);line-heig
 .fd-my-s{color:var(--ink-soft);font-size:var(--step--1)}
 .fd-me .fd-note{font-size:var(--step--1);color:var(--ink-soft);margin:1rem 0 0}
 .fd-how{margin-top:2.5rem;max-width:46rem}
+.fd-where{margin-top:3rem;max-width:56rem;scroll-margin-top:6rem}
+.fd-map{margin:1rem 0 0}
+.fd-map img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}
+.fd-map figcaption{font-size:var(--step--1);color:var(--ink-soft);padding-top:.4rem}
+.fd-steps{padding-left:1.4rem;margin:1rem 0}
+.fd-steps li{margin:.3rem 0}
+.fd-dir{font-weight:700;white-space:nowrap}
 .fd-how summary{font-weight:700;cursor:pointer;min-height:44px;display:flex;align-items:center}
 .fd-how ul{padding-left:1.25rem}
 </style>
@@ -685,6 +692,20 @@ document.addEventListener('click',function(e){
     <h3 aria-level="2" class="sr-only"><span lang="en">Open days</span></h3>
     <div id="fd-app" class="fd-app"><p class="muted"><span lang="en">Loading open days…</span></p></div>
     <noscript><p><span lang="en">Field Days needs JavaScript. You can also apply by writing to studiosyntropy@proton.me.</span></p></noscript>
+    <section class="fd-where" id="getting-there" aria-labelledby="fd-where-h">
+      <h3 aria-level="2" id="fd-where-h"><span lang="en">Getting to Gengfutian Farm</span></h3>
+      <figure class="fd-map">
+        <span lang="en"><img src="../img/gengfutian-directions.png" width="1700" height="940" loading="lazy" alt="Map of the route to Gengfutian Farm. From the dormitory entrance (A) on Jianguo Road Section 2, at the corner of Mingyi 5th Street, the route follows the campus road west along the north side of the dormitories, goes around the west end of the Zhimei Building, turns south and ends at the classroom (B). The food forest, marked with a star, lies about 80 metres south-west of the classroom."></span>
+        <figcaption><span lang="en">Map data © OpenStreetMap contributors.</span></figcaption>
+      </figure>
+      <ol class="fd-steps">
+        <li><span lang="en">Enter at the Tzu Chi University dormitory entrance on Jianguo Road Section 2 (建國路二段), at the corner of Mingyi 5th Street (明義五街) (A).</span></li>
+        <li><span lang="en">Follow the campus road west along the north side of the dormitories, past the courtyard.</span></li>
+        <li><span lang="en">At the west end, go around the Zhimei Building (致美樓) and turn south.</span></li>
+        <li><span lang="en">The route ends at the classroom (B). The food forest lies about 80 m further south-west (star).</span></li>
+      </ol>
+      <p class="btn-row"><a class="btn ghost" href="https://maps.app.goo.gl/kjoQpfYQiZW8n7XJ6" target="_blank" rel="noopener"><span lang="en">Entrance in Google Maps</span> <span aria-hidden="true">↗</span></a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=23.9950603%2C121.5615374" target="_blank" rel="noopener"><span lang="en">Food forest in Google Maps</span> <span aria-hidden="true">↗</span></a></p>
+    </section>
     <details class="fd-how">
       <summary><span lang="en">How Field Days work</span></summary>
       <ul>

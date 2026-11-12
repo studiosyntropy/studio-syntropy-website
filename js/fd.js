@@ -33,7 +33,7 @@
     dup: '您已申請過這一天。', refLine: function (r) { return '您的申請編號：' + r + '。確認信將寄到您的信箱，內含您個人紀錄的連結，也可在那裡取消申請。'; },
     ics: '加入我的行事曆', st: { confirmed: '已確認', waitlist: '候補中', review: '審核中', declined: '這次未獲選', cancelled: '已取消' },
     notfound: '找不到符合此電子郵件與編號的申請。', confirmCancel: '確定要取消這項申請嗎？', cancelled: '您的申請已取消。', unchanged: '這項申請已無法再更改。', stLine: '申請狀態：',
-    recH: '您的田間日紀錄', hello: function (n) { return n + ' 您好。'; }, level: '階段', levels: { pioneer: '先鋒', secondary: '次生', climax: '頂極階段', '': '參加第一天後開始' },
+    dir: '地圖與路線', recH: '您的田間日紀錄', hello: function (n) { return n + ' 您好。'; }, level: '階段', levels: { pioneer: '先鋒', secondary: '次生', climax: '頂極階段', '': '參加第一天後開始' },
     hours: '已確認時數', daysDone: '已參加天數', upcoming: '即將參加', past: '過去的日子', noUpcoming: '目前沒有即將參加的日子。請在下方選擇日期。',
     h: function (x) { return x + ' 小時'; }, attended: '已參加', noShow: '未出席', cancelBtn: '取消這一天',
     recNote: '每一天結束後，經工作室確認即會加入時數。階段依循生態演替：參加第一天後為「先鋒」，滿 10 小時為「次生」，滿 50 小時為「頂極階段」。',
@@ -65,7 +65,7 @@
     dup: 'You have already applied for this day.', refLine: function (r) { return 'Your reference: ' + r + '. A confirmation is on its way to your inbox, with a personal link to your record, where you can also cancel.'; },
     ics: 'Add to my calendar', st: { confirmed: 'Confirmed', waitlist: 'On the waiting list', review: 'Being reviewed', declined: 'Not selected this time', cancelled: 'Cancelled' },
     notfound: 'No application found with this email and reference.', confirmCancel: 'Do you want to cancel this application?', cancelled: 'Your application has been cancelled.', unchanged: 'This application can no longer be changed.', stLine: 'Status: ',
-    recH: 'Your Field Days record', hello: function (n) { return 'Welcome, ' + n + '.'; }, level: 'Level', levels: { pioneer: 'Pioneer', secondary: 'Secondary', climax: 'Climax stage', '': 'Starts with your first day' },
+    dir: 'Map and directions', recH: 'Your Field Days record', hello: function (n) { return 'Welcome, ' + n + '.'; }, level: 'Level', levels: { pioneer: 'Pioneer', secondary: 'Secondary', climax: 'Climax stage', '': 'Starts with your first day' },
     hours: 'Confirmed hours', daysDone: 'Days attended', upcoming: 'Upcoming', past: 'Earlier days', noUpcoming: 'No upcoming days. Choose a date below.',
     h: function (x) { return x + ' h'; }, attended: 'Attended', noShow: 'Did not attend', cancelBtn: 'Cancel this day',
     recNote: 'Hours are added once the studio confirms them after each day. Levels follow ecological succession: Pioneer after your first day, Secondary from 10 hours, Climax stage from 50 hours.',
@@ -92,6 +92,12 @@
   function fmtDay(s) { return new Intl.DateTimeFormat(LOC, { weekday: 'long', day: 'numeric', month: 'long' }).format(parseDate(s)); }
   function fmtMonth(s) { return new Intl.DateTimeFormat(LOC, { month: 'long', year: 'numeric' }).format(parseDate(s)); }
   function icon(type) { var t = document.getElementById('fd-ico-' + type); return t ? t.content.cloneNode(true) : null; }
+  // Days at Gengfutian Farm link to the map and directions on this page
+  function placeNode(d) {
+    var txt = pick(d.place) || '—';
+    if (!/gengfutian|耕福田/i.test((d.place && (d.place.en + ' ' + d.place.zh)) || '') || !document.getElementById('getting-there')) return document.createTextNode(txt);
+    return el('span', {}, [txt + ' · ', el('a', { href: '#getting-there', 'class': 'fd-dir', text: T.dir })]);
+  }
   function badge(type) { return el('span', { 'class': 'fd-badge fd-' + type }, [icon(type), el('span', { text: TYPE[type] })]); }
   function post(a, body) {
     return fetch(API + '?a=' + a, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
@@ -133,7 +139,7 @@
       el('p', { 'class': 'fd-date' }, [el('time', { datetime: d.date, text: fmtDay(d.date) }), ' · ', d.start + '–' + d.end]),
       el('h4', { id: hid, 'aria-level': '3', text: pick(d.title) || TYPE[d.type] }),
       el('p', { 'class': 'fd-meta' }, [badge(d.type), el('span', { 'class': 'fd-places' + (d.left > 0 || d.review ? '' : ' is-full'), text: avail })]),
-      el('dl', { 'class': 'fd-facts' }, [el('dt', { text: T.place }), el('dd', { text: pick(d.place) || '—' }), el('dt', { text: T.org }), el('dd', { text: pick(d.organiser) || '—' })]),
+      el('dl', { 'class': 'fd-facts' }, [el('dt', { text: T.place }), el('dd', {}, [placeNode(d)]), el('dt', { text: T.org }), el('dd', { text: pick(d.organiser) || '—' })]),
       pick(d.desc) ? el('p', { 'class': 'fd-desc', text: pick(d.desc) }) : null
     ]);
     var btn = el('button', { type: 'button', 'class': 'btn', 'aria-expanded': 'false', 'aria-controls': 'fd-f-' + d.id }, [T.apply]);
@@ -313,7 +319,7 @@
   function myItem(a, upcoming) {
     var d = a.day, info = el('div', {}, [
       el('p', { 'class': 'fd-date' }, [el('time', { datetime: d.date, text: fmtDay(d.date) }), ' · ', d.start + '–' + d.end]),
-      el('p', { 'class': 'fd-my-t' }, [el('b', { text: pick(d.title) || TYPE[d.type] }), pick(d.place) ? ' · ' + pick(d.place) : '']),
+      el('p', { 'class': 'fd-my-t' }, [el('b', { text: pick(d.title) || TYPE[d.type] }), pick(d.place) ? ' · ' : '', pick(d.place) ? placeNode(d) : null]),
       el('p', { 'class': 'fd-my-s', text: a.attended === true ? T.attended + ' · ' + T.h(a.hours) : a.attended === false ? T.noShow : (T.st[a.status] || a.status) + ' · ' + a.ref })]);
     var li = el('li', { 'class': 'fd-' + d.type }, [info]);
     if (upcoming && a.canCancel) {

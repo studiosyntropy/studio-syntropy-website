@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12 20:55",
+ "updated": "2026-11-12 22:32",
  "videos": 0,
  "items": [
   {
@@ -898,6 +898,27 @@
      "caption": ""
     }
    ]
+  },
+  {
+   "id": "img__gengfutian-directions_png",
+   "file": "gengfutian-directions.png",
+   "web_path": "img/gengfutian-directions.png",
+   "kind": "Photo",
+   "status": "Not used",
+   "description": "",
+   "width": 1700,
+   "height": 940,
+   "size_kb": 117,
+   "taken": "2026-11-12",
+   "original": null,
+   "copy": null,
+   "embedded_in": null,
+   "source": "Directions map made by Claude on 12 Nov 2026 from OpenStreetMap map tiles; route traced from Tobias's hand-drawn sketch on a Google Maps screenshot (12 Nov 2026)",
+   "edit": "Saturation reduced; route, markers A/B, food forest star, labels (EN/ZH), north arrow and 50 m scale added",
+   "credit": "Map data © OpenStreetMap contributors",
+   "note": null,
+   "added_to_site": null,
+   "uses": []
   },
   {
    "id": "img__gft-ba-after_jpg",

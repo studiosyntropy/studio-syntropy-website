@@ -113,27 +113,68 @@ function verifiedHours(db, personId) {
 }
 
 // ---------------------------------------------------------------- email (active once RESEND_API_KEY and FD_FROM are set)
-async function mail(to, subject, body) {
+async function mail(to, subject, body, html) {
   const k = process.env.RESEND_API_KEY, from = process.env.FD_FROM;
   if (!k || !from || !to) return false;
   try {
     const r = await fetch('https://api.resend.com/emails', {
       method: 'POST', headers: { Authorization: 'Bearer ' + k, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ from, to: [to], subject, text: body, reply_to: process.env.FD_NOTIFY || undefined }),
+      body: JSON.stringify({ from, to: [to], subject, text: body, html: html || undefined, reply_to: process.env.FD_NOTIFY || undefined }),
     });
     return r.ok;
   } catch { return false; }
 }
+// Gengfutian Farm: map links and the directions map (img/gengfutian-directions.png, made from OpenStreetMap data)
+const GFT = {
+  map: 'https://maps.app.goo.gl/kjoQpfYQiZW8n7XJ6',
+  forest: 'https://www.google.com/maps/search/?api=1&query=23.9950603%2C121.5615374',
+  img: `${SITE}/img/gengfutian-directions.png`,
+  addr: ['Tzu Chi University dormitory entrance, Sec. 2, Jianguo Rd., Ji’an Township, Hualien County (corner of Mingyi 5th St.)', '花蓮縣吉安鄉建國路二段，慈濟大學宿舍入口（明義五街口）'],
+  route: ['From the entrance (A), follow the campus road west along the north side of the dormitories, go around the Zhimei Building (致美樓) at the west end and turn south to the classroom (B). The food forest lies about 80 m further south-west.',
+          '從入口（A）沿宿舍北側的校園道路向西行，到西端繞過致美樓後向南轉，即抵達教室（B）。食物森林位於教室西南方約 80 公尺處。'],
+};
+const isGft = d => /gengfutian|耕福田/i.test((d.place && `${d.place.en} ${d.place.zh}`) || '');
+const dirUrl = zh => `${SITE}/${zh ? 'zh/' : ''}field-days#getting-there`;
+const h = t => String(t == null ? '' : t).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
 function applicantMail(p, a, d) {
-  const zh = p.lang === 'zh';
-  const t = (d.title && (zh ? d.title.zh || d.title.en : d.title.en)) || TYPE_LABEL[d.type][zh ? 1 : 0];
+  const zh = p.lang === 'zh', L = zh ? 1 : 0, gft = isGft(d);
+  const t = (d.title && (zh ? d.title.zh || d.title.en : d.title.en)) || TYPE_LABEL[d.type][L];
+  const place = (d.place && (zh ? d.place.zh || d.place.en : d.place.en || d.place.zh)) || '';
   const st = zh ? { confirmed: '您的名額已確認。', waitlist: '這一天已額滿，您已列入候補名單。若有名額釋出，我們會與您聯絡。', review: '我們已收到您的申請，將在幾天內回覆。' }
                 : { confirmed: 'Your place is confirmed.', waitlist: 'This day is full. You are on the waiting list, and we will contact you if a place opens.', review: 'Your application has been received; we will reply within a few days.' };
+  const W = zh ? { hi: `${p.name} 您好：`, date: '日期', place: '地點', entrance: '入口', maps: 'Google 地圖', dir: '地圖與路線', forest: '在 Google 地圖開啟食物森林', ref: '申請編號',
+                   rec: '您的田間日紀錄（時數與即將參加的日子，也可在此取消申請）：', open: '開啟我的紀錄', priv: '此連結僅供您本人使用，請勿轉寄。', sig: '趨合工作室 Studio Syntropy', osm: '地圖資料 © OpenStreetMap 貢獻者',
+                   alt: '前往耕福田農場的路線圖：從宿舍入口（A）到教室（B），星號為食物森林。' }
+                 : { hi: `Dear ${p.name},`, date: 'Date', place: 'Place', entrance: 'Entrance', maps: 'Google Maps', dir: 'Map and directions', forest: 'Food forest in Google Maps', ref: 'Reference',
+                   rec: 'Your Field Days record, with your hours and upcoming days, where you can also cancel:', open: 'Open my record', priv: 'This link is personal; please keep it to yourself.', sig: 'Studio Syntropy 趨合工作室', osm: 'Map data © OpenStreetMap contributors',
+                   alt: 'Map of the route to Gengfutian Farm: from the dormitory entrance (A) to the classroom (B); the star marks the food forest.' };
+  const sep = zh ? '：' : ': ', when = zh ? `${d.date}，${d.start}–${d.end}` : `${d.date}, ${d.start}–${d.end}`;
   const subject = zh ? `田間日 ${d.date}：${t}` : `Field Days ${d.date}: ${t}`;
-  const body = zh
-    ? `${p.name} 您好：\n\n${st[a.status] || ''}\n\n${t}\n日期：${d.date}，${d.start}–${d.end}\n地點：${(d.place && (d.place.zh || d.place.en)) || ''}\n申請編號：${a.ref}\n\n您的田間日紀錄（時數與即將參加的日子，也可在此取消申請）：\n${recordUrl(p)}\n此連結僅供您本人使用，請勿轉寄。\n\n趨合工作室 Studio Syntropy`
-    : `Dear ${p.name},\n\n${st[a.status] || ''}\n\n${t}\nDate: ${d.date}, ${d.start}–${d.end}\nPlace: ${(d.place && d.place.en) || ''}\nReference: ${a.ref}\n\nYour Field Days record, with your hours and upcoming days, where you can also cancel:\n${recordUrl(p)}\nThis link is personal; please keep it to yourself.\n\nStudio Syntropy 趨合工作室`;
-  return [subject, body];
+  const text = [W.hi, '', st[a.status] || '', '', t, W.date + sep + when, W.place + sep + place,
+    ...(gft ? [W.entrance + sep + GFT.addr[L], W.maps + sep + GFT.map, W.dir + sep + dirUrl(zh)] : []),
+    W.ref + sep + a.ref, '', W.rec, recordUrl(p), W.priv, '', W.sig].join('\n');
+  const row = (k, v) => `<tr><td style="padding:3px 16px 3px 0;color:#3F5444;vertical-align:top;white-space:nowrap">${h(k)}</td><td style="padding:3px 0;vertical-align:top">${v}</td></tr>`;
+  const link = (u, txt) => `<a href="${h(u)}" style="color:#1D3A26;font-weight:700">${h(txt)}</a>`;
+  const html = `<div style="font-family:'Atkinson Hyperlegible Next',Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#1D3A26;max-width:600px">
+<p style="margin:0 0 12px">${h(W.hi)}</p>
+<p style="margin:0 0 16px;font-weight:700">${h(st[a.status] || '')}</p>
+<p style="margin:0 0 6px;font-size:18px;font-weight:700">${h(t)}</p>
+<table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 0 16px">
+${row(W.date, h(when))}
+${row(W.place, gft ? link(GFT.map, place) : h(place))}
+${gft ? row(W.entrance, link(GFT.map, GFT.addr[L])) : ''}
+${row(W.ref, h(a.ref))}
+</table>
+${gft ? `<p style="margin:0 0 8px"><a href="${h(dirUrl(zh))}"><img src="${GFT.img}" width="560" alt="${h(W.alt)}" style="display:block;width:100%;max-width:560px;height:auto;border:1px solid #CFC5AC;border-radius:6px"></a></p>
+<p style="margin:0 0 16px;font-size:15px;color:#3F5444">${h(GFT.route[L])}<br>${link(dirUrl(zh), W.dir)} · ${link(GFT.forest, W.forest)}</p>` : ''}
+<p style="margin:0 0 4px">${h(W.rec)}</p>
+<p style="margin:0 0 4px">${link(recordUrl(p), W.open)}</p>
+<p style="margin:0 0 16px;font-size:14px;color:#3F5444">${h(W.priv)}</p>
+<p style="margin:0">${h(W.sig)}</p>
+${gft ? `<p style="margin:16px 0 0;font-size:12px;color:#777">${h(W.osm)}</p>` : ''}
+</div>`;
+  return [subject, text, html];
 }
 function linkMail(p) {
   return p.lang === 'zh'
@@ -201,8 +242,8 @@ async function apply(b) {
     delete result.appId;
     if (mailArgs) {
       const [p, a, d] = mailArgs;
-      const [s, m] = applicantMail(p, a, d);
-      await mail(p.email, s, m);
+      const [s, m, html] = applicantMail(p, a, d);
+      await mail(p.email, s, m, html);
       await studioNotice('new', p, a, d);
     }
   }
