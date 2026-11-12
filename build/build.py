@@ -210,6 +210,7 @@ def build():
         home = prefix + ('zh/' if lang == 'zh-Hant' else '') + 'index.html'
         b = lang_body(lang, prefix, href_en or prefix + 'index.html', href_zh or prefix + 'zh/index.html', home=home)
         a = b.index('<main id="main" tabindex="-1">') + len('<main id="main" tabindex="-1">'); z = b.index('</main>')
+        b = b.replace('<a class="brand" href="#top"', '<a class="brand" href="%s"' % home, 1)  # logo goes to the home page
         foot = re.search(r'<footer class="wrap foot".*?</footer>', b, re.S).group(0)  # same footer (with Privacy, Accessibility, Credits) on every page
         return b[:a] + '\n' + main_html + '\n<div class="band band-foot">\n  ' + foot + '\n</div>\n' + b[z:]
 
