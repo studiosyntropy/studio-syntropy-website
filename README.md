@@ -51,7 +51,7 @@ Rules: every photo appears only once on the home page; before/after pairs are al
 
 ## Field Days · 田間日
 
-Public page: https://studio-syntropy.com/field-days (and `/zh/field-days`). Admin page (Vercel sign-in required): https://studio-syntropy-website-studiosyntropys-projects.vercel.app/admin/field-days
+Public page: https://studio-syntropy.com/field-days (and `/zh/field-days`). The main menu and footer link to it as "Join us · 參與"; the home page has the button "Join a field day · 參加田間日" between "Our services" and "Contact". Admin page (Vercel sign-in required): https://studio-syntropy-website-studiosyntropys-projects.vercel.app/admin/field-days
 
 - Page text lives in `src/index.html` (`<!--PAGE:field-days-->` block); the list of days and the application form are built by `js/fd.js` (English and Chinese strings at the top).
 - `api/fd.js` is the server part (Vercel Function, Tokyo region). Data is one encrypted file in the private Vercel Blob store `field-days` (Tokyo); fitness and safety answers are kept in separate encrypted files and deleted after the day. Key: environment variable `FD_KEY`. Never change or delete it, or the data cannot be read.

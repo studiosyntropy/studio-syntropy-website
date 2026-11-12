@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12 02:39",
+ "updated": "2026-11-12 20:55",
  "videos": 0,
  "items": [
   {
@@ -29,7 +29,7 @@
    "web_path": "img/bed-syn.jpg",
    "kind": "Photo",
    "status": "In use",
-   "description": "Syntropic bed: banana trunks, wood chips and pruned leaves with dense green cover",
+   "description": "Bed managed with syntropic agroforestry principles: banana trunks, wood chips and pruned leaves with dense green cover",
    "width": 1074,
    "height": 348,
    "size_kb": 76,
@@ -48,8 +48,8 @@
      "url": "https://studio-syntropy.com/",
      "section": "Story \"From rock to food forest\"",
      "page_date": null,
-     "alt": "Syntropic bed: banana trunks, wood chips and pruned leaves with dense green cover",
-     "caption": "A syntropic bed covered with pruned biomass."
+     "alt": "Bed managed with syntropic agroforestry principles: banana trunks, wood chips and pruned leaves with dense green cover",
+     "caption": "A bed covered with pruned biomass, managed with syntropic agroforestry principles."
     }
    ]
   },
@@ -149,7 +149,7 @@
    "web_path": "img/blog/blog-guf-2.jpg",
    "kind": "Photo",
    "status": "In use",
-   "description": "Syntropic tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind",
+   "description": "Tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind",
    "width": 1600,
    "height": 901,
    "size_kb": 418,
@@ -168,7 +168,7 @@
      "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
      "section": "In the text",
      "page_date": "2025-11-25",
-     "alt": "Syntropic tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind",
+     "alt": "Tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind",
      "caption": "GFT, Gengfutian: the main reference site."
     }
    ]
@@ -209,7 +209,7 @@
    "web_path": "img/blog/blog-guf-4.jpg",
    "kind": "Photo",
    "status": "In use",
-   "description": "Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt",
+   "description": "Four people crouching beside a new bed of logs and mulch built on grey flood silt",
    "width": 1280,
    "height": 720,
    "size_kb": 244,
@@ -240,7 +240,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Post list thumbnail",
      "page_date": "2026-04-09",
@@ -252,7 +252,7 @@
      "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
      "section": "Cover photo",
      "page_date": "2025-11-25",
-     "alt": "Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt",
+     "alt": "Four people crouching beside a new bed of logs and mulch built on grey flood silt",
      "caption": ""
     },
     {
@@ -260,8 +260,8 @@
      "url": "https://studio-syntropy.com/blog/healing-the-soil-after-the-flood",
      "section": "In the text",
      "page_date": "2025-11-25",
-     "alt": "Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt",
-     "caption": "BZ: building syntropic beds."
+     "alt": "Four people crouching beside a new bed of logs and mulch built on grey flood silt",
+     "caption": "BZ: building beds with syntropic agroforestry principles."
     },
     {
      "page": "Blog post \"Healing the Soil After the Flood: Tracking Ecosystem Succession in Guangfu\"",
@@ -347,7 +347,7 @@
    "web_path": "img/blog/blog-res-1.jpg",
    "kind": "Photo",
    "status": "In use",
-   "description": "Gengfutian under an evening sky, with young fruit trees and a denser syntropic system with banana",
+   "description": "Gengfutian under an evening sky, with young fruit trees and a denser syntropic agroforestry system with banana",
    "width": 1280,
    "height": 721,
    "size_kb": 193,
@@ -378,7 +378,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Post list thumbnail",
      "page_date": "2026-04-09",
@@ -398,7 +398,7 @@
      "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
      "section": "Cover photo",
      "page_date": "2026-10-07",
-     "alt": "Gengfutian under an evening sky, with young fruit trees and a denser syntropic system with banana",
+     "alt": "Gengfutian under an evening sky, with young fruit trees and a denser syntropic agroforestry system with banana",
      "caption": ""
     },
     {
@@ -406,8 +406,8 @@
      "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
      "section": "In the text",
      "page_date": "2026-10-07",
-     "alt": "Gengfutian under an evening sky: young fruit trees on grass on the left, a denser syntropic system with banana on the right",
-     "caption": "Gengfutian: control (left) and syntropic system (right)."
+     "alt": "Gengfutian under an evening sky: young fruit trees on grass on the left, a denser syntropic agroforestry system with banana on the right",
+     "caption": "Gengfutian: control (left) and syntropic agroforestry system (right)."
     },
     {
      "page": "Blog post \"Validating Syntropic Agroforestry: A Closer Look at Soil and Plant Health\"",
@@ -425,7 +425,7 @@
    "web_path": "img/blog/blog-res-2.jpg",
    "kind": "Slide or chart",
    "status": "In use",
-   "description": "Slide: experimental setup of the Hualien field trial, with photos of the monoculture and syntropic beds and how each was managed",
+   "description": "Slide: experimental setup of the Hualien field trial, with photos of the monoculture and syntropic agroforestry beds and how each was managed",
    "width": 1600,
    "height": 1129,
    "size_kb": 258,
@@ -444,7 +444,7 @@
      "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
      "section": "In the text",
      "page_date": "2026-10-07",
-     "alt": "Slide: experimental setup of the Hualien field trial, with photos of the monoculture and syntropic beds and how each was managed",
+     "alt": "Slide: experimental setup of the Hualien field trial, with photos of the monoculture and syntropic agroforestry beds and how each was managed",
      "caption": "Experimental setup of the field trial. Slide: WorldVeg."
     }
    ]
@@ -455,7 +455,7 @@
    "web_path": "img/blog/blog-res-3.jpg",
    "kind": "Slide or chart",
    "status": "In use",
-   "description": "Slide: soil properties of monoculture soil in Hualien, syntropic soil in Hualien and monoculture soil in Tainan. Microbiome concentration 213, 1,637 and 236 µg/g; fungus-to-bacteria ratio 0.2:1, 3.8:1 and 0.4:1; pH 8.1, 7.5 and 7.2; carbon 1.8%, 29% and 0.86%; conductivity 0.08, 0.32 and 0.24 mS/dm; potassium 482, 2,424 and 80 ppm",
+   "description": "Slide: soil properties of monoculture soil in Hualien, soil under syntropic agroforestry in Hualien and monoculture soil in Tainan. Microbiome concentration 213, 1,637 and 236 µg/g; fungus-to-bacteria ratio 0.2:1, 3.8:1 and 0.4:1; pH 8.1, 7.5 and 7.2; carbon 1.8%, 29% and 0.86%; conductivity 0.08, 0.32 and 0.24 mS/dm; potassium 482, 2,424 and 80 ppm",
    "width": 1600,
    "height": 1095,
    "size_kb": 153,
@@ -474,7 +474,7 @@
      "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
      "section": "In the text",
      "page_date": "2026-10-07",
-     "alt": "Slide: soil properties of monoculture soil in Hualien, syntropic soil in Hualien and monoculture soil in Tainan. Microbiome concentration 213, 1,637 and 236 µg/g; fungus-to-bacteria ratio 0.2:1, 3.8:1 and 0.4:1; pH 8.1, 7.5 and 7.2; carbon 1.8%, 29% and 0.86%; conductivity 0.08, 0.32 and 0.24 mS/dm; potassium 482, 2,424 and 80 ppm",
+     "alt": "Slide: soil properties of monoculture soil in Hualien, soil under syntropic agroforestry in Hualien and monoculture soil in Tainan. Microbiome concentration 213, 1,637 and 236 µg/g; fungus-to-bacteria ratio 0.2:1, 3.8:1 and 0.4:1; pH 8.1, 7.5 and 7.2; carbon 1.8%, 29% and 0.86%; conductivity 0.08, 0.32 and 0.24 mS/dm; potassium 482, 2,424 and 80 ppm",
      "caption": "Soil analysis. Slide: WorldVeg."
     }
    ]
@@ -485,7 +485,7 @@
    "web_path": "img/blog/blog-res-4.jpg",
    "kind": "Slide or chart",
    "status": "In use",
-   "description": "Slide: Fusarium wilt incidence after applying biocontrol candidates in syntropic and monoculture soil, with photos of seedlings and their roots",
+   "description": "Slide: Fusarium wilt incidence after applying biocontrol candidates in soil under syntropic agroforestry and in monoculture soil, with photos of seedlings and their roots",
    "width": 1600,
    "height": 1087,
    "size_kb": 180,
@@ -504,7 +504,7 @@
      "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
      "section": "In the text",
      "page_date": "2026-10-07",
-     "alt": "Slide: Fusarium wilt incidence after applying biocontrol candidates in syntropic and monoculture soil, with photos of seedlings and their roots",
+     "alt": "Slide: Fusarium wilt incidence after applying biocontrol candidates in soil under syntropic agroforestry and in monoculture soil, with photos of seedlings and their roots",
      "caption": "Disease incidence after applying biocontrol candidates. Slide: WorldVeg."
     }
    ]
@@ -515,7 +515,7 @@
    "web_path": "img/blog/blog-res-5.jpg",
    "kind": "Slide or chart",
    "status": "In use",
-   "description": "Slide: pepper plants in syntropic soil with and without Fusarium. With Fusarium: 9 cm tall, 11 cm wide, 14 leaves; without: 6.5 cm, 7.3 cm, 10 leaves; no disease in either. The infested plants have thicker roots",
+   "description": "Slide: pepper plants in soil under syntropic agroforestry, with and without Fusarium. With Fusarium: 9 cm tall, 11 cm wide, 14 leaves; without: 6.5 cm, 7.3 cm, 10 leaves; no disease in either. The infested plants have thicker roots",
    "width": 1600,
    "height": 1093,
    "size_kb": 182,
@@ -534,8 +534,8 @@
      "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
      "section": "In the text",
      "page_date": "2026-10-07",
-     "alt": "Slide: pepper plants in syntropic soil with and without Fusarium. With Fusarium: 9 cm tall, 11 cm wide, 14 leaves; without: 6.5 cm, 7.3 cm, 10 leaves; no disease in either. The infested plants have thicker roots",
-     "caption": "Syntropic soil with and without Fusarium. Slide: WorldVeg."
+     "alt": "Slide: pepper plants in soil under syntropic agroforestry, with and without Fusarium. With Fusarium: 9 cm tall, 11 cm wide, 14 leaves; without: 6.5 cm, 7.3 cm, 10 leaves; no disease in either. The infested plants have thicker roots",
+     "caption": "Soil under syntropic agroforestry, with and without Fusarium. Slide: WorldVeg."
     }
    ]
   },
@@ -545,7 +545,7 @@
    "web_path": "img/blog/blog-res-6.jpg",
    "kind": "Slide or chart",
    "status": "In use",
-   "description": "Slide: plant measurements four weeks after transplanting. Height 30.8 cm syntropic, 21.1 cm Hualien control, 39.4 cm Tainan control; width 24.9, 16.4 and 39.2 cm; vigour 3.7, 1.8 and 3.2; beneficials: two spiders, bees and grasshoppers in the syntropic plots, one spider in the Hualien control",
+   "description": "Slide: plant measurements four weeks after transplanting. Height 30.8 cm syntropic agroforestry, 21.1 cm Hualien control, 39.4 cm Tainan control; width 24.9, 16.4 and 39.2 cm; vigour 3.7, 1.8 and 3.2; beneficials: two spiders, bees and grasshoppers in the syntropic agroforestry plots, one spider in the Hualien control",
    "width": 1600,
    "height": 1114,
    "size_kb": 226,
@@ -564,7 +564,7 @@
      "url": "https://studio-syntropy.com/blog/validating-syntropic-agroforestry",
      "section": "In the text",
      "page_date": "2026-10-07",
-     "alt": "Slide: plant measurements four weeks after transplanting. Height 30.8 cm syntropic, 21.1 cm Hualien control, 39.4 cm Tainan control; width 24.9, 16.4 and 39.2 cm; vigour 3.7, 1.8 and 3.2; beneficials: two spiders, bees and grasshoppers in the syntropic plots, one spider in the Hualien control",
+     "alt": "Slide: plant measurements four weeks after transplanting. Height 30.8 cm syntropic agroforestry, 21.1 cm Hualien control, 39.4 cm Tainan control; width 24.9, 16.4 and 39.2 cm; vigour 3.7, 1.8 and 3.2; beneficials: two spiders, bees and grasshoppers in the syntropic agroforestry plots, one spider in the Hualien control",
      "caption": "Plant measurements four weeks after transplanting. Slide: WorldVeg."
     }
    ]
@@ -620,7 +620,7 @@
    "added_to_site": "2026-10-26",
    "uses": [
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "In the text",
      "page_date": "2026-04-09",
@@ -650,7 +650,7 @@
    "added_to_site": "2026-10-26",
    "uses": [
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "In the text",
      "page_date": "2026-04-09",
@@ -680,7 +680,7 @@
    "added_to_site": "2026-10-26",
    "uses": [
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "In the text",
      "page_date": "2026-04-09",
@@ -710,7 +710,7 @@
    "added_to_site": "2026-10-26",
    "uses": [
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "In the text",
      "page_date": "2026-04-09",
@@ -756,7 +756,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Cover photo",
      "page_date": "2026-04-09",
@@ -764,7 +764,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "In the text",
      "page_date": "2026-04-09",
@@ -772,7 +772,7 @@
      "caption": "Community members and partners of the project."
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Share preview image",
      "page_date": "2026-04-09",
@@ -1528,7 +1528,7 @@
    "web_path": "img/teach-students.jpg",
    "kind": "Photo",
    "status": "In use",
-   "description": "International students planting a new syntropic plot below the mountains",
+   "description": "International students planting a new syntropic agroforestry plot below the mountains",
    "width": 1000,
    "height": 750,
    "size_kb": 193,
@@ -1547,7 +1547,7 @@
      "url": "https://studio-syntropy.com/teaching",
      "section": "Teaching",
      "page_date": null,
-     "alt": "International students planting a new syntropic plot below the mountains",
+     "alt": "International students planting a new syntropic agroforestry plot below the mountains",
      "caption": ""
     }
    ]
@@ -1635,7 +1635,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Phone home-screen icon",
      "page_date": "2026-04-09",
@@ -1713,7 +1713,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Browser tab icon",
      "page_date": "2026-04-09",
@@ -1791,7 +1791,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Header (logo)",
      "page_date": "2026-04-09",
@@ -1901,7 +1901,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Header (logo, dark mode)",
      "page_date": "2026-04-09",
@@ -1909,7 +1909,7 @@
      "caption": ""
     },
     {
-     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests\"",
+     "page": "Blog post \"Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien\"",
      "url": "https://studio-syntropy.com/blog/global-views-usr-award-2026",
      "section": "Footer (logo)",
      "page_date": "2026-04-09",
