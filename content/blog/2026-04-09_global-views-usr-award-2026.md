@@ -1,8 +1,8 @@
 ---
-title: Award-Winning Resilience: Tzu Chi University Recognised for Syntropic Food Forests
+title: Award-Winning Resilience: Tzu Chi University Recognised for Its Food Forests in Hualien
 date: 2026-04-09
 slug: global-views-usr-award-2026
-description: Tzu Chi University received a 2026 Global Views USR Merit Award for its syntropic food forests in Hualien. What the project does and where it goes next.
+description: Tzu Chi University received a 2026 Global Views USR Merit Award for its food forests in Hualien, designed and managed with syntropic agroforestry principles. What the project does and where it goes next.
 cover: img/blog/blog-tcu-5.jpg
 cover_alt: A large group of community members and partners holding a banner in front of trees
 ---
@@ -18,11 +18,11 @@ In recent years, Hualien has faced strong earthquakes, typhoons and floods that 
 
 !ba[Before: rows of young trees with logs on stony ground below the mountains|After: the same view as a dense green food forest|Gengfutian, the same view before and after. Drag the line or use the arrow keys.](img/blog/blog-tcu-3.jpg img/blog/blog-tcu-4.jpg)
 
-With syntropic agroforestry, we establish multi-layered, successional systems, and at Gengfutian, our demonstration farm, the results can be measured. In September 2025, topsoil under the tree lines held 10.6–15.1% organic matter, against 1.9% in the adjacent monoculture. In 2026, analyses by the World Vegetable Center found nearly eight times the microbial biomass in the syntropic soil. In a small chili trial the same year, syntropic plots gave 3.14 kg of fruit against 0.60 kg in the control plots, without irrigation after March and without fertiliser or sprays. These systems also support biodiversity, drainage and water-holding capacity, and help regulate the microclimate during extreme weather. Our aim is to help Hualien move from vulnerability towards climate resilience.
+With syntropic agroforestry, we establish multi-layered, successional systems, and at Gengfutian, our demonstration farm, the results can be measured. In September 2025, topsoil under the tree lines held 10.6–15.1% organic matter, against 1.9% in the adjacent monoculture. In 2026, analyses by the World Vegetable Center found nearly eight times the microbial biomass in the soil under syntropic agroforestry. In a small chili trial the same year, the syntropic agroforestry plots gave 3.14 kg of fruit against 0.60 kg in the control plots, without irrigation after March and without fertiliser or sprays. These systems also support biodiversity, drainage and water-holding capacity, and help regulate the microclimate during extreme weather. Our aim is to help Hualien move from vulnerability towards climate resilience.
 
 ## Bridging Traditional Knowledge and Modern Ecology
 
-The work is as much about community as about soil and seeds. The project connects Truku (Taroko) communities in the mountains, Amis (Pangcah) settlements on the coast and farmers on the plains. Working directly with tribal elders, we find that Indigenous farming knowledge and syntropic design complement each other, so that natural cycles and cultural heritage are cared for together.
+The work is as much about community as about soil and seeds. The project connects Truku (Taroko) communities in the mountains, Amis (Pangcah) settlements on the coast and farmers on the plains. Working directly with tribal elders, we find that Indigenous farming knowledge and syntropic agroforestry design complement each other, so that natural cycles and cultural heritage are cared for together.
 
 ![A large group of community members and partners holding a banner in front of trees|Community members and partners of the project.](img/blog/blog-tcu-5.jpg)
 

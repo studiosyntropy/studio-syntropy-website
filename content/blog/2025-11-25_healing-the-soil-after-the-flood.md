@@ -4,7 +4,7 @@ date: 2025-11-25
 slug: healing-the-soil-after-the-flood
 description: How organic inputs helped soil bacteria recover after the 2025 Guangfu flood in Hualien: soil DNA results from flood-affected and reference sites.
 cover: img/blog/blog-guf-4.jpg
-cover_alt: Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt
+cover_alt: Four people crouching beside a new bed of logs and mulch built on grey flood silt
 ---
 
 When we talk about syntropic agroforestry, we often focus on what happens above ground: the rapid growth of biomass, the use of every stratum, and eventually the harvest. Yet much of the work takes place beneath our feet, in the soil and its living cycles.
@@ -21,7 +21,7 @@ Since then, Prof. Chen Jun-Yao (陳俊堯) of Tzu Chi University has analysed ho
 
 Our main reference is GFT (Gengfutian, 耕福田), sampled on 27 November 2025. The 2,000 m² site was a nine-year-old soursop orchard on very rocky soil. Thirteen months before sampling, half of it (1,000 m²) was converted into a diverse syntropic agroforestry system.
 
-![Syntropic tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind|GFT, Gengfutian: the main reference site.](img/blog/blog-guf-2.jpg)
+![Tree lines with banana and fruit trees beside a lawn at Gengfutian, university buildings behind|GFT, Gengfutian: the main reference site.](img/blog/blog-guf-2.jpg)
 
 All 15 of the most abundant bacterial genera at GFT, among them Bacillus, Sphingobium and Arenimonas, made up at least 1% of the community each. We take this as a picture of a functioning soil microbiome, supported by the active roots of a diverse planting. As a second reference, we sampled LS (Luoshan, 羅山), a site not affected by the flood, on 4 February 2026.
 
@@ -34,7 +34,7 @@ The two sites differed mainly in the level of human intervention:
 BZ received substantial organic inputs, applied at irregular intervals, through the implementation of a syntropic agroforestry design.
 
 ![Grey flood silt across the field at BZ, with dark patches of organic material and young plantings, mountains behind|BZ: organic inputs on the silt.](img/blog/blog-guf-3.jpg)
-![Four people crouching beside a new syntropic bed of logs and mulch built on grey flood silt|BZ: building syntropic beds.](img/blog/blog-guf-4.jpg)
+![Four people crouching beside a new bed of logs and mulch built on grey flood silt|BZ: building beds with syntropic agroforestry principles.](img/blog/blog-guf-4.jpg)
 
 LT received few organic inputs and was sown with a grass and legume seed mix.
 
