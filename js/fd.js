@@ -5,7 +5,7 @@
   var ZH = document.documentElement.lang === 'zh-Hant';
   var LOC = ZH ? 'zh-TW' : 'en-GB';
   var API = '/api/fd';
-  var MAIL = 'studiosyntropy@proton.me';
+  var MAIL = 'info@studio-syntropy.com';
 
   var T = ZH ? {
     loading: '正在載入開放的日子……', loadErr: '無法載入開放的日子。請重新整理頁面。',

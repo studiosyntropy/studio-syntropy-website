@@ -118,7 +118,7 @@ ORG = {
  'name': 'Studio Syntropy', 'alternateName': '趨合工作室', 'url': SITE + '/',
  'logo': SITE + '/img/v8-app-icon.png', 'image': SITE + '/img/hero-chili-gft.jpg',
  'description': HEAD_SEO['en']['desc'],
- 'email': 'studiosyntropy@proton.me', 'telephone': '+886909572694',
+ 'email': 'info@studio-syntropy.com', 'telephone': '+886909572694',
  'address': {'@type': 'PostalAddress', 'addressLocality': 'Hualien', 'addressCountry': 'TW'},
  'areaServed': ['Taiwan', 'Malaysia'],
  'knowsAbout': ['Syntropic agroforestry', 'Food forest design', 'Soil health', 'Soil food web', 'Agroforestry courses'],
